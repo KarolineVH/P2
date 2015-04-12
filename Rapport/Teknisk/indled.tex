@@ -18,8 +18,11 @@ Med udgangspunkt i lokalplan 1-1-107 har bygningen fået de størrelser og dimen
 	\caption{Tilbygningens dimensioner}
 	\label{fig:farvel}
 \end{figure}
-/newline
+
 For at kunne beregne de laster som påvirker tilbygningen, er der opstillet nedenstående statisk system for bygningen. Systemet er opstillet som en bjælkekonstruktion.
+\newline
+\newline
+FIGURE HER!
 
 \section{Laster}
 Lidt tekst her.
@@ -41,7 +44,7 @@ FIGUR!
 \newline
 \newline
 Til at bestemme vindlasten på tilbygningen bruges følgende formel:	
-\begin{center} $w_e=q_p(z_e)$$\cdot$$c_{pe}$}
+\begin{center} $w_e=q_p(z_e)$$\cdot$$c_{pe}$
 \end{center}
 $q_p$: peakhastighedstrykket
 \newline
@@ -55,6 +58,8 @@ Den maksimale belastning fra vinden, peakhastighedstrykket $q_p$, bestemmes ved:
 $q_p(z_e)=[1+7I_v(z_e)]$$\cdot$$\frac{1}{2}$$\cdot$p$\cdot$$v_m^2(z_e)$
 \end{center}
 $I_v$: vindturbulens
+\newline
+$\rho$: densiteten for luft $1,25 \frac{kg}{m^3}$
 \newline
 $v_m$: middelvindhastigheden
 \newline
@@ -75,6 +80,10 @@ $z$: højde, som er 19 m
 $z_0$: ruhedslængde, som sættes til 1.0 for terrænkategori IV (\citep{EU91}, s.79)
 \newline
 \newline
+Vindturbulensen kan nu bestemmes til:
+\begin{center}
+$I_v(z)=frac{1.0}{1.0\cdot ln(\frac{19}{1.0})}=0.340$
+\end{center}
 Middelvindhastigheden, $v_m$, bestemmes ved:
 \begin{center}
 $v_m(z)=c_r(z)\cdot c_0(z)\cdot v_b$
@@ -98,6 +107,10 @@ $c_{season}$: årstidsfaktor, som sættes til 1.0 (\citep{EU91}, tabel 1b s. 77)
 $v_{b,0}$: grundværdi for basisvindhastigheden, som sættes til 24 $\frac{m}{s}$, da dette er gældende for størstedelen af Danmark (\citep{EU91}, s. 77)
 \newline
 \newline
+Basisvindhastigheden kan nu bestemmes til:
+\begin{center}
+$v_b=1.0\cdot 1.0\cdot 24 \frac{m}{s}=24 \frac{m}{s}$
+\end{center}
 Ruhedsfaktor, $c_r(z)$, bestemmes ved:
 \begin{center}
 $c_r(z)=k_r\cdot ln(\frac{z}{z_0})$
@@ -110,4 +123,18 @@ Terrænfaktoren, $k_r$, bestemmes ved:
 $k_r=0.19\cdot (\frac{z_0}{z_{0,II}})^{0.07}$
 \end{center}
 $z_{0,II}$: værdi for ruhedslængde for terrænkategori II, som sættes til 0.05 (\citep{EU91}, s. 78-79)
-
+\begin{center}
+$k_r=0.19\cdot (\frac{1.0}{z_{0.05}})^{0.07}=0.234$
+\end{center}
+Ruhedsfaktor kan nu bestemmes til:
+\begin{center}
+$c_r(z)=0.234\cdot ln(\frac{19}{1.0})=0.690$
+\end{center}
+Middelvindhastigheden kan nu bestemmes til:
+\begin{center}
+$v_m(z)=0.690\cdot 1.0\cdot 24 \frac{m}{s}=16.569 \frac{m}{s}$
+\end{center}
+Peakhastighedstrykket $q_p$ i højden z, kan nu bestemmes til:
+\begin{center}
+$q_p(z_e)=[1+7\cdot 0.340]\cdot \frac{1}{2}\cdot 1,25 \frac{kg}{m^3}\cdot (16,569 \frac{m}{s})^2=0.579 \frac{kN}{m^2}$
+\end{center}
