@@ -38,17 +38,13 @@ Til at beregne hvordan snelasten påvirker tilbygningen anvendes den karaktiske 
 \begin{center}
 $s=\mu_i\cdot C_e\cdot C_t \cdot s_k$
 \end{center}
-$s$: karakteristisk snelast
-\newline
-$\mu_i$: formfaktoren for snelasten, som sættes til 0.8 (\citep{EU91}, KILDE)
-\newline
-$C_e$: eksponeringsfaktoren
-\newline
-$C_t$: termisk faktor, som sættes til 1.0 (\citep{EU91}, s. 52)
-\newline
-$s_k$: karakteristisk snelast på jorden, som sættes til $1 \frac{kN}{m^2}$ KILDE!
-\newline
-\newline
+\begin{itemize}
+	\item[-] $s$: karakteristisk snelast
+	\item[-] $\mu_i$: formfaktoren for snelasten, som sættes til 0.8 (\citep{EU91}, tabel 5.2 s. 53)
+	\item[-] $C_e$: eksponeringsfaktoren
+	\item[-] $C_t$: termisk faktor, som sættes til 1.0 (\citep{EU91}, s. 52)
+	\item[-] $s_k$: karakteristisk terrænværdi, som sættes til $1 \frac{kN}{m^2}$ (\citep{EU91}, s. 49)
+\end{itemize}
 Til at bestemme den karakteristiske snelast, beregnes eksponeringsfaktoren $C_e$.
 \newline
 \newline
@@ -56,44 +52,73 @@ Eksponeringsfaktoren, $C_e$, bestemmes ved:
 \begin{center}
 $C_e=C_{top}\cdot C_s$
 \end{center}
-$C_{top}$: ..., som sættes til 1.0 (\citep{EU91}, tabel 5.1 s. 51)
-\newline
-$C_s$: ..., som sættes til 1.0 KILDE! (s. 51)
-\newline
-\newline
+\begin{itemize}
+	\item[-] $C_{top}$: topografi faktor, som sættes til 1.0 (\citep{EU91}, tabel 5.1 s. 51)
+	\item[-] $C_s$: størrelse faktor, som sættes til 1.0 (\citep{EU91}, s. 51-52)
+\end{itemize}
 Eksponeringsfaktoren kan nu bestemmes til:
 \begin{center}
 $C_e=1.0\cdot 1.0=1.0$
 \end{center}
+Strøybergs Palæ har et saddeltag, og dermed skal der tages højde for tre lasttilfælde, som ses på Figur INDSÆTTE FIGUR!
+\newline
+\newline
+\underline{Lasttilfælde 1}
+\begin{center}
+$s_1=0.8\cdot 1.0\cdot 1.0\cdot 1 \frac{kN}{m^2}=0.8 \frac{kN}{m^2}$
+\end{center}
+\underline{Lasttilfælde 2 og 3}
+\begin{center}
+$s_2=\frac{1}{2}\cdot 0.8\cdot 1.0\cdot 1.0\cdot 1 \frac{kN}{m^2}=0.4 \frac{kN}{m^2}$
+\end{center}
+\underline{Lasttilfælde 4}
+\begin{center}
+	$s_4=\mu_w\cdot C_e\cdot C_t\cdot s_k \frac{kN}{m^2}$
+\end{center}
+\begin{itemize}
+	\item[-] $\mu_w$: formfaktoren
+\end{itemize}
+Formfaktoren, $\mu_w$, bestemmes ved:
+\begin{center}
+$\mu_w=2.4-0.04\cdot \alpha$
+\end{center}
+\begin{itemize}
+	\item[-] $\alpha$: taghældningen målt fra vandret, som sættes til $26.565^{\circ}$
+\end{itemize}
+Formfaktoren kan nu bestemmes til:
+\begin{center}
+	$\mu_w=2.4-0.04\cdot 26.565=1.337$
+\end{center}
+Den karakteristiske snelast for lasttilfælde 4 kan nu bestemmes til:
+\begin{center}
+	$s_4=1.337\cdot 1.0\cdot 1.0\cdot 1 \frac{kN}{m^2}=1.337 \frac{kN}{m^2}$
+\end{center}
+I og med at lasttilfælde 4 giver den største last, anvendes denne til videre beregning.
 
 \subsubsection{Vindlast}
 Vindlasten beregnes for det højeste punkt på konstruktionen, hvilket er på tagspidsen for tilbygningen, da det er det punkt, hvor vinden er kraftigst.
 \newline
 \newline
-FIGUR!
+FIGUR! - henvis til den med taget, som skal være i egenlasten
 \newline
 \newline
 Til at bestemme vindlasten på tilbygningen bruges følgende formel:	
 \begin{center} $w_e=q_p(z_e)$$\cdot$$c_{pe}$
 \end{center}
-$q_p$: peakhastighedstrykket
-\newline
-$z_e$: referencehøjden for det udvendige vindtryk
-\newline
-$c_{pe}$: formfaktoren for det udvendige vindtryk 
-\newline
-\newline
+\begin{itemize}
+	\item[-] $q_p$: peakhastighedstrykket
+	\item[-] $z_e$: referencehøjden for det udvendige vindtryk
+	\item[-] $c_{pe}$: formfaktoren for det udvendige vindtryk
+\end{itemize}
 Den maksimale belastning fra vinden, peakhastighedstrykket $q_p$, bestemmes ved:
 \begin{center}
 $q_p(z_e)=[1+7I_v(z_e)]$$\cdot$$\frac{1}{2}$$\cdot$p$\cdot$$v_m^2(z_e)$
 \end{center}
-$I_v$: vindturbulens
-\newline
-$\rho$: densiteten for luft $1.25 \frac{kg}{m^3}$
-\newline
-$v_m$: middelvindhastigheden
-\newline
-\newline
+\begin{itemize}
+	\item[-] $I_v$: vindturbulens
+	\item[-] $\rho$: densiteten for luft $1.25 \frac{kg}{m^3}$
+	\item[-] $v_m$: middelvindhastigheden
+\end{itemize}
 For at bestemme peakhastigheden, beregnes først vindturbulens $I_v(z)$ samt middelvindhastigheden $v_m$.
 \newline
 \newline
@@ -101,15 +126,12 @@ Vindturbulens, $I_v(z)$, bestemmes ved:
 \begin{center}
 $I_v(z)=\frac{\sigma_v}{V_m(z)}=\frac{k_1}{c_0(z)\cdot ln(\frac{z}{z_0})}$
 \end{center}
-$k_1$: turbulensfaktor, sættes til 1.0 (\citep{EU91}, s. 82)
-\newline
-$c_0(z)$: orografifaktoren, som sættes til 1.0 (\citep{EU91}, s. 78)
-\newline
-$z$: højde, som er 19 m
-\newline
-$z_0$: ruhedslængde, som sættes til 1.0 for terrænkategori IV (\citep{EU91}, s. 79)
-\newline
-\newline
+\begin{itemize}
+	\item[-] $k_1$: turbulensfaktor, sættes til 1.0 (\citep{EU91}, s. 82)
+	\item[-] $c_0(z)$: orografifaktoren, som sættes til 1.0 (\citep{EU91}, s. 78)
+	\item[-] $z$: højde, som er 19 m
+	\item[-] $z_0$: ruhedslængde, som sættes til 1.0 for terrænkategori IV (\citep{EU91}, s. 79)
+\end{itemize}
 Vindturbulensen kan nu bestemmes til:
 \begin{center}
 $I_v(z)=\frac{1.0}{1.0\cdot ln(\frac{19}{1.0})}=0.340$
@@ -118,11 +140,10 @@ Middelvindhastigheden, $v_m$, bestemmes ved:
 \begin{center}
 $v_m(z)=c_r(z)\cdot c_0(z)\cdot v_b$
 \end{center}
-$c_r(z)$: ruhedsfaktor
-\newline
-$v_b$: basisvindhastigheden
-\newline
-\newline
+\begin{itemize}
+	\item[-] $c_r(z)$: ruhedsfaktor
+	\item[-] $v_b$: basisvindhastigheden
+\end{itemize}
 Til at bestemme middelvindhastigheden, beregnes basisvindhastigheden samt ruhedsfaktor.
 \newline
 \newline
@@ -130,13 +151,11 @@ Basisvindhastigheden, $v_b$, bestemmes ved:
 \begin{center}
 $v_b=c_{dir}\cdot c_{season}\cdot v_{b,0}$
 \end{center}
-$c_{dir}$: retningsfaktor, som sættes til 1.0 (\citep{EU91}, tabel 1a s. 77)
-\newline
-$c_{season}$: årstidsfaktor, som sættes til 1.0 (\citep{EU91}, tabel 1b s. 77)
-\newline
-$v_{b,0}$: grundværdi for basisvindhastigheden, som sættes til 24 $\frac{m}{s}$, da dette er gældende for størstedelen af Danmark (\citep{EU91}, s. 77)
-\newline
-\newline
+\begin{itemize}
+	\item[-] $c_{dir}$: retningsfaktor, som sættes til 1.0 (\citep{EU91}, tabel 1a s. 77)
+	\item[-] $c_{season}$: årstidsfaktor, som sættes til 1.0 (\citep{EU91}, tabel 1b s. 77)
+	\item[-] $v_{b,0}$: grundværdi for basisvindhastigheden, som sættes til 24 $\frac{m}{s}$, da dette er gældende for størstedelen af Danmark (\citep{EU91}, s. 77)
+\end{itemize}
 Basisvindhastigheden kan nu bestemmes til:
 \begin{center}
 $v_b=1.0\cdot 1.0\cdot 24 \frac{m}{s}=24 \frac{m}{s}$
@@ -145,14 +164,16 @@ Ruhedsfaktor, $c_r(z)$, bestemmes ved:
 \begin{center}
 $c_r(z)=k_r\cdot ln(\frac{z}{z_0})$
 \end{center}
-$k_r$: terrænfaktor
-\newline
-\newline
+\begin{itemize}
+	\item[-] $k_r$: terrænfaktor
+\end{itemize}
 Terrænfaktoren, $k_r$, bestemmes ved:
 \begin{center}
 $k_r=0.19\cdot (\frac{z_0}{z_{0,II}})^{0.07}$
 \end{center}
-$z_{0,II}$: værdi for ruhedslængde for terrænkategori II, som sættes til 0.05 (\citep{EU91}, s. 78-79)
+\begin{itemize}
+	\item[-] $z_{0,II}$: værdi for ruhedslængde for terrænkategori II, som sættes til 0.05 (\citep{EU91}, s. 78-79)
+\end{itemize}
 \begin{center}
 $k_r=0.19\cdot (\frac{1.0}{z_{0.05}})^{0.07}=0.234$
 \end{center}
@@ -168,3 +189,10 @@ Peakhastighedstrykket $q_p$ i højden z, kan nu bestemmes til:
 \begin{center}
 $q_p(z_e)=[1+7\cdot 0.340]\cdot \frac{1}{2}\cdot 1.25 \frac{kg}{m^3}\cdot (16.569 \frac{m}{s})^2=0.579 \frac{kN}{m^2}$
 \end{center}
+HVAD GØR VI NU??
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{billeder/opdeling.png}
+	\caption{Zoneinddeling af taget}
+	\label{fig:tag}
+\end{figure}
