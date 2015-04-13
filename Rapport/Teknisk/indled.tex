@@ -34,7 +34,39 @@ Indsætte her.
 Af variable laster optræder der både snelast og vindlast på bygningen, og disse udregnes efter Dansk Standard Eurocode 1991.
 
 \subsubsection{Snelast}
-Indsætte her.
+Til at beregne hvordan snelasten påvirker tilbygningen anvendes den karaktiske snelast og formlen:
+\begin{center}
+$s=\mu_i\cdot C_e\cdot C_t \cdot s_k$
+\end{center}
+$s$: karakteristisk snelast
+\newline
+$\mu_i$: formfaktoren for snelasten
+\newline
+$C_e$: eksponeringsfaktoren
+\newline
+$C_t$: termisk faktor, som sættes til 1.0 (\citep{EU91}, s. 52)
+\newline
+$s_k$: karakteristisk snelast på jorden, som sættes til $1 \frac{kN}{m^2}$ KILDE!
+\newline
+\newline
+Til at bestemme den karakteristiske snelast, beregnes formfaktoren $\mu$ samt eksponeringsfaktoren $C_e$.
+\newline
+\newline
+Eksponeringsfaktoren, $C_e$, bestemmes ved:
+\begin{center}
+$C_e=C_{top}\cdot C_s$
+\end{center}
+$C_{top}$: ..., som sættes til 1.0 (\citep{EU91}, tabel 5.1 s. 51)
+\newline
+$C_s$: ..., som sættes til 1.0 KILDE! (s. 51)
+\newline
+\newline
+Eksponeringsfaktoren kan nu bestemmes til:
+\begin{center}
+$C_e=1.0\cdot 1.0=1.0$
+\end{center}
+
+
 
 \subsubsection{Vindlast}
 Vindlasten beregnes for det højeste punkt på konstruktionen, hvilket er på tagspidsen for tilbygningen, da det er det punkt, hvor vinden er kraftigst.
@@ -59,7 +91,7 @@ $q_p(z_e)=[1+7I_v(z_e)]$$\cdot$$\frac{1}{2}$$\cdot$p$\cdot$$v_m^2(z_e)$
 \end{center}
 $I_v$: vindturbulens
 \newline
-$\rho$: densiteten for luft $1,25 \frac{kg}{m^3}$
+$\rho$: densiteten for luft $1.25 \frac{kg}{m^3}$
 \newline
 $v_m$: middelvindhastigheden
 \newline
@@ -77,12 +109,12 @@ $c_0(z)$: orografifaktoren, som sættes til 1.0 (\citep{EU91}, s. 78)
 \newline
 $z$: højde, som er 19 m
 \newline
-$z_0$: ruhedslængde, som sættes til 1.0 for terrænkategori IV (\citep{EU91}, s.79)
+$z_0$: ruhedslængde, som sættes til 1.0 for terrænkategori IV (\citep{EU91}, s. 79)
 \newline
 \newline
 Vindturbulensen kan nu bestemmes til:
 \begin{center}
-$I_v(z)=frac{1.0}{1.0\cdot ln(\frac{19}{1.0})}=0.340$
+$I_v(z)=\frac{1.0}{1.0\cdot ln(\frac{19}{1.0})}=0.340$
 \end{center}
 Middelvindhastigheden, $v_m$, bestemmes ved:
 \begin{center}
@@ -136,5 +168,5 @@ $v_m(z)=0.690\cdot 1.0\cdot 24 \frac{m}{s}=16.569 \frac{m}{s}$
 \end{center}
 Peakhastighedstrykket $q_p$ i højden z, kan nu bestemmes til:
 \begin{center}
-$q_p(z_e)=[1+7\cdot 0.340]\cdot \frac{1}{2}\cdot 1,25 \frac{kg}{m^3}\cdot (16,569 \frac{m}{s})^2=0.579 \frac{kN}{m^2}$
+$q_p(z_e)=[1+7\cdot 0.340]\cdot \frac{1}{2}\cdot 1.25 \frac{kg}{m^3}\cdot (16.569 \frac{m}{s})^2=0.579 \frac{kN}{m^2}$
 \end{center}
