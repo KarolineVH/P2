@@ -253,4 +253,39 @@ INTROTEKST
 \newline
 \underline{Egenlast}
 \newline
+Egenlasten bestemmes ud fra følgende formel:
+\begin{center}
+	$E_{d,1}=\gamma_{G1}\cdot K_{FI}\cdot G_{K1}$
+\end{center}
+\begin{itemize}
+	\item[-] $E_{d,1}$: regningsmæssige egenlast
+	\item[-] $\gamma_{G1}$: partialkoefficienten for den permanente last, som sættes til 1.0 (\citep{EU90}, tabel A 1.2 s. 44)
+	\item[-] $K_{FI}$: konsekvensklasse CC3, som sættes til 1.1 (\citep{EU90}, s. 43)
+	\item[-] $G_{K1}$: karakteristisk egenlast for den permanente last [kN], som sættes til 3437.84 kN
+\end{itemize}
+Egenlasten kan nu bestemmes til:
+\begin{center}
+	$E_{d,1}=1.0\cdot 1.1\cdot 3437.84 kN=4.538\cdot 10^3 kN$
+\end{center}
+\underline{Vindlast dominerende}
+\newline
+Nyttelasten for vindlast dominerende kan bestemmes ud fra følgende formel:
+\begin{center}
+	$E_{d,2}=\gamma_{G1}\cdot K_{FI}\cdot G_{K1}+\gamma_{Q1}\cdot K_{FI}\cdot Q_{k,1}+\gamma_{Q2}\cdot \Psi_{0,2}\cdot K_{FI}\cdot Q_{k,2}$
+\end{center}
+\begin{itemize}
+	\item[-] $E_{d,2}$: regningsmæssige last
+	\item[-] $\gamma_{Q1}$: partialkoefficienten for den dominerende last(vindlast), som sættes til 1.5 (\citep{EU90}, tabel A 1.2 s. 44)
+	\item[-] $Q_{k,1}$: karakteristisk nyttelast for vind, som sættes til TAL!!
+	\item[-] $\gamma_{Q2}$: partialkoefficenten for den variable last(snelast), som sættes til 1.5 (\citep{EU90}, tabel A 1.2 s. 44)
+	\item[-] $\Psi_{0,2}$: $\Psi$-faktor, som sættes til 0 (\citep{EU90}, tabel A 1.1 s. 41)
+	\item[-] $Q_{k,2}$: karakteristisk nyttelast for sne, som sættes til TAL!!
+\end{itemize}
+Nyttelasten for vindlast dominerende kan nu bestemmes til:
+\newline
+\newline
 INDSÆTTE!
+\newline
+\newline
+\underline{Snelast dominerende}
+Nyttelasten for snelast dominerende kan bestemmes ud fra følgende formel: 
