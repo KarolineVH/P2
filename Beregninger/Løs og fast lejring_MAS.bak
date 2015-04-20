@@ -202,7 +202,7 @@
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" hide-input="false" hide-output="true" inline-output="false" labelreference="L260" drawlabel="true">
 <Input>
-<Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Samme delpr\303\270ve fra l\303\270s lejring bruges til fast lejring. Til fast lejring bliver cylinderet fyldt </Font></Text-field>
+<Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Samme delpr\303\270ve fra l\303\270s lejring bruges til fast lejring. Til fast lejring bliver cylinderet fyldt ad 5 gange. Mellem hver fyldning, bliver materialet j\303\246vnet ud med en st\303\245llineal. Der skal ogs\303\245 stampes</Font></Text-field>
 </Input>
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" hide-input="false" hide-output="true" inline-output="false" labelreference="L261" drawlabel="true">
