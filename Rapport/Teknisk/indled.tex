@@ -5,7 +5,7 @@ Figur \ref{fig:hej} viser de nye byggefelter inden for henholdsvis delområde A 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\textwidth]{billeder/signatur.png}
-	\caption{Lokalplan 1-1-107, delområde A og B}
+	\caption{Lokalplan 1-1-107, delområde A og B \citep{lokalplan[ bilag 2, s. 35]}}
 	\label{fig:hej}
 \end{figure}
 
@@ -22,7 +22,31 @@ Med udgangspunkt i lokalplan 1-1-107 har bygningen fået de størrelser og dimen
 For at kunne beregne de laster som påvirker tilbygningen, er der opstillet nedenstående statisk system for bygningen. Systemet er opstillet som en bjælkekonstruktion.
 \newline
 \newline
-FIGURE HER!
+Beregningerne opdeles for to gavle og to facader. Det antages at gavlene hver er 12 m lang og 16 m høj, eksklusiv en gavltrekant med en højde på 3 m, og har 9 vinduer med dimensionerne; 0,95 m bred og 1,5 m høj.
+\newline
+\newline
+De to facader er 12,5 m lang og 16 m høj. Den har elleve vinduer, med samme mål som for vinduerne på gavlene, og en dør, som er 1,5 m bred og 2,1 m høj.
+\newline
+\newline
+For at kunne beregne de laster, som påvirker tilbygningen, er der opstillet et statisk system for tilbygningen. Systemet er opstillet som en bjælkekonstruktion og indeholder tre rammekonstruktioner som vist på Figur \ref{fig:system}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{billeder/del1statiskesystem.png}
+	\caption{Statiske system}
+	\label{fig:system}
+\end{figure}
+
+På disse rammekonstruktioner vil etagedækkene virke som en belastning, i stedet for at virke som en del af konstruktion. Dette er muligt, da der kan opsættes en samling mellem etagedækkene og stålkonstruktion, som ses på Figur \ref{fig:etage}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{billeder/etageovergang.png}
+	\caption{Etageovergang på tilbygningen}
+	\label{fig:etage}
+\end{figure}
+
+Med denne opstilling kan reaktionerne beregnes og der ud fra finde belastningen, som vil komme på funderingen, men først skal lasterne beregnes.
 
 \section{Laster}
 Lidt tekst her.
@@ -40,10 +64,10 @@ $s=\mu_i\cdot C_e\cdot C_t \cdot s_k$
 \end{center}
 \begin{itemize}
 	\item[-] $s$: karakteristisk snelast
-	\item[-] $\mu_i$: formfaktoren for snelasten, som sættes til 0.8 (\citep{EU91}, tabel 5.2 s. 53)
+	\item[-] $\mu_i$: formfaktoren for snelasten, som sættes til 0.8 \citep[ tabel 5.2 kapitel 5.3]{EU91}
 	\item[-] $C_e$: eksponeringsfaktoren
-	\item[-] $C_t$: termisk faktor, som sættes til 1.0 (\citep{EU91}, s. 52)
-	\item[-] $s_k$: karakteristisk terrænværdi, som sættes til $1 \frac{kN}{m^2}$ (\citep{EU91}, s. 49)
+	\item[-] $C_t$: termisk faktor, som sættes til 1.0 \citep[ kapitel 5.2]{EU91}
+	\item[-] $s_k$: karakteristisk terrænværdi, som sættes til $1 \frac{kN}{m^2}$ \citep[ kapitel 4.1]{EU91}
 \end{itemize}
 Til at bestemme den karakteristiske snelast, beregnes eksponeringsfaktoren $C_e$.
 \newline
@@ -53,14 +77,14 @@ Eksponeringsfaktoren, $C_e$, bestemmes ved:
 $C_e=C_{top}\cdot C_s$
 \end{center}
 \begin{itemize}
-	\item[-] $C_{top}$: topografi faktor, som sættes til 1.0 (\citep{EU91}, tabel 5.1 s. 51)
-	\item[-] $C_s$: størrelse faktor, som sættes til 1.0 (\citep{EU91}, s. 51-52)
+	\item[-] $C_{top}$: topografi faktor, som sættes til 1.0 \citep[ tabel 5.1 kapitel 5.2]{EU91}
+	\item[-] $C_s$: størrelse faktor, som sættes til 1.0 \citep[ kapitel 5.2]{EU91}
 \end{itemize}
 Eksponeringsfaktoren kan nu bestemmes til:
 \begin{center}
 $C_e=1.0\cdot 1.0=1.0$
 \end{center}
-Strøybergs Palæ har et saddeltag, og dermed skal der tages højde for tre lasttilfælde, som ses på Figur INDSÆTTE FIGUR!
+Strøybergs Palæ har et saddeltag, og dermed skal der tages højde for fire lasttilfælde, som ses på Figur INDSÆTTE FIGUR!
 \newline
 \newline
 \underline{Lasttilfælde 1}
@@ -76,7 +100,7 @@ $s_2=\frac{1}{2}\cdot 0.8\cdot 1.0\cdot 1.0\cdot 1 \frac{kN}{m^2}=0.4 \frac{kN}{
 	$s_4=\mu_w\cdot C_e\cdot C_t\cdot s_k \frac{kN}{m^2}$
 \end{center}
 \begin{itemize}
-	\item[-] $\mu_w$: formfaktoren, som sættes til 1.2 eftersom $\alpha$ er $26.565^{\circ}$ (\citep{EU91}, s. 55)
+	\item[-] $\mu_w$: formfaktoren, som sættes til 1.2 eftersom $\alpha$ er $26.565^{\circ}$ \citep[ kapitel 5.3.3]{EU91}
 \end{itemize}
 Den karakteristiske snelast for lasttilfælde 4 kan nu bestemmes til:
 \begin{center}
@@ -105,7 +129,7 @@ $q_p(z_e)=[1+7I_v(z_e)]$$\cdot$$\frac{1}{2}$$\cdot$p$\cdot$$v_m^2(z_e)$
 \end{center}
 \begin{itemize}
 	\item[-] $I_v$: vindturbulens
-	\item[-] $\rho$: densiteten for luft $1.25 \frac{kg}{m^3}$
+	\item[-] $\rho$: densiteten for luft $1.25 \frac{kg}{m^3}$ KILDE
 	\item[-] $v_m$: middelvindhastigheden
 \end{itemize}
 For at bestemme peakhastigheden, beregnes først vindturbulens $I_v(z)$ samt middelvindhastigheden $v_m$.
@@ -116,10 +140,10 @@ Vindturbulens, $I_v(z)$, bestemmes ved:
 $I_v(z)=\frac{\sigma_v}{V_m(z)}=\frac{k_1}{c_0(z)\cdot ln(\frac{z}{z_0})}$
 \end{center}
 \begin{itemize}
-	\item[-] $k_1$: turbulensfaktor, sættes til 1.0 (\citep{EU91}, s. 82)
-	\item[-] $c_0(z)$: orografifaktoren, som sættes til 1.0 (\citep{EU91}, s. 78)
+	\item[-] $k_1$: turbulensfaktor, sættes til 1.0 \citep[ kapitel 4.4]{EU91}
+	\item[-] $c_0(z)$: orografifaktoren, som sættes til 1.0 \citep[ kapitel 4.3.1]{EU91}
 	\item[-] $z$: højde, som er 19 m
-	\item[-] $z_0$: ruhedslængde, som sættes til 1.0 for terrænkategori IV (\citep{EU91}, s. 79)
+	\item[-] $z_0$: ruhedslængde, som sættes til 1.0 for terrænkategori IV \citep[ tabel 4.1 kapitel 4.3.2]{EU91}
 \end{itemize}
 Vindturbulensen kan nu bestemmes til:
 \begin{center}
@@ -141,9 +165,9 @@ Basisvindhastigheden, $v_b$, bestemmes ved:
 $v_b=c_{dir}\cdot c_{season}\cdot v_{b,0}$
 \end{center}
 \begin{itemize}
-	\item[-] $c_{dir}$: retningsfaktor, som sættes til 1.0 (\citep{EU91}, tabel 1a s. 77)
-	\item[-] $c_{season}$: årstidsfaktor, som sættes til 1.0 (\citep{EU91}, tabel 1b s. 77)
-	\item[-] $v_{b,0}$: grundværdi for basisvindhastigheden, som sættes til 24 $\frac{m}{s}$, da dette er gældende for størstedelen af Danmark (\citep{EU91}, s. 77)
+	\item[-] $c_{dir}$: retningsfaktor, som sættes til 1.0 \citep[ tabel 1a kapitel 4.2]{EU91}
+	\item[-] $c_{season}$: årstidsfaktor, som sættes til 1.0 \citep[ tabel 1b kapitel 4.2]{EU91}
+	\item[-] $v_{b,0}$: grundværdi for basisvindhastigheden, som sættes til 24 $\frac{m}{s}$, da dette er gældende for størstedelen af Danmark \citep[ kapitel 4.2]{EU91}
 \end{itemize}
 Basisvindhastigheden kan nu bestemmes til:
 \begin{center}
@@ -161,7 +185,7 @@ Terrænfaktoren, $k_r$, bestemmes ved:
 $k_r=0.19\cdot (\frac{z_0}{z_{0,II}})^{0.07}$
 \end{center}
 \begin{itemize}
-	\item[-] $z_{0,II}$: værdi for ruhedslængde for terrænkategori II, som sættes til 0.05 (\citep{EU91}, s. 78-79)
+	\item[-] $z_{0,II}$: værdi for ruhedslængde for terrænkategori II, som sættes til 0.05 \citep[ kapitel 4.3.2]{EU91}
 \end{itemize}
 \begin{center}
 $k_r=0.19\cdot (\frac{1.0}{z_{0.05}})^{0.07}=0.234$
@@ -193,7 +217,7 @@ For alle zoner bestemmes $c_{pe,10}$. Der opstilles en lineær ligning med samme
 \newline
 \underline{Zone F}
 \newline
-Ud fra tabel 7.4a (\citep{EU91}, s. 112) er de negative værdier for zone F -0.9 og -0.5. Her ud fra fås ligningen, og $c_{pe,10,neg}$ bestemmes:
+Ud fra \citep[ tabel 7.4a kapitel 7.2.5]{EU91} er de negative værdier for zone F: -0.9 og -0.5. Her ud fra fås ligningen, og $c_{pe,10,neg}$ bestemmes:
 \begin{center}
 	$f(\alpha)=0.0267\cdot \alpha - 1.3 \to c_{pe,10,neg}=-0.592$
 \end{center}
