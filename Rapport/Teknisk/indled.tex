@@ -32,7 +32,7 @@ For at kunne beregne de laster, som påvirker tilbygningen, er der opstillet et 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{billeder/del1statiskesystem.png}
+	\includegraphics[width=0.3\textwidth]{billeder/del1statiskesystem.png}
 	\caption{Statiske system}
 	\label{fig:system}
 \end{figure}
@@ -41,7 +41,7 @@ På disse rammekonstruktioner vil etagedækkene virke som en belastning, i stede
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{billeder/etageovergang.png}
+	\includegraphics[width=0.7\textwidth]{billeder/etageovergang.png}
 	\caption{Etageovergang på tilbygningen}
 	\label{fig:etage}
 \end{figure}
@@ -283,8 +283,8 @@ Egenlasten bestemmes ud fra følgende formel:
 \end{center}
 \begin{itemize}
 	\item[-] $E_{d,1}$: regningsmæssige egenlast
-	\item[-] $\gamma_{G1}$: partialkoefficienten for den permanente last, som sættes til 1.0 (\citep{EU90}, tabel A 1.2 s. 44)
-	\item[-] $K_{FI}$: konsekvensklasse CC3, som sættes til 1.1 (\citep{EU90}, s. 43)
+	\item[-] $\gamma_{G1}$: partialkoefficienten for den permanente last, som sættes til 1.0 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
+	\item[-] $K_{FI}$: konsekvensklasse CC3, som sættes til 1.1 \citep[ tabel A 1.2(A) anneks A.1.3.1]{EU90}
 	\item[-] $G_{K1}$: karakteristisk egenlast for den permanente last [kN], som sættes til 3437.84 kN
 \end{itemize}
 Egenlasten kan nu bestemmes til:
@@ -299,10 +299,10 @@ Nyttelasten for vindlast dominerende kan bestemmes ud fra følgende formel:
 \end{center}
 \begin{itemize}
 	\item[-] $E_{d,2}$: regningsmæssige last
-	\item[-] $\gamma_{Q1}$: partialkoefficienten for den dominerende last(vindlast), som sættes til 1.5 (\citep{EU90}, tabel A 1.2 s. 44)
+	\item[-] $\gamma_{Q1}$: partialkoefficienten for den dominerende last(vindlast), som sættes til 1.5 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
 	\item[-] $Q_{k,1}$: karakteristisk nyttelast for vind, som sættes til TAL!!
-	\item[-] $\gamma_{Q2}$: partialkoefficenten for den variable last(snelast), som sættes til 1.5 (\citep{EU90}, tabel A 1.2 s. 44)
-	\item[-] $\Psi_{0,2}$: $\Psi$-faktor, som sættes til 0 (\citep{EU90}, tabel A 1.1 s. 41)
+	\item[-] $\gamma_{Q2}$: partialkoefficenten for den variable last(snelast), som sættes til 1.5 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
+	\item[-] $\Psi_{0,2}$: $\Psi$-faktor, som sættes til 0 \citep[ tabel A 1.1 anneks A.1.2.2]{EU90}
 	\item[-] $Q_{k,2}$: karakteristisk nyttelast for sne, som sættes til TAL!!
 \end{itemize}
 Nyttelasten for vindlast dominerende kan nu bestemmes til:
