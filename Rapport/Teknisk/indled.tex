@@ -55,7 +55,7 @@ Lidt tekst her.
 Indsætte her.
 
 \subsection{Variable laster}
-Af variable laster optræder der både snelast og vindlast på bygningen, og disse udregnes efter Dansk Standard Eurocode 1991.
+Af variable laster optræder der både snelast, vindlast og nyttelast på bygningen, og disse udregnes efter Dansk Standard Eurocode 1991.
 
 \subsubsection{Snelast}
 Til at beregne hvordan snelasten påvirker tilbygningen anvendes den karaktiske snelast og formlen:
@@ -271,45 +271,85 @@ Den positive værdi for zone J er: 0.0. Her ud fra fås ligningen, og $c_{pe,10,
 \end{center}
 INDSÆTTE DET SIDSTE!
 
+\subsection{Nyttelast}
+Ud fra \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91} aflæses den jævnt fordelte last, $q_k$, for kategori A1, som er bolig og lokale adgangsveje, til at være $1,5 \frac{kN}{m^2}$. Denne last beregnes for alle etager på tilbygningen samlet set.
+\begin{center}
+	$Q_K3=q_k\cdot A\cdot antal etager$
+\end{center}
+\begin{itemize}
+	\item[-] A: arealet af én etage, som sættes til $150,0 m^2$
+	\item[-] antal etager for tilbygningen er 5, men der ses bort fra kælderetagen
+\end{itemize}
+Nyttelasten kan nu bestemmes til:
+\begin{center}
+	$Q_K3=1,5 \frac{kN}{m^2}\cdot 150,0 m^2\cdot 4=900,0 kN$
+\end{center}
+
 \section{Lastkombinationer}
 INTROTEKST
 \newline
 \newline
-\underline{Egenlast}
+\underline{Lastkombination 1: Egenlast}
 \newline
-Egenlasten bestemmes ud fra følgende formel:
+Den regningsmæssige egenlasten bestemmes ud fra følgende formel:
 \begin{center}
 	$E_{d,1}=\gamma_{G1}\cdot K_{FI}\cdot G_{K1}$
 \end{center}
 \begin{itemize}
-	\item[-] $E_{d,1}$: regningsmæssige egenlast
-	\item[-] $\gamma_{G1}$: partialkoefficienten for den permanente last, som sættes til 1.0 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
-	\item[-] $K_{FI}$: konsekvensklasse CC3, som sættes til 1.1 \citep[ tabel A 1.2(A) anneks A.1.3.1]{EU90}
-	\item[-] $G_{K1}$: karakteristisk egenlast for den permanente last [kN], som sættes til 3437.84 kN
+	\item[-] $\gamma_{G1}$: partialkoefficienten for den permanente last, som sættes til 1,2 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
+	\item[-] $K_{FI}$: konsekvensklasse CC3, som sættes til 1,1 \citep[ tabel A 1.2(A) anneks A.1.3.1]{EU90}
+	\item[-] $G_{K1}$: karakteristisk egenlast for den permanente last [kN], som sættes til 3437,86 kN
 \end{itemize}
-Egenlasten kan nu bestemmes til:
+Den regningsmæssige egenlast kan nu bestemmes til:
 \begin{center}
-	$E_{d,1}=1.0\cdot 1.1\cdot 3437.84 kN=4.538\cdot 10^3 kN$
-\end{center}
-\underline{Vindlast dominerende}
+	$E_{d,1}=1,2\cdot 1,1\cdot 3437,86 kN=4,538\cdot 10^3 kN$
+\end{center
+}
+\underline{Lastkombination 2: Vindlast dominerende}
 \newline
-Nyttelasten for vindlast dominerende kan bestemmes ud fra følgende formel:
+Den regningsmæssige last, for vindlast dominerende, bestemmes ud fra følgende formel:
 \begin{center}
-	$E_{d,2}=\gamma_{G1}\cdot K_{FI}\cdot G_{K1}+\gamma_{Q1}\cdot K_{FI}\cdot Q_{k,1}+\gamma_{Q2}\cdot \Psi_{0,2}\cdot K_{FI}\cdot Q_{k,2}$
+	$E_{d,2}=\gamma_{G1}\cdot K_{FI}\cdot G_{K1}+\gamma_{Q1}\cdot K_{FI}\cdot Q_{K1}+\gamma_{Q2}\cdot \Psi_{0,2}\cdot K_{FI}\cdot Q_{K2}+\gamma_{Q3}\cdot \Psi_{0,3}\cdot K_{FI}\cdot Q_{K3}$
 \end{center}
 \begin{itemize}
-	\item[-] $E_{d,2}$: regningsmæssige last
-	\item[-] $\gamma_{Q1}$: partialkoefficienten for den dominerende last(vindlast), som sættes til 1.5 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
-	\item[-] $Q_{k,1}$: karakteristisk nyttelast for vind, som sættes til TAL!!
-	\item[-] $\gamma_{Q2}$: partialkoefficenten for den variable last(snelast), som sættes til 1.5 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
-	\item[-] $\Psi_{0,2}$: $\Psi$-faktor, som sættes til 0 \citep[ tabel A 1.1 anneks A.1.2.2]{EU90}
-	\item[-] $Q_{k,2}$: karakteristisk nyttelast for sne, som sættes til TAL!!
+	\item[-] $\gamma_{Q1}$: partialkoefficienten, som sættes til 1,5 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
+	\item[-] $Q_{K1}$: karakteristisk nyttelast for vind, som sættes til X
+	\item[-] $\gamma_{Q2}$: partialkoefficenten, som sættes til 1,5 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
+	\item[-] $\Psi_{0,2}$: $\Psi$-faktor, som sættes til 0,0, ved vindlast dominerende \citep[ tabel A 1.1 anneks A.1.2.2]{EU90}
+	\item[-] $Q_{K2}$: karakteristisk nyttelast for sne, som sættes til Y
+	\item[-] $\gamma_{Q3}$: partialkoefficenten, som sættes til 1,5 \citep[ tabel A 1.2(B+C) anneks A.1.3.1]{EU90}
+	\item[-] $\Psi_{0,3}$: $\Psi$-faktor, som sættes til 0,5 \citep[ tabel A 1.1 anneks A.1.2.2]{EU90}
+	\item[-] $Q_{K3}$: karakteristisk nyttelast for bolig, som sættes til 900,0 kN
 \end{itemize}
-Nyttelasten for vindlast dominerende kan nu bestemmes til:
+Den regningsmæssige værdi for vindlast dominerende kan nu bestemmes til:
+\begin{center}
+	$E_{d,2}=$
+\end{center}
+
+\underline{Lastkombination 3: Snelast dominerende}
 \newline
+Den regningsmæssige last, for snelast dominerende, bestemmes ud fra følgende formel:
+\begin{center}
+ 	$E_{d,3}=\gamma_{G1}\cdot K_{FI}\cdot G_{K1}+\gamma_{Q1}\cdot \Psi_{0,1}\cdot K_{FI}\cdot Q_{K1}+\gamma_{Q2}\cdot K_{FI}\cdot Q_{K2}+\gamma_{Q3}\cdot \Psi_{0,3}\cdot K_{FI}\cdot Q_{K3}$
+\end{center}
+\begin{itemize}
+	$\Psi_{0,1}$: $\Psi$-faktor, som sættes til 0,3 \citep[ tabel A 1.1 anneks A.1.2.2]{EU90}
+\end{itemize}
+Den regningsmæssige værdi for snelast dominerende kan nu bestemmes til:
+\begin{center}
+	$E_{d,3}=$
+\end{center}
+
+\underline{Lastkombination 4: Nyttelast dominerende}
 \newline
-INDSÆTTE!
-\newline
-\newline
-\underline{Snelast dominerende}
-Nyttelasten for snelast dominerende kan bestemmes ud fra følgende formel: 
+Den regningsmæssige last, for nyttelast dominerende, bestemmes ud fra følgende formel:
+\begin{center}
+	$E_{d,4}=\gamma_{G1}\cdot K_{FI}\cdot G_{K1}+\gamma_{Q1}\cdot \Psi_{0,1}\cdot K_{FI}\cdot Q_{K1}+\gamma_{Q2}\cdot \Psi_{0,2}\cdot K_{FI}\cdot Q_{K2}+\gamma_{Q3}\cdot K_{FI}\cdot Q_{K3}$
+\end{center}
+\begin{itemize}
+	\item[-] $\Psi_{0,2}$: $\Psi$-faktor, som sættes til 0,3 \citep[ tabel A 1.1 anneks A.1.2.2]{EU90}
+\end{itemize}
+Den regningsmæssige værdi for nyttelast dominerende kan nu bestemmes til:
+\begin{itemize}
+	$E_{d,4}=$
+\end{itemize}
