@@ -37,7 +37,67 @@ Samme delprøve fra løs lejring bruges til fast lejring. Til fast lejring blive
 		Cyl + $W_s$ [g] & 340,45 & 340,46 & 340,50 & 337,52 \\ \hline
 		Cyl [g] & 241,99 & 241,99 & 241,99 & 241,99 \\ \hline
 		$W_s$ [g] & 98,55 & 98,47 & 98,51 & 98,57 \\ \hline
-		$e=\frac{d_s*p_w*V}{W_s}$ & & & & \\	\hline
+		$e=\frac{d_s*p_w*V}{W_s}-1$ & $e=\frac{2,643533194*0,99757*70}{98,55}-1$ & $e=\frac{2,643533194*0,99757*70}{98,47}-1$ & $e=\frac{2,643533194*0,99757*70}{98,51}-1$ & $e=\frac{2,643533194*0,99757*70}{98,57}-1$  \\ \hline
+		e & e=0,873137074 & e=0,874658867 & e=0,083897661 & e=0,872757011\\ \hline
 	\end{tabular}
 \end{center}
 
+$e_min$=gennemsnit af de fire forsøgsresultater
+$e_min=\frac{0,873137074+0,874658867+0,873897661+0,872757011}{4}$
+$e_min$=0,8736126532
+
+relativ densitet $d_s=\frac{W_s*p^t_w}{W_s+W_2-W_1}$
+
+$\frac{150,06*0,99757}{150,06+615,967-709,40}=2,643533194$
+
+Samme $d_s$ anvendes for "fest lejring"
+
+
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c| } 
+		\hline
+		Prøve nr & 1 & 2 & 3 & 4 \\	\hline 
+		Areal [$cm^2$] & 10,0 & 10,0 & 10,0 & 10,0 \\ \hline
+		Højde [cm] & 6,5 & 6,575 & 6,42 & 6,355 \\ \hline
+		Volume [$cm^3$] & 65 & 65,75 & 64,2 & 63,55 \\ \hline
+		Cyl + $W_s$ [g] & 349,48 & 349,31 & 346,55 & 345,75 \\ \hline
+		Cyl [g] & 241,99 & 238,95 & 238,95 & 238,95 \\ \hline
+		$W_s$ [g] & 107,49 & 110,36 & 107,6 & 106,8 \\ \hline
+		$e=\frac{d_s*p_w*V}{W_s}-1$ & $e=\frac{2,643533194*0,99757*65}{107,49}-1$ & $e=\frac{2,643533194*0,99757*65,75}{110,36}-1$ & $e=\frac{2,643533194*0,99757*64,2}{107,6}-1$ & $e=\frac{2,643533194*0,99757*63,55}{106,8}-1$  \\ \hline
+		e & e=0,59467912 & e=0,571130333 & e=0,573442602 & e=0,569178866\\ \hline
+	\end{tabular}
+\end{center}
+
+$e_min$=gennemsnit af de fire forsøgsresultater
+$e_min=\frac{0,594679612+0,571130333+0,573442602+0,569178866}{4}$
+$e_min$=0,5771078532
+
+\textbf{Beregninger}
+\newline
+
+Poretallet beregnes udfra formelen
+\begin{center}
+	$e_insitu=(1+w)*\frac{d_s}{y}*y_w-1$
+\end{center}
+
+Ledet $\frac{d_s}{y}*y_w$ kan erstattes med ledet $\frac{d_s*p_w*V}{W_s}$,hvor vi anvender tallene fra slidet?????? SKRIV LIGE noget andet om hvor vi får tallene fra????
+\begin{center}
+	$V=(\pi*3,5^2*7)$=V=269,3915701
+\end{center}
+\begin{center}
+	$e_insitu=(1+0)*\frac{2,643533194*1,00*(\pi*3,5^2*7)}{421,4}-1=e_insitu=0,689951490$
+\end{center}
+
+Den relative lejringstæthed, $I_D$ er graden af det intakte materiale som er kompakteret
+\begin{center}
+	$I_D=\frac{0,8736126532-0,689951490}{0,8736126532-0,5771078532}=I_D=0,6194205396$
+\end{center}
+
+\begin{figure}
+	\begin{center}
+		\input{tabelfriktions}
+	\end{center}
+\end{figure}
+
+\textbf{Fejlkilder}
+I Forsøggentagelse 2 kom der for meget materiale i cylinderen. Derfor er der taget noget ud efter de 80 slag og herefter er der givet 10 ekstra slag. 
