@@ -41,7 +41,7 @@ På disse rammekonstruktioner vil etagedækkene virke som en belastning, i stede
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/etageovergang.png}
+	\includegraphics[width=0.4\textwidth]{billeder/etageovergang.png}
 	\caption{Etageovergang på tilbygningen}
 	\label{fig:etage}
 \end{figure}
@@ -49,10 +49,79 @@ På disse rammekonstruktioner vil etagedækkene virke som en belastning, i stede
 Med denne opstilling kan reaktionerne beregnes og der ud fra finde belastningen, som vil komme på funderingen, men først skal lasterne beregnes.
 
 \section{Laster}
-Lidt tekst her.
+Tilbygningen til Strøybergs Palæ vil blive udsat for en række forskellige laster, både permanente- og variable laster, hvilke vil blive beregnet i dette afsnit således, at der senere hen kan opstilles lastkombinationer, regnes reaktionskræfter, snitkræfter, spændinger samt brudgrænse- og anvendelsesgrænsetilstande.
 
 \subsection{Permanent last}
-Indsætte her.
+Egenlasten er en permanent last. For tilbygningen til Strøybergs Palæ beregnes denne gennem de gjorte antagelser samt de givne mål, som er illustreret på Figur \ref{fig:farvel}.
+\newline
+\newline
+\textbf{Areal af facader og gavle}
+\newline
+\newline
+\underline{Facade}
+Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade. 
+\newline \indent{     }  Ét vindue regnes til være 0,95 m bred og 1,5 m høj TJEK MED MICHAEL! + KILDE. Døren antages at være 1,5 m bred og 2,1 m høj KILDE. Arealet for én facade bestemmes til:
+\begin{center}
+	$12,5 m\cdot 16,0 m - (1,5 m\cdot0,95 m\cdot11 + 1,5 m\cdot 2,1 m)=181,175 m^2$
+\end{center}
+
+Til beregning af væggens egenlast vides det, at der skal påregnes en indervæg og et isoleringslag, mens den ydervæggen ikke er en del af det statiske system og dermed ikke skal medregnes.
+\newline \indent{     }  Ifølge KILDE(http://www.bolius.dk/tunge-indvendige-vaegge-19288) aflæses en typisk indervæg til at være 130 mm tyk, og det antages, at denne værdi benyttes til tilbygningen af Strøybergs Palæ. Dermed kan værdien for indervæggen af facaden nu bestemmes ved at gange facadens areal uden viduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for mursten, hvilket er $1500,0 \frac{kg}{m^3}$:
+\begin{center}
+	$181,175 m^2\cdot 130 mm\cdot 1500,0 \frac{kg}{m^3}=35329,125 kg$
+\end{center}
+
+Denne værdi omregnes til $N$ ved at gange med tyngdeaccelerationen:
+\begin{center}
+	$35329,125 kg\cdot 9,82 \frac{m}{s^2}=346,932 kN$
+\end{center}
+
+I og med facaderne er identiske ganges de $346,932 kN$ med 2:
+\begin{center}
+	$346,932 kN\cdot 2=693,864 kN$
+\end{center}
+
+Isoleringslaget skal ifølge KILDE$(http://www.byggeriogenergi.dk/media/5932/indv_efterisolering_massive_murede_vaegge_ok.pdf)$ være 100 mm tyk. Det antages, at typen af isolering har densiteten $30 \frac{kg}{m^3}$ KILDE (http://www.rockwool.dk/produkter/u/7429/bygningsisolering/bd-60-flexibatts).
+\newline \indent{     }  Facadens areal uden vinduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for isoleringen:
+\begin{center}
+	$181,175 m^2\cdot 0,1 \cdot 30 \frac{kg}{m^3}=543,525 kg$
+\end{center}
+
+Denne værdi omregnes til $N$ ved at gange med tyngdeaccelerationen:
+\begin{center}
+	$543,525 kg\cdot 9,82 \frac{m}{s^2}=5,337 kN$
+\end{center}
+
+I og med facaderne er identiske ganges de $5,337 kN$ med 2:
+\begin{center}
+	$5,337 kN\cdot 2=10,675 kN$
+\end{center}
+
+\underline{Gavl}
+Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer på denne gavl, mens der antages at være 9 vinduer, identiske med dem for facaden, for gavlen, der ikke ligger op ad den nuværende bygning. Til forskel for facadens areal, har gavlene også arealet for tagetagen, som har dimensionerne der ses på Figur \ref{fig:tagetage}. Arealet for facaden der ikke ligger op ad den nuværende bygning bestemmes dermed til:
+\begin{center}
+	$12 m\cdot 16 m + 3 m\cdot 12 m \cdot 0,5 - 1,5 m\cdot 0,95 m \cdot 9=197,175 m^2$
+\end{center}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{billeder/Tagmedvinkel.png}
+	\caption{Dimensioner for tagetagen}
+	\label{fig:tagetage}
+\end{figure}
+
+Ligesom for facaderne skal der også påregnes en indervæg og et isoleringslag for gavlene.
+\newline
+\newline
+$Beregning af gavlenes bidrag til egenlast: 
+Den arealet af den indvendige væg ganges med tykkelsen, og denne gangen med densiteten for en mursten, som antages til at væres 1500 kg/m^3 (http://www.mur-tag.dk/index.php?id=368). Dernæst omregnes vægten til kN og ganges med 2, da der er to gavle.
+….Indsæt beregning for indvendig væg af gavl.
+Isoleringen regnes på samme måde, denne gang med en anden tykkelse og densitet. Densiten af isoleringen antages til at være 30 kg/m^3 (http://www.rockwool.dk/produkter/u/7429/bygningsisolering/bd-60-flexibatts). 
+Det endelige ganges igen med 2. 
+…...indsæt beregning for isolering  i gavl.
+Beregning af facadernes bidrag til egenlast:
+Fremgangsmåden er her den samme som ved gavlenes last, forskellen er kun arealet som her er 181.175m^2
+….. Indsæt kun resultat????$
 
 \subsection{Variable laster}
 Af variable laster optræder der både snelast, vindlast og nyttelast på bygningen, og disse udregnes efter Dansk Standard Eurocode 1991.
