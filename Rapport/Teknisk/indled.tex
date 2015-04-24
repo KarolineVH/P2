@@ -41,7 +41,7 @@ På disse rammekonstruktioner vil etagedækkene virke som en belastning, i stede
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.4\textwidth]{billeder/etageovergang.png}
+	\includegraphics[width=0.2\textwidth]{billeder/etageovergang.png}
 	\caption{Etageovergang på tilbygningen}
 	\label{fig:etage}
 \end{figure}
@@ -55,10 +55,11 @@ Tilbygningen til Strøybergs Palæ vil blive udsat for en række forskellige las
 Egenlasten er en permanent last. For tilbygningen til Strøybergs Palæ beregnes denne gennem de gjorte antagelser samt de givne mål, som er illustreret på Figur \ref{fig:farvel}.
 \newline
 \newline
-\textbf{Areal af facader og gavle}
+\textbf{Last fra væg}
 \newline
 \newline
 \underline{Facade}
+\newline
 Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade. 
 \newline \indent{     }  Ét vindue regnes til være 0,95 m bred og 1,5 m høj TJEK MED MICHAEL! + KILDE. Døren antages at være 1,5 m bred og 2,1 m høj KILDE. Arealet for én facade bestemmes til:
 \begin{center}
@@ -68,7 +69,7 @@ Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. D
 Til beregning af væggens egenlast vides det, at der skal påregnes en indervæg og et isoleringslag, mens den ydervæggen ikke er en del af det statiske system og dermed ikke skal medregnes.
 \newline \indent{     }  Ifølge KILDE(http://www.bolius.dk/tunge-indvendige-vaegge-19288) aflæses en typisk indervæg til at være 130 mm tyk, og det antages, at denne værdi benyttes til tilbygningen af Strøybergs Palæ. Dermed kan værdien for indervæggen af facaden nu bestemmes ved at gange facadens areal uden viduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for mursten, hvilket er $1500,0 \frac{kg}{m^3}$:
 \begin{center}
-	$181,175 m^2\cdot 130 mm\cdot 1500,0 \frac{kg}{m^3}=35329,125 kg$
+	$181,175 m^2\cdot 130 mm\cdot 1500,0 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}=35329,125 kg$
 \end{center}
 
 Denne værdi omregnes til $N$ ved at gange med tyngdeaccelerationen:
@@ -84,12 +85,7 @@ I og med facaderne er identiske ganges de $346,932 kN$ med 2:
 Isoleringslaget skal ifølge KILDE$(http://www.byggeriogenergi.dk/media/5932/indv_efterisolering_massive_murede_vaegge_ok.pdf)$ være 100 mm tyk. Det antages, at typen af isolering har densiteten $30 \frac{kg}{m^3}$ KILDE (http://www.rockwool.dk/produkter/u/7429/bygningsisolering/bd-60-flexibatts).
 \newline \indent{     }  Facadens areal uden vinduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for isoleringen:
 \begin{center}
-	$181,175 m^2\cdot 0,1 \cdot 30 \frac{kg}{m^3}=543,525 kg$
-\end{center}
-
-Denne værdi omregnes til $N$ ved at gange med tyngdeaccelerationen:
-\begin{center}
-	$543,525 kg\cdot 9,82 \frac{m}{s^2}=5,337 kN$
+	$181,175 m^2\cdot 0,1 \cdot 30 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}=5,337 kN$
 \end{center}
 
 I og med facaderne er identiske ganges de $5,337 kN$ med 2:
@@ -98,6 +94,7 @@ I og med facaderne er identiske ganges de $5,337 kN$ med 2:
 \end{center}
 
 \underline{Gavl}
+\newline
 Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer på denne gavl, mens der antages at være 9 vinduer, identiske med dem for facaden, for gavlen, der ikke ligger op ad den nuværende bygning. Til forskel for facadens areal, har gavlene også arealet for tagetagen, som har dimensionerne der ses på Figur \ref{fig:tagetage}. Arealet for facaden der ikke ligger op ad den nuværende bygning bestemmes dermed til:
 \begin{center}
 	$12 m\cdot 16 m + 3 m\cdot 12 m \cdot 0,5 - 1,5 m\cdot 0,95 m \cdot 9=197,175 m^2$
@@ -105,23 +102,107 @@ Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.4\textwidth]{billeder/Tagmedvinkel.png}
+	\includegraphics[width=0.6\textwidth]{billeder/Tagmedvinkel.png}
 	\caption{Dimensioner for tagetagen}
 	\label{fig:tagetage}
 \end{figure}
 
-Ligesom for facaderne skal der også påregnes en indervæg og et isoleringslag for gavlene.
+Ligesom for facaderne skal der også påregnes en indervæg og et isoleringslag for gavlene, og det antages at værdierne for facaderne er ens med gavlene med hensyn til tykkelse og densitet for indervæg og isolering.
 \newline
 \newline
-$Beregning af gavlenes bidrag til egenlast: 
-Den arealet af den indvendige væg ganges med tykkelsen, og denne gangen med densiteten for en mursten, som antages til at væres 1500 kg/m^3 (http://www.mur-tag.dk/index.php?id=368). Dernæst omregnes vægten til kN og ganges med 2, da der er to gavle.
-….Indsæt beregning for indvendig væg af gavl.
-Isoleringen regnes på samme måde, denne gang med en anden tykkelse og densitet. Densiten af isoleringen antages til at være 30 kg/m^3 (http://www.rockwool.dk/produkter/u/7429/bygningsisolering/bd-60-flexibatts). 
-Det endelige ganges igen med 2. 
-…...indsæt beregning for isolering  i gavl.
-Beregning af facadernes bidrag til egenlast:
-Fremgangsmåden er her den samme som ved gavlenes last, forskellen er kun arealet som her er 181.175m^2
-….. Indsæt kun resultat????$
+Værdien for indervæggen bestemmes til:
+\begin{center}
+	$197,175 m^2\cdot 130 mm\cdot 1500,0 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}=377,570 kN$
+\end{center}
+
+Værdien for isolering bestemmes til:
+\begin{center}
+	$197,175 m^2\cdot 100 mm\cdot 30 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}=5,809 kN$
+\end{center}
+
+Hermed regnes værdierne nu for gavlen, der ligger op ad den nuværende bygning. 
+\newline \indent{     }  Arealet af gavlen bestemmes til:
+\begin{center}
+	$12 m\cdot 16 m + 3 m\cdot 12 m \cdot 0,5=210,0 m^2$
+\end{center}
+
+Værdien for indervæggen bestemmes til:
+\begin{center}
+	$210,0 m^2\cdot 130 mm\cdot 1500,0 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}=402,129 kN$
+\end{center}
+
+Værdien for isolering bestemmes til:
+\begin{center}
+	$210,0 m^2\cdot 100 mm\cdot 30 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}=6,187 kN$
+\end{center}
+
+\textbf{Last fra gulv}
+\newline
+Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper og andre former for genstande, der mindsker mængden af gulv. Derfor er den samlede mængde gulv pr. etage $12,\!5 m\cdot 12,\!0 m=150,\!0 m^2$.
+\newline \indent{     }  Fire ud af de fem etager består af bærende gulv, hvor den sidste, kælderetagen, ligger på fundamentet. Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Der antages, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen, og mellem betondækket og undergulvet lægges isoleringen. 
+\newline \indent{     }  Først bestemmes gulvets last for en etage, hvorefter denne ganges denne med fire, da der er fire etager foruden kælderetagen. Betondækkets andel beregnes først, da både længden, bredden og tykkelsen kendes. 
+\newline
+\newline
+Rumfanget af betonen for én etage bestemmes til:
+\begin{center}
+	$12,\!5 m\cdot 12,\!0 m\cdot 120 mm=18,\!0 m^3$
+\end{center}
+
+Rumfanget ganges med betons densitet, som er $2400 \frac{kg}{m^3}$, KILDE (http://materials.dk/links/D5x5\%20Betons\%20densitet.pdf), hvorefter denne værdi ganges med tyngdeaccelerationen, for at få værdien i $kN$, som der ganges med 4, for at få lasten for alle fire etager:
+\begin{center}
+	$18,\!0 m^3\cdot 2400 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}\cdot 4=1693,440 kN$
+\end{center}
+
+Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!0$ mm høj og $140,\!0$ mm bred KILDE $(http://www.danskbyggeri.dk/files/Filbibliotek/Erhvervs-\%20og\%20byggeteknik/Tolerancer/52615.toemrer_net.pdf)$. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke KILDE.
+\begin{center}
+	$\frac{12,\!5 m}{400 mm}=31,\!25$ bjælker
+\end{center} 
+
+Da der ikke kan optræde $31,\!25$ bjælker rundes der op til 32 bjælker.
+\newline
+\newline
+Rumfanget af én bjælke, som består af to bjælker med længden $6,\!25$ m, ganges med bjælkens densitet fir tørrumvægt af træ KILDE (http://trae.dk/index.asp?page=\%2FDokumenter\%2FDokument.asp\%3FDokumentID\%3D124), hvorefter denne værdi ganges med tyngdeaccelerationen og ganges med 4: 
+\begin{center}
+	$7,\!840 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=157,\!057 kN$
+\end{center}
+
+Isoleringsarealet for tilbygningen er det samlede gulvareal minus det areal, som bjælkerne ligger på:
+\begin{center}
+	$150,\! m^2 - (140 mm\cdot 12,\!5 m\cdot 32)=94,\!0 m^2$
+\end{center}
+
+Isoleringslaget har samme højde som bjælkerne og har en densitet på $30 \frac{kg}{m^3}$ KILDE (http://www.rockwool.dk/produkter/u/7429/bygningsisolering/bd-60-flexibatts). Dermed kan værdien for isolering bestemmes til:
+\begin{center}
+	$94,\!0 m^2\cdot 140 mm\cdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=15,\!508 kN$
+\end{center}
+
+Gulvbelægningen antages for at være linoleumsgulv med en højde på $2,\!5 mm$ KILDE! med en densitet på $2,\!9 \frac{kg}{m^3}$ KILDE (http://www.kjeldtoft.com/upl/website/download-brochurer-/DesktopTekniskespecifikationer.pdf). Dermed kan værdien for linoleumsgulv bestemmes til:
+\begin{center}
+	$2,\!5 mm\cdot 12,\!5 m\cdot 12,\!0 m\cdot 2,\!9 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=0,\!043 kN$
+\end{center}
+
+\textbf{Last fra tag}
+\newline
+Det antages at taget, som benyttes, er et mellemtungt tag, som har værdien $600 \frac{N}{m^2}$, (http://www.ringstedspaer.dk/konstruktioner.htm) og det er et sadeltag med teglsten. Der er derfor fundet en middelværdi for lasten fra taget til systemet. 
+\newline
+\newline
+Tagets areal bestemmes ud fra Figur \ref{fig:tagetage}:
+\begin{center}
+	$6,\!7 m\cdot 12,\!5 m \cdot 2=167,\!500 m^2$
+\end{center}
+
+Arealet ganges med værdien for mellemtungt tag:
+\begin{center}
+	$167,\!500 m^2\cdot 600 \frac{N}{m^2}=100,\!500 kN$
+\end{center}
+
+\textbf{Samlet last}
+\newline
+De beregnede laster for væg, gulv og tag lægges nu sammen, for at få den samlede egenlast, som divideres med arealet, som den virker over:
+\begin{center}
+	$\frac{0 kN}{12,\!5 m\cdot 12,\!0 m}=23,\!085 \frac{kN}{m^2}$
+\end{center}
+
 
 \subsection{Variable laster}
 Af variable laster optræder der både snelast, vindlast og nyttelast på bygningen, og disse udregnes efter Dansk Standard Eurocode 1991.
