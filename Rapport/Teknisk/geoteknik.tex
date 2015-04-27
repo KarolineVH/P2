@@ -99,11 +99,21 @@ Uensformighedstallet fortæller, hvor velsorteret jorden er:
 
 Forsøget er udført to gange, og der er derfor lavet en sigtekurve for hvert forsøg, og uensformighedstallet er udregnet for begge forsøg. 
 \newline \indent{     }  Det procentvise gennemfald i hver sigte er beregnet, og herudfra fås nedenstående sigtekurver: 
-\newline
-\newline
-SIGTEKURVER INDSÆTTES HER
-\newline
-\newline
+
+\begin{figure}[htbp] \centering
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\includegraphics[width=1.0\textwidth]{billeder/sigtekurve1.png}
+		\caption{Sigtekurve til forsøg 1}
+		\label{fig:sigtekurve1}
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\centering
+		\includegraphics[width=1.0\textwidth]{billeder/sigtekurve2.png}
+		\caption{Sigtekurve til forsøg 2}
+		\label{fig:sigtekurve2}
+	\end{minipage}
+\end{figure}
+
 Uensformighedstallet for begge forsøg er beregnet, ved at lave lineær regression i mellem henholdsvis 10\% og 60\% og derved finde 10\%-fraktilen og 60\%-fraktilen.
 \newline
 \newline
@@ -173,21 +183,20 @@ $I_D$ bestemmes ved:
 	\item[-] $e_{in situ}$: jordens naturlige poretal 
 \end{itemize}
 
-Jordens naturlige poretal $e_{in situ}$ bestemmes ved:
+Poretallet \textit{e}, for henholdsvis den løseste og fasteste lejring beregnes ved:
 
 \begin{center}
-	$e_{in situ} = (1 + w) \frac{d_s  \rho_w  V}{W_s} - 1$
+	$e = \frac{d_s \rho_w  V}{W_s} - 1$
 \end{center}
 
 \begin{itemize}
-	\item[-] w: det naturlige vandindhold [rent tal], som er fundet i forsøg 1: Vandindhold
-	\item[-] $d_s$: kornvægtfylde [rent tal], som er fundet i forsøg 3: Kornvægtfylde 
+	\item[-] $d_s$: kornvægtfylde [rent tal], som er fundet i forsøg 3: kornvægtfylde 
 	\item[-] $\rho_w$: Vands densitet på $1 \frac{g}{cm^3}$
 	\item[-] V: Volumen af materialet $[cm^3]$
-	\item[-] $W_s$: ???
+	\item[-]: $W_s$: Vægten at tørt kornmateriale [g]
 \end{itemize}
 
-Der er udført fire forsøg for henholdsvis den løse lejring og den faste lejring. $e_{min}$, $e_{max}$ og $e_{in situ}$ og den relative lejringstæthed $I_D$ er beregnet til:
+Der er udført fire forsøg for henholdsvis den løseste og den fasteste lejring, hvor jordens gennemsnitlige poretal er beregnet til:
 
 \begin{center}
 	$e_{min} = \frac{0,\!595 + 0,\!571 + 0,\!573 + 0,\!569}{4} = 0,\!577$
@@ -197,9 +206,23 @@ Der er udført fire forsøg for henholdsvis den løse lejring og den faste lejri
 	$e_{max} = \frac{0,\!873 + 0,\!875 + 0,\!874 + 0,\!873}{4} = 0,\!874$
 \end{center}
 
+Herefter bestemmes jordens naturlige poretal $e_{in situ}$ ved:
+
+\begin{center}
+	$e_{in situ} = (1 + w) \frac{d_s  \rho_w  V}{W_s} - 1$
+\end{center}
+
+\begin{itemize}
+	\item[-] w: det naturlige vandindhold [rent tal], som er fundet i forsøg 1: vandindhold 
+\end{itemize}
+
+Dette er beregnet til:
+
 \begin{center}
 	$e_{in situ} = (1+0) \cdot \frac{2,\!643 \cdot 1,\!00 \cdot 269,\!39}{421,\!4} - 1 = 0,\!690$
 \end{center}
+
+Slutteligt kan den relative lejringstæthed $I_D$ bestemmes til:
 
 \begin{center}
 	$I_D = \frac{0,\!874 - 0,\!690}{0,\!874 - 0,\!577} = 0,\!619$
