@@ -31,62 +31,46 @@ Ved en sigteanalyse kan der både udføres en grovsigtning og en finsigtning. Gr
 \newline
 \textbf{Resultater}
 \newline
-Tabel over resultater for det første udførte forsøg:
 \newline
-\newline
-Tabel over resultater for det andet udførte forsøg:
-\newline
-\newline
+Forsøget er udført to gange. I Figur \ref{fig:forsoget} og Figur \ref{fig:forsogto} ses en oversigt over de resultater der er opnået i hvert forsøg. 
+
+\begin{figure}[htbp] \centering
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\includegraphics[width=1.0\textwidth]{billeder/forsogetsigteanalyse.png}
+		\caption{Tabel over resultater for det første udførte forsøg}
+		\label{fig:forsoget}
+	\end{minipage}\hfill
+\end{figure}
+
+\begin{figure}[htbp] \centering
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\includegraphics[width=1.0\textwidth]{billeder/forsogtosigteanalyse.png}
+		\caption{Tabel over resultater for det andet udførte forsøg}
+		\label{fig:forsogto}
+	\end{minipage}\hfill
+\end{figure}
+
 \textbf{Beregninger}
 \newline
-\underline{Forsøg 1}
-\newline
-\newline
-HER INDSÆTTES SIGTEKURVE FOR FORSØG 1
-\newline
-\newline
-For at finde 10\%-fraktilen er der lavet lineær regression imellem sigte med maskestørrelse $0,\!075$ mm og $0,\!125$ mm, hvor følgende ligning fremgår: 
-
-\begin{center}
-	$d_{10}=862,\!42x - 63,\!223$
-\end{center}
-
-For at finde 60\%-fraktilen er der lavet lineær regression imellem sigte med maskestørrelse $0,\!125$ mm og $0,\!15$ mm, hvor følgende ligning fremgår:
-
-\begin{center}
-	$d_{60}=937,\!12x - 72,\!56$
-\end{center}
-
-Henholdsvis 10\%-fraktilen og 60\%-fraktilen er beregnet til: $d_{10}=0,\!085\%$ og $d_{60}=0,\!14\%$
-\newline
-\newline
-Uensformighedstallet beregnes til:
-\begin{center}
-	$U = \frac{d_{60}}{d_{10}} = \frac{0,\!14}{0,\!085} = 1,\!67$
-\end{center}
-
 \underline{Forsøg 2}
 \newline
 \newline
-HER INDSÆTTES SIGTEKURVE FOR FORSØG 2
+60\%-fraktilen og 10\%-fraktilen beregnet, ved at lave lineær regression imellem sigte med maskestørrelse $0,\!125$ mm og $0,\!15$ mm, der ligger mellem henholdsvis 60\% og 10\% i sigtekurven. 
 \newline
 \newline
-Ligesom ovenfor, er 60\%-fraktilen og 10\%-fraktilen beregnet, ved at lave lineær regression imellem de to punkter, der ligger mellem henholdsvis 60\% og 10\% i sigtekurven. Disse punkter, er de samme som ovenfor. På samme måde, bliver uensformighedstallet beregnet. 
-
+Nedenstående ligning fås ved 10\%-fraktilen:
 \begin{center}
-	$d_{10}=502,\!31x - 35,\!635 \leftrightarrow d_{10}=0,\!091$
-	\newline
-	\newline
-	$d_{60}=1390,\!7x - 146,\!68 \leftrightarrow d_{60}=0,\!15$
-	\newline
-	\newline 
-	$U=\frac{d_{60}}{d_{10}} = \frac{0,\!15}{0,\!091} = 1,\!64$
+	$y = 502,\!31x - 35,\!635 \leftrightarrow d_{10}=0,\!091$
 \end{center}
 
-Til videre beregninger benyttes gennemsnittet af de to fundne værdier for uensformighedstallet: 
-
+Nedenstående ligning fås ved 60\%-fraktilen:
 \begin{center}
-	$\frac{1,\!67+1,\!64}{2}=1,\!65$
+	$y = 1390,\!7x - 146,\!68 \leftrightarrow d_{60}=0,\!15$
+\end{center}
+
+Uensformighedstallet beregnes til:
+\begin{center}
+	$U=\frac{d_{60}}{d_{10}} = \frac{0,\!15}{0,\!091} = 1,\!64$
 \end{center}
 
 \textbf{Fejlkilder}

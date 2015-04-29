@@ -132,7 +132,7 @@ Uensformighedstallet fortæller, hvor velsorteret jorden er:
 \end{itemize}
 
 Forsøget er udført to gange, og der er derfor lavet en sigtekurve for hvert forsøg, og uensformighedstallet er udregnet for begge forsøg. 
-\newline \indent{     }  Det procentvise gennemfald i hver sigte er beregnet, og herudfra fås nedenstående sigtekurver: 
+\newline \indent{     }  Det procentvise gennemfald i hver sigte er beregnet, og herudfra fås sigtekurverne vist på Figur \ref{fig:sigtekurve1} og Figur \ref{fig:sigtekurve2}.
 
 \begin{figure}[htbp]
 		\includegraphics[width=1.0\textwidth]{billeder/sigtekurve1.png}
@@ -150,25 +150,33 @@ Forsøget er udført to gange, og der er derfor lavet en sigtekurve for hvert fo
 Uensformighedstallet for begge forsøg er beregnet, ved at lave lineær regression i mellem henholdsvis 10\% og 60\% og derved finde 10\%-fraktilen og 60\%-fraktilen.
 \newline
 \newline
-Ved forsøg 1 er 10\%-fraktilen og 60\%-fraktilen beregnet til: 
+Ved det første udførste forsøg er 10\%-fraktilen fundet ved at lave lineær regression imellem sigte med maskestørrelse $0,\!075$ mm og $0,\!125$ mm, hvor følgende ligning fremgår: 
+
+\begin{center}
+	$y = 862,\!42x - 63,\!223$
+\end{center}
+
+For at finde 60\%-fraktilen er der lavet lineær regression imellem sigte med maskestørrelse $0,\!125$ mm og $0,\!15$ mm, hvor følgende ligning fremgår:
+
+\begin{center}
+	$d_{60}=937,\!12x - 72,\!56$
+\end{center}
+
+Ved forsøg 1 er 10\%-fraktilen og 60\%-fraktilen hermed beregnet til: 
 \begin{center}
 	$d_{10} = 0,\!08$ og $d_{60} = 0,\!14$
 \end{center} 
 
-Uensformighedstallet i forsøg 1 er hermed:
+Uensformighedstallet i forsøg 1 er derved:
 \begin{center}
 	$U = \frac{0,\!14}{0,\!08} = 1,\!67$
 \end{center}
 
-Ved forsøg 2 er 10\%-fraktilen og 60\%-fraktilen beregnet til:
+Ved forsøg 2 er 10\%-fraktilen, 60\%-fraktilen og uensformighedstallet beregnet til:
 \begin{center}
-	$d_{10} = 0,\!91$ og $d_{60} = 0,\!15$
+	$d_{10} = 0,\!91$ og $d_{60} = 0,\!15$ og $U = \frac{0,\!15}{0,\!91} = 1,\!64$
 \end{center} 
-
-Uensformighedstallet i forsøg 2 er hermed:
-\begin{center}
-	$U = \frac{0,\!15}{0,\!91} = 1,\!64$
-\end{center}
+Uddybbende beregninger er vist i Bilag B. 
 
 Til videre beregninger benyttes gennemsnittet af uensformighedstallet for forsøg 1 og forsøg 2, som er $1,\!65$. Dette tal fortæller, at jorden er velsorteret. 
 
