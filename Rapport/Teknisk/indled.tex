@@ -60,7 +60,15 @@ Egenlaster er permanente laster. For tilbygningen til Strøybergs Palæ beregnes
 \newline
 \underline{Facade}
 \newline
-Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade. 
+Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade, hvilket illustreres på Figur \ref{fig:facade}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{billeder/facadenord.png}
+	\caption{Facaden på øst- og vestsiden}
+	\label{fig:facade}
+\end{figure}
+ 
 \newline \indent{     }  Ét vindue regnes til være $0,\!95$ m bred og $1,\!5$ m høj TJEK MED MICHAEL! + KILDE. Døren antages at være $1,\!5$ m bred og $2,\!1$ m høj KILDE. Arealet for én facade bestemmes til:
 \begin{center}
 	$12,\!5 m\cdot 16,\!0 m - (1,\!5 m\cdot0,\!95 m\cdot11 + 1,\!5 m\cdot 2,\!1 m)=181,\!175 m^2$
@@ -95,10 +103,17 @@ I og med facaderne er identiske ganges de $5,\!337 kN$ med 2:
 
 \underline{Gavl}
 \newline
-Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer på denne gavl, mens der antages at være 9 vinduer, identiske med dem for facaden, for gavlen, der ikke ligger op ad den nuværende bygning. Til forskel for facadens areal, har gavlene også arealet for tagetagen, som har dimensionerne der ses på Figur \ref{fig:tagetage}. Arealet for facaden der ikke ligger op ad den nuværende bygning bestemmes dermed til:
+Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer på denne gavl, mens der antages at være 9 vinduer, identiske med dem for facaden, for gavlen, der ikke ligger op ad den nuværende bygning, som kan ses på Figur \ref{fig:gavl}. Til forskel for facadens areal, har gavlene også arealet for tagetagen, som har dimensionerne der ses på Figur \ref{fig:tagetage}. Arealet for facaden der ikke ligger op ad den nuværende bygning bestemmes dermed til:
 \begin{center}
 	$12 m\cdot 16 m + 3 m\cdot 12 m \cdot 0,\!5 - 1,\!5 m\cdot 0,\!95 m \cdot 9=197,\!175 m^2$
 \end{center}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/facadevestellerøst.png}
+	\caption{Dimensioner for tagetagen}
+	\label{fig:gavl}
+\end{figure}
 
 \begin{figure}[htbp]
 	\centering
@@ -226,18 +241,24 @@ Eksponeringsfaktoren kan nu bestemmes til:
 \begin{center}
 $C_e=1,\!0\cdot 1,\!0=1,\!0$
 \end{center}
-Strøybergs Palæ har et saddeltag, og dermed skal der tages højde for fire lasttilfælde, som ses på Figur INDSÆTTE FIGUR!
-\newline
-\newline
-\underline{Lasttilfælde 1}
+Strøybergs Palæ har et saddeltag, og dermed skal der tages højde for fire lasttilfælde, som ses på Figur \ref{fig:sne}. Derudover ganges snetilfældets værdi med 6,25 m, som er halvdelen af tilbygningens længde, hvilket gøres, da det statiske system er opdelt i tre rammer, for at få værdien ud i $\frac{kN}{m}$.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{billeder/snelasttilfælde.png}
+	\caption{Fordeling af sne i de fire tilfælde}
+	\label{fig:sne}
+\end{figure}
+
+\underline{Snetilfælde 1}
 \begin{center}
-$s_1=0,\!8\cdot 1.0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}=0,\!8 \frac{kN}{m^2}$
+$s_1=0,\!8\cdot 1.0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}\cdot 6,\!25 m=5,\!0 \frac{kN}{m}$
 \end{center}
-\underline{Lasttilfælde 2 og 3}
+\underline{Snetilfælde 2 og 3}
 \begin{center}
-$s_2=\frac{1}{2}\cdot 0,\!8\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}=0,\!4 \frac{kN}{m^2}$
+$s_2=\frac{1}{2}\cdot 0,\!8\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}\cdot 6,\!25 m=2,\!5 \frac{kN}{m}$
 \end{center}
-\underline{Lasttilfælde 4}
+\underline{Snetilfælde 4}
 \begin{center}
 	$s_4=\mu_wC_eC_ts_k \frac{kN}{m^2}$
 \end{center}
@@ -246,7 +267,7 @@ $s_2=\frac{1}{2}\cdot 0,\!8\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}=0,\!4 \f
 \end{itemize}
 Den karakteristiske snelast for lasttilfælde 4 kan nu bestemmes til:
 \begin{center}
-	$s_4=1,\!2\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}=1,\!2 \frac{kN}{m^2}$
+	$s_4=1,\!2\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}6,\!25 m=7,\!5 \frac{kN}{m}$
 \end{center}
 I og med at lasttilfælde 4 giver den største last, anvendes denne til videre beregning.
 
