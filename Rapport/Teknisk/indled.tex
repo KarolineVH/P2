@@ -251,20 +251,33 @@ Den karakteristiske snelast for lasttilfælde 4 kan nu bestemmes til:
 I og med at lasttilfælde 4 giver den største last, anvendes denne til videre beregning.
 
 \subsubsection{Vindlast}
-Vindlasten beregnes for det højeste punkt på konstruktionen, hvilket er på tagspidsen for tilbygningen, da det er det punkt, hvor vinden er kraftigst.
+For vindlasten skal der regnes en nettovindlast, som er forskellige mellem den udvendige og den indvendige last. Lasterne skal ud i $\frac{kN}{m}$, som skal anvendes til lastkombinationer.
+\newline \indent{     }  For Strøybergs Palæ regnes der en nettovindlast for siden af bygningen og for taget af bygningen. Dette gøres for tre vindretninger, nord, øst og vest, da sydsiden af tilbygningen kommer i forlængelse af en anden bygning, og derfor formodes denne vindlast ikke at have særlig stor betydning for tilbygningen.
 \newline
 \newline
-FIGUR! - henvis til den med taget, som skal være i egenlasten
-\newline
-\newline
-Til at bestemme vindlasten på tilbygningen bruges følgende formel:	
-\begin{center} $w_e=q_p(z_e)c_{pe}$
+Til at bestemme vindlasten på tilbygningens vindtryk på de udvendige flader anvendes følgende formel:	
+\begin{center} 
+	$w_e=q_p(z_e)c_{pe}$
 \end{center}
 \begin{itemize}
 	\item[-] $q_p$: peakhastighedstrykket
-	\item[-] $z_e$: referencehøjden for det udvendige vindtryk
+	\item[-] $z_e$: referencehøjden for det udvendige vindtryk, som sættes til 19 m for taget og 16 m for tilbygningen uden tag \ref{fig:tagetage}
 	\item[-] $c_{pe}$: formfaktoren for det udvendige vindtryk
 \end{itemize}
+
+Til at bestemme vindlasten på tilbygningens vindtryk på de indvendige flader anvendes følgende formel:
+\begin{center} 
+	$w_i=q_p(z_i)c_{pi}$
+\end{center}
+\begin{itemize}
+	\item[-] $q_p$: peakhastighedstrykket
+	\item[-] $z_i$: referencehøjden for det indvendige vindtryk, som sættes lig $z_e$ \citep[ kapitel 7.2.9]{EU91}
+	\item[-] $c_{pi}$: formfaktoren for det indvendige vindtryk
+\end{itemize}
+
+Nedenfor gives et beregningseksempel for beregning af $q_p$ på tilbygningens udvendige side med højden 19 m. Beregningerne for udvendig med højden 16 m og indvendig for både 19 m og 16 m kan ses i bilag, hvor fremgangsmåden er ens som den viste blot med andre værdier fra de samme tabeller som anvendes i eksemplet. INDSÆTTE REFERENCE HER!
+\newline
+\newline
 Den maksimale belastning fra vinden, peakhastighedstrykket $q_p$, bestemmes ved:
 \begin{center}
 $q_p(z_e)=[1+7I_v(z_e)]\frac{1}{2}pv_m^2(z_e)$
