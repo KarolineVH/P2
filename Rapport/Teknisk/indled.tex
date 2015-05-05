@@ -75,7 +75,7 @@ Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. D
 \end{center}
 
 Til beregning af væggens egenlast vides det, at der skal påregnes en indervæg og et isoleringslag, mens den ydervæggen ikke er en del af det statiske system og dermed ikke skal medregnes.
-\newline \indent{     }  Ifølge KILDE(http://www.bolius.dk/tunge-indvendige-vaegge-19288) aflæses en typisk indervæg til at være 130 mm tyk, og det antages, at denne værdi benyttes til tilbygningen af Strøybergs Palæ. Dermed kan værdien for indervæggen af facaden nu bestemmes ved at gange facadens areal uden viduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for mursten, hvilket er $1500,\!0 \frac{kg}{m^3}$:
+\newline \indent{     }  En typisk indervæg er typisk 130 mm tyk \citep{indervaeg}, og det antages, at denne værdi benyttes til tilbygningen af Strøybergs Palæ. Dermed kan værdien for indervæggen af facaden nu bestemmes ved at gange facadens areal uden viduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for mursten, hvilket er $1500,\!0 \frac{kg}{m^3}$:
 \begin{center}
 	$181,\!175 m^2\cdot 130 mm\cdot 1500,\!0 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=35329,\!125 kg$
 \end{center}
@@ -90,7 +90,7 @@ I og med facaderne er identiske ganges de $346,\!932 kN$ med 2:
 	$346,\!932 kN\cdot 2=693,\!864 kN$
 \end{center}
 
-Isoleringslaget skal ifølge KILDE$(http://www.byggeriogenergi.dk/media/5932/indv_efterisolering_massive_murede_vaegge_ok.pdf)$ være 100 mm tyk. Det antages, at typen af isolering har densiteten $30 \frac{kg}{m^3}$ KILDE (http://www.rockwool.dk/produkter/u/7429/bygningsisolering/bd-60-flexibatts).
+Isoleringslaget regnes til at være 100 mm tyk \citep{isolering}, og det antages, at typen af isolering har densiteten $30 \frac{kg}{m^3}$ \citep{densitet}.
 \newline \indent{     }  Facadens areal uden vinduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for isoleringen:
 \begin{center}
 	$181,\!175 m^2\cdot 0,1 \cdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=5,\!337 kN$
@@ -165,12 +165,12 @@ Rumfanget af betonen for én etage bestemmes til:
 	$12,\!5 m\cdot 12,\!0 m\cdot 120 mm=18,\!0 m^3$
 \end{center}
 
-Rumfanget ganges med betons densitet, som er $2400 \frac{kg}{m^3}$, KILDE (http://materials.dk/links/D5x5\%20Betons\%20densitet.pdf), hvorefter denne værdi ganges med tyngdeaccelerationen, for at få værdien i $kN$, som der ganges med 4 for at få lasten for alle fire etager:
+Rumfanget ganges med betons densitet, som er $2400 \frac{kg}{m^3}$ \citep{}, hvorefter hvorefter denne værdi ganges med tyngdeaccelerationen, for at få værdien i $kN$, som der ganges med 4 for at få lasten for alle fire etager:
 \begin{center}
 	$18,\!0 m^3\cdot 2400 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}\cdot 4=1693,440 kN$
 \end{center}
 
-Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!0$ mm høj og $140,\!0$ mm bred KILDE $(http://www.danskbyggeri.dk/files/Filbibliotek/Erhvervs-\%20og\%20byggeteknik/Tolerancer/52615.toemrer_net.pdf)$. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke KILDE.
+Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!0$ mm høj og $140,\!0$ mm bred \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke KILDE!!!!!
 \begin{center}
 	$\frac{12,\!5 m}{400 mm}=31,\!25$ bjælker
 \end{center} 
@@ -178,7 +178,7 @@ Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af ti
 Da der ikke kan optræde $31,\!25$ bjælker rundes der op til 32 bjælker.
 \newline
 \newline
-Rumfanget af én bjælke, som består af to bjælker med længden $6,\!25$ m, ganges med bjælkens densitet fir tørrumvægt af træ KILDE (http://trae.dk/index.asp?page=\%2FDokumenter\%2FDokument.asp\%3FDokumentID\%3D124), hvorefter denne værdi ganges med tyngdeaccelerationen og ganges med 4: 
+Rumfanget af én bjælke, som består af to bjælker med længden $6,\!25$ m, ganges med bjælkens densitet for tørrumvægt af træ \citep{torrumvagt}, hvorefter denne værdi ganges med tyngdeaccelerationen og ganges med 4: 
 \begin{center}
 	$7,\!840 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=157,\!057 kN$
 \end{center}
@@ -188,19 +188,20 @@ Isoleringsarealet for tilbygningen er det samlede gulvareal minus det areal, som
 	$150,\! m^2 - (140 mm\cdot 12,\!5 m\cdot 32)=94,\!0 m^2$
 \end{center}
 
-Isoleringslaget har samme højde som bjælkerne og har en densitet på $30 \frac{kg}{m^3}$ KILDE (http://www.rockwool.dk/produkter/u/7429/bygningsisolering/bd-60-flexibatts). Dermed kan værdien for isolering bestemmes til:
+Isoleringslaget har samme højde som bjælkerne og har en densitet på $30 \frac{kg}{m^3}$ \citep{densitet}. Dermed kan værdien for isolering bestemmes til:
 \begin{center}
 	$94,\!0 m^2\cdot 140 mm\cdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=15,\!508 kN$
 \end{center}
 
-Gulvbelægningen antages for at være linoleumsgulv med en højde på $2,\!5 mm$ KILDE! med en densitet på $2,\!9 \frac{kg}{m^3}$ KILDE (http://www.kjeldtoft.com/upl/website/download-brochurer-/DesktopTekniskespecifikationer.pdf). Dermed kan værdien for linoleumsgulv bestemmes til:
+Gulvbelægningen antages for at være linoleumsgulv med en højde på $2,\!5 mm$ KILDE! med en densitet på $2,\!9 \frac{kg}{m^3}$ KILDE (http://www.kjeldtoft.com/upl/website/download-brochurer-/DesktopTekniskespecifikationer.pdf). 
+Dermed kan værdien for linoleumsgulv bestemmes til:
 \begin{center}
 	$2,\!5 mm\cdot 12,\!5 m\cdot 12,\!0 m\cdot 2,\!9 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=0,\!043 kN$
 \end{center}
 
 \textbf{Last fra tag}
 \newline
-Det antages at taget, som benyttes, er et mellemtungt tag, som har værdien $600 \frac{N}{m^2}$, (http://www.ringstedspaer.dk/konstruktioner.htm) og det er et sadeltag med teglsten. Der er derfor fundet en middelværdi for lasten fra taget til systemet. 
+Det antages at taget, som benyttes, er et mellemtungt tag, som har værdien $600 \frac{N}{m^2}$ \citep{tag}, og det er et sadeltag med teglsten. Der er derfor fundet en middelværdi for lasten fra taget til systemet. 
 \newline
 \newline
 Tagets areal bestemmes ud fra Figur \ref{fig:tagetage}:
