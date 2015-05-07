@@ -55,7 +55,7 @@ Tilbygningen til Strøybergs Palæ vil blive udsat for en række forskellige las
 Egenlaster er permanente laster. For tilbygningen til Strøybergs Palæ beregnes disse laster gennem de gjorte antagelser samt de givne mål, som er illustreret på Figur \ref{fig:farvel}.
 \newline
 \newline
-\textbf{Last fra tagsystem}
+\textbf{Egenlast}
 \newline
 Det antages at taget, som benyttes, er et mellemtungt tag, som har værdien $600 \frac{N}{m^2}$ \citep{tag}, og det er et sadeltag med teglsten. Der er derfor fundet en middelværdi for lasten fra taget til systemet. 
 \newline
@@ -70,9 +70,9 @@ Arealet ganges med værdien for mellemtungt tag:
 	$167,\!500 m^2\cdot 600 \frac{N}{m^2}=100,\!500 kN$
 \end{center}
 
-\textbf{Last fra væg}
+\underline{Last fra tagsystem}
 \newline
-\underline{Facade}
+\textit{Last fra væg}
 \newline
 Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade \citep{gammellokalplan}, hvilket illustreres på Figur \ref{fig:facade}.
 
@@ -115,8 +115,6 @@ I og med facaderne er identiske ganges de $5,\!337 kN$ med 2:
 	$5,\!337 kN\cdot 2=10,\!675 kN$
 \end{center}
 
-\underline{Gavl}
-\newline
 Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer på denne gavl, mens der antages at være 9 vinduer, identiske med dem for facaden, for gavlen, der ikke ligger op ad den nuværende bygning, som kan ses på Figur \ref{fig:gavl}.
 
 \begin{figure}[htbp]
@@ -151,7 +149,7 @@ Værdien for isolering bestemmes til:
 	$197,\!175 m^2\cdot 0,\!100 mcdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=5,\!809 kN$
 \end{center}
 
-\textbf{Last fra gulv}
+\textit{Last fra gulv}
 \newline
 Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper og andre former for genstande, der mindsker mængden af gulv. Derfor er den samlede mængde gulv pr. etage $12,\!5 m\cdot 12,\!0 m=150,\!0 m^2$.
 \newline \indent{     }  Fire ud af de fem etager består af bærende gulv, hvor den sidste, kælderetagen, ligger på fundamentet. Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Der antages, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen, og mellem betondækket og undergulvet lægges isoleringen \citep{Gulvopbygning}. 
@@ -198,7 +196,7 @@ Dermed kan værdien for linoleumsgulv bestemmes til:
 	$0,\!0025 m\cdot 12,\!5 m\cdot 12,\!0 m\cdot 2,\!9 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=0,\!043 kN$
 \end{center}
 
-\textbf{Samlet egenlast eksklusiv tag og stålsystem}
+\textit{Samlet egenlast eksklusiv tag og stålsystem}
 \newline
 De tidligere beregnede værdier adderes; 
 \begin{center}
@@ -220,9 +218,9 @@ Denne last laves nu om til en linjelast ned langs stængerne, og derfor deles me
 	$\frac{369,24 kN}{18m} =  20,\!51 \frac{kN}{m}$
 \end{center} 
 
-\textbf{Egenlast af stålsystemet}
+\textit{Egenlast af stålsystemet}
 \newline
-\underline{Egenlast stål i tagsystemet}
+Egenlast stål i tagsystemet:
 \newline
 Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g=115\frac{kg}{m}$ \citep{Stabi}. Dette skal ganges med højden af sadeltaget, som er $6,\!7m$ og omregnes efterfølgende til KiloNewton.  
 \begin{center}
@@ -239,7 +237,7 @@ Denne værdi skal ganges med to, da der går to stålstænger op ved taget:
 $7,\! 58kN \cdot 2 = 15,\! 1506888 kN$
 \end{center}
 
-\underline{Stålsystem eksklusiv tag}
+Stålsystem eksklusiv tag:
 \newline
 Stålstyrken antages igen at være S235, som har densiteten $g=115\frac{kg}{m}$ \citep{Stabi}. For at finde kraften af en enkelt lodret stang multipliceres denne med højden af bygningen, som er 18 m, inklusiv kælderen.
 \begin{center}
@@ -269,7 +267,7 @@ Dette skal omregnes til at blive en linjelast og der divideres derfor med længd
 $\frac{6,\! 78 kN}{6m} = 1,\! 13\frac{kN}{m}$
 \newline
 \newline
-\textbf{Opsamling}
+\textit{Opsamling}
 \newline
 Nu er alle egenlasterne fra taget, etagedækkene samt egenlasten fra stålsystemet fundet. Disse placeres nu i det statiskesytem vidst på Figur \ref{fig:dsadsd}
 
@@ -708,7 +706,7 @@ Det er nu bestemt i denne rapport, at der fokuseres på vind fra vest, hvor der 
 Systemet betragtes, hvor der laves beregninger for rammen i midten af konstruktionen, hvilken ligger 6,25 m inde på konstruktionen. Det betyder, rammen ligger mellem zone F og G (se Figur \ref{fig:opdeling}). Derfor udregnes et gennemsnit mellem værdierne for zonerne F og G ved vind på taget, da zonen E for siderne gælder for hele facaden. 
 Dog ses det, at værdierne F og G for taget er ens, og dermed er gennemsnitsværdien lig med værdierne for F og G. 
 
-\subsection{Nyttelast}
+\textbf{Nyttelast}
 Ud fra \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91} aflæses den jævnt fordelte last, $q_k$, for kategori A1, som er bolig og lokale adgangsveje, til at være $1,\!5 \frac{kN}{m^2}$. Denne last beregnes for alle etager på tilbygningen samlet set.
 \begin{center}
 	$Q_{K3}=q_k A etageantal$
