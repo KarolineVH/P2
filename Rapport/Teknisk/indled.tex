@@ -51,11 +51,11 @@ Med denne opstilling kan reaktionerne beregnes og der ud fra finde belastningen,
 \section{Laster}
 Tilbygningen til Strøybergs Palæ vil blive udsat for en række forskellige laster, både permanente- og variable laster, hvilke vil blive beregnet i dette afsnit således, at der senere hen kan opstilles lastkombinationer, regnes reaktionskræfter, snitkræfter, spændinger samt brudgrænse- og anvendelsesgrænsetilstande.
 
-\subsection{Permanent last}
+\subsection{Permanente laster}
 Egenlaster er permanente laster. For tilbygningen til Strøybergs Palæ beregnes disse laster gennem de gjorte antagelser samt de givne mål, som er illustreret på Figur \ref{fig:farvel}.
 \newline
 \newline
-\textbf{Last fra tagsystem}
+\textbf{last fra tagsystem}
 \newline
 Det antages at taget, som benyttes, er et mellemtungt tag, som har værdien $600 \frac{N}{m^2}$ \citep{tag}, og det er et sadeltag med teglsten. Der er derfor fundet en middelværdi for lasten fra taget til systemet. 
 \newline
@@ -75,7 +75,7 @@ Arealet ganges med værdien for mellemtungt tag:
 \newline
 \underline{Facade}
 \newline
-Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade, hvilket illustreres på Figur \ref{fig:facade}.
+Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade \citep{gammellokalplan}, hvilket illustreres på Figur \ref{fig:facade}.
 
 \begin{figure}[htbp]
 	\centering
@@ -84,13 +84,13 @@ Facaderne antages for at være ens samt indeholde lige mange vinduer og døre. D
 	\label{fig:facade}
 \end{figure}
 
-\indent{     }  Ét vindue regnes til være $0,\!95$ m bred og $1,\!5$ m høj TJEK MED MICHAEL! + KILDE. Døren antages at være $1,\!5$ m bred og $2,\!1$ m høj KILDE. Arealet for én facade bestemmes til:
+\indent{     }  Ét vindue antages til være $0,\!95$ m bred og $1,\!5$ m høj. Døren antages at være $1,\!5$ m bred og $2,\!1$ m høj. Arealet for én facade bestemmes til:
 \begin{center}
 	$12,\!5 m\cdot 16,\!0 m - (1,\!5 m\cdot0,\!95 m\cdot11 + 1,\!5 m\cdot 2,\!1 m)=181,\!175 m^2$
 \end{center}
 
 Til beregning af væggens egenlast vides det, at der skal påregnes en indervæg og et isoleringslag, mens den ydervæggen ikke er en del af det statiske system og dermed ikke skal medregnes.
-\newline \indent{     }  En typisk indervæg er typisk 130 mm tyk \citep{indervaeg}, og det antages, at denne værdi benyttes til tilbygningen af Strøybergs Palæ. Dermed kan værdien for indervæggen af facaden nu bestemmes ved at gange facadens areal uden viduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for mursten, hvilket er $1500,\!0 \frac{kg}{m^3}$:
+\newline \indent{     }  En typisk indervæg er typisk 130 mm tyk \citep{indervaeg}, og det antages, at denne værdi benyttes til tilbygningen af Strøybergs Palæ. Dermed kan værdien for indervæggen af facaden nu bestemmes ved at gange facadens areal uden viduer og dør med tykkelsen, hvorefter denne værdi ganges med densiteten for mursten \citep{murstendensitet}, hvilket er $1500,\!0 \frac{kg}{m^3}$:
 \begin{center}
 	$181,\!175 m^2\cdot 130 mm\cdot 1500,\!0 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=35329,\!125 kg$
 \end{center}
@@ -155,7 +155,7 @@ Værdien for isolering bestemmes til:
 \textbf{Last fra gulv}
 \newline
 Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper og andre former for genstande, der mindsker mængden af gulv. Derfor er den samlede mængde gulv pr. etage $12,\!5 m\cdot 12,\!0 m=150,\!0 m^2$.
-\newline \indent{     }  Fire ud af de fem etager består af bærende gulv, hvor den sidste, kælderetagen, ligger på fundamentet. Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Der antages, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen, og mellem betondækket og undergulvet lægges isoleringen. 
+\newline \indent{     }  Fire ud af de fem etager består af bærende gulv, hvor den sidste, kælderetagen, ligger på fundamentet. Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Der antages, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen, og mellem betondækket og undergulvet lægges isoleringen \citep{Gulvopbygning}. 
 \newline \indent{     }  Først bestemmes gulvets last for en etage, hvorefter denne ganges denne med fire, da der er fire etager foruden kælderetagen. Betondækkets andel beregnes først, da både længden, bredden og tykkelsen kendes. 
 \newline
 \newline
@@ -164,12 +164,13 @@ Rumfanget af betonen for én etage bestemmes til:
 	$12,\!5 m\cdot 12,\!0 m\cdot 120 mm=18,\!0 m^3$
 \end{center}
 
-Rumfanget ganges med betons densitet, som er $2400 \frac{kg}{m^3}$ \citep{}, hvorefter hvorefter denne værdi ganges med tyngdeaccelerationen, for at få værdien i $kN$, som der ganges med 4 for at få lasten for alle fire etager:
+Rumfanget ganges med betons densitet, som er $2400 \frac{kg}{m^3}$ \citep{betonsdensitet}, hvorefter hvorefter denne værdi ganges med tyngdeaccelerationen, for at få værdien i $kN$, som der ganges med 4 for at få lasten for alle fire etager:
 \begin{center}
 	$18,\!0 m^3\cdot 2400 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}\cdot 4=1693,440 kN$
 \end{center}
 
-Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!0$ mm høj og $140,\!0$ mm bred \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke KILDE!!!!!
+Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!0$ mm høj og $140,\!0$ mm bred \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke \citep{Gulvopbygning}. 
+
 \begin{center}
 	$\frac{12,\!5 m}{400 mm}=31,\!25$ bjælker
 \end{center} 
@@ -192,7 +193,7 @@ Isoleringslaget har samme højde som bjælkerne og har en densitet på $30 \frac
 	$94,\!0 m^2\cdot 140 mm\cdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=15,\!508 kN$
 \end{center}
 
-Gulvbelægningen antages for at være linoleumsgulv med en højde på $2,\!5 mm$ KILDE! med en densitet på $2,\!9 \frac{kg}{m^3}$ KILDE (http://www.kjeldtoft.com/upl/website/download-brochurer-/DesktopTekniskespecifikationer.pdf). 
+Gulvbelægningen antages for at være linoleumsgulv med en højde på $2,\!5 mm$ og en densitet på $2,\!9 \frac{kg}{m^3}$ \citep{linoleum}. 
 Dermed kan værdien for linoleumsgulv bestemmes til:
 \begin{center}
 	$2,\!5 mm\cdot 12,\!5 m\cdot 12,\!0 m\cdot 2,\!9 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=0,\!043 kN$
@@ -209,10 +210,13 @@ Den samlede egenlast deles med 2, da midterrammen optager halvdelen af den bereg
 	$\frac{2953,904 kN}{2} =  1476,\!952 kN$
 \end{center}
 Den midterste stang optager $\frac{2}{4}$ af egenlasten, mens de to yderste stænger hver optager $\frac{1}{4}$.
+
 \begin{center}
 	$\frac{1476,952 kN}{4} =  369,\!24 kN$
 \end{center}
-Denne last laves nu om til en linjelast ned langs stængerne, og derfor deles med 18m: 
+
+Denne last laves nu om til en linjelast ned langs stængerne, og derfor deles med 18m:
+ 
 \begin{center}
 	$\frac{369,24 kN}{18m} =  20,\!51 \frac{kN}{m}$
 \end{center}
@@ -222,61 +226,54 @@ Den midterste stang optager $\frac{2}{4}$ af egenlasten, mens de to yderste stæ
 \newline
 \textbf{Egenlast af stålsystemet}
 \newline
-\underline{Egenlast stål i tagsystemet}
+\underline{egenlast stål i tagsystemet}
 \newline
-Stålstyrken, som er anvendt, antages at være S200, som har densiteten $g=26.2\frac{kg}{m}$. Dette skal ganges med højden af sadeltaget, som er $6,\!7m$.og omregnes efterfølgende til Newton.  
+Stålstyrken, som er anvendt, antages at være S235 med profil nr. S450, som har densiteten $g=115\frac{kg}{m}$ \citep{Stabi}. Dette skal ganges med højden af sadeltaget, som er $6,\!7m$.og omregnes efterfølgende til KiloNewton.  
 \begin{center}
-	$26.2\frac{kg}{m}\cdot 6,\!7m = 175,\!75 kg$
-	$175,\!75 kg\cdot 9,\! 82\frac{m}{s^2} = 1,\! 73 kN$
+	$115\frac{kg}{m}\cdot 6,\!7m = 771,\! 42 kg$
+	$771,\! 42kg\cdot 9,\! 82\frac{m}{s^2} = 7,\! 5753444 kN$
 \end{center}
 Denne værdi skal ganges med to, da der går to stålstænger op ved taget:
-$1,\! 73 \cdot 2 = 3,\! 45 kN$
 
+\begin{center}
+$7,\! 58kN \cdot 2 = 15,\! 1506888 kN$
+\end{center}
 
 \underline{Stålsystem eksklusiv tag}
 \newline
-
-Stålstyrken antages igen at være S200, som har densiteten $g=26.2\frac{kg}{m}$. For at finde kraften af en enkelt lodret stang multipliceres denne med højden af bygningen, inklusiv kælderen, som er 18m.
+Stålstyrken antages igen at være S235, som har densiteten $g=115\frac{kg}{m}$ \citep{Stabi}. For at finde kraften af en enkelt lodret stang multipliceres denne med højden af bygningen, som er 18 m, inklusiv kælderen.
 \begin{center}
-	$26.2\frac{kg}{m}\cdot 18m = 471,\!6 kg$
-	$471,\!6 kg \cdot 9,\!82\frac{m}{s^2} = 4,\! 631 kN$
+	$115\frac{kg}{m}\cdot 18m = 2070 kg$
+	$2070 kg \cdot 9,\!82\frac{m}{s^2} = 20,\! 33 kN$
 \end{center}
 
 Dette skal omregnes til at blive en linjelast og der divideres derfor med højden igen:
-$\frac{4,\! 631 kN}{18m} = 0,\! 26\frac{kN}{m}$
 
-
-
-Det samme skal gøres for at finde kraften for en vandret stang, og densiteten skal her ganges med længden af den vandrette bjælke, som er 6m.
 \begin{center}
-	$26.2\frac{kg}{m}\cdot 6m = 157,\!2 kg$
-	$157,\!2 kg \cdot 9,\!82\frac{m}{s^2} = 1,\!54  kN$
+$\frac{20,\! 33 kN}{18m} = 1,\! 13\frac{kN}{m}$
+\end{center}
+
+Det samme skal gøres for at finde kraften for en vandret stang, og densiteten skal her ganges med længden af den vandrette bjælke, som er 6 m.
+\begin{center}
+	$115\frac{kg}{m}\cdot 6m = 690 kg$
+	$690 kg \cdot 9,\!82\frac{m}{s^2} = 6,\!78  kN$
 \end{center}
 
 Dette skal omregnes til at blive en linjelast og der divideres derfor med længden af den vandrette stang:
-$\frac{1,\! 54 kN}{6m} = 0,\! 26\frac{kN}{m}$
-\begin{center}
-	\item[-] Hej
-\end{center}
-\textbf{Samlede egenlast af bygningssystemet}
-\newline
-Nu er alle laster der påvirker
+$\frac{6,\! 78 kN}{6m} = 1,\! 13\frac{kN}{m}$
 \newline
 \newline
-\textbf{Last fra tag}
+\textbf{Opsamling}
 \newline
-Det antages at taget, som benyttes, er et mellemtungt tag, som har værdien $600 \frac{N}{m^2}$ \citep{tag}, og det er et sadeltag med teglsten. Der er derfor fundet en middelværdi for lasten fra taget til systemet. 
-\newline
-\newline
-Tagets areal bestemmes ud fra Figur \ref{fig:tagetage}:
-\begin{center}
-	$6,\!7 m\cdot 12,\!5 m \cdot 2=167,\!500 m^2$
-\end{center}
+Nu er alle egenlasterne fra taget, etagedækkene samt egenlasten fra stålsystemet fundet. Disse placeres nu i det statiskesytem vidst på figur \ref{fig:dsadsd}
 
-Arealet ganges med værdien for mellemtungt tag:
-\begin{center}
-	$167,\!500 m^2\cdot 600 \frac{N}{m^2}=100,\!500 kN$
-\end{center}
+%Ikke det rigtige billede%
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/Tagmedvinkel.png}
+	\caption{Dimensioner for tagetagen}
+	\label{fig:tagetage}
+\end{figure}
 
 \subsection{Variable laster}
 Af variable laster optræder der både snelast, vindlast og nyttelast på bygningen. Disse udregnes efter Dansk Standard Eurocode 1991.
