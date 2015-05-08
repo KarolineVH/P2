@@ -51,6 +51,7 @@ De permanente laster, der beregnes for tilbygningen af Strøybergs Palæ, er ege
 \newline
 \textbf{Egenlast}
 \newline
+\underline{Last fra tag}
 Det antages at taget, er et mellemtungt sadeltag med teglsten, som har egenvægt $600 \frac{N}{m^2}$ \citep{tag}.
 \newline
 \newline
@@ -92,10 +93,10 @@ Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleri
 		\begin{tabular}{|c|c|c|}
 			\hline
 			& Densitet [$\frac{kg}{m^3}$] & Tykkelse [mm] \\ \hline
-			Mursten  & 1500 \citep{murstendensitet} & 130 \citep{indervaeg}    \\ \hline
-			Rockwool & 30 \citep{densitet} & 100 \citep{isolering}             \\ \hline
+			Mursten  & 1500  & 130     \\ \hline
+			Rockwool & 30 & 100              \\ \hline
 		\end{tabular}
-		\caption{Materialer og deres egenskaber for væg}
+		\caption{Materialer og deres egenskaber for væg \citep{murstendensitet} \citep{indervaeg} \citep{densitet} \citep{isolering}}
 		\label{tab:murogwool}
 	\end{center}
 \end{table}
@@ -110,68 +111,97 @@ Da den ene gavl ligger op ad den nuværende bygning, antages denne side ikke at 
 \end{figure}
 
 Indervæg og isolering for gavlen er identisk med indervæg og isolering for facaderne. 
-\newline \indent{     }  Når arealet af facaderne beregnes trækkes arealet af vinduerne samt døren fra, da disse antages at belaste ydermuren. Arealet og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast}.
+\newline \indent{     }  Når arealet af facaderne beregnes trækkes arealet af vinduerne samt døren fra, da disse antages at belaste ydermuren. 
+\newline
+\newline
+Arealet for facaderne og gavlen bestemmes og resultaterne kan ses i Tabel \ref{tab:arealoglast}:
+\begin{center}
+	$A_{facade} = 16,\!00 m \cdot 12,\!50 - (11\cdot1,\!50 m \cdot 0,\!95 + 2,\!10\cdot 1,\!50) = 181,\!18 m^2$
+	\newline
+	\newline
+	$A_{gavl} = 16,\!00 m \cdot 12,\!00 + 3,\!00 m \cdot 12,\!00 \cdot 0,\!50 - (9\cdot1,\!50 m \cdot 0,\!95) = 197,\!18 m^2$
+\end{center}
+
+Lasten fra facaderne og gavlen bestemmes og resultaterne kan ses i Tabel \ref{tab:arealoglast}:
+\begin{center}
+	$p_{facade} = 181,\!18 m^2\cdot(0,\!13 m \cdot 1500,\!00 \frac{kg}{m^3} + 0,\!10 m \cdot 30,\!00 \frac{kg}{m^3})\cdot 9,\!82 \frac{m}{s^2} = 352,\!27$
+	\newline
+	\newline
+	$p_{gavl} = 197,\!18 m^2\cdot(0,\!13 m \cdot 1500,\!00 \frac{kg}{m^3} + 0,\!10 m \cdot 30,\!00 \frac{kg}{m^3})\cdot 9,\!82 \frac{m}{s^2} = 383,\!38$
+\end{center}
 
 \begin{table}
 	\begin{center}
 		\begin{tabular}{|c|c|c|}
 			\hline
 			& Areal [$m^2$]   & Last [kN]    \\ \hline
-			Facade, vest & 181,175 & 352,269 \\ \hline
-			Facade, øst  & 181,175 & 352,269 \\ \hline
-			Gavl, nord   & 197,175 & 383,379 \\ \hline
+			Facade, vest & 181,18 & 352,27 \\ \hline
+			Facade, øst  & 181,18 & 352,27 \\ \hline
+			Gavl, nord   & 197,18 & 383,38 \\ \hline
 		\end{tabular}
-		\caption{Materialer og deres egenskaber for væg}
+		\caption{Areal og last for væg}
 		\label{tab:arealoglast}
 	\end{center}
 \end{table}
 
 \textit{Last fra gulv}
 \newline
-Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper og andre former for genstande, der mindsker mængden af gulv. Derfor er den samlede mængde gulv pr. etage $12,\!5 m\cdot 12,\!0 m=150,\!0 m^2$.
-\newline \indent{     }  Fire ud af de fem etager består af bærende gulv, hvor den sidste, kælderetagen, ligger på fundamentet. Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Der antages, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen, og mellem betondækket og undergulvet lægges isoleringen \citep{Gulvopbygning}. 
-\newline \indent{     }  Først bestemmes gulvets last for en etage, hvorefter denne ganges denne med fire, da der er fire etager foruden kælderetagen. Betondækkets andel beregnes først, da både længden, bredden og tykkelsen kendes. 
-\newline
-\newline
-Rumfanget af betonen for én etage bestemmes til:
-\begin{center}
-	$12,\!5 m\cdot 12,\!0 m\cdot 0,\!120 m=18,\!0 m^3$
-\end{center}
+Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper og andre former for genstande, der mindsker mængden af gulv. Derfor er den samlede mængde gulv pr. etage $A_{etage} = 12,\!50 m\cdot 12,\!00 m = 150,\!00 m^2$.
+\newline \indent{     }  Fire ud af de fem etager består af bærende gulv, hvor den sidste, kælderetagen, ligger på fundamentet. Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Det bestemmes, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen, og mellem betondækket og undergulvet lægges isoleringen \citep{Gulvopbygning}. Densiteten og tykkelsen af gulvlagene kan ses i Tabel \ref{tab:densi}.
 
-Rumfanget ganges med betons densitet, som er $2400 \frac{kg}{m^3}$ \citep{betonsdensitet}, hvorefter hvorefter denne værdi ganges med tyngdeaccelerationen, for at få værdien i $kN$, som der ganges med 4 for at få lasten for alle fire etager:
-\begin{center}
-	$18,\!0 m^3\cdot 2400 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}\cdot 4=1693,440 kN$
-\end{center}
+\begin{table}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& Densitet [$\frac{kg}{m^3}$] & Tykkelse [mm] \\ \hline
+			Beton    & 2400     & 120      \\ \hline
+			Rockwool & 30       & 140      \\ \hline
+			Linoleum & 2,9      & 383,379  \\ \hline
+		\end{tabular}
+		\caption{Materialer og deres egenskaber for gulv}
+		\label{tab:densi}
+	\end{center}
+\end{table}
 
-Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!0$ mm høj og $140,\!0$ mm bred \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke \citep{Gulvopbygning}. 
+Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!00$ mm høj og $140,\!00$ mm bred \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke \citep{Gulvopbygning}. 
 
 \begin{center}
-	$\frac{12,\!5 m}{0,\!400 m}=31,\!25$ bjælker
+	$\frac{12,\!50 m}{0,\!40 m}=31,\!25$ bjælker
 \end{center} 
 
 Da der ikke kan optræde $31,\!25$ bjælker rundes der op til 32 bjælker.
 \newline
 \newline
-Rumfanget af én bjælke, som består af to bjælker med længden $6,\!25$ m, ganges med bjælkens densitet for tørrumvægt af træ \citep{torrumvagt}, hvorefter denne værdi ganges med tyngdeaccelerationen og ganges med 4: 
+Rumfanget af én bjælke, som består af to bjælker med længden $6,\!25$ m, ganges med bjælkens densitet for tørrumvægt af træ \citep{torrumvagt}, som er , hvorefter denne værdi ganges med tyngdeaccelerationen og ganges med 4: 
 \begin{center}
-	$7,\!840 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=157,\!057 kN$
+	$p{bjælker} = 7,\!84 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4 = 157,\!06 kN$
 \end{center}
 
-Isoleringsarealet for tilbygningen er det samlede gulvareal minus det areal, som bjælkerne ligger på:
+Volumen af betonen for én etage bestemmes til:
 \begin{center}
-	$150,\! m^2 - (0,\!140 m\cdot 12,\!5 m\cdot 32)=94,\!0 m^2$
+	$12,\!5 m\cdot 12,\!0 m\cdot 0,\!120 m = 18,\!0 m^3$
 \end{center}
 
-Isoleringslaget har samme højde som bjælkerne og har en densitet på $30 \frac{kg}{m^3}$ \citep{densitet}. Dermed kan værdien for isolering bestemmes til:
+Lasten for betonen for de fire etager bestemmes til:
 \begin{center}
-	$94,\!0 m^2\cdot 0,\!140 m\cdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=15,\!508 kN$
+	$18,\!0 m^3\cdot 2400 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}\cdot 4=1693,440 kN$
 \end{center}
 
-Gulvbelægningen antages for at være linoleumsgulv med en højde på $2,\!5 mm$ og en densitet på $2,\!9 \frac{kg}{m^3}$ \citep{linoleum}. 
-Dermed kan værdien for linoleumsgulv bestemmes til:
-\begin{center}
-	$0,\!0025 m\cdot 12,\!5 m\cdot 12,\!0 m\cdot 2,\!9 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4=0,\!043 kN$
-\end{center}
+Beregning af volumen og last for rockwool og linoleum beregnes på samme måde som for beton, dog skal bjælkernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:gulv}.
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& Volume [$m^3$] & Last [kN] \\ \hline
+			Beton    & &      \\ \hline
+			Rockwool & &      \\ \hline
+			Linoleum & &      \\ \hline
+		\end{tabular}
+		\caption{Materialer og deres egenskaber for gulv}
+		\label{tab:gulv}
+	\end{center}
+\end{table}
 
 \textit{Samlet egenlast eksklusiv tag og stålsystem}
 \newline
