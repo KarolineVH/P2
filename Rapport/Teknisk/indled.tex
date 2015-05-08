@@ -323,6 +323,16 @@ Dermed er jordlasten, som linjelast, i dybderne som ses på Tabel \ref{tab:jord}
 	\end{center}
 \end{table}
 
+Den jordlast der virker på det statiske system er illustreret på Figur \ref{fig:jordlast}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{billeder/jordlast.png}
+	\caption{Jordlast på det statiske system angivet i $\frac{kN}{m}$}
+	\label{fig:jordlast}
+\end{figure}
+
+
 \subsection{Variable laster}
 Af variable laster optræder der både snelast, vindlast og nyttelast på bygningen. Disse udregnes efter Dansk Standard Eurocode 1991.
 
@@ -381,7 +391,14 @@ Den karakteristiske snelast for lasttilfælde 4 kan nu bestemmes til:
 \begin{center}
 	$s_4=1,\!2\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}\cdot 6,\!25 m = 7,\!5 \frac{kN}{m}$
 \end{center}
-Til videre beregning har projektgruppen valgt at anvende snetilfælde 1, selvom der i praksis burde laves beregninger med samtlige snetilfælde.
+Til videre beregning har projektgruppen valgt at anvende snetilfælde 1, som er illustreret på Figur \ref{fig:sne}. I praksis burde der laves beregninger med samtlige snetilfælde.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{billeder/snelast.png}
+	\caption{Snelast på det statiske system angivet i $\frac{kN}{m}$}
+	\label{fig:snelast}
+\end{figure}
 
 \subsubsection{Vindlast}
 For vindlasten regnes der en nettovindlast, hvilken regnes som summen af den udvendige og den indvendige vindlast.
@@ -650,21 +667,36 @@ Det er nu bestemt i denne rapport, at der fokuseres på vind fra vest, hvor der 
 \newline
 Systemet betragtes, hvor der laves beregninger for rammen i midten af konstruktionen, hvilken ligger 6,25 m inde på konstruktionen. Det betyder, rammen ligger mellem zone F og G (se Figur \ref{fig:opdeling}). Derfor udregnes et gennemsnit mellem værdierne for zonerne F og G ved vind på taget, da zonen E for siderne gælder for hele facaden. 
 Dog ses det, at værdierne F og G for taget er ens, og dermed er gennemsnitsværdien lig med værdierne for F og G. 
+\newline \indent{     }  De vindlaster der virker på det statiske system, som anvendes til videre beregninger, er illustreret på Figur \ref{fig:vindlast}. 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{billeder/vindlast.png}
+	\caption{Vindlast på det statiske system angivet i $\frac{kN}{m}$}
+	\label{fig:vindlast}
+\end{figure}
 
 \textbf{Nyttelast}
-Ud fra Eurocode 1991 \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91} aflæses den jævnt fordelte last, $q_k$, for kategori A1, som er bolig og lokale adgangsveje, til at være $1,\!5 \frac{kN}{m^2}$. Denne last beregnes for alle etager på tilbygningen samlet set. Denne omregnes til en linjelast ved at multiplicere med afstanden mellem rammerne på $6,\!25$ m. Hermed fås en linjelast på $9,\!37 \frac{kN}{m}$. 
+Ud fra Eurocode 1991 \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91} aflæses den jævnt fordelte last, $q_k$, for kategori A1, som er bolig og lokale adgangsveje, til at være $1,\!5 \frac{kN}{m^2}$. Denne last beregnes for alle etager på tilbygningen samlet set. Den omregnes til en linjelast ved at multiplicere med afstanden mellem rammerne på $6,\!25$ m. Hermed fås en linjelast på $9,\!37 \frac{kN}{m}$. 
+\newline \indent{     }  Den nyttelast der virker på det statiske system er illustreret på Figur \ref{fig:nyttelast}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{billeder/nyttelast.png}
+	\caption{Nyttelast på det statiske system angivet i $\frac{kN}{m}$}
+	\label{fig:nyttelast}
+\end{figure}
 
 \section{Lastkombinationer}
-Den karakteristiske egenlast, jordlast, vindlast, snelast og nyttelast er bestemt for tilbygningen til Strøybergs Palæ. Derfor opstilles derfor en række forskellige lasttilfælde, for at beregne de regningsmæssige laster, som skal anvendes til beregningerne af reaktioskræfter for det statiske system af tilbygningen til Strøybergs Palæ.
-\newline \indent{     }  Lastkombinationerne opstilles ved at betragte tilbygningen i tre dele; Taget, rammen mellem jorden og taget samt rammen under jorden. Disse deles ind i områder, da lasterne ikke virker ens på alle konstruktionsdele, hvilket er illustreret på Figur (INDSÆT FIGUR AF OMRÅDER PÅ STATISK SYSTEM).
+Den karakteristiske egenlast, jordlast, vindlast, snelast og nyttelast er bestemt for tilbygningen til Strøybergs Palæ. Derfor opstilles en række forskellige lasttilfælde, for at finde de regningsmæssige laster, som skal anvendes til beregningerne af reaktioner. Lastkombinationerne opstilles ved at betragte tilbygningen i de områder, som er illustreret på Figur XX (LAV FIGUR AF OMRÅDER OG INDSÆT).
 \newline
 \newline
-Ved et rigtigt byggeprojekt skal der opstilles lasttilfælde for alle tænkelige scenarier, som kan forekomme. For dette projekt er det dog ikke en mulighed, og derfor fokuseres der kun udvalgte tilfælde.
+INDSÆT FIGUR AF OMRÅDER!
 \newline
 \newline
-Formlen for den regningsmæssige last er:
+Ved et rigtigt byggeprojekt skal der opstilles lasttilfælde for alle tænkelige scenarier, som kan forekomme. For dette projekt er det dog ikke en mulighed, og derfor er der til videre beregninger valgt at lægge fokus på vindlast som den dominerende last. Hermed opstilles der følgende lastkombination for hvert område:
 \begin{center}
-	$E_d = \gamma_{G1} K_{FI} G_{K1} + \gamma_{Q1} K_{FI} Q_{K1} + \gamma_{Q2} \Psi_{0,2} K_{FI} Q_{K2} + \gamma_{Q3} \Psi_{0,3} K_{FI} Q_{K3}$ 
+	$E_d = \gamma_{G1} K_{FI} G_{K1} + \gamma_{G2} K_{FI} G_{K2} + \gamma_{G3} K_{FI} G_{K3} \gamma_{Q1} K_{FI} Q_{K1} + \gamma_{Q2} \Psi_{0,2} K_{FI} Q_{K2} + \gamma_{Q3} \Psi_{0,3} K_{FI} Q_{K3}$ 
 \end{center}
 
 \begin{itemize}
@@ -676,12 +708,50 @@ Formlen for den regningsmæssige last er:
 	\item[-] $\Psi$: Kombinationsværdi af variabel last. Mulitipliceres den værdi, som ikke er dominerende 
 \end{itemize}
 
-Der er lavet tre lasttilfælde for områder 1; for henholdsvis egenlasten, snelasten og vindlasten dominerende. Snelasten dominerende er beregnet ved: VENT MED AT INDSÆTTE TIL DET ER GODKENDT AF JOHAN. 
+Nedenfor gennemgås to beregningseksempeler for den regningsmæssige last, med udgangspunkt i henholdsvis område 1 og 6. 
+
+I område 1 område optræder der vindlast, snelast og egenlast, og beregnes ved følgende:
+
+\begin{center}
+	$E_d = 1,\!0 \cdot 1,\!1 \cdot 8,\!63 \frac{kN}{m} + 1,\!5 \cdot 1,\!1 \cdot 3,\!20 \frac{kN}{m} + 1,\!5 \cdot 0 \cdot 1,\!1 \cdot 5,\!0 \frac{kN}{m}$
+\end{center}
+
+Herudfra kan egenlasten, der virker per løbende skrå længde, vindlasten, der virker vinkelret på taget, og snelasten, der virker per løbende vandrette længde, for dette område findes:
+
+\begin{center}
+	$Egenlast = 1,\!0 \cdot 1,\!1 \cdot 8,\!63 \frac{kN}{m} = 9,\!49 \frac{kN}{m}$
+\end{center}
+
+\begin{center}
+	$Vindlast = 1,\!5 \cdot 1,\!1 \cdot 3,\!20 \frac{kN}{m} = 5,\!28 \frac{kN}{m}$
+\end{center}
+
+\begin{center}
+	$Snelast = 1,\!5 \cdot 0 \cdot 1,\!1 \cdot 5,\!0 \frac{kN}{m} = 0 \frac{kN}{m}$ 
+\end{center}
+
+I område 6 optræder der vindlast, egenlast fra etagedæk, egenlast fra stålprofiler og nyttelast. Her er egenlasten for etagedæk og egenlasten fra stålprofilerne lagt sammen til $21,\!64$. Lastkombinationen opstilles som følgende:
+
+\begin{center}
+	$E_d = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{kN}{m} + 1,\!5 \cdot 1,\!1 \cdot 3,\!68 \frac{kN}{m} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{kN}{m}$
+\end{center}
+
+De laster der virker i vandret retning, altså i x-retningen, er vindlast:
+
+\begin{center}
+	$Last i x-retningen = 1,\!5 \cdot 1,\!1 \cdot 3,\!68 \frac{kN}{m} = 6,\!08 \frac{kN}{m}$
+\end{center}
+
+De laster der virker i lodret retning, altså y-retningen, er nyttelast, egenlast fra etagedæk samt egenlast fra stålprofiler:
+
+\begin{center}
+	$Last i y-retningen = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{kN}{m} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{kN}{m} = 31,\!54 \frac{kN}{m}$ 
+\end{center}
+
+Dette gentages hvor hvert område på konstruktionen. De laster der virker på konstruktionen er angivet på Figur (LAV FIGUR MED ALLE LASTER VED VIND DOMINERENDE). 
 \newline
 \newline
-Nedenstående tabel viser resultaterne for hvert område, med skiftende dominerende laster.
+INDSÆT FIGUR MED ALLE LASTER FOR VIND DOMINERENDE!
 \newline
 \newline
-INDSÆT TABEL MED VÆRDI FOR LASTTILFÆLDE!
-\newline
-\newline
+De laster der virker på taget omregnes til punktlaster........
