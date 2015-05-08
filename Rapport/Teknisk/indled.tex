@@ -74,11 +74,7 @@ Dermed er lasten fra taget $100,\!500 kN$, som vil blive brugt til videre beregn
 \newline
 \underline{Last fra væg}
 \newline
-Facaderne antages at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade \citep{gammellokalplan}, hvilket illustreres på Figur \ref{fig:facade}.
-\newline \indent{     }  Ét vindue sættes til at være $0,\!95$ m bred og $1,\!5$ m høj og døren til at være $1,\!5$ m bred og $2,\!1$ m høj. Arealet for én facade bestemmes til:
-\begin{center}
-	$A_{facade} = 12,\!5 m\cdot 16,\!0 m - (1,\!5 m\cdot0,\!95 m\cdot11 + 1,\!5 m\cdot 2,\!1 m)=181,\!175 m^2$
-\end{center}
+Facaderne antages at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade \citep{gammellokalplan}, hvilket illustreres med mål på Figur \ref{fig:facade}.
 
 \begin{figure}[htbp]
 	\centering
@@ -87,31 +83,22 @@ Facaderne antages at være ens samt indeholde lige mange vinduer og døre. Der a
 	\label{fig:facade}
 \end{figure}
 
-Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag, mens ydervæggen ikke er en del af det statiske system og dermed ikke skal medregnes.
-\newline \indent{     }  En typisk indervæg er 130 mm tyk bestående af mursten \citep{indervaeg}. Denne værdi benyttes til tilbygningen af Strøybergs Palæ. Dermed kan værdien for indervæggen af facaden nu bestemmes ved at multiplicere facadens areal uden viduer og dør med tykkelsen, hvorefter denne værdi multipliceres med densiteten for mursten \citep{murstendensitet}, hvilket er $1500,\!0 \frac{kg}{m^3}$:
-\begin{center}
-	$181,\!175 m^2\cdot 0,\!130 m\cdot 1500,\!0 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=346,\!932 kN$
-\end{center}
+Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag, mens ydervæggen ikke er en del af det statiske system og dermed ikke skal medregnes. Indervæggen bestemmes til at være mursten, mens isoleringen bestemmes til at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses i Tabel \ref{tab:murogwool}.
 
-I og med facaderne er identiske multipliceres de $346,\!932 kN$ med 2:
-\begin{center}
-	$p_{indervæg} = 346,\!932 kN\cdot 2 = 693,\!864 kN$
-\end{center}
+\begin{table}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& Densitet [$\frac{kg}{m^3}$] & Tykkelse [mm] \\ \hline
+			Mursten  & 1500 \citep{murstendensitet} & 130 \citep{indervaeg}    \\ \hline
+			Rockwool & 30 \citep{densitet} & 100 \citep{isolering}             \\ \hline
+		\end{tabular}
+		\caption{Materialer og deres egenskaber for væg}
+		\label{tab:murogwool}
+	\end{center}
+\end{table}
 
-Dermed er lasten fra indervæggen på de to facader $693,\!864 kN$, som vil blive brugt til videre beregninger.
-
-Isoleringslaget sættes til at være 100 mm tyk bestående af rockwool \citep{isolering}, og typen af isolering har densiteten $30 \frac{kg}{m^3}$ \citep{densitet}.
-\newline \indent{     }  Facadens areal uden vinduer og dør multipliceres med tykkelsen, hvorefter denne værdi multipliceres med densiteten for isoleringen:
-\begin{center}
-	$181,\!175 m^2\cdot 0,\!100 m \cdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=5,\!337 kN$
-\end{center}
-
-I og med facaderne er identiske ganges de $5,\!337 kN$ med 2:
-\begin{center}
-	$5,\!337 kN\cdot 2=10,\!675 kN$
-\end{center}
-
-Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer på denne gavl, mens der antages at være 9 vinduer, identiske med dem for facaden, for gavlen, der ikke ligger op ad den nuværende bygning, som kan ses på Figur \ref{fig:gavl}.
+Da den ene gavl ligger op ad den nuværende bygning, antages denne side ikke at belaste det statiske system, mens der antages at være 9 vinduer, identiske med dem for facaden, for gavlen, der ikke ligger op ad den nuværende bygning, som kan ses på Figur \ref{fig:gavl}.
 
 \begin{figure}[htbp]
 	\centering
@@ -120,23 +107,22 @@ Da den ene gavl ligger op ad den nuværende bygning, vil der ikke være vinduer 
 	\label{fig:gavl}
 \end{figure}
 
-Til forskel for facadens areal, har gavlene også arealet for tagetagen, som har dimensionerne der ses på Figur \ref{fig:tagetage}. Arealet for facaden der ikke ligger op ad den nuværende bygning bestemmes dermed til:
-\begin{center}
-	$12 m\cdot 16 m + 3 m\cdot 12 m \cdot 0,\!5 - 1,\!5 m\cdot 0,\!95 m \cdot 9=197,\!175 m^2$
-\end{center}
+Indervæg og isolering for gavlen er identisk med indervæg og isolering for facaderne. 
+\newline \indent{     }  Når arealet af facaderne beregnes trækkes arealet af vinduerne samt døren fra, da disse antages at belaste ydermuren. Arealet og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast}.
 
-Ligesom for facaderne skal der også påregnes en indervæg og et isoleringslag for gavlen, og det antages at der anvendes den samme tykkelse og densitet for indervæg og isolering.
-\newline
-\newline
-Værdien for indervæggen bestemmes til:
-\begin{center}
-	$197,\!175 m^2\cdot 0,\!130 m\cdot 1500,\!0 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=377,\!570 kN$
-\end{center}
-
-Værdien for isolering bestemmes til:
-\begin{center}
-	$197,\!175 m^2\cdot 0,\!100 mcdot 30 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}=5,\!809 kN$
-\end{center}
+\begin{table}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& Areal [$m^2$]   & Last [kN]    \\ \hline
+			Facade, vest & 181,175 & 352,269 \\ \hline
+			Facade, øst  & 181,175 & 352,269 \\ \hline
+			Gavl, nord   & 197,175 & 383,379 \\ \hline
+		\end{tabular}
+		\caption{Materialer og deres egenskaber for væg}
+		\label{tab:arealoglast}
+	\end{center}
+\end{table}
 
 \textit{Last fra gulv}
 \newline
