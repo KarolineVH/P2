@@ -1,0 +1,83 @@
+\chapter{Beregning af $q_p$}
+Nedenfor gives et beregningseksempel for beregning af $q_p$ for taget med vindretning fra vest. Fremgangsmåden for vindretningerne øst og nord er identisk med nedenstående eksempel, blot med andre værdier fra de samme kilder som anvendes i eksemplet, da vindretning og højden ændres.
+\newline
+\newline
+Den maksimale belastning fra vinden, peakhastighedstrykket $q_p$, bestemmes ved:
+\begin{center}
+	$q_p(z_e)=[1+7I_v(z_e)]\frac{1}{2}pv_m^2(z_e)$
+\end{center}
+\begin{itemize}
+	\item[-] $I_v$: vindturbulens
+	\item[-] $\rho$: densiteten for luft ved $20^{\circ}$, $1,\!25 \frac{kg}{m^3}$
+	\item[-] $v_m$: middelvindhastigheden
+\end{itemize}
+For at bestemme peakhastigheden, beregnes først vindturbulens $I_v(z)$ samt middelvindhastigheden $v_m$.
+\newline
+\newline
+Vindturbulens, $I_v(z)$, bestemmes ved:
+\begin{center}
+	$I_v(z)=\frac{\sigma_v}{V_m(z)}=\frac{k_1}{c_0(z)\cdot ln(\frac{z}{z_0})}$
+\end{center}
+\begin{itemize}
+	\item[-] $k_1$: turbulensfaktor, sættes til $1,\!0$ \citep[ kapitel 4.4]{EU91}
+	\item[-] $c_0(z)$: orografifaktoren, som sættes til $1,\!0$ \citep[ kapitel 4.3.1]{EU91}
+	\item[-] $z$: højden, som med taget er 19 m
+	\item[-] $z_0$: ruhedslængde, som sættes til $1,\!0$ for terrænkategori IV \citep[ tabel 4.1 kapitel 4.3.2]{EU91}
+\end{itemize}
+Vindturbulensen bestemmes til:
+\begin{center}
+	$I_v(z)=\frac{1,\!0}{1,\!0\cdot ln(\frac{19}{1,\!0})}=0,\!340$
+\end{center}
+Middelvindhastigheden, $v_m$, bestemmes ved:
+\begin{center}
+	$v_m(z)=c_r(z)c_0(z)v_b$
+\end{center}
+\begin{itemize}
+	\item[-] $c_r(z)$: ruhedsfaktor
+	\item[-] $v_b$: basisvindhastigheden
+\end{itemize}
+Til at bestemme middelvindhastigheden, beregnes basisvindhastigheden samt ruhedsfaktoren.
+\newline
+\newline
+Basisvindhastigheden, $v_b$, bestemmes ved:
+\begin{center}
+	$v_b=c_{dir}c_{season}v_{b,0}$
+\end{center}
+\begin{itemize}
+	\item[-] $c_{dir}$: retningsfaktor, som sættes til $1,\!0$ ved vind fra vest \citep[ tabel 1a kapitel 4.2]{EU91}
+	\item[-] $c_{season}$: årstidsfaktor, som sættes til $1,\!0$ \citep[ tabel 1b kapitel 4.2]{EU91}
+	\item[-] $v_{b,0}$: grundværdi for basisvindhastigheden, som sættes til 24 $\frac{m}{s}$ \citep[ kapitel 4.2]{EU91}
+\end{itemize}
+Basisvindhastigheden bestemmes til:
+\begin{center}
+	$v_b=1,\!0\cdot 1,\!0\cdot 24 \frac{m}{s}=24 \frac{m}{s}$
+\end{center}
+Ruhedsfaktor, $c_r(z)$, bestemmes ved:
+\begin{center}
+	$c_r(z)=k_rln(\frac{z}{z_0})$
+\end{center}
+\begin{itemize}
+	\item[-] $k_r$: terrænfaktor
+\end{itemize}
+Terrænfaktoren, $k_r$, bestemmes ved:
+\begin{center}
+	$k_r=0,\!19\cdot (\frac{z_0}{z_{0,II}})^{0,\!07}$
+\end{center}
+\begin{itemize}
+	\item[-] $z_{0,II}$: værdi for ruhedslængde for terrænkategori II, som sættes til $0,\!05$ \citep[ kapitel 4.3.2]{EU91}
+\end{itemize}
+\begin{center}
+	$k_r=0.19\cdot (\frac{1,0}{0,05})^{0,07}=0,\!234$
+\end{center}
+Ruhedsfaktor bestemmes til:
+\begin{center}
+	$c_r(z)=0,\!234\cdot ln(\frac{19}{1.0})=0,\!690$
+\end{center}
+Middelvindhastigheden bestemmes til:
+\begin{center}
+	$v_m(z)=0,\!690\cdot 1,\!0\cdot 24 \frac{m}{s}=16,\!569 \frac{m}{s}$
+\end{center}
+Peakhastighedstrykket $q_p$ i højden z, bestemmes til:
+\begin{center}
+	$q_p(z_e)=[1+7\cdot 0,\!340]\cdot \frac{1}{2}\cdot 1,\!25 \frac{kg}{m^3}\cdot (16,\!569 \frac{m}{s})^2=0,\!579 \frac{kN}{m^2}$
+\end{center}
