@@ -52,6 +52,7 @@ De permanente laster, der beregnes for tilbygningen af Strøybergs Palæ, er ege
 \textbf{Egenlast}
 \newline
 \underline{Last fra tag}
+\newline
 Det antages at taget, er et mellemtungt sadeltag med teglsten, som har egenvægt $600 \frac{N}{m^2}$ \citep{tag}.
 \newline
 \newline
@@ -287,10 +288,7 @@ Nu er alle karakteristiske egenlaster fra taget, etagedækkene samt egenlasten f
 
 \textbf{Jordlast}
 \newline
-Idet tilbygningen har en kælder, der går 2 m under jorden, bliver den påvirket med en jordlast. Jordlasten virker på konstruktionen fra jordoverfladen og nedefter. Den fordeler sig som vist på Figur XX.
-\newline
-\newline
-INDSÆT FIGUR...... (Det antages at den jord, som påvirker bygningen, ligger med en afstand op til 1 m ud fra kældervæggen.)
+Idet tilbygningen har en kælder, der går 2 m under jorden, bliver den påvirket med en jordlast. Jordlasten virker på konstruktionen fra jordoverfladen og nedefter. Jordlasten virker liniært afhængig af dybden.
 \newline
 \newline
 Jordlasten beregnes gennem formlen:
@@ -327,19 +325,6 @@ I og med jordlasten ved 0 m er $0 \frac{kN}{m^2}$, vil den også optræde som en
 \begin{center}
 	$\sigma_{x,linje} = 18,\!61 \frac{kN}{m^2}\cdot 6,\!25 m = 116,\!32 \frac{kN}{m}$
 \end{center}
-
-Dermed er jordlasten, som linjelast, i dybderne som ses på Tabel \ref{tab:jord}.
-\begin{table}[htb]
-	\begin{center}
-		\begin{tabular}{ |c|c|c| } 
-		\hline
-		Dybde [m] & 0 & 2 \\ \hline
-		Jordlast $[\frac{kN}{m}]$ & 0 & 116,32 \\ \hline
-		\end{tabular}
-		\caption{Værdier for jordlasten}
-		\label{tab:jord}
-	\end{center}
-\end{table}
 
 For at finde den jordlast der virker over x-antal meter under jorden, opstilles følgende ligning:
 
@@ -532,7 +517,7 @@ Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c|c| } 
 			\hline
-			Zone/Formfaktor & \multicolumn{2}{l|}{$c_{pe,10 udvendig}$} & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
+			\multirow{2}{*}{Zone/Formfaktor} & \multicolumn{2}{l|}{$c_{pe,10 udvendig}$} & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
 			& Positiv & Negativ & Positiv & Negativ \\ \hline
 			F & 0,585 & -0,592 & 0,200 & -0,300 \\	\hline
 			G & 0,585 & -0,569 & 0,200 & -0,300 \\	\hline 
@@ -549,7 +534,7 @@ Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c| } 
 			\hline
-			Zone/Formfaktor & $c_{pe,10 udvendig}$ & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
+			\multirow{2}{*}{Zone/Formfaktor} & $c_{pe,10 udvendig}$ & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
 			& Negativ & Positiv & Negativ \\ \hline
 			F & -1,146 & 0,200 & -0,300 \\	\hline
 			G & -1,377 & 0,200 & -0,300 \\	\hline 
@@ -727,20 +712,20 @@ Ud fra Eurocode 1991 \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91} aflæses den jævn
 \end{figure}
 
 \section{Lastkombinationer}
-Den karakteristiske egenlast, jordlast, vindlast, snelast og nyttelast er bestemt for tilbygningen til Strøybergs Palæ. Derfor opstilles en række lasttilfælde, for at finde de regningsmæssige laster, som skal anvendes til beregningerne af reaktioner. Lastkombinationerne opstilles ved at betragte tilbygningen i de områder, som er illustreret på Figur XX (LAV FIGUR AF OMRÅDER OG INDSÆT).
+Den karakteristiske egenlast, jordlast, vindlast, snelast og nyttelast er bestemt for tilbygningen til Strøybergs Palæ. Derfor opstilles en række lastkombinationer, for at finde de regningsmæssige laster, som skal anvendes til beregningerne af reaktioner. Lastkombinationerne opstilles ved at betragte tilbygningen i de områder, som er illustreret på Figur XX (LAV FIGUR AF OMRÅDER OG INDSÆT).
 \newline
 \newline
 INDSÆT FIGUR AF OMRÅDER!
 \newline
 \newline
-Ved et rigtigt byggeprojekt skal der opstilles lasttilfælde for alle tænkelige scenarier, som kan forekomme. For dette projekt er det dog ikke en mulighed, og derfor er der til videre beregninger valgt at fokusere på vindlast som den dominerende last. Hermed opstilles der følgende lastkombination for hvert område:
+Ved et rigtigt byggeprojekt skal der opstilles lastkombinationer for alle tænkelige scenarier, som kan forekomme. For dette projekt er det dog ikke en mulighed, og derfor er der til videre beregninger valgt at fokusere på vindlast som den dominerende last. Hermed opstilles der følgende lastkombination for hvert område:
 \begin{center}
-	$E_d = \gamma_{G1} K_{FI} G_{K1} + \gamma_{G2} K_{FI} G_{K2} + \gamma_{G3} K_{FI} G_{K3} \gamma_{Q1} K_{FI} Q_{K1} + \gamma_{Q2} \Psi_{0,2} K_{FI} Q_{K2} + \gamma_{Q3} \Psi_{0,3} K_{FI} Q_{K3}$ 
+	$E_d = \gamma_{G1} K_{FI} G_{K1} + \gamma_{G2} K_{FI} G_{K2} + \gamma_{Q1} K_{FI} Q_{K1} + \gamma_{Q2} \Psi_{0,2} K_{FI} Q_{K2} + \gamma_{Q3} \Psi_{0,3} K_{FI} Q_{K3}$ 
 \end{center}
 
 \begin{itemize}
 	\item[-] $\gamma_G$: Partialkoefficient for permanent last
-	\item[-] $K_{FI}$: Konsekvensklasse
+	\item[-] $K_{FI}$: Konsekvensklasse CC3
 	\item[-] $G_K$: Karakteristisk værdi for permanent last
 	\item[-] $\gamma_Q$: Partialkoefficient for variabel last
 	\item[-] $Q_K$: Karakteristisk værdi for variabel last
