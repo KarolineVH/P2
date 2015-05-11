@@ -156,7 +156,7 @@ Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, tra
 			& Densitet [$\frac{kg}{m^3}$] & Tykkelse [mm] \\ \hline
 			Beton    & 2400     & 120      \\ \hline
 			Rockwool & 30       & 140      \\ \hline
-			Linoleum & 2,9      & 383,379  \\ \hline
+			Linoleum & 2,9      & 383,38  \\ \hline
 		\end{tabular}
 		\caption{Materialer og deres egenskaber for gulv}
 		\label{tab:densi}
@@ -172,19 +172,19 @@ Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af ti
 Da der ikke kan optræde $31,\!25$ bjælker rundes der op til 32 bjælker.
 \newline
 \newline
-Rumfanget af én bjælke, som består af to bjælker med længden $6,\!25$ m, ganges med bjælkens densitet for tørrumvægt af træ \citep{torrumvagt}, som er , hvorefter denne værdi ganges med tyngdeaccelerationen og ganges med 4: 
+Rumfanget af én bjælke, som består af to bjælker med længden $6,\!25$ m, multipliceres med bjælkens densitet for tørrumvægt af træ \citep{torrumvagt}, som er , hvorefter denne værdi multipliceres med tyngdeaccelerationen og ganges med 4: 
 \begin{center}
-	$p{bjælker} = 7,\!84 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4 = 157,\!06 kN$
+	$p_{bjælker} = 7,\!84 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4 = 157,\!06 kN$
 \end{center}
 
-Volumen af betonen for én etage bestemmes til:
+Volumen af betonen for fire etager bestemmes til:
 \begin{center}
-	$12,\!5 m\cdot 12,\!0 m\cdot 0,\!120 m = 18,\!0 m^3$
+	$12,\!50 m\cdot 12,\!00 m\cdot 0,\!12 m\cdot 4 = 72,\!00 m^3$
 \end{center}
 
 Lasten for betonen for de fire etager bestemmes til:
 \begin{center}
-	$18,\!0 m^3\cdot 2400 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2}\cdot 4=1693,440 kN$
+	$72,\!00 m^3\cdot 2400 \frac{kg}{m^3}\cdot 9,82 \frac{m}{s^2} = 1693,44 kN$
 \end{center}
 
 Beregning af volumen og last for rockwool og linoleum beregnes på samme måde som for beton, dog skal bjælkernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:gulv}.
@@ -194,9 +194,9 @@ Beregning af volumen og last for rockwool og linoleum beregnes på samme måde s
 		\begin{tabular}{|c|c|c|}
 			\hline
 			& Volume [$m^3$] & Last [kN] \\ \hline
-			Beton    & &      \\ \hline
-			Rockwool & &      \\ \hline
-			Linoleum & &      \\ \hline
+			Beton    & 72 & 1693,44     \\ \hline
+			Rockwool & 52,64 & 15,51     \\ \hline
+			Linoleum & 1,50 & 0,04     \\ \hline
 		\end{tabular}
 		\caption{Materialer og deres egenskaber for gulv}
 		\label{tab:gulv}
