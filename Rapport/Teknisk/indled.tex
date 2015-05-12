@@ -287,7 +287,7 @@ Nu er alle karakteristiske egenlaster fra taget, etagedækkene samt egenlasten f
 
 \textbf{Jordlast}
 \newline
-Idet tilbygningen har en kælder, der går 2 m under jorden, bliver den påvirket med en jordlast. Jordlasten virker på konstruktionen fra jordoverfladen og nedefter. Den fordeler sig som vist på Figur XX
+Idet tilbygningen har en kælder, der går 2 m under jorden, bliver den påvirket med en jordlast. Jordlasten virker på konstruktionen fra jordoverfladen og nedefter. Den fordeler sig som vist på Figur XX.
 \newline
 \newline
 INDSÆT FIGUR...... (Det antages at den jord, som påvirker bygningen, ligger med en afstand op til 1 m ud fra kældervæggen.)
@@ -299,7 +299,7 @@ Jordlasten beregnes gennem formlen:
 \end{center}
 
 \begin{itemize}
-	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0 = 1-sin(\varphi)$, hvor $\varphi$ er friktionsvinklen, som er bestemt ved geoteknikforsøg HUSK HENVISNING!
+	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0=1-sin(\varphi)$, hvor $\varphi$ er friktionsvinklen. Friktionsvinklen er bestemt igennem fire forsøg, som ses under Afsnit (!!!!!!)
 	\item[-] $\sigma_z$: den lodrette fladelast i dybden z givet ved $\sigma_z = z\gamma$, hvor z er dybden og $\gamma$ er rumvægten $[\frac{kN}{m^3}]$
 \end{itemize}
 
@@ -341,18 +341,22 @@ Dermed er jordlasten, som linjelast, i dybderne som ses på Tabel \ref{tab:jord}
 	\end{center}
 \end{table}
 
-Ligningen for jordlasten findes ved: 
+For at finde den jordlast der virker over x-antal meter under jorden, opstilles følgende ligning:
 
 \begin{center}
 	$w = \frac{1}{2} \cdot x \cdot p$
 \end{center}
 
 \begin{itemize}
-	\item[-] x: længden kraften virker over
+	\item[-] x: længden, som kraften virker over
 	\item[-] p: den største kraft
 \end{itemize}
 
-Hermed fås ligningen: $w = \frac{1}{2} 116,\!32 \frac{kN}{m} x$
+Hermed fås ligningen: 
+
+\begin{center}
+	$w = \frac{1}{2} 116,\!32 \frac{kN}{m} x = 58,\!16x$
+\end{center}
 
 Den jordlast der virker på det statiske system er illustreret på Figur \ref{fig:jordlast}.
 
@@ -720,13 +724,13 @@ Ud fra Eurocode 1991 \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91} aflæses den jævn
 \end{figure}
 
 \section{Lastkombinationer}
-Den karakteristiske egenlast, jordlast, vindlast, snelast og nyttelast er bestemt for tilbygningen til Strøybergs Palæ. Derfor opstilles en række forskellige lasttilfælde, for at finde de regningsmæssige laster, som skal anvendes til beregningerne af reaktioner. Lastkombinationerne opstilles ved at betragte tilbygningen i de områder, som er illustreret på Figur XX (LAV FIGUR AF OMRÅDER OG INDSÆT).
+Den karakteristiske egenlast, jordlast, vindlast, snelast og nyttelast er bestemt for tilbygningen til Strøybergs Palæ. Derfor opstilles en række lasttilfælde, for at finde de regningsmæssige laster, som skal anvendes til beregningerne af reaktioner. Lastkombinationerne opstilles ved at betragte tilbygningen i de områder, som er illustreret på Figur XX (LAV FIGUR AF OMRÅDER OG INDSÆT).
 \newline
 \newline
 INDSÆT FIGUR AF OMRÅDER!
 \newline
 \newline
-Ved et rigtigt byggeprojekt skal der opstilles lasttilfælde for alle tænkelige scenarier, som kan forekomme. For dette projekt er det dog ikke en mulighed, og derfor er der til videre beregninger valgt at lægge fokus på vindlast som den dominerende last. Hermed opstilles der følgende lastkombination for hvert område:
+Ved et rigtigt byggeprojekt skal der opstilles lasttilfælde for alle tænkelige scenarier, som kan forekomme. For dette projekt er det dog ikke en mulighed, og derfor er der til videre beregninger valgt at fokusere på vindlast som den dominerende last. Hermed opstilles der følgende lastkombination for hvert område:
 \begin{center}
 	$E_d = \gamma_{G1} K_{FI} G_{K1} + \gamma_{G2} K_{FI} G_{K2} + \gamma_{G3} K_{FI} G_{K3} \gamma_{Q1} K_{FI} Q_{K1} + \gamma_{Q2} \Psi_{0,2} K_{FI} Q_{K2} + \gamma_{Q3} \Psi_{0,3} K_{FI} Q_{K3}$ 
 \end{center}
@@ -737,7 +741,7 @@ Ved et rigtigt byggeprojekt skal der opstilles lasttilfælde for alle tænkelige
 	\item[-] $G_K$: Karakteristisk værdi for permanent last
 	\item[-] $\gamma_Q$: Partialkoefficient for variabel last
 	\item[-] $Q_K$: Karakteristisk værdi for variabel last
-	\item[-] $\Psi$: Kombinationsværdi af variabel last. Mulitipliceres den værdi, som ikke er dominerende 
+	\item[-] $\Psi$: Kombinationsværdi af variabel last, som mulitipliceres den værdi, som ikke er dominerende 
 \end{itemize}
 
 Nedenfor gennemgås to beregningseksempeler for den regningsmæssige last, med udgangspunkt i henholdsvis område 1 og 6. 
@@ -762,7 +766,7 @@ Herudfra kan egenlasten, der virker per løbende skrå længde, vindlasten, der 
 	$Snelast = 1,\!5 \cdot 0 \cdot 1,\!1 \cdot 5,\!0 \frac{kN}{m} = 0 \frac{kN}{m}$ 
 \end{center}
 
-I område 6 optræder der vindlast, egenlast fra etagedæk, egenlast fra stålprofiler og nyttelast. Her er egenlasten for etagedæk og egenlasten fra stålprofilerne lagt sammen til $21,\!64$. Lastkombinationen opstilles som følgende:
+I område 6 optræder der vindlast, egenlast fra etagedæk, egenlast fra stålprofiler og nyttelast. Her er egenlasten for etagedæk og egenlasten fra stålprofilerne lagt sammen til $21,\!64 \frac{kN}{m}$. Lastkombinationen opstilles som følgende:
 
 \begin{center}
 	$E_d = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{kN}{m} + 1,\!5 \cdot 1,\!1 \cdot 3,\!68 \frac{kN}{m} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{kN}{m}$
@@ -780,7 +784,7 @@ De laster der virker i lodret retning, altså y-retningen, er nyttelast, egenlas
 	$y-retningen = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{kN}{m} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{kN}{m} = 31,\!54 \frac{kN}{m}$ 
 \end{center}
 
-Dette gentages hvor hvert område på konstruktionen. De laster der virker på konstruktionen er angivet på Figur (LAV FIGUR MED ALLE LASTER VED VIND DOMINERENDE). 
+Ovenstående beregninger gentages hvor hvert område på konstruktionen, og der er derfor lavet i alt 11 lastkombinationer i dette projekt. De laster der virker på konstruktionen er angivet på Figur (LAV FIGUR MED ALLE LASTER VED VIND DOMINERENDE). 
 \newline
 \newline
 INDSÆT FIGUR MED ALLE LASTER FOR VIND DOMINERENDE!
