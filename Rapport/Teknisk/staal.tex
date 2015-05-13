@@ -103,7 +103,68 @@ Til sidst bruges den vandrette ligevægt til at finde $A_{vandret}$.
 Både snitkræfter og snitkræftskurver.
 
 \section{Spænding}
-Spændingsfordeling af normalspænding og forskydningsspænding.
+For at finde ud af om konstruktionen kan holde, undersøges spændingstilstanden. Her skal det gælde:
 
-\section{...}
-Brudgrænsetilstand, nedbøjning mm?...
+\begin{center}
+	$\sqrt{\sigma^2 + 3\tau^2} \leq f_y$ 
+\end{center}
+
+\begin{itemize}
+	\item[-] $\sigma$: Normalspænding
+	\item[-] $\tau$: Forskydningsspænding
+	\item[-] $f_y$: Flydespænding
+\end{itemize}
+
+Flydespændingen beregnes ved formlen:
+
+\begin{center}
+	$f_y = \frac{f_{yk}}{\gamma}$
+\end{center}
+
+\begin{itemize}
+	\item[-] $f_{yk}$: Den karakteristiske flydespænding, der afhænger af ståltype. For ståltype S235 er $f_{yk} = 225 MPa$
+	\item[-] $\gamma$: Partialkoefficient, der sættes til 1,1 \citep[ s. 212]{stabi}.  
+\end{itemize}
+
+Altså beregnes den regningsmæssige flydespænding til:
+
+\begin{center}
+	$f_y = \frac{225 MPa}{1,\!1} = 204,\!54 MPa$
+\end{center}
+
+Normalspændingen findes ved Naviers formel:
+
+\begin{center}
+	$\sigma = \frac{N}{A} - \frac{M}{I} y$
+\end{center}
+
+\begin{itemize}
+	\item[-] N: Normalkraft [kN]
+	\item[-] A: Tværsnitsareal, som for stålprofil 450 er $14,\!7 \cdot 10^3 mm^2$ \citep{stabi}. 
+	\item[-] M: Moment [kN]
+	\item[-] y: Tyngdepunktskoordinat [mm]
+	\item[-] I: Inertimoment, som for stålprofil 450 er $458,\!5 mm^4$ \citep{stabi}. 
+\end{itemize} 
+
+Dernæst beregnes forskydningsspændingen ved Grasshofs formel:
+
+\begin{center}
+	$\tau = \frac{VQ}{Ib}$
+\end{center}
+
+\begin{itemize}
+	\item[-] V: Forskydningskraft [kN]
+	\item[-] Q: 1. ordens arealmoment for $A_1$: $Q = \int_A_1 \! y \, \mathrm{d}A = yA$ $[mm^3]$
+	\item[-] b: bredde
+\end{itemize}
+
+Nedenfor vises et beregningseksempel for et kritisk punkt. Resultaterne for alle de valgte kritiske punkter kan ses i tabel XX. 
+\newline
+\newline
+VIS BEREGNINGSEKSEMPEL FOR ET KRITISK PUNKT
+\newline
+\newline
+INDSÆT TABEL MED RESULTATER (SE MAPLE-DOKUMENT) 
+\newline
+\newline
+SKRIV KONKLUSION (KAN DET HOLDE)? Hvad kan man gøre hvis det ikke kan holde - eller er det "overdimensioneret"?
