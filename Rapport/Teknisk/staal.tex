@@ -49,25 +49,22 @@ $Jord+vind_ind$ & $63,\!77x + 1,\!66$ & $\frac{kN}{m}$ \\ \hline
 	\end{center}
 \end{table}
 
-Her findes først den vandrette reaktion i charnieret ved hjælp af vandret ligevægt
+Først bestemmes $Cha_v$ gennem vandret ligevægt: 
 \begin{center}
-	$\rightarrow+:0=Cos(26,\!6)*P_1+Charnier_{vandret}+\frac{J*2m}{2}-Vind_2*16m$
-	$Charnier_vandret=-Cos(26,\!6)*P_1-\frac{J*2m}{2}+Vind_2*16m$
-	$Charnier_vandret=-1,\!707354925*10^5N$
+	$\rightarrow+:0=F_x+Cha_v-J(2m)-V_k\cdot2m-V_2\cdot16m$
+	$Cha_v\leftrightarrow -27349,37742$
 \end{center}
 
-Derefter findes den lodrette reaktion i punktet C ved hjælp af moment ligevægt
+Nu bestemmes $C_y$ gennem moment ligevægt: 
 \begin{center}
-	$\AR{}:0=-Sin(26,\!6)*P_1*6m-E*18m*6m-d*18m*6m+C_y*6m-\frac{J*2m}{2}*17,\!33m$
-	$C_y=\frac{1}{6m}*(Sin(26,\!6)*P_1*6m+E*18m*6m+d*18m*6m+\frac{J*2m}{2}*17,\!33m)$
-	$C_y=9,\!147775436*10^5N$ 
+	$\AR{}:0=-F_y\cdot6m-E_1\cdot18m\cdot6m+C_y\cdot6m-J(2m)\cdot17,\!33m-V_k\cdot2m\cdot17m-E_s\cdot6m\cdot3m-V_2\cdot16m\cdot8m$
+	$C_y\leftrightarrow 8,\!064541700\cdot10^5N$ 
 \end{center}
 
-Så kan den lodrette reaktion i charnieret findes ved hjælp af lodret ligevægt
+Nu kan $Cha_l$ bestemmes gennem lodret ligevægt: 
 \begin{center}
-	$\uparrow+:0=-Sin(26,\!6)*P_1-E*18m+C_y+Charnier_Lodret$
-	$Charnier_lodret=Sin(26,\!6)*P_1+E*18m+d*16-C_y$
-	$Charnier_lodret=-2,\!356174399*10^5N$
+	$\uparrow+:0=F_y-E_1\cdot18m-E_s\cdot6m+C_y+Cha_l$
+	$Cha_l \leftrightarrow -2,\!976261656*10^5N$
 \end{center}
 
 Der beregnes nu på systemet til venstre da reaktionerne i charnieret er fundet, disse bliver sat som belastninger som ses på billede (blabla 4)
