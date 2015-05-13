@@ -55,12 +55,12 @@ Det antages, at taget er et mellemtungt sadeltag med teglsten, som har egenvægt
 \newline
 Tagets areal bestemmes ud fra Figur \ref{fig:tagetage}:
 \begin{center}
-	$A_{tag} = 6,\!7 m\cdot 12,\!5 m \cdot 2=167,\!500 m^2$
+	$A_{tag} = 6,\!7 m\cdot 12,\!5 m \cdot 2=167,\!50 m^2$
 \end{center}
 
 Arealet multipliceres med egenvægten for mellemtungt tag:
 \begin{center}
-	$p_{tag} = 167,\!500 m^2\cdot 600 \frac{N}{m^2}=100,\!500 kN$
+	$p_{tag} = 167,\!50 m^2\cdot 600 \frac{N}{m^2}=100,\!50 kN$
 \end{center}
 
 \begin{figure}[H]
@@ -70,9 +70,34 @@ Arealet multipliceres med egenvægten for mellemtungt tag:
 	\label{fig:tagetage}
 \end{figure}
 
-Dermed er lasten fra taget $100,\!500 kN$, som vil blive brugt til videre beregninger.
+Dermed er lasten for hele taget på tilbygningen $100,\!50 kN$, som vil blive fordelt ud på de tre rammer, hvor den midterste ramme vil optage halvdelen af lasten, som herefter omregnes til en linjelast:
+\begin{center}
+	$/frac{\frac{100,\!50 kN}{2}}{6,\!7 m} = 7,\!50 \frac{kN}{m}$
+\end{center}
 \newline
 \newline
+Egenlast af stål i tagsystemet:
+\newline
+Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g = 115\frac{kg}{m}$ \citep{stabi}. Dette skal multipliceres med højden af sadeltaget, som er $6,\!7 m$. Dette skal også multipliceres med to, da der går to stålstænger op til taget. Derefter omregnes der til [kN].
+\begin{center}
+	$115\frac{kg}{m}\cdot 6,\!7m \cdot 9,\!82\frac{m}{s^2}\cdot 2 = 15,\!15 kN$
+\end{center}
+
+Dermed er lasten for stålsystemet af taget på den midterste ramme 15,15 kN, hvor der ligeledes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \textbf{Last fra væg}
 \newline
 Facaderne antages at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade \citep{gammellokalplan}, hvilket illustreres med mål på Figur \ref{fig:facade}.
@@ -185,16 +210,31 @@ Beregning af volumen og last for beton, rockwool og linoleum beregnes på samme 
 	\end{center}
 \end{table}
 
+\textbf{Samlet egenlast eksklusiv tag og stålsystem}
+\newline
+De tidligere beregnede værdier adderes:
+\begin{center}
+	$352,\!27 kN + 352,\!27 kN + 383,\!38 kN + 157,\!06 kN + 1693,\!44 kN + 15,\!51 kN + 0,\!04 = 2953,\!90 kN$
+\end{center}
+
+Den samlede egenlast deles med 2, da midterrammen optager halvdelen af den beregnede last:
+\begin{center}
+	$\frac{2953,\!90 kN}{2} = 1476,\!95 kN$
+\end{center}
+
+Den midterste stang, i midterrammen, optager halvdelen af egenlasten, mens de to yderste stænger hver optager en fjerdedel:
+\begin{center}
+	$\frac{1476,\!95 kN}{4} = 369,\!24 kN$
+\end{center}
+
+Denne last omregnes nu til en linjelast ned langs stængerne, og derfor deles med 18 m:
+\begin{center}
+	$\frac{369,\!24 kN}{18 m} = 20,\!51 \frac{kN}{m}$
+\end{center}
+
 \textbf{Egenlast af stålsystemet}
 \newline
 \newline
-Egenlast stål i tagsystemet:
-\newline
-Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g = 115\frac{kg}{m}$ \citep{stabi}. Dette skal multipliceres med højden af sadeltaget, som er $6,\!7 m$. Dette skal også multipliceres med to, da der går to stålstænger op til taget. Derefter omregnes der til [N].
-\begin{center}
-	$115\frac{kg}{m}\cdot 6,\!7m \cdot 9,\!82\frac{m}{s^2} = 7,\!58 kN$
-\end{center}
-
 Stålsystem eksklusiv tag:
 \newline
 Stålstyrken antages igen at være S235, som har densiteten $g=115\frac{kg}{m}$ \citep{stabi}. For at finde kraften af en enkelt lodret stang multipliceres denne med højden af bygningen, som er 18 m, inklusiv kælderen.
