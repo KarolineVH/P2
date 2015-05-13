@@ -185,82 +185,44 @@ Beregning af volumen og last for beton, rockwool og linoleum beregnes på samme 
 	\end{center}
 \end{table}
 
-\textbf{Samlet egenlast eksklusiv tag og stålsystem}
-\newline
-De tidligere beregnede værdier adderes; 
-\begin{center}
-	$346,\!932 kN + 346,\!932 kN + 5,\!337 kN + 5,\!337 kN + 377,\!509 kN + 5,\!809 kN + 1693,\!440 kN + 157,\!057 kN + 15,\!508 kN + 0,\!043 kN = 2953,\!904 kN$
-\end{center}
-Den samlede egenlast deles med 2, da midterrammen optager halvdelen af den beregnede last. 
-\begin{center}
-	$\frac{2953,904 kN}{2} =  1476,\!952 kN$
-\end{center}
-Den midterste stang optager $\frac{1}{2}$ af egenlasten, mens de to yderste stænger hver optager $\frac{1}{4}$, derfor divideres nu med 4.
-
-\begin{center}
-	$\frac{1476,952 kN}{4} =  369,\!24 kN$
-\end{center}
-
-Denne last laves nu om til en linjelast ned langs stængerne, og derfor deles med 18m:
- 
-\begin{center}
-	$\frac{369,24 kN}{18m} =  20,\!51 \frac{kN}{m}$
-\end{center} 
-
 \textbf{Egenlast af stålsystemet}
+\newline
 \newline
 Egenlast stål i tagsystemet:
 \newline
-Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g=115\frac{kg}{m}$ \citep{stabi}. Dette skal ganges med højden af sadeltaget, som er $6,\!7m$ og omregnes efterfølgende til KiloNewton.  
+Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g = 115\frac{kg}{m}$ \citep{stabi}. Dette skal multipliceres med højden af sadeltaget, som er $6,\!7 m$. Dette skal også multipliceres med to, da der går to stålstænger op til taget. Derefter omregnes der til [N].
 \begin{center}
-	$115\frac{kg}{m}\cdot 6,\!7m = 771,\! 42 kg$
-\end{center}
-
-\begin{center}
-	$771,\! 42kg\cdot 9,\! 82\frac{m}{s^2} = 7,\! 5753444 kN$
-\end{center}
-
-Denne værdi skal ganges med to, da der går to stålstænger op ved taget:
-
-\begin{center}
-$7,\! 58kN \cdot 2 = 15,\! 1506888 kN$
+	$115\frac{kg}{m}\cdot 6,\!7m \cdot 9,\!82\frac{m}{s^2} = 7,\!58 kN$
 \end{center}
 
 Stålsystem eksklusiv tag:
 \newline
 Stålstyrken antages igen at være S235, som har densiteten $g=115\frac{kg}{m}$ \citep{stabi}. For at finde kraften af en enkelt lodret stang multipliceres denne med højden af bygningen, som er 18 m, inklusiv kælderen.
 \begin{center}
-	$115\frac{kg}{m}\cdot 18m = 2070 kg$
-\end{center}
-
-\begin{center}
-	$2070 kg \cdot 9,\!82\frac{m}{s^2} = 20,\! 33 kN$
+	$115\frac{kg}{m}\cdot 18 m \cdot 9,\!82\frac{m}{s^2} = 20,\!33 kN$
 \end{center}
 
 Dette skal omregnes til at blive en linjelast og der divideres derfor med højden igen:
 
 \begin{center}
-$\frac{20,\! 33 kN}{18m} = 1,\! 13\frac{kN}{m}$
+	$\frac{20,\!33 kN}{18m} = 1,\!13\frac{kN}{m}$
 \end{center}
 
 Det samme skal gøres for at finde kraften for en vandret stang, og densiteten skal her ganges med længden af den vandrette bjælke, som er 6 m.
 \begin{center}
-	$115\frac{kg}{m}\cdot 6m = 690 kg$
-\end{center}
-
-\begin{center}
-	$690 kg \cdot 9,\!82\frac{m}{s^2} = 6,\!78  kN$
+	$115\frac{kg}{m}\cdot 6 m \cdot 9,\!82\frac{m}{s^2} = 6,\!78  kN$
 \end{center}
 
 Dette skal omregnes til at blive en linjelast og der divideres derfor med længden af den vandrette stang:
-$\frac{6,\! 78 kN}{6m} = 1,\! 13\frac{kN}{m}$
-\newline
-\newline
+\begin{center}
+$\frac{6,\!78 kN}{6m} = 1,\!13 \frac{kN}{m}$
+\end{center}
+
 \textbf{Opsamling}
 \newline
 Nu er alle karakteristiske egenlaster fra taget, etagedækkene samt egenlasten fra bjælkesystemet bestemt. Disse placeres nu i det statiske sytem vidst på Figur \ref{fig:m} og \ref{fig:n}.
 
-\begin{figure}[htbp]\centering
+\begin{figure}[H]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
 		\includegraphics[width=0.80\textwidth]{billeder/egenlastetage.png} %Venstre billede
 	\end{minipage}\hfill
