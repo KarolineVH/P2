@@ -53,7 +53,8 @@ Tilbygningen til Strøybergs Palæ vil blive udsat for en række laster, både p
 De permanente laster, der beregnes for tilbygningen af Strøybergs Palæ, er egenlast og jordlast.
 
 \subsubsection{Egenlast}
-Når egenlasten skal bestemmes, findes rumfanget af diverse materialer og ganges med deres densitet, og der fratrækkes vinduer og døres arealer. Dette er lasterne for hele bygningen, lasterne deles ud på de 3 rammer, hvor den midterste optager halvdelen af lasterne. De bestemte laster laves til sidst om til linjelaster, som sættes på bjælkesystemet.  
+For at bestemme den egenlast der virker på det statiske system, beregnes først en samlet egenlast for taget, dernæst bestemmes egenlasten for gulve og vægge, hvorudfra den samlede egenlast under taget kan bestemmes, og til sidst bestemmes egenlasten for stålsystemet ekslusivt tag. Den egenlast der virker under taget opdeles altså i egenlast fra stålsystem og egenlast fra etagedæk, idet egenlasten fra etagedækkene giver anledning til moment, på grund samlingen mellem etagedækkene og stålkonstruktionen, som ses på Figur \ref{fig:etage}. 
+\newline \indent{     }  Når egenlasten skal bestemmes, findes rumfanget af de pågældende materialer, som multipliceres med materialets densitet, og der fratrækkes vinduer og døres arealer. Dette er lasterne for hele bygningen. Lasterne deles ud på de 3 rammer, hvor den midterste optager halvdelen af lasterne. De bestemte laster laves til sidst om til linjelaster, som sættes på bjælkesystemet.  
 
 \textbf{Last fra tag}
 \newline
@@ -65,10 +66,29 @@ Tagets areal bestemmes ud fra Figur \ref{fig:tagetage}:
 	$A_{tag} = 6,\!71 m\cdot 12,\!50 m \cdot 2=167,\!71 m^2$
 \end{center}
 
-Arealet multipliceres med egenvægten for mellemtungt tag:
+Arealet multipliceres med egenvægten for mellemtungt tag, for at finde lasten for hele taget på tilbygningen:
 \begin{center}
 	$p_{tag} = 167,\!71 m^2\cdot 600,\!00 \frac{N}{m^2}=100,\!62 kN$
 \end{center}
+
+Denne last vil blive fordelt ud på de tre rammer, hvor den midterste ramme vil optage halvdelen af lasten, som herefter omregnes til en linjelast:
+\begin{center}
+	$\frac{\frac{100,\!62 kN}{2}}\cdot{6,\!71 m \cdot 2} = 3,\!75 \frac{kN}{m}$
+\end{center}
+
+Denne værdi skal lægges sammen med egelasten for stålsystemet i tagkonstuktionen. 
+\newline \indent{     }  Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g = 115,\!00\frac{kg}{m}$ \citep{stabi}. Dette multipliceres med længden af sadeltaget, som er $6,\!71 m$ samt tyngdeaccelerationen, for at finde lasten fra stålsystemet:
+
+\begin{center}
+	$115,\!00 \frac{kg}{m}\cdot 6,\!71m \cdot 9,\!82\frac{m}{s^2} = 7,\!58 kN$
+\end{center}
+
+Denne last omregnes til en linjelast: 
+\begin{center}
+	$\frac{7,\!58 kN}{6,\!71m}= 1,\!13 \frac{kN}{m}$
+\end{center}
+
+Denne linjelast kan nu adderes til tagets egenlast, og den samlede egenlast for taget er bestemt til $4,\!89 \frac{kN}{m}$. 
 
 \begin{figure}[H]
 	\centering
@@ -77,28 +97,9 @@ Arealet multipliceres med egenvægten for mellemtungt tag:
 	\label{fig:tagetage}
 \end{figure}
 
-Dermed er lasten for hele taget på tilbygningen $100,\!62 kN$, som vil blive fordelt ud på de tre rammer, hvor den midterste ramme vil optage halvdelen af lasten, som herefter omregnes til en linjelast:
-\begin{center}
-	$\frac{\frac{100,\!62 kN}{2}}\cdot{6,\!71 m \cdot 2} = 3,\!75 \frac{kN}{m}$
-\end{center}
-
-Egenlast af stål i tagsystemet:
-\newline
-Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g = 115,\!00\frac{kg}{m}$ \citep{stabi}. Dette skal multipliceres med længden af sadeltaget, som er $6,\!71 m$. Derefter omregnes der til [kN].
-\begin{center}
-	$115,\!00 \frac{kg}{m}\cdot 6,\!71m \cdot 9,\!82\frac{m}{s^2} = 7,\!58 kN$
-\end{center}
-
-Dermed er lasten for stålsystemet i taget på den midterste ramme $7,\!58 kN$ pr. stål stang. Denne laves nu om til en linje last: 
-\begin{center}
-	$\frac{7,\!58 kN}{6,\!71m}= 1,\!13 \frac{kN}{m}$
-\end{center}
-
-Denne linjelast kan nu adderes til tagets egenlast, og den samlede egenlast for taget er bestemt til $4, \!89 \frac{kN}{m}$. 
-
 \textbf{Last fra væg}
 \newline
-Facaderne antages at være ens samt indeholde lige mange vinduer og døre. Der antages at være 11 vinduer og én dør pr. facade \citep{gammellokalplan}, hvilket illustreres med mål på Figur \ref{fig:facade}.
+Tilbygningens to facader antages at være ens, og bestå af lige mange vinduer og døre. Facaderne antages at bestå af 11 vinduer og én dør \citep{gammellokalplan}, hvilket illustreres med mål på Figur \ref{fig:facade}.
 
 \begin{figure}[H]
 	\centering
@@ -107,7 +108,7 @@ Facaderne antages at være ens samt indeholde lige mange vinduer og døre. Der a
 	\label{fig:facade}
 \end{figure}
 
-Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen ikke er en del af det statiske system og dermed ikke skal medregnes. Indervæggen bestemmes til at være mursten, mens isoleringen bestemmes til at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses i Tabel \ref{tab:murogwool}.
+Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen er ikke er en del af det statiske system og skal derfor ikke medregnes. Indervæggen bestemmes at være mursten, og isoleringen bestemmes at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses i Tabel \ref{tab:murogwool}.
 
 \begin{table}
 	\begin{center}
@@ -122,8 +123,8 @@ Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleri
 	\end{center}
 \end{table}
 
-Da den ene gavl ligger op ad den nuværende bygning, antages denne side ikke at belaste det statiske system. 
-\newline \indent{     }  De 9 vinduer på gavlen, der ikke ligger op ad den nuværende bygning, er identiske med dem på facaden, som kan ses på Figur \ref{fig:gavl}. Indervæg og isolering for gavlen er ligeledes identisk med facadens.
+Der medregnes kun egenlast for én gavl, idet den anden gavl ligger op ad den nuværende bygning, og den belaster dermed ikke det statiske system. 
+\newline \indent{     }  De 9 vinduer på gavlen har identiske mål med dem på facaden, som kan ses på Figur \ref{fig:gavl}. Indervæg og isolering for gavlen er ligeledes identisk med facadens.
 \newline \indent{     }  Når arealet af facaderne beregnes trækkes arealet af vinduerne samt døren fra, da disse antages at belaste ydermuren.
 
 \begin{figure}[H]
@@ -137,6 +138,13 @@ Arealerne og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast
 \begin{center}
 	$p = g A \sum dt$
 \end{center}
+
+\begin{itemize}
+	\item[-] g: Tyngdeacceleration på $9,\!82 \frac{m}{s^2}$
+	\item[-] A: Areal
+	\item[-] d: Densitet af metariale
+	\item[-] t: Tykkelse af materiale
+\end{itemize}
 
 \begin{table}
 	\begin{center}
@@ -154,7 +162,7 @@ Arealerne og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast
 
 \textbf{Last fra gulv}
 \newline
-Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper m.m. Derfor er den samlede mængde gulv pr. etage: 
+Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper m.m. Derfor er det samlede areal af gulv pr. etage: 
 
 \begin{center}
 $A_{etage} = 12,\!50 m\cdot 12,\!00 m = 150,\!00 m^2$
@@ -208,39 +216,37 @@ Beregning af volumen og last for beton, rockwool og linoleum beregnes på samme 
 	\end{center}
 \end{table}
 
-\textbf{Samlet egenlast eksklusiv tag og stålsystem}
+\textbf{Samlet egenlast fra etagedæk}
 \newline
-De tidligere beregnede værdier adderes:
-\begin{center}
-	$352,\!27 kN + 352,\!27 kN + 383,\!38 kN + 157,\!06 kN + 1693,\!44 kN + 15,\!51 kN + 0,\!04 = 2953,\!90 kN$
-\end{center}
-
-Den samlede egenlast deles med 2, da midterrammen optager halvdelen af den beregnede last:
-\begin{center}
-	$\frac{2953,\!90 kN}{2} = 1476,\!95 kN$
-\end{center}
-
+Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet last på $2953,\!90 kN$. 
+\newline \indent{     }  Den samlede egenlast deles med 2, da midterrammen optager halvdelen af den beregnede last, og der fås en last på $1476,\!95 kN$. 
+\newline
+\newline
 Den midterste stang, i midterrammen, optager halvdelen af egenlasten, mens de to yderste stænger hver optager en fjerdedel:
 \begin{center}
 	$\frac{1476,\!95 kN}{4} = 369,\!24 kN$
 \end{center}
 
-Denne last omregnes nu til en linjelast ned langs stængerne, og derfor deles med 18 m:
+Denne last omregnes til en linjelast, og derfor deles med 18 m, som er højden fra understøtningerne til taget:
+
 \begin{center}
 	$\frac{369,\!24 kN}{18 m} = 20,\!51 \frac{kN}{m}$
 \end{center}
 
+Den samlede egenlast fra etagedækkene er altså $20,\!51 \frac{kN}{m}$. 
+
 \textbf{Egenlast af stålsystemet}
 \newline
+Der beregnes en egenlast for stålsystemet ekslusivt tag. 
 \newline
-Stålsystem eksklusiv tag:
 \newline
-Stålstyrken antages igen at være S235, som har densiteten $g=115\frac{kg}{m}$ \citep{stabi}. For at finde kraften af en enkelt lodret stang multipliceres denne med højden af bygningen, som er 18 m, inklusiv kælderen.
+For at finde kraften af en enkelt lodret stang multipliceres ståls densitet $g=115\frac{kg}{m}$ med højden af bygningen fra kælder til tag, som er 18 m, og dernæst tyngeaccelerationen:
+
 \begin{center}
 	$115\frac{kg}{m}\cdot 18 m \cdot 9,\!82\frac{m}{s^2} = 20,\!33 kN$
 \end{center}
 
-Dette skal omregnes til at blive en linjelast og der divideres derfor med højden igen:
+Dette omregnes til at blive en linjelast ved at divideres med højden på 18 m:
 
 \begin{center}
 	$\frac{20,\!33 kN}{18m} = 1,\!13\frac{kN}{m}$
@@ -256,9 +262,11 @@ Dette skal omregnes til at blive en linjelast og der divideres derfor med længd
 $\frac{6,\!78 kN}{6m} = 1,\!13 \frac{kN}{m}$
 \end{center}
 
+Egenlasten fra stålsystemet er altså $1,\!13 \frac{kN}{m}$.
+
 \textbf{Opsamling}
 \newline
-Nu er alle karakteristiske egenlaster fra taget, etagedækkene samt egenlasten fra bjælkesystemet bestemt. Disse placeres nu i det statiske sytem vidst på Figur \ref{fig:m} og \ref{fig:n}.
+De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsystemet bestemt. Disse placeres nu i det statiske sytem vidst på Figur \ref{fig:m} og \ref{fig:n}.
 
 \begin{figure}[H]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
