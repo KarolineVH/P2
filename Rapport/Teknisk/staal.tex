@@ -49,55 +49,58 @@ $Jord+vind_ind$ & $63,\!77x + 1,\!66$ & $\frac{kN}{m}$ \\ \hline
 	\end{center}
 \end{table}
 
-Først bestemmes $Cha_v$ gennem vandret ligevægt: 
+Først bestemmes den vandrette reaktion i charnier ledet, $S_v$ gennem vandret ligevægt: 
 \begin{center}
-	$\rightarrow+:0=F_x+Cha_v-J(2m)-V_k\cdot2m-V_2\cdot16m$
-	$Cha_v\leftrightarrow -27349,37742$
+	$\rightarrow+:0 = F_x + S_v - J(2m) - V_k \cdot 2m - V_2 \cdot 16m$
+	$S_v \leftrightarrow -1309,\!49 N$
 \end{center}
 
-Nu bestemmes $C_y$ gennem moment ligevægt: 
+Nu bestemmes $C_y$ gennem moment ligevægt om punkt E: 
 \begin{center}
-	$\AR{}:0 = -F_y \cdot 6 m - E_1 \cdot 18 m \cdot 6 m + C_y \cdot 6 m - J(2m) \cdot 17,\!33 m - V_k \cdot 2 m \cdot 17 m - E_s \cdot 6 m \cdot 3 m - V_2 \cdot 16 m \cdot 8 m$
+	$\AR{}:0 = -F_y \cdot 6m - E_1 \cdot 18m \cdot 6m + C_y \cdot 6m - J(2m) \cdot 17,\!33m - V_k \cdot 2m \cdot 17m - E_s \cdot 6m \cdot 3m - V_2 \cdot 16m \cdot 8m$
 \end{center}
 \begin{center}
-	$C_y = 8,\!064 \cdot 10^5 N$
+	$C_y = 7,\!80 \cdot 10^5 N$
 \end{center}
 
-Nu kan $Cha_l$ bestemmes gennem lodret ligevægt: 
+Nu kan den lodrette reaktion i charnier ledet, $S_l$ bestemmes gennem lodret ligevægt: 
 \begin{center}
-	$\uparrow+: 0 = F_y - E_1 \cdot 18 m - E_s \cdot 6 m + C_y + Cha_l$
+	$\uparrow+: 0 = F_y - E_1 \cdot 18m - E_s \cdot 6m + C_y + S_l$
 \end{center}
 \begin{center}	
-	$Cha_l = -2,\!976 \cdot 10^5N$
+	$S_l = -2,\!44 \cdot 10^5N$
 \end{center}
 
-Der beregnes nu på systemet til venstre da reaktionerne i charnieret er fundet, disse bliver sat som belastninger som ses på billede (blabla 4)
+Nu er reaktionerne for det højre system bestemt, og disse sættes nu på som belastninger i punkt E for det venstre system, og reaktionerne bestemmes for dette. Da reaktionerne i begge systemer peger i negativ rentning, så ændres fortegnet og dermed retning, så de virker som vist på figur 4. ???
 
 %indsæt Figur 
 
-Der startes her med at beregne moment omkring A da der i denne ligninge kun vil være en ubekendt som er $B_{lodret}$  
+Først tages der moment om A, for at beregne $B_y$  
 \begin{center}
-	$A\hookrightarrow+:0=B_y*6m+Charnier_Lodret*6m+-18m*Charnier_vandret-E*18m*6m-d*18m*6m-d*18m*6-d-18m-E*6m*\frac{6}{2}+P_2*Cos(26,\!6)*18m-Vind_2*18m*(\frac{16}{2}m+2m)-\frac{J*2m}{2}*(\frac{2m}{2})$
-	$B_y=\frac{1}{6m}*(-Charner_lodret*6m+18m*Charnier_vandret+E*18m*6m+d*18m*6m+d*18m*6m+d*18m+E*6m*\frac{6}{2}m-P_2*Cos(26,\!6)*18m+Vind_2*18m*(8m+2m+\frac{J*2m}{2}*\frac{2m}{2})$
+	$A\hookrightarrow+: 0 = B_y \cdot 6m + S_l \cdot 6m + S_v \cdot 18m - E_2 \cdot 18m \cdot 6m - E_s \cdot 6m \cdot 3m + D_x \cdot 18m - V_1 \cdot 16m \cdot (8m + 2m) - J(2m) \cdot (2m \cdot \frac{1}{3}) - V_k \cdot 2m \cdot 1m$ 
+	$B_y \leftrightarrow 9,\!49 \cdot 10^5N$
 \end{center}
 
-Der regnes derefter på den lodrette ligevægt for at finde $A_{lodret}$
+Nu laves lodret ligevægt for at bestemme $A_y$
 \begin{center}
-	$\uparrow+:0=A_y+B_y+Charnier_y-E*18m-d*18m-d*18m-d*18m-E*6m-P_2*Sin(26,\!6)$
-	$A_y=-B_y-Charnier_y+E*18m+d*18m+d*18m+d*18m+E*6m+P_2*Sin(26,\!6)$
+	$\uparrow+: 0 = A_y + B_y - S_l - E_2 \cdot 18m - E_1 \cdot 18m - F_y - E_s \cdot 6 m$
+	$A_y \leftrightarrow 5,\!35 \cdot 10^5N$
 \end{center}
 
-For at gøre det muligt at isolere en af de vandrette reaktioner laves der et snint i charnieret og derefter bliver der taget moment omkring charnieret. Dette gøres for at finde $B_{vandret}$.
+For at gøre det muligt at isolere en af de vandrette reaktioner laves der et snint i charnieret, og derefter tages der moment omkring charnieret i punkt E, for at bestemme $B_x$.
 \begin{center}
-	$\hookrightarrow+:0=18m*B_x+d*18m-d*18m$
-	$B_x=\frac{d*18m-d*18m}{18m}=0$
+	$\hookrightarrow+: 0 = B_x \cdot 18m$
+	$B_x \leftrightarrow 0N$
 \end{center}
 
-Til sidst bruges den vandrette ligevægt til at finde $A_{vandret}$.
+Slutteligt laves vandret ligevægt for at bestemme $A_x$
 \begin{center}
-	$\rightarrow+:0=A_x+Charnier_x+B_x+\frac{J*2m}{2}+Vind_2*16m-P_2*Cos(26,\!6)$
-	$A_x=P_2*Cos(26,\!6)-Charnier_x-B_x-Vind_2*16m-\frac{J*2m}{2}$
+	$\rightarrow+: 0 = A_x - S_v + B_x + J(2m) + V_k \cdot 2m + V_1 \cdot 16 m - D_x$
+	$A_x \leftrightarrow -1,\!33 \cdot 10^5N$
 \end{center} 
+ 
+ Nu er reaktionerne bestemt for det statiske system, og der skal nu laves snitkræfter for system, både ved beregning af brudgrænsetilstanden og anvendelsesgrænsetilstanden. 
+ 
  
 \section{Snitkræfter}
 Både snitkræfter og snitkræftskurver.
