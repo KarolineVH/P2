@@ -53,12 +53,12 @@ Tilbygningen til Strøybergs Palæ vil blive udsat for en række laster, både p
 De permanente laster, der beregnes for tilbygningen af Strøybergs Palæ, er egenlast og jordlast.
 
 \subsubsection{Egenlast}
-For at bestemme den egenlast der virker på det statiske system, beregnes først en samlet egenlast for taget, dernæst bestemmes egenlasten for gulve og vægge, hvorudfra den samlede egenlast under taget kan bestemmes, og til sidst bestemmes egenlasten for stålsystemet ekslusivt tag. Den egenlast der virker under taget opdeles altså i egenlast fra stålsystem og egenlast fra etagedæk, idet egenlasten fra etagedækkene giver anledning til moment, på grund samlingen mellem etagedækkene og stålkonstruktionen, som ses på Figur \ref{fig:etage}. 
-\newline \indent{     }  Når egenlasten skal bestemmes, findes rumfanget af de pågældende materialer, som multipliceres med materialets densitet, og der fratrækkes vinduer og døres arealer. Dette er lasterne for hele bygningen. Lasterne deles ud på de 3 rammer, hvor den midterste optager halvdelen af lasterne. De bestemte laster laves til sidst om til linjelaster, som sættes på bjælkesystemet.  
+For at bestemme den egenlast der virker på det statiske system, beregnes først en samlet egenlast for taget, dernæst bestemmes egenlasten for gulve og vægge, hvorudfra den samlede egenlast for etagerne kan bestemmes. Til sidst bestemmes egenlasten for stålsystemet ekslusivt tag. Den egenlast der virker under taget opdeles altså i egenlast fra stålsystem og egenlast fra etagedæk, idet egenlasten fra etagedækkene giver anledning til moment, grundet samlingen mellem etagedækkene og stålkonstruktionen, som ses på Figur \ref{fig:etage}. 
+\newline \indent{     }  Når egenlasten skal bestemmes, findes rumfanget af de pågældende materialer, hvilken multipliceres med materialets densitet, og dernæst fratrækkes vinduer og døres arealer. Dette er lasterne for hele bygningen. Lasterne deles ud på de 3 rammer, hvor den midterste optager halvdelen af lasterne. De bestemte laster laves til sidst om til linjelaster, som sættes på bjælkesystemet.  
 
 \textbf{Last fra tag}
 \newline
-Det antages, at taget er et mellemtungt sadeltag med teglsten, som har egenvægt $600 \frac{N}{m^2}$ \citep{tag}.
+Det antages, at taget er et mellemtungt sadeltag med teglsten, som har egenvægten $600 \frac{N}{m^2}$ \citep{tag}.
 \newline
 \newline
 Tagets areal bestemmes ud fra Figur \ref{fig:tagetage}:
@@ -73,11 +73,11 @@ Arealet multipliceres med egenvægten for mellemtungt tag, for at finde lasten f
 
 Denne last vil blive fordelt ud på de tre rammer, hvor den midterste ramme vil optage halvdelen af lasten, som herefter omregnes til en linjelast:
 \begin{center}
-	$\frac{\frac{100,\!62 kN}{2}}\cdot{6,\!71 m \cdot 2} = 3,\!75 \frac{kN}{m}$
+	$\frac{\frac{100,\!62kN}{2}}{6,\!71m \cdot2} = 3,\!75 \frac{kN}{m}$
 \end{center}
 
-Denne værdi skal lægges sammen med egelasten for stålsystemet i tagkonstuktionen. 
-\newline \indent{     }  Densiteten for den anvendte ståltype S235 med profil nr. 450 har densiteten $g = 115,\!00\frac{kg}{m}$ \citep{stabi}. Dette multipliceres med længden af sadeltaget, som er $6,\!71 m$ samt tyngdeaccelerationen, for at finde lasten fra stålsystemet:
+Denne værdi skal lægges sammen med egelasten for stålsystemet i tagkonstuktionen, for at bestemme den samlede egenlast for taget.
+\newline \indent{     }  Egenlasten for stålet regnes ud fra densiteten for den anvendte ståltype, S235, med profil nr. 450. Her er densiteten $g = 115,\!00\frac{kg}{m}$ \citep{stabi}. Denne multipliceres med længden af sadeltaget, som er $6,\!71 m$ samt tyngdeaccelerationen, for at finde lasten fra stålsystemet:
 
 \begin{center}
 	$115,\!00 \frac{kg}{m}\cdot 6,\!71m \cdot 9,\!82\frac{m}{s^2} = 7,\!58 kN$
@@ -97,9 +97,9 @@ Denne linjelast kan nu adderes til tagets egenlast, og den samlede egenlast for 
 	\label{fig:tagetage}
 \end{figure}
 
-\textbf{Last fra væg}
+\textbf{Last fra vægge}
 \newline
-Tilbygningens to facader antages at være ens, og bestå af lige mange vinduer og døre. Facaderne antages at bestå af 11 vinduer og én dør \citep{gammellokalplan}, hvilket illustreres med mål på Figur \ref{fig:facade}.
+Egenlasten for etagerne udregnes nu, ved først at regne egenlasten for væggene ud. Tilbygningens to facader antages at være ens, og hver især bestå af 11 vinduer og én dør \citep{gammellokalplan}, hvilket illustreres på Figur \ref{fig:facade}.
 
 \begin{figure}[H]
 	\centering
@@ -130,7 +130,7 @@ Der medregnes kun egenlast for én gavl, idet den anden gavl ligger op ad den nu
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{billeder/facadevestellerost.png}
-	\caption{Dimensioner for tagetagen}
+	\caption{Mål og dimensioner for gavl og tilbygningen}
 	\label{fig:gavl}
 \end{figure}
 
@@ -162,14 +162,14 @@ Arealerne og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast
 
 \textbf{Last fra gulv}
 \newline
-Det antages at bygnings etager kun består af gulv, dvs. ingen skillevægge, trapper m.m. Derfor er det samlede areal af gulv pr. etage: 
+Det antages at bygningens etager kun består af gulv, dvs. ingen skillevægge, trapper m.m. Derfor er det samlede areal af gulvet pr. etage: 
 
 \begin{center}
 $A_{etage} = 12,\!50 m\cdot 12,\!00 m = 150,\!00 m^2$
 \end{center}
 
-Fire ud af fem etager består af bærende gulv. Kælderetagen ligger på fundamentet og regnes derfor ikke som et bærende gulv. 
-\newline \indent{     }  Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Det bestemmes, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen, og mellem betondækket og undergulvet lægges isoleringen \citep{Gulvopbygning}. Densiteten og tykkelsen af gulvlagene kan ses i Tabel \ref{tab:densi}.
+Fire ud af tilbygningens fem etager består af bærende gulve, da kælderetagen ligger på fundamentet og derfor ikke regnes som et bærende gulv. 
+\newline \indent{     }  Et bærende gulv antages at bestå af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Det bestemmes, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil der ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen. Isoleringen lægges mellem betondækket og undergulvet \citep{Gulvopbygning}. Densiteten og tykkelsen af gulvlagene kan ses i Tabel \ref{tab:densi}.
 
 \begin{table}
 	\begin{center}
@@ -185,21 +185,21 @@ Fire ud af fem etager består af bærende gulv. Kælderetagen ligger på fundame
 	\end{center}
 \end{table}
 
-Der er behov for bjælker, som hver er $6,\!25$ m lang, da de er halvdelen af tilbygningens længde, $140,\!00$ mm høj og $140,\!00$ mm bred \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke \citep{Gulvopbygning}. 
+Der er behov for bjælker, som hver er $6,\!25$ m lange, da det er halvdelen af tilbygningens længde, $140,\!00$ mm høje og $140,\!00$ mm bredde \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke \citep{Gulvopbygning}. 
 
 \begin{center}
 	$\frac{12,\!50 m}{0,\!40 m}=31,\!25$ bjælker
 \end{center} 
 
-Da der ikke kan optræde $31,\!25$ bjælker rundes der op til 32 bjælker.
+Da der ikke kan optræde $31,\!25$ bjælker afrundes det til 32 bjælker.
 \newline
 \newline
-Rumfanget af de 32 bjælker med længden $12,\!5$ m multipliceres med bjælkens densitet for tørrumvægt af træ \citep{torrumvagt}, som er $510 \frac{kg}{m^3}$, hvorefter denne værdi multipliceres med tyngdeaccelerationen og multipliceres med 4, da der er fire etager foruden kælderen. Herved findes lasten for bjælkerne: 
+Rumfanget af de 32 bjælker med længden $12,\!5$ m multipliceres med densiteten for tørrumvægt af træ \citep{torrumvagt}, som er $510 \frac{kg}{m^3}$, hvorefter denne værdi først multipliceres med tyngdeaccelerationen og dernæst med 4, da der er fire etager foruden kælderen. Herved findes egenlasten for bjælkerne: 
 \begin{center}
 	$p_{bjælker} = 7,\!84 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4 = 157,\!06 kN$
 \end{center}
 
-Beregning af volumen og last for beton, rockwool og linoleum beregnes på samme måde som for bjælkerne, dog skal bjælkernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:gulv}.
+Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samme måde som for bjælkerne, dog skal bjælkernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:gulv}.
 
 \begin{table}
 	\begin{center}
@@ -216,13 +216,13 @@ Beregning af volumen og last for beton, rockwool og linoleum beregnes på samme 
 	\end{center}
 \end{table}
 
-\textbf{Samlet egenlast fra etagedæk}
+\textbf{Samlet egenlast for etagedæk}
 \newline
 Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet last på $2953,\!90 kN$. 
-\newline \indent{     }  Den samlede egenlast deles med 2, da midterrammen optager halvdelen af den beregnede last, og der fås en last på $1476,\!95 kN$. 
+\newline \indent{     }  Den samlede egenlast deles med 2, da midterrammen optager halvdelen af tilbygningens samlede egenlast. $1476,\!95 kN$. 
 \newline
 \newline
-Den midterste stang, i midterrammen, optager halvdelen af egenlasten, mens de to yderste stænger hver optager en fjerdedel:
+Den midterste stang i det statiske system optager halvdelen af egenlasten, mens de to yderste stænger hver optager en fjerdedel:
 \begin{center}
 	$\frac{1476,\!95 kN}{4} = 369,\!24 kN$
 \end{center}
@@ -240,24 +240,24 @@ Den samlede egenlast fra etagedækkene er altså $20,\!51 \frac{kN}{m}$.
 Der beregnes en egenlast for stålsystemet ekslusivt tag. 
 \newline
 \newline
-For at finde kraften af en enkelt lodret stang multipliceres ståls densitet $g=115\frac{kg}{m}$ med højden af bygningen fra kælder til tag, som er 18 m, og dernæst tyngeaccelerationen:
+For at finde kraften af en enkelt lodret stang multipliceres stålets densitet $g=115\frac{kg}{m}$ først med højden af bygningen fra kælderen til taget, hvilken er 18 m, og dernæst med tyngeaccelerationen:
 
 \begin{center}
 	$115\frac{kg}{m}\cdot 18 m \cdot 9,\!82\frac{m}{s^2} = 20,\!33 kN$
 \end{center}
 
-Dette omregnes til at blive en linjelast ved at divideres med højden på 18 m:
+Denne omregnes til en linjelast ved at dividere med højden 18 m:
 
 \begin{center}
 	$\frac{20,\!33 kN}{18m} = 1,\!13\frac{kN}{m}$
 \end{center}
 
-Det samme skal gøres for at finde kraften for en vandret stang, og densiteten skal her ganges med længden af den vandrette bjælke, som er 6 m.
+Det samme skal gøres for at finde kraften for en vandret stang, og densiteten skal her multipliceres med længden af den vandrette bjælke, som er 6 m.
 \begin{center}
 	$115\frac{kg}{m}\cdot 6 m \cdot 9,\!82\frac{m}{s^2} = 6,\!78  kN$
 \end{center}
 
-Dette skal omregnes til at blive en linjelast og der divideres derfor med længden af den vandrette stang:
+Dette skal omregnes til en linjelast, og der divideres derfor med længden af den vandrette stang:
 \begin{center}
 $\frac{6,\!78 kN}{6m} = 1,\!13 \frac{kN}{m}$
 \end{center}
