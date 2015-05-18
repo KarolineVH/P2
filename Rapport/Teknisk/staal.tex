@@ -21,38 +21,14 @@ Når der beregnes reaktionskræfter for de tre understøtninger, er der behov fo
 	\end{minipage}
 \end{figure}
 
-Reaktionerne, der vil virke i charnieret, sættes som belastninger på venstre del af systemet. 
+Reaktionerne, der virker i charnieret, sættes som belastninger på venstre del af systemet. Reaktionerne på højre del af systemet beregnes først.
 \newline
 \newline
-Reaktionerne på højre del af systemet beregnes først.
-\newline
-\newline
-Lasterne, der påvirker højre side af det statiske system, ses på Figur XX, hvor værdierne kan ses i Tabel \ref{tab:laster}.
-% Indsæt figur med hvordan lasterne er på venstre- og højre del af systemet.
-
-\begin{table}
-	\begin{center}
-		\begin{tabular}{|c|c|c|}
-			\hline
-Betegnelse     & Værdi & Enhed \\ \hline
-$P_1$           &       &       \\ \hline
-$P_2$           &       &       \\ \hline
-$q_1$           & 31,54 & $\frac{kN}{m}$ \\ \hline
-$q_2$           & 9,47  & $\frac{kN}{m}$ \\ \hline
-$q_3$           & 61,34 & $\frac{kN}{m}$ \\ \hline
-$Vind_1$        & 6,08  & $\frac{kN}{m}$ \\ \hline
-$Vind_2$       	& -1,20 & $\frac{kN}{m}$ \\ \hline
-$Jord+vind_ind$ & $63,\!77x + 1,\!66$ & $\frac{kN}{m}$ \\ \hline
-		\end{tabular}
-		\caption{Laster på det statiske system}
-		\label{tab:laster}
-	\end{center}
-\end{table}
-
 Først bestemmes den vandrette reaktion i charnier ledet, $S_v$ gennem vandret ligevægt: 
 \begin{center}
 	$\rightarrow+:0 = F_x + S_v - J(2m) - V_k \cdot 2m - V_2 \cdot 16m$
-	$S_v \leftrightarrow -1309,\!49 N$
+	\newline
+	$S_v = -1309,\!49 N$
 \end{center}
 
 Nu bestemmes $C_y$ gennem moment ligevægt om punkt E: 
