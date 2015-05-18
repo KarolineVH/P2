@@ -5,21 +5,18 @@ I dette afsnit undersøges tilbygningens brudgrænsetilstand. Først beregnes re
 \section{Reaktioner}
 Når der beregnes reaktioner for de tre understøtninger, er der behov for at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingv} og \ref{fig:opdelingh}. I skæringen mellem de to dele, vil der være snitkræfter, men ikke momentkræfter, da momentet i charnierledet er nul. Dermed optræder der kun normalkraften, N, og forskydningskraften, V.
 
-\begin{figure}[htbp]\centering
-	\begin{minipage}[b]{0.48\textwidth}\centering
-		\includegraphics[width=0.50\textwidth]{billeder/venstre.png} %Venstre billede
-	\end{minipage}\hfill
-	\begin{minipage}[b]{0.48\textwidth}\centering
-		\includegraphics[width=0.35\textwidth]{billeder/hojre.png} %Højre billede
-	\end{minipage}\\ %Captions and labels
-	\begin{minipage}[t]{0.6\textwidth}
-		\caption{Venstre side af systemet med reaktioner, samt fritlegemediagram} %Venstre caption og label
-		\label{fig:opdelingv}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.6\textwidth}
-		\caption{Højre side af systemet, samt fritlegemediagram} %Højre caption og label
-		\label{fig:opdelingh}
-	\end{minipage}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/venstre.png}
+	\caption{Venstre side af systemet med reaktioner, samt fritlegemediagram}
+	\label{fig:opdelingv}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/hojre.png}
+	\caption{Højre side af systemet, samt fritlegemediagram}
+	\label{fig:opdelingh}
 \end{figure}
 
 Reaktionerne på højre side af systemet, der virker i charnieret, sættes som belastninger på venstre del af systemet. Reaktionerne på højre del af systemet beregnes først.
@@ -79,8 +76,12 @@ Slutteligt laves vandret ligevægt for at bestemme $A_x$
 Alle reaktionerne er hermed bestemt, og der kan laves snitkræfter.
 
 \section{Snitkræfter}
+Snitkræfterne for Strøybergs Palæs stålramme kan nu beregnes gennem de kendte reaktioner. Her laves der snitkræfter for to tilfælde; brudgrænse- og anvendelsesgrænsetilstand. I beregningen af brudgrænsetilstanden skal der ses på de mest ekstreme lasttilfælde (kritiske moment, normal og forskydning?) for at se, om stålkonstruktionen kan holde til disse belastninger. For anvendelsesgrænsetilstanden skal der undersøges, hvor store deformationer stålrammerne får ved lasterne, og om disse overskrider de maksimalt tilladte udbøjninger jævnført Eurocode 1993, afsnit 7.2. Her kan der dog gennem Eurocode 1993, afsnit 7.2 tages nogle forbehold, som gør at konstruktionen ikke er nær så belastet, som ved brudgrænsetilstanden, da der kun skal fokuseres på én variabel last og ikke alle laster, som optræder i konstruktionen; der beregnes derfor kun ud fra vindlasten. Det betyder også, at der skal udregnes nye reaktioner for systemet, hvor vindlasten optræder som eneste variable last.
+\newline
+\newline
+For begge tilstande fokuseres der kun på hovedkonstruktionen og ikke taget, og der tages derfor udgangspunkt i rammerne for henholdsvis brudgrænse- og anvendelsesgrænsetilstand, som illustreret på figur NYE BILLEDER – FIGUR 1 og 2, da disse er grundkonstruktionen, hvor belastning fra taget optræder i punkterne D og F.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{billeder/snitbrud.png}
 	\caption{Snit}
