@@ -1,0 +1,92 @@
+
+\textbf{Bæreevne for fundament}
+\newline
+Til bestemmelse af bæreevnen af fundamentet benyttes formlen:
+\begin{center}
+	$\frac{R}{A}=\frac{1}{2}*\gamma*b'*N_\gamma*s_\gamma*i_\gamma+q*N_q*s_q*i_q*d_q+c'*N_c*s_c*i_c*d_c$
+\end{center}
+
+\newline
+Hvor 
+$R:effektiv lodret bæreevne
+A:effektiv areal 
+\gamma:rumvægt for sand - vand som sættes til 20\frac{kN}{m^3}-10\frac{kN}{m^3}
+b':effektive bredde
+N_\gamma:bæreevnefaktor 
+s_\gamma og s_q:formfaktor
+i_\gamma og i_q:hældningsfaktor
+q:effektiv lodret overlejringstryk ved FUK 
+d_q:dybdefaktor$
+\newline
+Alle værdier pånær $b'$ kan bestemmes, således $b'$ til sidst kan bestemmes.
+I og med der intet moment er i understøtningen, er hele bredden af fundamentet effektiv og dermed ikke excentrisk. Fra resultanten af alle lodrette kræfter i fundamentunderkanten, V, fås en belastning, og for at fundamentet kan holde, skal R mindst være lige så stor som V.
+Der beregnes ikke kohæsion, fordi den der næsten ingen kohæsion er imellem sandkornene og dermed betragtes som værende 0. Derfor medregnes $c'*N_c*s_c*i_c*d_c$ -leddet ikke.
+Da det ikke altid kan sikres, at jorden ved siden af fundamentet forbliver intakt, ses der normalt bort fra dybdefaktoren, og sættes $d__q$ til 1.
+Arealet kan bestemmes, når arealet antages for at være kvadratisk, og da der intet moment er i understøtningen er $b'=b$ og arealet bliver $A=b^2$.
+\newline
+\begin{center}
+	$s_\gamma=1-0,\!4*\frac{b'}{l'}=1-0,\!4*\frac{b'}{b'}=1-0,\!4=0,\!6$
+    $s_q=1+0,\!2*\frac{b'}{l'}=1+0,\!2*\frac{b'}{b'}=1+0,\!2=1,\!2$
+    \newline
+    $i_q=(1-\frac{H}{V+A*c'*cot(\varphi)'})^2$
+\end{center}
+\newline
+H:resultanten for alle vandrette kræfter i fundamentunderkanten, FUK, som sættes til $1,\!33079214*10^5N$
+V:resultanten for alle lodrette kræfter i fundamentunderkanten, FUK, som sættes til $5,\!351696139*10^5N$
+\newline
+Da $c'$ ikke anvendes i dette projekt, sættes denne lig 0 og formlen bliver da:
+\begin{center}
+	$i_q=(1-\frac{H}{V})^2$
+	$i_q=(1-\frac{1,\!33079214*10^5N}{5,\!351696139*10^5N})^2=0,\!5645007388$
+\end{center}
+\newline
+\begin{center}
+	$i_\gamma=i_q^2$
+	$i_\gamma=(0,\!5645007388)^2=0,\!3186610841$
+\end{center}
+\newline
+$q$ bestemmes, når fundamentet antages at have en højde på 0,8 m(se Figur XX) og der regnes kun for $q__ude$:
+\begin{center}
+	$q=h_1*\gamma+h_2*(\gamma_sand-\gamma_vand)$
+\end{center}
+\newline
+$h_1:$længden ned til grundvandsspejlingen, som er $0,\!8m$
+$h_2:$længden fra grundvandsspejlingen ned til fundamentunderkanten, FUK som er $2,\!8m$
+$\gamma:$ henholdsvis rumvægten for sand og vand.
+\newline
+\begin{center}
+	$q=0,\!8m*20\frac{kN}{m^3}+2m*(20\frac{kN}{m^3}-10\frac{kN}{m^3})=36\frac{kN}{m^2}$
+\end{center}
+\newline
+$N_q$ betemmes ud fra følgende formel, når friktionsvinklen,$\varphi=32,\!33$
+\begin{center}
+	$N_q=e^\pi*Tan(\varphi)*\frac{1+Sin(\varphi)}{1-Sin(\varphi)}$
+	$N_q=e^\pi*Tan(32,\!32604742)*\frac{1+Sin(32,\!32604742)}{1-Sin(32,\!32604742)}=24,\!083$
+\end{center}
+\newline
+$N_\gamma$ bestemmes ud fra følgende formel: 
+\begin{center}
+	$N_\gamma=\frac{1}{4}((N_q-1)Cos(\varphi))^\frac{3}{2}$
+	$N_\gamma=\frac{1}{4}((24,\!083-1)Cos(32,\!32604742))^\frac{3}{2}=21,\!53664057$
+\end{center}
+\newline 
+Bredden $b'=b$ kan nu bestemmes: 
+\begin{center}
+	$\frac{R}{A}=\frac{1}{2}*\gamma*b'*N_\gamma*s_\gamma*i_\gamma+q*N_q*s_q*i_q*d_q$
+	$\frac{V}{b^2}=\frac{1}{2}*\gamma*b'*N_\gamma*s_\gamma*i_\gamma+q*N_q*s_q*i_q*d_q$
+	$(\frac{5,\!351696139*10^5N}{b^2}=\frac{1}{2}*10000*b*21,\!53664057*0,\!6*0,\!3186610841+36000*24,\!083*1,\!2*0,\!5645007388*1)=0,\!9392506518$
+\end{center}
+\newline
+Dermed skal siderne på fundamentet være $0,\!94m$
+
+
+
+
+
+
+
+
+
+
+
+
