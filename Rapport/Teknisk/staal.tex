@@ -76,10 +76,7 @@ Slutteligt laves vandret ligevægt for at bestemme $A_x$
 \end{center} 
 
 \section{Snitkræfter}
-Snitkræfterne for tilbygningen til Strøybergs Palæ kan nu beregnes gennem de kendte reaktioner. Her laves der snitkræfter for to tilfælde; brudgrænse- og anvendelsesgrænsetilstand. I beregningen af brudgrænsetilstanden skal der ses på de mest ekstreme lasttilfælde (kritiske moment, normal og forskydning?) for at se, om stålkonstruktionen kan holde til disse belastninger. For anvendelsesgrænsetilstanden skal der undersøges, hvor store deformationer stålrammerne får ved lasterne, og om disse overskrider de maksimalt tilladte udbøjninger jævnført Eurocode 1993, afsnit 7.2. Her kan der dog gennem Eurocode 1993, afsnit 7.2 tages nogle forbehold, som gør at konstruktionen ikke er nær så belastet, som ved brudgrænsetilstanden, da der kun skal fokuseres på én variabel last og ikke alle laster, som optræder i konstruktionen; der beregnes derfor kun ud fra vindlasten. Det betyder også, at der skal udregnes nye reaktioner for systemet, hvor vindlasten optræder som eneste variable last.
-\newline
-\newline
-For begge tilstande fokuseres der kun på hovedkonstruktionen og ikke taget, og der tages derfor udgangspunkt i rammerne for henholdsvis brudgrænse- og anvendelsesgrænsetilstand, som illustreret på figur NYE BILLEDER – FIGUR 1 og 2, da disse er grundkonstruktionen, hvor belastning fra taget optræder i punkterne D og F.
+Snitkræfterne for tilbygningen Strøybergs Palæs stålramme kan nu beregnes. Her laves der syv snit, som er illustreret på Figur \ref{fig:snitbrud}. Disse resultater vil bruges til at undersøge, om konstruktionen har en tilstrækkelig bæreevne eller om den vil bryde sammen. 
 
 \begin{figure}[H]
 	\centering
@@ -87,6 +84,88 @@ For begge tilstande fokuseres der kun på hovedkonstruktionen og ikke taget, og 
 	\caption{Snit}
 	\label{fig:snitbrud}
 \end{figure}
+
+Nedenfor vises beregningseksempel for snit 1 og snit 5. Beregningerne for de resterende snit, kan ses i Bilag ???. 
+\newline
+\newline
+\textbf{Snit 1: 0 < x < 2 m}
+\newline
+Fritlegemediagrammet for snit 1 ses på Figur ???.
+\newline
+\newline
+Først bestemmes normalkraften:
+\begin{center}
+	$0 = N_1 + A_y - E_1 \cdot x \leftrightarrow N_1(x) = 31,\!54 \frac{kN}{m} x - 547,\!95 kN $
+\end{center}
+
+Normalkraften bestemmes ved 0 m og 2 m:
+\begin{center}
+	$N_1(0m) = -547,\!95 kN$
+	\newline
+	$N_1(2m) = -484,\!87 kN$
+\end{center}
+
+Nu bestemmes forskydningskraften:
+\begin{center}
+	$0 = V_1 + J(x) + v_k \cdot x + A_x \leftrightarrow V_1(x) = -33,\!64\frac{kN}{m} x + 133,\!31 kN$
+\end{center}
+
+Forskydningskraften bestemmes ved 0 m og 2 m:
+\begin{center}
+	$V_1(0m) = 133,\!31 kN$
+	\newline
+	$V_1(2m) = 66,\!02 kN$
+\end{center}
+
+Til sidst bestemmes momentkraften:
+\begin{center}
+	$0 = M_1 + J(x) \cdot \frac{2x}{3} + v_k \cdot x \cdot \frac{x}{2} + A_x \cdot x \leftrightarrow M_1(x) = -22,\!15\frac{kN}{m} x^2 + 133,\!30kN x$
+\end{center}
+
+Momentkraften i højden 0 m og 2 m bestemmes:
+\begin{center}
+	$M_1(0m) = 0 kNm$
+	\newline
+	$M_1(2m) = 178,\!00 kNm$
+\end{center}
+
+\textbf{Snit 5: 0 < x < 6 m}
+\newline
+\newline
+Normalkraften bestemmes først:
+\begin{center}
+	$0 = -N_5 + F_x - v_2 \cdot 16m - J(2m) - v_k \cdot 2m \leftrightarrow N_5 = 49,\!57 kN - 48,\!12 kN = 1,\!45 kN$
+\end{center}
+
+Hermed er normalkraften til 0 m og 6 m 1,45 kN. 
+\newline
+\newline
+Forskydningskraften for snit 5 bestemmes ved:
+\begin{center}
+	$0 = V_5 - E_1 \cdot 18 m - F_y + C_y - E_s x \leftrightarrow V_5(x) = -172,\!35 kN + 1,\!24 \frac{kN}{m}x$
+\end{center}
+
+Forskydningskraften til 0 m og 6 m er hermed:
+\begin{center}
+	$V_5(0m) = -172,\!35 kN$
+	\newline
+	$V_5(6m) = -164,\!89 kN$
+\end{center}
+
+Til sidst bestemmes momentkraften:
+\begin{center}
+	$0 = -M_5 - F_y \cdot x - E_1 \cdot 18 m \cdot x - E_s \cdot x \frac{x}{2} - v_2 \cdot 16 m \cdot 8 m - v_k \cdot 2 m \cdot 17 m - J(2m) \cdot 17,\!33 m + C_y \cdot x \leftrightarrow M_5(x) = 172,\!35 kN \cdot x - 0,\!62 \frac{kN}{m} \cdot x^2 -1011,\!72 kNm$
+\end{center}
+
+Momentkraften til 0 m og 6 m bestemmes:
+\begin{center}
+	$M_5(0m) = -1011,\!72 kNm$
+	\newline
+	$M_5(6m) = 0 kN$
+\end{center}
+
+
+TABEL MED RESULTATER
 
 \section{Spænding}
 For at finde ud af om konstruktionen kan holde, undersøges spændingstilstanden. Her skal det gælde:
