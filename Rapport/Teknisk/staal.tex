@@ -166,18 +166,21 @@ Momentkraften til 0 m og 6 m bestemmes:
 	$M_5(6m) = 0 kN$
 \end{center}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/snitet.png}
-	\caption{Fritlegemediagram for snit 1}
-	\label{fig:snitet}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/snitfem.png}
-	\caption{Fritlegemediagram for snit 5}
-	\label{fig:snitfem}
+\begin{figure}[H]\centering
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\includegraphics[width=0.80\textwidth]{billeder/snitet.png} %Venstre billede
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\includegraphics[width=1.0\textwidth]{billeder/snitfem.png} %Højre billede
+	\end{minipage}\\ %Captions and labels
+	\begin{minipage}[t]{0.48\textwidth}
+		\caption{Fritlegemediagram for snit 1} %Venstre caption og label
+		\label{fig:snitet}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\caption{Fritlegemediagram for snit 5} %Højre caption og label
+		\label{fig:snitfem}
+	\end{minipage}
 \end{figure}
 
 Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene, som bruges til at beregne spændingstilstanden. 
@@ -218,7 +221,7 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/sfkn.png}
+	\includegraphics[width=0.7\textwidth]{billeder/SKFN.png}
 	\caption{Normalkraftkurve}
 	\label{fig:normalkraftkurve}
 \end{figure}
