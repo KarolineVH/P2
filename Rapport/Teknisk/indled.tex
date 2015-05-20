@@ -492,7 +492,7 @@ Da tilbygningen til Strøybergs Palæ får et sadeltag, anbefales det at dele ta
 	\label{fig:opdeling}
 \end{figure}
 
-Formfaktorerne, $c_{pe}$, for tagets zoner bestemmes ud fra Eurocode 1991. Her anvendes taghældningen på $\alpha = 26,\!56^{\circ}$, og der laves derfor lineær regression mellem $c_{pe}$ værdierne for vinklerne 15 og 30 grader, efter anbefaling af Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91}. For $\theta = 0^{\circ}$ skifter trykket hurtigt mellem positive og negative værdier i vindsiden, ved en taghældning mellem $\alpha = -5^{\circ} til + 45^{\circ}$, og derfor skal der regnes for både positive og negative formfaktorværdier. 
+Formfaktorerne, $c_{pe}$, for tagets zoner bestemmes ud fra Eurocode 1991. Her anvendes taghældningen på $\alpha = 26,\!57^{\circ}$, og der laves derfor lineær regression mellem $c_{pe}$ værdierne for vinklerne 15 og 30 grader, efter anbefaling af Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91}. For $\theta = 0^{\circ}$ skifter trykket hurtigt mellem positive og negative værdier i vindsiden, ved en taghældning mellem $\alpha = -5^{\circ} til + 45^{\circ}$, og derfor skal der regnes for både positive og negative formfaktorværdier. 
 \newline \indent{     }  Nedenfor er et beregningseksempel for beregning af formfaktoren.
 \newline
 \newline
@@ -504,7 +504,7 @@ Ud fra Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91} er de negative vær
 \end{center}
 De positive værdier for zone F er: $0,\!2$ og $0,\!7$. Her ud fra fås ligningen, og $c_{pe,10,pos}$ bestemmes:
 \begin{center}
-	$f(\alpha)=0,\!033\alpha - 0,\!3 \to c_{pe,10,pos}=0,\!585$
+	$f(\alpha)=0,\!033\alpha - 0,\!3 \to c_{pe,10,pos}=0,\!59$
 \end{center}
 
 De beregnede værdier for formfaktorerne ses i Tabellerne; \ref{tab:cc} og \ref{tab:kk}. 
@@ -532,13 +532,13 @@ Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c|c| } 
 			\hline
-			Zone/Formfaktor & \multicolumn{2}{l|}{$c_{pe,10 udvendig}$} & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
+			\multirow{2}{*}{Zone/Formfaktor} & \multicolumn{2}{l|}{$c_{pe,10 udvendig}$} & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\ \cline{2-5}
 			& Positiv & Negativ & Positiv & Negativ \\ \hline
-			F & 0,585 & -0,59 & 0,20 & -0,30 \\	\hline
-			G & 0,585 & -0,57 & 0,20 & -0,30 \\	\hline 
+			F & 0,59 & -0,59 & 0,20 & -0,30 \\	\hline
+			G & 0,59 & -0,57 & 0,20 & -0,30 \\	\hline 
 			H & 0,35 & -0,22 & 0,20 & -0,30 \\ 	\hline
 			I & 0 & -0,40 & 0,20 & -0,30 \\	\hline
-			J & 0 & -0,615 & 0,20 & -0,30 \\	\hline
+			J & 0 & -0,61 & 0,20 & -0,30 \\	\hline
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ på udvendige og indvendige tagoverflader for vind fra vest og øst, vindretning $0^{\circ} = 180^{\circ}$ på taget}
 		\label{tab:cc}
@@ -549,7 +549,7 @@ Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c| } 
 			\hline
-			Zone/Formfaktor & $c_{pe,10 udvendig}$ & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
+			\multirow{2}{*}{Zone/Formfaktor} & $c_{pe,10 udvendig}$ & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\cline{2-4}
 			& Negativ & Positiv & Negativ \\ \hline
 			F & -1,15 & 0,20 & -0,30 \\	\hline
 			G & -1,38 & 0,20 & -0,30 \\	\hline 
@@ -597,7 +597,7 @@ For alle vindretningerne anvendes vindkombination 1 til videre beregning, og dis
 		\begin{tabular}{ |c|c|c|c| } 
 			\hline
 			Zone/Vindretning, w $[\frac{kN}{m}]$ & Vest & Øst & Nord \\	\hline
-			F & 3,20 & 2,56 & -2,445 \\	\hline
+			F & 3,20 & 2,56 & -2,45 \\	\hline
 			G & 3,20 & 2,56 & -3,80 \\	\hline 
 			H & 2,37 & 1,89 & -1,31 \\ 	\hline
 			I & -0,36 & -0,29 & -0,58 \\	\hline
