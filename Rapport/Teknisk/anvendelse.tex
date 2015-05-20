@@ -1,5 +1,7 @@
 \chapter{Anvendelsesgrænsetilstand}
-Nu er brudgrænsetilstanden bestemt, og derfor kan der regnes for anvendelsesgrænsetilstanden. Hertil er der udregnet nye reaktioner for konstruktionen, da vindlasten optræder som eneste variable last. Vindlasterne på siden bliver forlænget, så denne virker ned i kælderen også, og der ses nu bort fra jordlasten. Derfor fås fem snit, som vist på Figur 2. Ud fra anvendelsesgrænsetilstanden kan der vurderes, om bygningen har tilstrækkelig små deformationer til, at bygningens dimensioner kan godtages. Hertil anvendes bjælkens differentialligning, for at udregne udbøjningerne for stængerne. Da det statiske system for tilbygningen til Strøybergs Palæ er statisk bestemt, er det den anden ordens afledede, som anvendes for at bestemme udbøjningerne. Reaktionerne for anvendelsesgrænsetilstanden udregnes på samme måde som reaktionerne for brudgrænsetilstand, der kan ses i Bilag ZZ. Værdierne ses i Tabel \ref{tab:anden}.
+Nu er brudgrænsetilstanden bestemt, og derfor kan der regnes for anvendelsesgrænsetilstanden. Ud fra anvendelsesgrænsetilstanden kan det vurderes, om bygningen har tilstrækkelig små deformationer til, at bygningens dimensioner kan godtages, hvortil bjælkens differentialligning anvendes. 
+\newline \indent{     }  Det antages, at der kun virker én variabel last på konstruktionen, nemlig vindlasten. Denne last forlænges helt ned til understøtningerne, og der ses bort fra jordlasten. Derfor er der udregnet nye reaktioner for konstruktionen, som ses i Tabel \ref{tab:anden}. Beregningerne kan ses i Bilag XX. 
+
 \begin{table}
 	\begin{center}
 		\begin{tabular}{|c|c|c|}
@@ -18,14 +20,29 @@ Nu er brudgrænsetilstanden bestemt, og derfor kan der regnes for anvendelsesgr�
 	\end{center}
 \end{table}
 
-Nedenfor er vist et eksempel på, hvordan snitkræfterne regnes for snit 1. Alle beregningerne findes i Bilag XX og resultaterne kan ses i Tabel \ref{tab:anden2}.
+\section{Snitkræfter}
+Der er lavet i alt fem snit på konstruktionen, som vist på Figur \ref{fig:snitanvendelse}. Dog ses der bort fra den højre del af konstruktionen, og dermed er det kun snit 1-3 der anvendes. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/snitanvendelse.png}
+	\caption{Snit}
+	\label{fig:snitanvendelse}
+\end{figure}
+
+Nedenfor er vist et eksempel på, hvordan snitkræfterne regnes for snit 1. Alle beregningerne findes i Bilag XX og resultaterne for alle snitkræfter kan ses i Tabel \ref{tab:anden2}.
 \newline
 \newline
 \textbf{Snit 1: 0 m < x < 18 m}
 \newline
-Fritlegemediagrammet for snit 1 ses på Figur XX.
-\newline
-\newline
+Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitetan}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/asnitet.png}
+	\caption{Snit}
+	\label{fig:snitetan}
+\end{figure}
+
 Først bestemmes normalkraften:
 \begin{center}
 	$0 = N_1 + A_y - E_1\cdot x \leftrightarrow N_1(x) = 31,\cdot54 \frac{kN}{m} \cdot x - 886,\!36 kN$
@@ -57,9 +74,9 @@ Til sidst bestemmes momentkraften:
 
 Momentkraften bestemmes ved 0 m og 18 m:
 \begin{center}
-	$M_1(0m) = 0,\!00 kN\cdot m$
+	$M_1(0m) = 0,\!00 kNm$
 	\newline
-	$M_1(18m) = 1676,\!36 kN\cdot m$
+	$M_1(18m) = 1676,\!36 kNm$
 \end{center}
 
 \begin{table}
@@ -77,3 +94,6 @@ Momentkraften bestemmes ved 0 m og 18 m:
 		\label{tab:anden2}
 	\end{center}
 \end{table}
+
+\section{Bjælkens differentialligning}
+For at udregne udbøjningerne for stængerne, anvendes bjælkens differentialligning. Da det statiske system for tilbygningen til Strøybergs Palæ er statisk bestemt, er det den anden ordens afledede, som anvendes for at bestemme udbøjningerne.
