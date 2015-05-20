@@ -19,15 +19,58 @@ Nu er brudgrænsetilstanden bestemt, og derfor kan der regnes for anvendelsesgr�
 \end{table}
 
 Nedenfor er vist et eksempel på, hvordan snitkræfterne regnes for snit 1. Alle beregningerne findes i Bilag XX og resultaterne kan ses i Tabel \ref{tab:anden2}.
+\newline
+\newline
+\textbf{Snit 1: 0 m < x < 18 m}
+\newline
+Fritlegemediagrammet for snit 1 ses på Figur XX.
+\newline
+\newline
+Først bestemmes normalkraften:
+\begin{center}
+	$0 = N_1 + A_y - E_1\cdot x \leftrightarrow N_1(x) = 31,\cdot54 \frac{kN}{m} \cdot x - 886,\!36 kN$
+\end{center}
+
+Normalkraften bestemmes ved 0 m og 18 m:
+\begin{center}
+	$N_1(0m) = -886,\!36 kN$
+	\newline
+	$N_1(18m) = -318,\!62 kN$
+\end{center}
+
+Nu bestemmes forskydningskraften:
+\begin{center}
+	$0 = V_1 + A_x + Vind_1 \cdot x \leftrightarrow V_1(x) = -6,\!08 \frac{kN}{m} \cdot x + 147,\!87$
+\end{center}
+
+Forskydningskraften bestemmes ved 0 m og 18 m:
+\begin{center}
+	$V_1(0m) = 147,\!87$
+	\newline
+	$V_1(18m) = 38,\!39$
+\end{center}
+
+Til sidst bestemmes momentkraften:
+\begin{center}
+	$0 = M_1 + A_x \cdot x + Vind_1\cdot x\cdot \frac{x}{2} \leftrightarrow M_1(x) = 147,\!87 kN\cdot x - 3,\!04 \frac{kN}{m}\cdot x^2$
+\end{center}
+
+Momentkraften bestemmes ved 0 m og 18 m:
+\begin{center}
+	$M_1(0m) = 0,\!00 kN\cdot m$
+	\newline
+	$M_1(18m) = 1676,\!36 kN\cdot m$
+\end{center}
+
 \begin{table}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			Snit/Værdi    & N - 0 m & N - $X_{max}$ m & V - 0 m & V - $X_{max}$ m & M - 0 m & M - $X_{max}$ m 	\\ \hline
+			Snit/Værdi    & N (0 m) & N ($X_{max}$ m) & V (0 m) & V ($X_{max}$ m) & M (0 m) & M ($X_{max}$ m) 	\\ \hline
 			1. A-D, 0<x<18 	& -886,36 	& -318,62 	&  147,87 	&  38,39 	&  0,00     &  1676,36        		\\ \hline
-			2. D-E, 0<x<6  	&  71,14    &  71,14    &  275,67   & -283,12   &  1676,36  &  $-9,00\cdot10^-6$    \\ \hline
+			2. D-E, 0<x<6  	&  71,14    &  71,14    &  275,67   & -283,12   &  1676,36  &  0,00    \\ \hline
 			3. B-E, 0<x<18  & -948,58   &  164,54   &  0,00     &  0,00     &  0,00     &  0,00 			    \\ \hline
-			4. E-F, 0<x<6   &  71,00    &  71,00    &  28,62    &  36,07    &  194,06   &  $1,00\cdot10^-6$     \\ \hline
+			4. E-F, 0<x<6   &  71,00    &  71,00    &  28,62    &  36,07    &  194,06   &  0,00     \\ \hline
 			5. C-F, 0<x<18     & -578,86   & -11,12    &  0,00     &  21,56    &  0,00     &  194,06       		\\ \hline
 		\end{tabular}
 		\caption{Snitkræfter for anvendelsesgrænsetilstand, N og V: kN og M: $kN\cdot m$}
