@@ -223,19 +223,42 @@ Dernæst beregnes forskydningsspændingen ved Grasshofs formel:
 	\item[-] b: bredde
 \end{itemize}
 
-Nedenfor vises et beregningseksempel for et kritisk punkt. Resultaterne for alle de valgte kritiske punkter kan ses i tabel XX. 
+Nedenfor vises et beregningseksempel for et kritisk punkt. Resultaterne for alle de valgte kritiske punkter kan ses i Tabel \ref{fig:tabelspanding}. 
 \newline
 \newline
-VIS BEREGNINGSEKSEMPEL FOR ET KRITISK PUNKT
+\textbf{Snit 5: Største forskydningskraft}
 \newline
-\newline
-INDSÆT TABEL MED RESULTATER (SE MAPLE) 
-\newline
-\newline
-Det ses i Tabel XXXX at spændingen i flere tilfælde overskrider den regningsmsæssige flydespænding. Derfor vil stålrammen opleve brud, og i værste tilfælde knække sammen, som det kendes fra ståls arbejdskurve.
+
+Normalspændingen og forskydningsspændingen beregnes begge ved henholdsvis $y = -225 mm$ og $y = 225 mm$, fordi I-profilens højde er 450 mm, og dermed er længden til y-koordinaten $\pm 225 mm$. Eksemplet nedenfor, er beregnet med $y = 225 mm$.
+
+Først beregnes normalspændingen:
+\begin{center}
+	$\sigma = \frac{1,\!45 kN}{14,\!7 \cdot 10^3 mm^2} - \frac{-1011,\!72 kNm}{458,\!5 \cdot 10^6 mm^4} \cdot 225 mm = 496,\!58 MPa$
+\end{center}
+
+Dernæst beregnes forskydningsspændingen:
+\begin{center}
+	$\tau = \frac{-172,\!35 kN \cdot (225 mm \cdot 14,\!7\cdot10^3 mm^2)}{458,\!5\cdot10^6 mm^4 \cdot 24,\!3 mm} = -51,\!16 MPa$
+\end{center}
+
+Til sidst kan spændingstilstanden beregnes:
+\begin{center}
+	$\sqrt{496,\!58^2 MPa + 3 \cdot -51,\!16^2 MPa} = 504,\!43 MPa$
+\end{center}
+
+Denne spænding på 504,43 MPa, er for høj, idet flydespændingen er beregnet til $204,\!54 MPa$. Dermed vil konstruktionen bryde sammen.
+
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=0.8\textwidth]{billeder/tabelspanding.png}
+ 	\caption{Resultater af spændingstilstand}
+ 	\label{fig:tabelspanding}
+ \end{figure}
+
+Det ses i Tabel \ref{fig:tabelspanding} at spændingen i flere tilfælde overskrider den regningsmsæssige flydespænding. Derfor vil stålrammen opleve brud, og i værste tilfælde knække sammen, som det kendes fra ståls arbejdskurve.
 \newline 
 \newline
 For at konstruktionen ikke skal bryde sammen, skal der foretages en række ændringer.
 \newline \indent{     }  Der er indsat tre stålrammer i tilbygningen. Ved at indsætte en eller to stålrammer mere, vil lasterne foredeles ud over disse, og dermed vil hver enkelt stålramme i mindre grad belastes. Dermed vil spændingerne i sidste ende mindskes. 
 \newline \indent{     }  Der er valgt en ståltype S235, som kan ændres til en højere styrkeklasse, for eksempel S275 eller S355. Ved at vælge en højere styrkeklasse, øges flydespændingen dermed. En større flydespænding betyder, at stålen kan klare en større spænding. Ved for eksempel kan ændre ståltypen til S355 ændres flydespændingen til $f_y = \frac{345 MPa}{1,\!1} = 313,\!64 MPa$. 
-\newline \indent{     }  Til sidst kan der vælges en anden stålprofil. HVAD ÆNDRE DET?
+\newline \indent{     }  Til sidst kan der vælges en anden stålprofil. Dette vil ændre henholdsvis højden, bredde, inertimomentet, densiteten, tværsnitsarealet, mm på stålprofilen. Dette vil give anledning til en mindre last, hvis stålprofilen mindskes, og dermed en mindre spænding. 
