@@ -173,7 +173,7 @@ Fire ud af tilbygningens fem etager består af bærende gulve. Kælderetagen lig
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{billeder/gulv.png}
+	\includegraphics[width=0.4\textwidth]{billeder/gulv.png}
 	\caption{Opbygning af bærende gulv}
 	\label{fig:gulv}
 \end{figure}
@@ -466,9 +466,9 @@ I Bilag A ses et beregningseksempel på bestemmelse af peakhastighedstrykket, $q
 	\begin{tabular}{ |c|c|c| } 
 		\hline
 		Vindretning/Højden & $q_p [\frac{kN}{m^2}]$ ved 16 m & $q_p [\frac{kN}{m^2}]$ ved 19 m \\	\hline
-		Vest & 0,536 & 0,579 \\		\hline
-		Øst & 0,428 & 0,463 \\	\hline 
-		Nord & 0,428 & 0,463 \\ 	\hline
+		Vest & 0,54 & 0,58 \\		\hline
+		Øst & 0,43 & 0,46 \\	\hline 
+		Nord & 0,43 & 0,46 \\ 	\hline
 	\end{tabular}
 		\caption{Værdier for $q_p [\frac{kN}{m^2}]$}
 		\label{tab:peak}
@@ -500,11 +500,11 @@ Formfaktorerne, $c_{pe}$, for tagets zoner bestemmes ud fra Eurocode 1991. Her a
 \newline
 Ud fra Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91} er de negative værdier for zone F: $-0,\!9$ og $-0,\!5$. Her ud fra laves lineær regression, og $c_{pe,10,neg}$ bestemmes:
 \begin{center}
-	$f(\alpha)=0,\!0267\alpha - 1,\!3 \to c_{pe,10,neg}=-0,\!592$
+	$f(\alpha)=0,\!027\alpha - 1,\!3 \to c_{pe,10,neg}=-0,\!59$
 \end{center}
 De positive værdier for zone F er: $0,\!2$ og $0,\!7$. Her ud fra fås ligningen, og $c_{pe,10,pos}$ bestemmes:
 \begin{center}
-	$f(\alpha)=0,\!0333\alpha - 0,\!3 \to c_{pe,10,pos}=0,\!585$
+	$f(\alpha)=0,\!033\alpha - 0,\!3 \to c_{pe,10,pos}=0,\!585$
 \end{center}
 
 De beregnede værdier for formfaktorerne ses i Tabellerne; \ref{tab:cc} og \ref{tab:kk}. 
@@ -534,11 +534,11 @@ Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
 			\hline
 			Zone/Formfaktor & \multicolumn{2}{l|}{$c_{pe,10 udvendig}$} & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
 			& Positiv & Negativ & Positiv & Negativ \\ \hline
-			F & 0,585 & -0,592 & 0,200 & -0,300 \\	\hline
-			G & 0,585 & -0,569 & 0,200 & -0,300 \\	\hline 
-			H & 0,354 & -0,223 & 0,200 & -0,300 \\ 	\hline
-			I & 0 & -0,400 & 0,200 & -0,300 \\	\hline
-			J & 0 & -0,615 & 0,200 & -0,300 \\	\hline
+			F & 0,585 & -0,59 & 0,20 & -0,30 \\	\hline
+			G & 0,585 & -0,57 & 0,20 & -0,30 \\	\hline 
+			H & 0,35 & -0,22 & 0,20 & -0,30 \\ 	\hline
+			I & 0 & -0,40 & 0,20 & -0,30 \\	\hline
+			J & 0 & -0,615 & 0,20 & -0,30 \\	\hline
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ på udvendige og indvendige tagoverflader for vind fra vest og øst, vindretning $0^{\circ} = 180^{\circ}$ på taget}
 		\label{tab:cc}
@@ -551,10 +551,10 @@ Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
 			\hline
 			Zone/Formfaktor & $c_{pe,10 udvendig}$ & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\hline
 			& Negativ & Positiv & Negativ \\ \hline
-			F & -1,146 & 0,200 & -0,300 \\	\hline
-			G & -1,377 & 0,200 & -0,300 \\	\hline 
-			H & -0,754 & 0,200 & -0,300 \\ 	\hline
-			I & -0,500 & 0,200 & -0,300 \\	\hline
+			F & -1,15 & 0,20 & -0,30 \\	\hline
+			G & -1,38 & 0,20 & -0,30 \\	\hline 
+			H & -0,75 & 0,20 & -0,30 \\ 	\hline
+			I & -0,50 & 0,20 & -0,30 \\	\hline
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ på udvendige og indvendige tagoverflader for vind fra nord, vindretning $90^{\circ}$ på taget}
 		\label{tab:kk}
@@ -582,12 +582,12 @@ Enheden skal være $[\frac{kN}{m}]$, og derfor multipliceres med længden mellem
 \end{center}
 
 \begin{itemize}
-	\item[-] $w_{e,F}$: udvendigt vindtryk for zone F = $0,\!339 \frac{kN}{m^2}$
-	\item[-] $w_{i,F}$: indvendigt vindtryk for zone F = $-0,\!174 \frac{kN}{m^2}$
+	\item[-] $w_{e,F}$: udvendigt vindtryk for zone F = $0,\!34 \frac{kN}{m^2}$
+	\item[-] $w_{i,F}$: indvendigt vindtryk for zone F = $-0,\!17 \frac{kN}{m^2}$
 \end{itemize}
 
 \begin{center} 
-	$w_F=(w_{e,F}-w_{i,F})\cdot 6,\!25 m = (0,\!339 \frac{kN}{m^2} - (-0,\!174 \frac{kN}{m^2})\cdot 6,\!25 m = 3,\!203 \frac{kN}{m}$
+	$w_F=(w_{e,F}-w_{i,F})\cdot 6,\!25 m = (0,\!34 \frac{kN}{m^2} - (-0,\!17 \frac{kN}{m^2})\cdot 6,\!25 m = 3,\!20 \frac{kN}{m}$
 \end{center}
 
 For alle vindretningerne anvendes vindkombination 1 til videre beregning, og disse laster ses i Tabel \ref{tab:bb}. 
@@ -597,11 +597,11 @@ For alle vindretningerne anvendes vindkombination 1 til videre beregning, og dis
 		\begin{tabular}{ |c|c|c|c| } 
 			\hline
 			Zone/Vindretning, w $[\frac{kN}{m}]$ & Vest & Øst & Nord \\	\hline
-			F & 3,203 & 2,563 & -2,445 \\	\hline
-			G & 3,203 & 2,563 & -3,804 \\	\hline 
-			H & 2,367 & 1,893 & -1,314 \\ 	\hline
-			I & -0,362 & -0,289 & -0,579 \\	\hline
-			J & -1,138 & -0,910 & - \\	\hline
+			F & 3,20 & 2,56 & -2,445 \\	\hline
+			G & 3,20 & 2,56 & -3,80 \\	\hline 
+			H & 2,37 & 1,89 & -1,31 \\ 	\hline
+			I & -0,36 & -0,29 & -0,58 \\	\hline
+			J & -1,14 & -0,91 & - \\	\hline
 		\end{tabular}
 		\caption{Værdier for nettovindtryk på taget}
 		\label{tab:bb}
@@ -654,10 +654,10 @@ Der arbejdes videre med vindkombination 1, hvor den udvendige vind virker som tr
 			\hline
 			\multirow{2}{*}{Zone/Formfaktor} & \multirow{2}{*}{$c_{pe,10}$ udvendig} & \multicolumn{2}{l|}{$c_{pe,10}$ indvendig} \\ \cline{3-4} 
 			& & Positiv & Negativ   		\\ \hline
-			A & -1,200 & 0,200 & -0,300 \\	\hline
-			B & -0,800 & 0,200 & -0,300 \\	\hline 
-			D & 0,800 & 0,200 & -0,300 \\	\hline
-			E & -0,517 & 0,200 & -0,300 \\	\hline
+			A & -1,20 & 0,20 & -0,30 \\	\hline
+			B & -0,80 & 0,20 & -0,30 \\	\hline 
+			D & 0,80 & 0,20 & -0,30 \\	\hline
+			E & -0,52 & 0,20 & -0,30 \\	\hline
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ for vind fra vest og øst}
 		\label{tab:ff}
@@ -670,11 +670,11 @@ Der arbejdes videre med vindkombination 1, hvor den udvendige vind virker som tr
 			\hline
 			\multirow{2}{*}{Zone/Formfaktor} & \multirow{2}{*}{$c_{pe,10}$ udvendig} & \multicolumn{2}{l|}{$c_{pe,10}$ indvendig} \\ \cline{3-4} 
 			& & Positiv & Negativ   		\\ \hline
-			A & -1,200 & 0,200 & -0,300 \\	\hline
-			B & -0,800 & 0,200 & -0,300 \\	\hline
-			C & -0,500 & 0,200 & -0,300 \\	\hline 
-			D & 0,752 & 0,200 & -0,300 \\	\hline
-			E & -0,404 & 0,200 & -0,300 \\	\hline
+			A & -1,20 & 0,20 & -0,30 \\	\hline
+			B & -0,80 & 0,20 & -0,30 \\	\hline
+			C & -0,50 & 0,20 & -0,30 \\	\hline 
+			D & 0,75 & 0,20 & -0,30 \\	\hline
+			E & -0,40 & 0,20 & -0,30 \\	\hline
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ for vind fra nord}
 		\label{tab:gg}
@@ -686,8 +686,8 @@ Der arbejdes videre med vindkombination 1, hvor den udvendige vind virker som tr
 		\begin{tabular}{|c|c|c|c|}
 			\hline
 			Zone/Vindretning, w $[\frac{kN}{m}]$ & Vest & Øst & Nord \\ \hline
-			D & 3,686 & 2,946 & 2,142 \\ \hline
-			E & -0,726 & -0,580 & -0,953 \\ \hline
+			D & 3,69 & 2,95 & 2,14 \\ \hline
+			E & -0,73 & -0,58 & -0,95 \\ \hline
 		\end{tabular}
 		\caption{Værdier for nettovindtryk på siderne}
 		\label{tab:hh}
