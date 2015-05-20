@@ -22,7 +22,7 @@ Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Sy
 Reaktionerne på højre side af systemet, der virker i charnieret, sættes som belastninger på venstre del af systemet. Reaktionerne på højre del af systemet beregnes først.
 \newline
 \newline
-Først bestemmes den vandrette reaktion i charnier ledet, $S_v$ gennem vandret ligevægt: 
+Først bestemmes den vandrette reaktion i charnier ledet, $E_x$ gennem vandret ligevægt: 
 \begin{center}
 	$\rightarrow+:0 = F_x + E_x - J(2m) - V_k \cdot 2m - V_2 \cdot 16m$
 	\newline
@@ -36,9 +36,9 @@ $C_y$ bestemmes gennem moment ligevægt om punkt E:
 	$C_y = 779,\!83 kN$
 \end{center}
 
-Til sidst bestemmes den lodrette reaktion i charnier ledet, $S_l$ gennem lodret ligevægt: 
+Til sidst bestemmes den lodrette reaktion i charnier ledet, $E_y$ gennem lodret ligevægt: 
 \begin{center}
-	$\uparrow+: 0 = F_y - E_1 \cdot 18m - E_s \cdot 6m + C_y + S_l$
+	$\uparrow+: 0 = F_y - E_1 \cdot 18m - E_s \cdot 6m + C_y + E_y$
 	\newline	
 	$E_y = -164,\!89 kN$
 \end{center}
@@ -88,11 +88,17 @@ Snitkræfterne for tilbygningen Strøybergs Palæs stålramme kan nu beregnes. H
 Nedenfor vises beregningseksempel for snit 1 og snit 5. Beregningerne for de resterende snit, kan ses i Bilag ???. 
 \newline
 \newline
-\textbf{Snit 1: 0 < x < 2 m}
+\textbf{Snit 1: 0 m < x < 2 m}
 \newline
-Fritlegemediagrammet for snit 1 ses på Figur ???.
-\newline
-\newline
+Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitet}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/snitet.png}
+	\caption{Fritlegemediagram for snit 1}
+	\label{fig:snitet}
+\end{figure}
+
 Først bestemmes normalkraften:
 \begin{center}
 	$0 = N_1 + A_y - E_1 \cdot x \leftrightarrow N_1(x) = 31,\!54 \frac{kN}{m} x - 547,\!95 kN $
@@ -129,9 +135,17 @@ Momentkraften i højden 0 m og 2 m bestemmes:
 	$M_1(2m) = 178,\!00 kNm$
 \end{center}
 
-\textbf{Snit 5: 0 < x < 6 m}
+\textbf{Snit 5: 0 m < x < 6 m}
 \newline
-\newline
+Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitfem}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/snitfem.png}
+	\caption{Fritlegemediagram for snit 5}
+	\label{fig:snitfem}
+\end{figure}
+
 Normalkraften bestemmes først:
 \begin{center}
 	$0 = -N_5 + F_x - v_2 \cdot 16m - J(2m) - v_k \cdot 2m \leftrightarrow N_5 = 49,\!57 kN - 48,\!12 kN = 1,\!45 kN$
@@ -164,8 +178,48 @@ Momentkraften til 0 m og 6 m bestemmes:
 	$M_5(6m) = 0 kN$
 \end{center}
 
+Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene, som bruges til at beregne spændingstilstanden. 
 
-TABEL MED RESULTATER
+\begin{table}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			Snit/Værdi & N($X_{min}$) & N($X_{max}$) & V($X_{min}$) & V($X_{max}$) & M($X_{min}$) & M($X_{max}$) 	\\ \hline
+			1. 0<x<2  & -547,95       & -484,87    	&  133,31    	&  66,02 	&  0,00     &  178.00        		\\ \hline
+			2. 2<x<18 &  -484,87        &  19,78       &  53,85      & -43,46   &  178,00  &  455,80    \\ \hline
+			3. 0<x<6  & 1,45       &  1,45     &  -72,24         &  -79,69     &  403,78     &  0,21 			    \\ \hline
+			4. 0<x<18 &  -1027,92       &  85,20      &  0,00        &  0,00    &  0,00   &   0,00    \\ \hline
+			5. 0<x<6  &  1,45     &    1,45      &  -172,35      &  -164,89     &   -1011,72        &   0,00      		\\ \hline
+			6. 2<x<18 &  -716,74  &   -212,09  &   -64,89    &   -45,73    &    -88,62       &   -1011,94      		\\ \hline
+			7. 0<x<2 &  -779,83        &   -716,75       &     0,00      &   -67,29   &    0,00     &    -88,62     		\\ \hline
+		\end{tabular}
+		\caption{Snitkræfter for brudgrænsetilstand, N og V: kN og M: $kN\cdot m$}
+		\label{tab:resultaterbrud}
+	\end{center}
+\end{table}
+
+Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:forskydningskurve}, Figur \ref{fig:momentkurve} og Figur \ref{fig:normalkraftkurve}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/sk.png}
+	\caption{Forskydningskurve}
+	\label{fig:forskydningskurve}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/skkm.png}
+	\caption{Momentkurve}
+	\label{fig:momentkurve}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{billeder/sfkn.png}
+	\caption{Normalkraftkurve}
+	\label{fig:normalkraftkurve}
+\end{figure}
 
 \section{Spænding}
 For at finde ud af om konstruktionen kan holde, undersøges spændingstilstanden. Her skal det gælde:
@@ -175,9 +229,9 @@ For at finde ud af om konstruktionen kan holde, undersøges spændingstilstanden
 \end{center}
 
 \begin{itemize}
-	\item[-] $\sigma$: Normalspænding
-	\item[-] $\tau$: Forskydningsspænding
-	\item[-] $f_y$: Flydespænding
+	\item[-] $\sigma$: Normalspænding [MPa]
+	\item[-] $\tau$: Forskydningsspænding [MPa]
+	\item[-] $f_y$: Flydespænding [MPa]
 \end{itemize}
 
 Flydespændingen beregnes ved formlen:
@@ -204,10 +258,10 @@ Normalspændingen findes ved Naviers formel:
 \end{center}
 
 \begin{itemize}
-	\item[-] N: Normalkraft [kN]
+	\item[-] N: Normalkraft [kN], som er bestemt igennem snitkræfter
 	\item[-] A: Tværsnitsareal, som for stålprofil 450 er $14,\!7 \cdot 10^3 mm^2$ \citep{stabi}. 
-	\item[-] M: Moment [kN]
-	\item[-] y: Tyngdepunktskoordinat [mm]
+	\item[-] M: Moment [kN], som er bestemt igennem snitkræfter
+	\item[-] y: Tyngdepunktskoordinat [mm], som er $\pm 225$
 	\item[-] I: Inertimoment, som for stålprofil 450 er $458,\!5 \cdot 10^6 mm^4$ \citep{stabi}. 
 \end{itemize} 
 
@@ -218,17 +272,15 @@ Dernæst beregnes forskydningsspændingen ved Grasshofs formel:
 \end{center}
 
 \begin{itemize}
-	\item[-] V: Forskydningskraft [kN]
+	\item[-] V: Forskydningskraft [kN], som er bestemt igennem snitkræfter
 	\item[-] Q: 1. ordens arealmoment for $A_1$: $Q = \int_{A_1}y \mathrm{d}A = yA$ $[mm^3]$
-	\item[-] b: bredde
+	\item[-] b: bredde, som er 24,3 mm
 \end{itemize}
 
-Nedenfor vises et beregningseksempel for et kritisk punkt. Resultaterne for alle de valgte kritiske punkter kan ses i Tabel \ref{fig:tabelspanding}. 
+Nedenfor vises et beregningseksempel for et kritisk punkt. Resultaterne for alle de valgte kritiske punkter kan ses på Figur \ref{fig:tabelspanding}. 
 \newline
 \newline
 \textbf{Snit 5: Største forskydningskraft}
-\newline
-
 Normalspændingen og forskydningsspændingen beregnes begge ved henholdsvis $y = -225 mm$ og $y = 225 mm$, fordi I-profilens højde er 450 mm, og dermed er længden til y-koordinaten $\pm 225 mm$. Eksemplet nedenfor, er beregnet med $y = 225 mm$.
 
 Først beregnes normalspændingen:
@@ -243,22 +295,25 @@ Dernæst beregnes forskydningsspændingen:
 
 Til sidst kan spændingstilstanden beregnes:
 \begin{center}
-	$\sqrt{496,\!58^2 MPa + 3 \cdot -51,\!16^2 MPa} = 504,\!43 MPa$
+	$\sqrt{496,\!58^2 MPa + 3 \cdot (-51,\!16)^2 MPa} = 504,\!43 MPa$
 \end{center}
 
 Denne spænding på 504,43 MPa, er for høj, idet flydespændingen er beregnet til $204,\!54 MPa$. Dermed vil konstruktionen bryde sammen.
 
  \begin{figure}[H]
  	\centering
- 	\includegraphics[width=0.8\textwidth]{billeder/tabelspanding.png}
+ 	\includegraphics[width=1.2\textwidth]{billeder/tabelspanding.png}
  	\caption{Resultater af spændingstilstand}
  	\label{fig:tabelspanding}
  \end{figure}
 
-Det ses i Tabel \ref{fig:tabelspanding} at spændingen i flere tilfælde overskrider den regningsmsæssige flydespænding. Derfor vil stålrammen opleve brud, og i værste tilfælde knække sammen, som det kendes fra ståls arbejdskurve.
+Det ses på Figur \ref{fig:tabelspanding} at spændingen i flere tilfælde overskrider den regningsmsæssige flydespænding. Derfor vil stålrammen opleve brud, og i værste tilfælde knække sammen, som det kendes fra ståls arbejdskurve.
 \newline 
 \newline
 For at konstruktionen ikke skal bryde sammen, skal der foretages en række ændringer.
-\newline \indent{     }  Der er indsat tre stålrammer i tilbygningen. Ved at indsætte en eller to stålrammer mere, vil lasterne foredeles ud over disse, og dermed vil hver enkelt stålramme i mindre grad belastes. Dermed vil spændingerne i sidste ende mindskes. 
-\newline \indent{     }  Der er valgt en ståltype S235, som kan ændres til en højere styrkeklasse, for eksempel S275 eller S355. Ved at vælge en højere styrkeklasse, øges flydespændingen dermed. En større flydespænding betyder, at stålen kan klare en større spænding. Ved for eksempel kan ændre ståltypen til S355 ændres flydespændingen til $f_y = \frac{345 MPa}{1,\!1} = 313,\!64 MPa$. 
+\newline \indent{     }  Der er indsat tre stålrammer i tilbygningen. Ved at indsætte en eller to stålrammer mere, vil lasterne fordeles ud over disse, og dermed vil hver enkelt stålramme belastes mindre. Dermed vil spændingerne i sidste ende mindskes. 
+\newline \indent{     }  Der er valgt en ståltype S235, som kan ændres til en højere styrkeklasse, for eksempel S275 eller S355. Ved at vælge en højere styrkeklasse, øges flydespændingen dermed. En større flydespænding betyder, at stålen kan klare en større spænding. Ved for eksempel kan ændre ståltypen til S355 ændres flydespændingen til $f_y = \frac{345 MPa}{1,\!1} = 313,\!64 MPa$. Dette er dog stadig ikke en stærk nok stål, og derfor kan dette ikke være den eneste ændring der skal foretages. 
 \newline \indent{     }  Til sidst kan der vælges en anden stålprofil. Dette vil ændre henholdsvis højden, bredde, inertimomentet, densiteten, tværsnitsarealet, mm på stålprofilen. Dette vil give anledning til en mindre last, hvis stålprofilen mindskes, og dermed en mindre spænding. 
+\newline
+\newline
+Ved et rigtigt byggeprojekt, skal det økonomiske aspekt også tages i betragtning... SKRIV LIDT MERE. 
