@@ -10,7 +10,7 @@ Figur \ref{fig:hej} viser de nye byggefelter inden for henholdsvis delområde A 
 \end{figure}
 
 Med udgangspunkt i lokalplan 1-1-107 har bygningen fået de størrelser og dimensioner, som ses på Figur \ref{fig:farvel}, som videre beregninger tager udgangspunkt i.
-\newline \indent{     }  Tilbygningen bliver $12,\!5$ meter lang og 12 meter bred i henhold til den eksisterende bygningsbredde. Kælderen har en højde på i alt $3,\!25$ m, hvor $1,\!25$ m ligger over terræn. Stueetagen, 1. sal og 2. sal har hver især en højde på $4,\!9$ m og tagetagen har en højde på 3 meter med en hældning på $26,\!6$ grader. I alt er tilbygningen 19 m høj over terræn.
+\newline \indent{     }  Tilbygningen bliver $12,\!5$ meter lang og 12 m bred i henhold til den eksisterende bygningsbredde. Kælderen har en højde på i alt $3,\!25$ m, hvor $1,\!25$ m ligger over terræn. Stueetagen, 1. sal og 2. sal har hver især en højde på $4,\!9$ m og tagetagen har en højde på 3 meter med en hældning på $26,\!57$ grader. I alt er tilbygningen 19 m høj over terræn.
 
 \begin{figure}[H]
 	\centering
@@ -37,14 +37,7 @@ Etagedækkene vil virke som en belastning og ses ikke som en del af konstruktion
 	\label{fig:etage}
 \end{figure}
 
-Ståltypen for det statiske system sættes til at være ståltype S235 med profilnummer 450 \citep{stabi}. Mål for profilen ses på Figur \ref{fig:iprofil}. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.4\textwidth]{billeder/iprofil.png}
-	\caption{I-profil 450}
-	\label{fig:iprofil}
-\end{figure}
+Ståltypen for det statiske system sættes til at være ståltype S235 med I-profilnummer 450 \citep{stabi}. Mål for profilet ses på Figur \ref{fig:iprofil}. 
 
 \section{Laster}
 Tilbygningen til Strøybergs Palæ vil blive udsat for en række laster, både permanente- og variable laster. Disse vil blive beregnet i dette afsnit, så der kan opstilles lastkombinationer samt beregnes brudgrænse- og anvendelsesgrænsetilstande.
@@ -58,41 +51,36 @@ For at bestemme den egenlast der virker på det statiske system, beregnes først
 
 \textbf{Last fra tag}
 \newline
-Det antages, at taget er et mellemtungt sadeltag med teglsten, som har egenvægten $600 \frac{N}{m^2}$ \citep{tag}.
+Det antages, at taget er et mellemtungt sadeltag med teglsten, som har egenvægten \SI{600,00}{$\frac{\text{N}}{\text{m}^2}$} \citep{tag}.
 \newline
 \newline
 Tagets areal bestemmes ud fra Figur \ref{fig:tagetage}:
-\begin{center}
-	$A_{tag} = 6,\!71 m\cdot 12,\!50 m \cdot 2=167,\!71 m^2$
-\end{center}
+\begin{equation}
+	A_{tag} = \SI{6,71}{m} \cdot \SI{12,50}{m} \cdot 2 = \SI{167,71}{m^2}
+\end{equation}
 
 Arealet multipliceres med egenvægten for mellemtungt tag, for at finde lasten for hele taget på tilbygningen:
-\begin{center}
-	$p_{tag} = 167,\!71 m^2\cdot 600,\!00 \frac{N}{m^2}=100,\!62 kN$
-\end{center}
+\begin{align}
+	p_{tag} = \SI{167,71}{m^2}\cdot \SI{600,00}{$\frac{\text{N}}{\text{m}^2}$} = \SI{100,62}{kN}
+\end{align}
 
-Denne last vil blive fordelt ud på de tre rammer, hvor den midterste ramme vil optage halvdelen af lasten, som herefter omregnes til en linjelast:
-\begin{center}
-	$\frac{\frac{100,\!62kN}{2}}{6,\!71m \cdot2} = 3,\!75 \frac{kN}{m}$
-\end{center}
+Denne last vil blive fordelt ud på de tre rammer (se Figur \ref{fig:farvel}), hvor den midterste ramme vil optage halvdelen af lasten, som herefter omregnes til en linjelast:
+\begin{equation}
+	\frac{\frac{100,62\text{kN}}{2}}{6,\!71\text{m} \cdot2} = 3,\!75
+	\frac{\text{kN}}{\text{m}}
+\end{equation}
 
-Denne værdi skal lægges sammen med egelasten for stålsystemet i tagkonstuktionen, for at bestemme den samlede egenlast for taget.
-\newline \indent{     }  Egenlasten for stålet regnes ud fra densiteten for den anvendte ståltype, S235, med profil nr. 450. Her er densiteten $g = 115,\!00\frac{kg}{m}$ \citep{stabi}. Denne multipliceres med længden af sadeltaget, som er $6,\!71 m$ samt tyngdeaccelerationen, for at finde lasten fra stålsystemet:
+Denne værdi skal lægges sammen med egenlasten for stålsystemet i tagkonstuktionen, for at bestemme den samlede egenlast for taget.
+\newline \indent{     }  Egenlasten for stålet regnes ud fra densiteten for den anvendte ståltype, S235, med profil nr. 450. Her er densiteten \SI{115,00}{$\frac{\text{kg}}{\text{m}}$} \citep{stabi}. Denne multipliceres med længden af sadeltaget, som er \SI{6,71}{m} samt tyngdeaccelerationen, for at finde lasten fra stålsystemet, som herefter deles med længden igen, for at få en linjelast:
+\begin{equation}
+	\SI{115,00}{$\frac{\text{kg}}{\text{m}}$} \cdot \SI{9,82}{$\frac{\text{m}}{\text{s}^2}$} = \SI{1,13}{$\frac{\text{kN}}{\text{m}}$}
+\end{equation}
 
-\begin{center}
-	$115,\!00 \frac{kg}{m}\cdot 6,\!71m \cdot 9,\!82\frac{m}{s^2} = 7,\!58 kN$
-\end{center}
-
-Denne last omregnes til en linjelast: 
-\begin{center}
-	$\frac{7,\!58 kN}{6,\!71m}= 1,\!13 \frac{kN}{m}$
-\end{center}
-
-Denne linjelast kan nu adderes til tagets egenlast, og den samlede egenlast for taget er bestemt til $4,\!89 \frac{kN}{m}$. 
+Denne linjelast kan nu adderes til tagets egenlast, og den samlede egenlast for taget er bestemt til \SI{4,89}{$\frac{\text{kN}}{\text{m}}$}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/Tagmedvinkel.png}
+	\includegraphics[width=0.5\textwidth]{billeder/Tagmedvinkel.png}
 	\caption{Dimensioner for tagetagen}
 	\label{fig:tagetage}
 \end{figure}
@@ -103,7 +91,7 @@ Egenlasten for etagerne udregnes nu, ved først at regne egenlasten for væggene
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{billeder/facadenord.png}
+	\includegraphics[width=0.6\textwidth]{billeder/facadenord.png}
 	\caption{Facaden på øst- og vestsiden}
 	\label{fig:facade}
 \end{figure}
@@ -112,11 +100,12 @@ Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleri
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{c c c}
 			\hline
-			& Densitet, d [$\frac{kg}{m^3}$] & Tykkelse, t [mm] \\ \hline
-			Mursten  & 1500  & 130     \\ \hline
-			Rockwool & 30 & 100              \\ \hline
+			Materiale & Densitet & Tykkelse \\ 
+			& \textit{d} [$\frac{\text{kg}}{\text{m}^3}$] & \textit{t} [mm] \\ \hline
+			Mursten  & 1500  & 130     \\ 
+			Rockwool & 30 & 100              \\ 
 		\end{tabular}
 		\caption{Materialer og deres egenskaber for væg \citep{murstendensitet} \citep{indervaeg} \citep{densitet} \citep{isolering}}
 		\label{tab:murogwool}
@@ -129,31 +118,32 @@ Der medregnes kun egenlast for én gavl, idet den anden gavl ligger op ad den nu
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{billeder/facadevestellerost.png}
+	\includegraphics[width=0.4\textwidth]{billeder/facadevestellerost.png}
 	\caption{Mål og dimensioner for gavl og tilbygningen}
 	\label{fig:gavl}
 \end{figure}
 
 Arealerne og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast}, hvor lasten bestemmes ud fra formlen:
-\begin{center}
-	$p = g A \sum dt$
-\end{center}
+\begin{equation}
+	p = g A \sum dt
+\end{equation}
 
 \begin{itemize}
-	\item[-] g: Tyngdeacceleration på $9,\!82 \frac{m}{s^2}$
-	\item[-] A: Areal
-	\item[-] d: Densitet af metariale
-	\item[-] t: Tykkelse af materiale
+	\item[-] $g$: tyngdeacceleration på \SI{9,82}{$\frac{\text{m}}{\text{s}^2}$}
+	\item[-] $A$: areal
+	\item[-] $d$: densitet af meteriale
+	\item[-] $t$: tykkelse af materiale
 \end{itemize}
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{c c c }
 			\hline
-			& Areal, A [$m^2$]   & Last, p [kN]    \\ \hline
-			Facade, vest & 181,18 & 352,27 \\ \hline
-			Facade, øst  & 181,18 & 352,27 \\ \hline
-			Gavl, nord   & 197,18 & 383,38 \\ \hline
+			Vindretning & Areal   & Last    \\
+			& \textit{A} [$\text{m}^2$] & \textit{p} [kN] \\ \hline
+			Facade, vest & 181,18 & 352,27 \\
+			Facade, øst  & 181,18 & 352,27 \\
+			Gavl, nord   & 197,18 & 383,38 \\
 		\end{tabular}
 		\caption{Areal og last for væg}
 		\label{tab:arealoglast}
@@ -163,29 +153,29 @@ Arealerne og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast
 \textbf{Last fra gulv}
 \newline
 Det antages at bygningens etager kun består af gulv, dvs. ingen skillevægge, trapper m.m. Derfor er det samlede areal af gulvet pr. etage: 
-
-\begin{center}
-$A_{etage} = 12,\!50 m\cdot 12,\!00 m = 150,\!00 m^2$
-\end{center}
+\begin{equation}
+	A_{etage} = \SI{12,50}{m} \cdot \SI{12,00}{m} = \SI{150,00}{$\text{m}^2$}
+\end{equation}
 
 Fire ud af tilbygningens fem etager består af bærende gulve. Kælderetagen ligger på fundamentet, og bliver dermed ikke båret af rammen. Derfor medregnes kælderetagens gulv ikke. 
-\newline \indent{     }  Opbygningen af det bærende gulv er illustreret på Figur \ref{fig:gulv}. Det bærende gulv består af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Det bestemmes, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at lede og overføre lasterne ud i understøtning. Derefter vil der ligge et undergulv, mellemgulv og til sidst selve gulvbelægningen. Isoleringen lægges mellem betondækket og undergulvet \citep{Gulvopbygning}. Densiteten og tykkelsen af gulvlagene kan ses i Tabel \ref{tab:densi}.
+\newline \indent{     }  Opbygningen af det bærende gulv er illustreret på Figur \ref{fig:gulv}. Det bærende gulv består af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Det bestemmes, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at løfte gulvet, således der er plads til isoleringslaget \citep{Gulvopbygning}. Densiteten og tykkelsen af gulvlagene kan ses i Tabel \ref{tab:densi}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth]{billeder/gulv.png}
+	\includegraphics[width=0.3\textwidth]{billeder/gulv.png}
 	\caption{Opbygning af bærende gulv}
 	\label{fig:gulv}
 \end{figure}
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{c c c}
 			\hline
-			& Densitet [$\frac{kg}{m^3}$] & Tykkelse [mm] \\ \hline
-			Beton    & 2400     & 120      \\ \hline
-			Rockwool & 30       & 140      \\ \hline
-			Linoleum & 2,9      & 383,38  \\ \hline
+			Materiale & Densitet & Tykkelse \\
+			& \textit{d} [$\frac{\text{kg}}{\text{m}^3}$] & \textit{t} [mm] \\ \hline
+			Beton    & 2400     & 120      \\ 
+			Rockwool & 30       & 140      \\ 
+			Linoleum & 2,9      & 383,38  \\ 
 		\end{tabular}
 		\caption{Materialer og deres egenskaber for gulv}
 		\label{tab:densi}
@@ -194,29 +184,30 @@ Fire ud af tilbygningens fem etager består af bærende gulve. Kælderetagen lig
 
 Der er behov for bjælker, som hver er $6,\!25$ m lange, da det er halvdelen af tilbygningens længde, $140,\!00$ mm høje og $140,\!00$ mm bredde \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke \citep{Gulvopbygning}. 
 
-\begin{center}
-	$\frac{12,\!50 m}{0,\!40 m}=31,\!25$ bjælker
-\end{center} 
+\begin{equation}
+	\frac{12,\!50 \text{m}}{0,\!40 \text{m}} = \SI{31,25}{\text{bjælker}}
+\end{equation} 
 
 Da der ikke kan optræde $31,\!25$ bjælker afrundes det til 32 bjælker.
-\newline
-\newline
-Rumfanget af de 32 bjælker med længden $12,\!5$ m multipliceres med densiteten for tørrumvægt af træ \citep{torrumvagt}, som er $510 \frac{kg}{m^3}$, hvorefter denne værdi først multipliceres med tyngdeaccelerationen og dernæst med 4, da der er fire etager foruden kælderen. Herved findes egenlasten for bjælkerne: 
-\begin{center}
-	$p_{bjælker} = 7,\!84 m^3\cdot 510 \frac{kg}{m^3}\cdot 9,\!82 \frac{m}{s^2}\cdot 4 = 157,\!06 kN$
-\end{center}
+
+
+Rumfanget af de 32 bjælker med længden $12,\!5$ m multipliceres med densiteten for tørrumvægt af træ \citep{torrumvagt}, som er \SI{510,00}{$\frac{\text{kg}}{\text{m}^3}$}, hvorefter denne værdi først multipliceres med tyngdeaccelerationen og dernæst med 4, da der er fire etager foruden kælderen. Herved findes egenlasten for bjælkerne: 
+\begin{equation}
+	p_{\textup{bjælker}} = \SI{7,84}{m^3} \cdot \SI{9,82}{$\frac{\text{m}}{\text{s}^2}$} = \SI{157,06}{kN}
+\end{equation}
 
 Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samme måde som for bjælkerne, dog skal bjælkernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:gulv}.
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{c c c}
 			\hline
-			& Volume [$m^3$] & Last [kN] \\ \hline
-			Bjælker	 & 31,36 & 157,06	\\ \hline
-			Beton    & 72,00 & 1693,44     \\ \hline
-			Rockwool & 52,64 & 15,51     \\ \hline
-			Linoleum & 1,50 & 0,04     \\ \hline
+			Materiale & Volumen & Last \\ 
+			& \textit{V} [$\text{m}3$] & \textit{p} [kN] \\ \hline
+			Bjælker	 & 31,36 & 157,06	\\ 
+			Beton    & 72,00 & 1693,44     \\ 
+			Rockwool & 52,64 & 15,51     \\ 
+			Linoleum & 1,50 & 0,04     \\ 
 		\end{tabular}
 		\caption{Samlet volumen og last for gulvelementerne}
 		\label{tab:gulv}
@@ -225,51 +216,38 @@ Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samm
 
 \textbf{Samlet egenlast for etagedæk}
 \newline
-Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet last på $2953,\!90 kN$. 
-\newline \indent{     }  Den samlede egenlast deles med 2, da midterrammen optager halvdelen af tilbygningens samlede egenlast. $1476,\!95 kN$. 
+Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet last på $2953,\!90$ kN. 
+\newline \indent{     }  Den samlede egenlast deles med 2, da midterrammen optager halvdelen af tilbygningens samlede egenlast, $1476,\!95$ kN. 
 \newline
 \newline
 Den midterste stang i det statiske system optager halvdelen af egenlasten, mens de to yderste stænger hver optager en fjerdedel:
-\begin{center}
-	$\frac{1476,\!95 kN}{4} = 369,\!24 kN$
-\end{center}
+\begin{equation}
+	\frac{1476,\!95 \text{kN}}{4} = \SI{369,24}{kN}
+\end{equation}
 
 Denne last omregnes til en linjelast, og derfor deles med 18 m, som er højden fra understøtningerne til taget:
+\begin{equation}
+	\frac{369,\!24 \text{kN}}{18 \text{m}} = \SI{20,51}{$\frac{\text{kN}}{\text{m}}$}
+\end{equation}
 
-\begin{center}
-	$\frac{369,\!24 kN}{18 m} = 20,\!51 \frac{kN}{m}$
-\end{center}
-
-Den samlede egenlast fra etagedækkene er altså $20,\!51 \frac{kN}{m}$. 
+Den samlede egenlast fra etagedækkene er altså $20,\!51 \frac{\text{kN}}{\text{m}}$. 
 
 \textbf{Egenlast af stålsystemet}
 \newline
 Der beregnes en egenlast for stålsystemet ekslusivt tag. 
 \newline
 \newline
-For at finde kraften af en enkelt lodret stang multipliceres stålets densitet $g=115\frac{kg}{m}$ først med højden af bygningen fra kælderen til taget, hvilken er 18 m, og dernæst med tyngeaccelerationen:
+For at finde kraften af et enkelt rammeben multipliceres profilets densitet 115,00 $\frac{\text{kg}}{\text{m}}$ med tyngeaccelerationen:
+\begin{equation}
+	115,\!00 \frac{\text{kg}}{\text{m}} \cdot 9,\!82 \frac{\text{m}}{\text{s}^2} = 1,\!13 \frac{text{kN}}{\text{m}}
+\end{equation}
 
-\begin{center}
-	$115\frac{kg}{m}\cdot 18 m \cdot 9,\!82\frac{m}{s^2} = 20,\!33 kN$
-\end{center}
+Det samme skal gøres for at finde kraften for en vandret stang.
+\begin{equation}
+	115 \frac{\text{kg}}{\text{m}}\cdot \cdot 9,\!82 \frac{\text{m}}{\text{s}^2} = 1,\!13 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
-Denne omregnes til en linjelast ved at dividere med højden 18 m:
-
-\begin{center}
-	$\frac{20,\!33 kN}{18m} = 1,\!13\frac{kN}{m}$
-\end{center}
-
-Det samme skal gøres for at finde kraften for en vandret stang, og densiteten skal her multipliceres med længden af den vandrette bjælke, som er 6 m.
-\begin{center}
-	$115\frac{kg}{m}\cdot 6 m \cdot 9,\!82\frac{m}{s^2} = 6,\!78  kN$
-\end{center}
-
-Dette skal omregnes til en linjelast, og der divideres derfor med længden af den vandrette stang:
-\begin{center}
-$\frac{6,\!78 kN}{6m} = 1,\!13 \frac{kN}{m}$
-\end{center}
-
-Egenlasten fra stålsystemet er altså $1,\!13 \frac{kN}{m}$.
+Egenlasten fra stålsystemet er altså 1,13 $\frac{\text{kN}}{\text{m}}$.
 
 \textbf{Opsamling}
 \newline
@@ -283,11 +261,11 @@ De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsys
 		\includegraphics[width=0.8\textwidth]{billeder/egenlaststaal.png} %Højre billede
 	\end{minipage}\\ %Captions and labels
 	\begin{minipage}[t]{0.48\textwidth}
-		\caption{Egenlast fra etagedæk angivet i $\frac{kN}{m}$} %Venstre caption og label
+		\caption{Egenlast fra etagedæk angivet i [$\frac{\text{kN}}{\text{m}}$]} %Venstre caption og label
 		\label{fig:m}
 	\end{minipage}\hfill
 	\begin{minipage}[t]{0.48\textwidth}
-		\caption{Egenlast fra stålsystemet angivet i $\frac{kN}{m}$} %Højre caption og label
+		\caption{Egenlast fra stålsystemet angivet i [$\frac{\text{kN}}{\text{m}}$]} %Højre caption og label
 		\label{fig:n}
 	\end{minipage}
 \end{figure}
@@ -297,46 +275,48 @@ Idet tilbygningen har en kælder, der går 2 m under jorden, bliver den påvirke
 \newline
 \newline
 Jordlasten beregnes gennem formlen:
-\begin{center}
-	$\sigma_x = k_0 \sigma_z$
-\end{center}
+\begin{equation}
+	\sigma_x = k_0 \sigma_z
+\end{equation}
 
 \begin{itemize}
-	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0=1-sin(\varphi)$, hvor $\varphi$ er friktionsvinklen. Friktionsvinklen er bestemt igennem fire forsøg, som ses under Afsnit (!!!!!!)
-	\item[-] $\sigma_z$: den lodrette fladelast i dybden z givet ved $\sigma_z = z\gamma$, hvor z er dybden og $\gamma$ er rumvægten $[\frac{kN}{m^3}]$
+	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0=1-\sin(\varphi)$, hvor $\varphi$ er friktionsvinklen. Friktionsvinklen er bestemt igennem fire forsøg, som ses under Afsnit (!!!!!!)
+	\item[-] $\sigma_z$: den lodrette fladelast i dybden $z$ givet ved $\sigma_z = z\gamma$, hvor $z$ er dybden og $\gamma$ er rumvægten $[\frac{\text{kN}}{\text{m}^3}]$
 \end{itemize}
 
 Hviletrykskoefficenten, $k_0$ bestemmes:
 \begin{center}
-	$k_0 = 1 - sin(32,\!33) = 0,\!47$
+	$k_0 = 1 - \sin(32,\!33) = 0,\!47$
 \end{center}
 
-Rumvægten slås op til $20 \frac{kN}{m^3}$ \citep[ s. 386]{stabi} og den lodrette fladelast, $\sigma_z$, bestemmes:
-\begin{center}
-	$\sigma_z = z\cdot 20 \frac{kN}{m^3}$
-\end{center}
+Rumvægten slås op til 20 $\frac{\text{kN}}{\text{m}^3}$ \citep[ s. 386]{stabi} og den lodrette hviletryksspænding, $\sigma_z$, bestemmes:
+\begin{equation}
+	\sigma_z = z\cdot 20 \frac{\text{kN}}{\text{m}^3}
+\end{equation}
 
-Nu er hviletrykskoefficienten og fladlasten bestemt, og det betyder, at jordlasten $\sigma_x$, i dybderne z for 0 m og 2 m bestemmes:
-\begin{center}
-	$\sigma_x = 0,\!47\cdot 0 m\cdot 20 \frac{kN}{m^3} = 0 \frac{kN}{m^2}$
-\end{center}
+Nu er hviletrykskoefficienten og fladlasten bestemt, og det betyder, at jordlasten $\sigma_x$, i dybderne $z$ for 0 m og 2 m bestemmes:
+\begin{equation}
+	\sigma_x = 0,\!47\cdot \SI{0}{m}\cdot 20 \frac{\text{kN}}{\text{m}^3} = 0 \frac{\text{kN}}{\text{m}^2}
+\end{equation}
 
-\begin{center}
-	$\sigma_x = 0,\!47\cdot 2 m\cdot 20 \frac{kN}{m^3} = 18,\!61 \frac{kN}{m^2}$
-\end{center}
+\begin{equation}
+	\sigma_x = 0,\!47\cdot \SI{2}{m}\cdot 20 \frac{\text{kN}}{\text{m}^3} = 18,\!61 \frac{\text{kN}}{\text{m}^2}
+\end{equation}
 
-I og med jordlasten ved 0 m er $0 \frac{kN}{m^2}$, vil den også optræde som en linjelast med værdien $0 \frac{kN}{m}$. Dermed beregnes linjelasten for dybden 2 m, ved at multiplicere med længden, som den virker over, hvilken er 6,25 m:
-\begin{center}
-	$\sigma_{x,linje} = 18,\!61 \frac{kN}{m^2}\cdot 6,\!25 m = 116,\!32 \frac{kN}{m}$
-\end{center}
+I og med jordlasten ved 0 m er 0 $\frac{\text{kN}}{\text{m}^2}$, vil den også optræde som en linjelast med værdien 0 $\frac{\text{kN}}{\text{m}^2}$. Dermed beregnes linjelasten for dybden 2 m, ved at multiplicere med længden, som den virker over, hvilken er 6,25 m:
+\begin{equation}
+	q_{x,linje} = 18,\!61 \frac{\text{kN}}{\text{m}^2}\cdot \SI{6,25}{m} = 116,\!32 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
 Dermed er jordlasten, som linjelast, i dybderne som ses på Tabel \ref{tab:jord}.
 \begin{table}[htb]
 	\begin{center}
-		\begin{tabular}{ |c|c|c| } 
+		\begin{tabular}{ c c c } 
 		\hline
-		Dybde [m] & 0 & 2 \\ \hline
-		Jordlast $[\frac{kN}{m}]$ & 0 & 116,32 \\ \hline
+		Dybde & Jordlast \\
+		[m] & $p_x,linje$ [$\frac{\text{kN}}{\text{m}}$] \\ \hline
+		0 & 0 \\ 
+		2 & 116,32
 		\end{tabular}
 		\caption{Værdier for jordlasten}
 		\label{tab:jord}
@@ -344,58 +324,59 @@ Dermed er jordlasten, som linjelast, i dybderne som ses på Tabel \ref{tab:jord}
 \end{table}
 
 For at finde den jordlast der virker over x-antal meter under jorden, opstilles følgende ligning:
-
-\begin{center}
-	$w = \frac{1}{2} \cdot x \cdot p$
-\end{center}
+\begin{equation}
+	w = \frac{1}{2} x p
+\end{equation}
 
 \begin{itemize}
-	\item[-] x: længden, som kraften virker over
-	\item[-] p: den største kraft
+	\item[-] $x$: længden, som kraften virker over
+	\item[-] $p$: den største kraft
 \end{itemize}
 
 Hermed fås ligningen: 
-\begin{center}
-	$w = \frac{1}{2} 116,\!32 \frac{kN}{m} x = 58,\!16x$
-\end{center}
+\begin{equation}
+	w = \frac{1}{2} 116,\!32 \frac{\text{kN}}{\text{m}} x = 58,\!16x
+\end{equation}
 
 Den jordlast der virker på det statiske system er illustreret på Figur \ref{fig:jordlast}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{billeder/jordlast.png}
-	\caption{Jordlast på det statiske system angivet i $\frac{kN}{m}$}
+	\caption{Jordlast på det statiske system angivet i [$\frac{\text{kN}}{\text{m}}$]}
 	\label{fig:jordlast}
 \end{figure}
 
 \subsection{Variable laster}
-Af variable laster optræder snelast, vindlast og nyttelast på bygningen. Disse udregnes efter Dansk Standard Eurocode 1991.
+Af variable laster optræder snelast, vindlast og nyttelast på bygningen. Disse udregnes efter Eurocode 1991.
 
 \subsubsection{Snelast}
 Til at beregne den karakteristiske snelast anvendes følgende formel:
-\begin{center}
-	$s=\mu_iC_eC_ts_k$
-\end{center}
+\begin{equation}
+	s=\mu_iC_eC_ts_k
+\end{equation}
 \begin{itemize}
 	\item[-] $\mu_i$: formfaktoren for snelasten, som sættes til 0.8 \citep[ tabel 5.2 kapitel 5.3]{EU91}
 	\item[-] $C_e$: eksponeringsfaktoren
 	\item[-] $C_t$: termisk faktor, som sættes til $1,\!0$ \citep[ kapitel 5.2]{EU91}
-	\item[-] $s_k$: karakteristisk terrænværdi, som sættes til $1 \frac{kN}{m^2}$ \citep[ kapitel 4.1]{EU91}
+	\item[-] $s_k$: karakteristisk terrænværdi, som sættes til 1 [$\frac{\text{kN}}{\text{m}^2}$] \citep[ kapitel 4.1]{EU91}
 \end{itemize}
 
 Eksponeringsfaktoren, $C_e$, bestemmes ved:
-\begin{center}
-$C_e=C_{top}C_s$
-\end{center}
+\begin{equation}
+	C_e=C_{top}C_s
+\end{equation}
 \begin{itemize}
 	\item[-] $C_{top}$: topografi faktor, som sættes til $1,\!0$ \citep[ tabel 5.1 kapitel 5.2]{EU91}
 	\item[-] $C_s$: størrelse faktor, som sættes til $1,\!0$ \citep[ kapitel 5.2]{EU91}
 \end{itemize}
+
 Eksponeringsfaktoren kan nu bestemmes til:
-\begin{center}
-$C_e=1,\!0\cdot 1,\!0=1,\!0$
-\end{center}
-Strøybergs Palæ har et sadeltag, og dermed skal der tages højde for fire lasttilfælde, som ses på Figur \ref{fig:sne}. Derudover multipliceres snetilfældets værdi med 6,25 m, som er halvdelen af tilbygningens længde, hvilket gøres, da det statiske system er opdelt i tre rammer, for at få værdien ud i $\frac{kN}{m}$.
+\begin{equation}
+	C_e = 1,\!0 \cdot 1,\!0 = 1,\!0
+\end{equation}
+
+Strøybergs Palæ har et sadeltag, og dermed skal der tages højde for fire lasttilfælde, som ses på Figur \ref{fig:sne}. Derudover multipliceres snetilfældets værdi med 6,25 m, som er halvdelen af tilbygningens længde, hvilket gøres, da det statiske system er opdelt i tre rammer, for at få værdien ud i $\frac{\text{kN}}{\text{m}}$.
 
 \begin{figure}[htbp]
 	\centering
@@ -405,33 +386,37 @@ Strøybergs Palæ har et sadeltag, og dermed skal der tages højde for fire last
 \end{figure}
 
 \underline{Snetilfælde 1}
-\begin{center}
-$s_1=0,\!8\cdot 1.0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}\cdot 6,\!25 m=5,\!0 \frac{kN}{m}$
-\end{center}
+\begin{equation}
+	s_1 = 0,\!8\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{\text{kN}}{\text{m}^2}\cdot \SI{6,25}{m} = 5,\!0 \frac{\text{kN}}{\text{m}}
+\end{equation}
+
 \underline{Snetilfælde 2 og 3}
-\begin{center}
-$s_2=\frac{1}{2}\cdot 0,\!8\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}\cdot 6,\!25 m=2,\!5 \frac{kN}{m}$
-\end{center}
+\begin{equation}
+	s_2 = s_3 = \frac{1}{2}\cdot 0,\!8 \cdot 1,\!0 \cdot 1,\!0\cdot 1 \frac{\text{kN}}{\text{m}^2}\cdot \SI{6,25}{m} = 2,\!5 \frac{\text{kN}}{\text{m}}
+\end{equation}
+
 \underline{Snetilfælde 4}
 \newline
-\newline
 Snetilfælde 4 er ophobning, og dermed anvendes en anden formfaktor.
-\begin{center}
-	$s_4=\mu_wC_eC_ts_k$
-\end{center}
+\begin{equation}
+	s_4 = \mu_w C_e C_t s_k
+\end{equation}
+
 \begin{itemize}
-	\item[-] $\mu_w$: formfaktoren, som sættes til $1,\!2$ eftersom $\alpha$ er $26,\!56^{\circ}$ \citep[ kapitel 5.3.3]{EU91}
+	\item[-] $\mu_w$: formfaktoren, som sættes til $1,\!2$ eftersom $\alpha$ er $26,\!57^{\circ}$ \citep[ kapitel 5.3.3]{EU91}
 \end{itemize}
+
 Den karakteristiske snelast for lasttilfælde 4 kan nu bestemmes til:
-\begin{center}
-	$s_4=1,\!2\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{kN}{m^2}\cdot 6,\!25 m = 7,\!5 \frac{kN}{m}$
-\end{center}
+\begin{equation}
+	s_4 = 1,\!2\cdot 1,\!0\cdot 1,\!0\cdot 1 \frac{\text{kN}}{\text{m}^2}\cdot \SI{6,25}{m} = 7,\!5 \frac{\text{kN}}{\text{m}}
+\end{equation}
+
 Til videre beregning har projektgruppen valgt at anvende snetilfælde 1, som er illustreret på Figur \ref{fig:sne}. I praksis burde der laves beregninger med samtlige snetilfælde.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.3\textwidth]{billeder/snelast.png}
-	\caption{Snelast på det statiske system angivet i $\frac{kN}{m}$}
+	\caption{Snelast på det statiske system angivet i [$\frac{\text{kN}}{\text{m}}$]}
 	\label{fig:snelast}
 \end{figure}
 
@@ -441,9 +426,10 @@ For vindlasten regnes der en nettovindlast, hvilken regnes som summen af den udv
 \newline
 \newline
 Til at bestemme vindlasten på tilbygningens udvendige sider anvendes følgende formel:	
-\begin{center} 
-	$w_e=q_p(z_e)c_{pe}$
-\end{center}
+\begin{equation} 
+	w_e = q_p(z_e)c_{pe}
+\end{equation}
+
 \begin{itemize}
 	\item[-] $q_p$: peakhastighedstrykket
 	\item[-] $z_e$: referencehøjden for det udvendige vindtryk, som er 19 m for taget og 16 m for facaderne
@@ -451,9 +437,9 @@ Til at bestemme vindlasten på tilbygningens udvendige sider anvendes følgende 
 \end{itemize}
 
 Til at bestemme vindlasten på tilbygningens indvendige sider anvendes følgende formel:
-\begin{center} 
-	$w_i=q_p(z_i)c_{pi}$
-\end{center}
+\begin{equation} 
+	w_i = q_p(z_i)c_{pi}
+\end{equation}
 \begin{itemize}
 	\item[-] $q_p$: peakhastighedstrykket
 	\item[-] $z_i$: referencehøjden for det indvendige vindtryk, som sættes lig det udvendige for hhv. tag og facader $z_e$ \citep[ kapitel 7.2.9]{EU91}
@@ -463,14 +449,14 @@ Til at bestemme vindlasten på tilbygningens indvendige sider anvendes følgende
 I Bilag A ses et beregningseksempel på bestemmelse af peakhastighedstrykket, $q_p$, og i Tabel \ref{tab:peak} ses værdierne for peakhastighedstrykket for alle tre vindretninger ved højderne 16 m og 19 m.
 \begin{table}[htb]
 \begin{center}
-	\begin{tabular}{ |c|c|c| } 
+	\begin{tabular}{ c c c| } 
 		\hline
-		Vindretning/Højden & $q_p [\frac{kN}{m^2}]$ ved 16 m & $q_p [\frac{kN}{m^2}]$ ved 19 m \\	\hline
-		Vest & 0,54 & 0,58 \\		\hline
-		Øst & 0,43 & 0,46 \\	\hline 
-		Nord & 0,43 & 0,46 \\ 	\hline
+		Vindretning/Højden & $q_p [\frac{\text{kN}}{\text{m}^2}]$ ved 16 m & $q_p [\frac{\text{kN}}{\text{m}^2}]$ ved 19 m \\	\hline
+		Vest & 0,54 & 0,58 \\	
+		Øst & 0,43 & 0,46 \\
+		Nord & 0,43 & 0,46 \\
 	\end{tabular}
-		\caption{Værdier for $q_p [\frac{kN}{m^2}]$}
+		\caption{Værdier for $q_p [\frac{\text{kN}}{\text{m}^2}]$}
 		\label{tab:peak}
 \end{center}
 \end{table}
@@ -481,64 +467,66 @@ Peakhastighedstrykket skal nu anvendes, for at bestemme vindlasten på taget fra
 \textbf{Vindtryk på tag}
 \newline
 Først bestemmes de karakteristiske vindlaster ved at opstille en række vindtilfælde for henholdsvis tryk og sug. Tryk regnes altid positiv, da denne virker mod taget, og sug regnes altid negativ, da denne virker væk fra taget.
-\newline
-\newline
+
+
 Da tilbygningen til Strøybergs Palæ får et sadeltag, anbefales det at dele taget ind i zoner efter Eurodecode 1991. Bygningen tegnes i fuld størrelse, hvor længden \textit{e} er 25 m, og derfor er den nuværende bygning også medregnet i målene. For vindretningen $\theta = 0^{\circ}$ (gælder for vindretning fra vest og fra øst) skal bygningen deles ind som vist på Figur \ref{fig:opdeling}.  
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{billeder/opdeling.png}
+	\includegraphics[width=0.6\textwidth]{billeder/opdeling.png}
 	\caption{Opdeling af bygning, for vindretning fra øst og vest \citep[ kapitel 7.2.5]{EU91}}
 	\label{fig:opdeling}
 \end{figure}
 
-Formfaktorerne, $c_{pe}$, for tagets zoner bestemmes ud fra Eurocode 1991. Her anvendes taghældningen på $\alpha = 26,\!57^{\circ}$, og der laves derfor lineær regression mellem $c_{pe}$ værdierne for vinklerne 15 og 30 grader, efter anbefaling af Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91}. For $\theta = 0^{\circ}$ skifter trykket hurtigt mellem positive og negative værdier i vindsiden, ved en taghældning mellem $\alpha = -5^{\circ} til + 45^{\circ}$, og derfor skal der regnes for både positive og negative formfaktorværdier. 
+Formfaktorerne, $c_{pe}$, for tagets zoner bestemmes ud fra Eurocode 1991. Her anvendes taghældningen på $\alpha = 26,\!57^{\circ}$, og der laves derfor lineær regression mellem $c_{pe}$ værdierne for vinklerne 15 og 30 grader, efter anbefaling af Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91}. For $\theta = 0^{\circ}$ skifter trykket hurtigt mellem positive og negative værdier i vindsiden, ved en taghældning mellem $\alpha = -5^{\circ}$ til $+ 45^{\circ}$, og derfor skal der regnes for både positive og negative formfaktorværdier. 
 \newline \indent{     }  Nedenfor er et beregningseksempel for beregning af formfaktoren.
-\newline
-\newline
+
+
 \underline{Zone F for vind fra vest}
 \newline
-Ud fra Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91} er de negative værdier for zone F: $-0,\!9$ og $-0,\!5$. Her ud fra laves lineær regression, og $c_{pe,10,neg}$ bestemmes:
-\begin{center}
-	$f(\alpha)=0,\!027\alpha - 1,\!3 \to c_{pe,10,neg}=-0,\!59$
-\end{center}
-De positive værdier for zone F er: $0,\!2$ og $0,\!7$. Her ud fra fås ligningen, og $c_{pe,10,pos}$ bestemmes:
-\begin{center}
-	$f(\alpha)=0,\!033\alpha - 0,\!3 \to c_{pe,10,pos}=0,\!59$
-\end{center}
+Ud fra Eurocode 1991 \citep[ tabel 7.4a kapitel 7.2.5]{EU91} findes de negative værdier for zone F ved $15^{\circ}$ og $30^{\circ}$. Her ud fra laves lineær regression, og $c_{pe,10,neg}$ bestemmes:
+\begin{equation}
+	c_{pe,10,neg} = -0,\!59
+\end{equation}
 
-De beregnede værdier for formfaktorerne ses i Tabellerne; \ref{tab:cc} og \ref{tab:kk}. 
-\newline
-\newline
+Ligeledes gøres for de positive værdier for zone F ved $15^{\circ}$ og $30^{\circ}$, og $c_{pe,10,pos}$ bestemmes:
+\begin{equation}
+	c_{pe,10,pos}=0,\!59
+\end{equation}
+
+De beregnede værdier for formfaktorerne ses i Tabellerne \ref{tab:cc} og \ref{tab:kk}. 
+
+
 De udvendige vindtryk beregnes ved formlen, som tidligere vist:
-\begin{center} 
-	$w_e=q_p(z_e)c_{pe}$
-\end{center}
+\begin{equation} 
+	w_e=q_p(z_e)c_{pe}
+\end{equation}
+
 Disse værdier findes alle i Bilag - HUSK REFERENCE! 
-\newline
-\newline
+
+
 De indvendige vindtryk skal nu bestemmes, da de virker på samme tid som de udvendige vindtryk.
-\newline
-\newline
+
+
 Der findes to måder til bestemmelse af formfaktoren, $c_{pi}$, for indvendig vind. I dette projekt anvendes den forsimplede metode, hvor $c_{pi}$ regnes til at være den mindst gunstige af + 0,2 og - 0,3 \citep[Kapitel 7]{EU91}. Værdierne for formfaktoren ses i Tabellerne \ref{tab:cc} og \ref{tab:kk}.
-\newline
-\newline
+
+
 Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
-\begin{center} 
-	$w_e=q_p(z_e)c_{pi}$
-\end{center}
+\begin{equation} 
+	w_e=q_p(z_e)c_{pi}
+\end{equation}
 
 \begin{table}[htb]
 	\begin{center}
-		\begin{tabular}{ |c|c|c|c|c| } 
+		\begin{tabular}{ c c c c c } 
 			\hline
-			\multirow{2}{*}{Zone/Formfaktor} & \multicolumn{2}{l|}{$c_{pe,10 udvendig}$} & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\ \cline{2-5}
+			\multirow{2}{*}{Zone/Formfaktor} & \multicolumn{2}{}{$c_{pe,10 udvendig}$} & \multicolumn{2}{}{$c_{pe,10 indvendig}$} \\ 
 			& Positiv & Negativ & Positiv & Negativ \\ \hline
-			F & 0,59 & -0,59 & 0,20 & -0,30 \\	\hline
-			G & 0,59 & -0,57 & 0,20 & -0,30 \\	\hline 
-			H & 0,35 & -0,22 & 0,20 & -0,30 \\ 	\hline
-			I & 0 & -0,40 & 0,20 & -0,30 \\	\hline
-			J & 0 & -0,61 & 0,20 & -0,30 \\	\hline
+			F & 0,59 & -0,59 & 0,20 & -0,30 \\
+			G & 0,59 & -0,57 & 0,20 & -0,30 \\
+			H & 0,35 & -0,22 & 0,20 & -0,30 \\ 
+			I & 0 & -0,40 & 0,20 & -0,30 \\	
+			J & 0 & -0,61 & 0,20 & -0,30 \\	
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ på udvendige og indvendige tagoverflader for vind fra vest og øst, vindretning $0^{\circ} = 180^{\circ}$ på taget}
 		\label{tab:cc}
@@ -547,14 +535,14 @@ Herefter kan de indvendige vindtryk beregnes ved formlen, som tidligere vist:
 
 \begin{table}[htb]
 	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
+		\begin{tabular}{ c c c c } 
 			\hline
-			\multirow{2}{*}{Zone/Formfaktor} & $c_{pe,10 udvendig}$ & \multicolumn{2}{l|}{$c_{pe,10 indvendig}$} \\	\cline{2-4}
+			\multirow{2}{*}{Zone/Formfaktor} & $c_{pe,10 udvendig}$ & \multicolumn{2}{}{$c_{pe,10 indvendig}$} \\	
 			& Negativ & Positiv & Negativ \\ \hline
-			F & -1,15 & 0,20 & -0,30 \\	\hline
-			G & -1,38 & 0,20 & -0,30 \\	\hline 
-			H & -0,75 & 0,20 & -0,30 \\ 	\hline
-			I & -0,50 & 0,20 & -0,30 \\	\hline
+			F & -1,15 & 0,20 & -0,30 \\	
+			G & -1,38 & 0,20 & -0,30 \\ 
+			H & -0,75 & 0,20 & -0,30 \\ 
+			I & -0,50 & 0,20 & -0,30 \\	
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ på udvendige og indvendige tagoverflader for vind fra nord, vindretning $90^{\circ}$ på taget}
 		\label{tab:kk}
@@ -575,33 +563,33 @@ Der opstilles fire vindkombinationer for hver vindretning:
 Nedenfor laves et beregningseksempel med vind fra vest med vindkombination 1 for zone F. De resterende værdier kan ses i Tabel \ref{tab:bb}.
 \newline
 \newline
-Enheden skal være $[\frac{kN}{m}]$, og derfor multipliceres med længden mellem hver af vores stænger, som er 6,25 m. Se Figur \ref{fig:farvel}.
+Enheden skal være $[\frac{\text{kN}}{\text{m}}]$, og derfor multipliceres med længden mellem hver af stængerne, som er 6,25 m. Se Figur \ref{fig:farvel}.
 
-\begin{center} 
-	$w_F=(w_{e,F}-w_{i,F})\cdot 6,\!25 m$
-\end{center}
+\begin{equation} 
+	w_F = (w_{e,F}-w_{i,F})\cdot \SI{6,25}{m}
+\end{equation}
 
 \begin{itemize}
-	\item[-] $w_{e,F}$: udvendigt vindtryk for zone F = $0,\!34 \frac{kN}{m^2}$
-	\item[-] $w_{i,F}$: indvendigt vindtryk for zone F = $-0,\!17 \frac{kN}{m^2}$
+	\item[-] $w_{e,F}$: udvendigt vindtryk for zone F = $0,\!34 \frac{\text{kN}}{\text{m}^2}$
+	\item[-] $w_{i,F}$: indvendigt vindtryk for zone F = $-0,\!17 \frac{\text{kN}}{\text{m}^2}$
 \end{itemize}
 
-\begin{center} 
-	$w_F=(w_{e,F}-w_{i,F})\cdot 6,\!25 m = (0,\!34 \frac{kN}{m^2} - (-0,\!17 \frac{kN}{m^2})\cdot 6,\!25 m = 3,\!20 \frac{kN}{m}$
-\end{center}
+\begin{equation} 
+	w_F = (w_{e,F}-w_{i,F})\cdot \SI{6,25}{m} = (0,\!34 \frac{\text{kN}}{\text{m}^2} - (-0,\!17 \frac{\text{kN}}{\text{m}^2})\cdot \SI{6,25}{m} = 3,\!20 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
 For alle vindretningerne anvendes vindkombination 1 til videre beregning, og disse laster ses i Tabel \ref{tab:bb}. 
 
 \begin{table}[htb]
 	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
+		\begin{tabular}{ c c c c } 
 			\hline
-			Zone/Vindretning, w $[\frac{kN}{m}]$ & Vest & Øst & Nord \\	\hline
-			F & 3,20 & 2,56 & -2,45 \\	\hline
-			G & 3,20 & 2,56 & -3,80 \\	\hline 
-			H & 2,37 & 1,89 & -1,31 \\ 	\hline
-			I & -0,36 & -0,29 & -0,58 \\	\hline
-			J & -1,14 & -0,91 & - \\	\hline
+			Zone/Vindretning, w $[\frac{\text{kN}}{\text{m}}]$ & Vest & Øst & Nord \\	\hline
+			F & 3,20 & 2,56 & -2,45 \\
+			G & 3,20 & 2,56 & -3,80 \\	
+			H & 2,37 & 1,89 & -1,31 \\ 	
+			I & -0,36 & -0,29 & -0,58 \\
+			J & -1,14 & -0,91 & - \\
 		\end{tabular}
 		\caption{Værdier for nettovindtryk på taget}
 		\label{tab:bb}
@@ -610,15 +598,15 @@ For alle vindretningerne anvendes vindkombination 1 til videre beregning, og dis
 
 Fra Tabel \ref{tab:bb} ses, at værdierne for vest er større i forhold til værdierne for øst. Det formodes derfor, at vindlasten er mere kritisk ved vind fra vest, og der ses fremover bort fra vinden fra øst i projektet. I tabellen ses det ligeledes, at værdierne for nord alle er negative, hvilket skyldes at vinden fra nord kun kan påvirke taget med sug, og dermed ses der i denne rapport også bort fra denne. 
 \newline \indent{     }  Derfor anvendes værdierne for vest til de videre beregninger, når der skal opstilles lastkombinationer vindlasten for taget.
-\newline
-\newline
+
+
 \textbf{Vindtryk på facaderne}
 \newline
-Vinden vil også påvirke Strøybergs Palæ på dens facader og endegavle, og derfor skal vindlasten også beregnes for de lodrette vægge af bygningen.
+Vinden vil også påvirke Strøybergs Palæ på facader og endegavle, og derfor skal vindlasten også beregnes for de lodrette vægge.
 \newline \indent{     }  Nettovindtrykket på facaderne beregnes på samme måde som nettovindtrykket for taget, dog tages der udgangspunkt i \citep[ tabel 7.1]{EU91}. Længden af bygningens facader skal anvendes, og igen bruges den fulde længde af bygningen, der består af den nuværende bygning samt tilbygningen, hvilket giver længden 25 m. 
-\newline
-\newline
-For vindretning $\varphi = 0^{\circ}$ for vind fra vest og $\varphi = 180^{\circ}$ for vind fra øst gælder at b = 25 m, d = 12 m og højden h = 16 m. Bygningen skal igen opdeles i nogle zoner, både for vind fra vest, øst og nord, hvor zonerne D og E ses på Figur \ref{fig:vindvest} og \ref{fig:vindost}, mens zonerne A, B og C kan ses i Eurocode 1991 \citep [kapitel 7.2.2 figur 7.5]{EU91}.
+
+
+For vindretning $\varphi = 0^{\circ}$ for vind fra vest og $\varphi = 180^{\circ}$ for vind fra øst gælder at $b$ = 25 m, $d$ = 12 m og højden $h$ = 16 m. Bygningen skal igen opdeles i nogle zoner, både for vind fra vest, øst og nord, hvor zonerne D og E ses på Figur \ref{fig:vindvest} og \ref{fig:vindost}, mens zonerne A, B og C kan ses i Eurocode 1991 \citep [kapitel 7.2.2 figur 7.5]{EU91}.
 
 \begin{figure}[htbp]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
@@ -650,14 +638,14 @@ Der arbejdes videre med vindkombination 1, hvor den udvendige vind virker som tr
 
 \begin{table}[htb]
 	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
+		\begin{tabular}{ c c c c } 
 			\hline
-			\multirow{2}{*}{Zone/Formfaktor} & \multirow{2}{*}{$c_{pe,10}$ udvendig} & \multicolumn{2}{l|}{$c_{pe,10}$ indvendig} \\ \cline{3-4} 
+			\multirow{2}{*}{Zone/Formfaktor} & \multirow{2}{*}{$c_{pe,10}$ udvendig} & \multicolumn{2}{}{$c_{pe,10}$ indvendig} \\ 
 			& & Positiv & Negativ   		\\ \hline
-			A & -1,20 & 0,20 & -0,30 \\	\hline
-			B & -0,80 & 0,20 & -0,30 \\	\hline 
-			D & 0,80 & 0,20 & -0,30 \\	\hline
-			E & -0,52 & 0,20 & -0,30 \\	\hline
+			A & -1,20 & 0,20 & -0,30 \\	
+			B & -0,80 & 0,20 & -0,30 \\	 
+			D & 0,80 & 0,20 & -0,30 \\	
+			E & -0,52 & 0,20 & -0,30 \\	
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ for vind fra vest og øst}
 		\label{tab:ff}
@@ -666,15 +654,15 @@ Der arbejdes videre med vindkombination 1, hvor den udvendige vind virker som tr
 
 \begin{table}[htb]
 	\begin{center}
-		\begin{tabular}{ |c|c|c|c| } 
+		\begin{tabular}{ c c c c } 
 			\hline
-			\multirow{2}{*}{Zone/Formfaktor} & \multirow{2}{*}{$c_{pe,10}$ udvendig} & \multicolumn{2}{l|}{$c_{pe,10}$ indvendig} \\ \cline{3-4} 
+			\multirow{2}{*}{Zone/Formfaktor} & \multirow{2}{*}{$c_{pe,10}$ udvendig} & \multicolumn{2}{}{$c_{pe,10}$ indvendig} \\ 
 			& & Positiv & Negativ   		\\ \hline
-			A & -1,20 & 0,20 & -0,30 \\	\hline
-			B & -0,80 & 0,20 & -0,30 \\	\hline
-			C & -0,50 & 0,20 & -0,30 \\	\hline 
-			D & 0,75 & 0,20 & -0,30 \\	\hline
-			E & -0,40 & 0,20 & -0,30 \\	\hline
+			A & -1,20 & 0,20 & -0,30 \\	
+			B & -0,80 & 0,20 & -0,30 \\	
+			C & -0,50 & 0,20 & -0,30 \\	 
+			D & 0,75 & 0,20 & -0,30 \\	
+			E & -0,40 & 0,20 & -0,30 \\	
 		\end{tabular}
 		\caption{Værdier for $c_{pe,10}$ for vind fra nord}
 		\label{tab:gg}
@@ -683,21 +671,21 @@ Der arbejdes videre med vindkombination 1, hvor den udvendige vind virker som tr
 
 \begin{table}[htb]
 	\begin{center}
-		\begin{tabular}{|c|c|c|c|}
+		\begin{tabular}{c c c c}
 			\hline
-			Zone/Vindretning, w $[\frac{kN}{m}]$ & Vest & Øst & Nord \\ \hline
-			D & 3,69 & 2,95 & 2,14 \\ \hline
-			E & -0,73 & -0,58 & -0,95 \\ \hline
+			Zone/Vindretning, w $[\frac{\text{kN}}{\text{m}}]$ & Vest & Øst & Nord \\ \hline
+			D & 3,69 & 2,95 & 2,14 \\ 
+			E & -0,73 & -0,58 & -0,95 \\ 
 		\end{tabular}
 		\caption{Værdier for nettovindtryk på siderne}
 		\label{tab:hh}
 	\end{center}
 \end{table}
 
-Ud fra Tabel \ref{tab:hh} ses det, at værdierne for vest er størst. Det formodes igen, at vindlasten derfor er mere kritisk fra vest end for de to andre vindretninger, og der ses fremover bort fra vinden fra nord og øst. Derfor anvendes lasterne for vest videre i lastkombinationerne, når der skal opstilles lastkombinationer for siden af bygningen.
+Ud fra Tabel \ref{tab:hh} ses det, at værdierne for vest er størst. Det formodes igen, at vindlasten derfor er mere kritisk fra vest end for de to andre vindretninger, og der ses fremover bort fra vinden fra nord og øst. Derfor anvendes lasterne for vest videre i lastkombinationerne, når der skal opstilles lastkombinationer for bygningen.
 \newline \indent{     }  Disse linjelaster virker på højden af facaderne, der er siderne D og E, som hver er 16 m høje.
-\newline
-\newline
+
+
 \textbf{Opsummering}
 \newline
 Det er nu bestemt i denne rapport, at der fokuseres på vind fra vest, hvor der optræder forskellige udvendige laster, mens den indre altid optræder som sug. Lasterne er omregnet til linjelaster ved at multiplicere med afstanden mellem rammerne, hvilken er 6,25 m. 
@@ -709,19 +697,19 @@ Dog ses det, at værdierne F og G for taget er ens, og dermed er gennemsnitsvær
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{billeder/vindlast.png}
-	\caption{Vindlast på det statiske system angivet i $\frac{kN}{m}$}
+	\includegraphics[width=0.4\textwidth]{billeder/vindlast.png}
+	\caption{Vindlast på det statiske system angivet i [$\frac{\text{kN}}{\text{m}}$]}
 	\label{fig:vindlast}
 \end{figure}
 
 \subsubsection{Nyttelast}
-Ud fra Eurocode 1991 aflæses den jævnt fordelte last, $q_k$, for kategori A1, som er bolig og lokale adgangsveje, til $1,\!5 \frac{kN}{m^2}$ \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91}. Lasten omregnes til en linjelast ved at multiplicere med afstanden mellem rammerne på $6,\!25$ m. Hermed fås en linjelast på $9,\!37 \frac{kN}{m}$. 
+Ud fra Eurocode 1991 aflæses den jævnt fordelte last, $q_k$, for kategori A1, som er bolig og lokale adgangsveje, til $1,\!5 \frac{\text{kN}}{\text{m}^2}$ \citep[ tabel 6.2 kapitel 6.3.1.2]{EU91}. Lasten omregnes til en linjelast ved at multiplicere med afstanden mellem rammerne på 6,25 m. Hermed fås en linjelast på $9,\!37 \frac{\text{kN}}{\text{m}}$. 
 \newline \indent{     }  Den nyttelast, der virker på det statiske system er illustreret på Figur \ref{fig:nyttelast}.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.4\textwidth]{billeder/nyttelast.png}
-	\caption{Nyttelast på det statiske system angivet i $\frac{kN}{m}$}
+	\includegraphics[width=0.3\textwidth]{billeder/nyttelast.png}
+	\caption{Nyttelast på det statiske system angivet i [$\frac{\text{kN}}{\text{m}}$]}
 	\label{fig:nyttelast}
 \end{figure}
 
@@ -736,60 +724,53 @@ Den karakteristiske egenlast, jordlast, vindlast, snelast og nyttelast er bestem
 \end{figure}
 
 Ved et rigtigt byggeprojekt skal der opstilles lasttilfælde for alle tænkelige scenarier, som kan forekomme. For dette projekt er det dog ikke en mulighed, og derfor er der til videre beregninger valgt at fokusere på vindlast som den dominerende last. Hermed opstilles der følgende lastkombination for hvert område:
-\begin{center}
-	$E_d = \gamma_{G1} K_{FI} G_{K1} + \gamma_{G2} K_{FI} G_{K2} + \gamma_{Q1} K_{FI} Q_{K1} + \gamma_{Q2} \Psi_{0,2} K_{FI} Q_{K2} + \gamma_{Q3} \Psi_{0,3} K_{FI} Q_{K3}$ 
-\end{center}
+\begin{equation}
+	E_d = \gamma_{G1} K_{FI} G_{K1}" + "\gamma_{G2} K_{FI} G_{K2}" + "\gamma_{Q1} K_{FI} Q_{K1}" + "\gamma_{Q2} \psi_{0,2} K_{FI} Q_{K2}" + "\gamma_{Q3} \psi_{0,3} K_{FI} Q_{K3}
+\end{equation}
 
 \begin{itemize}
-	\item[-] $\gamma_G$: Partialkoefficient for permanent last
-	\item[-] $K_{FI}$: Konsekvensklasse
-	\item[-] $G_K$: Karakteristisk værdi for permanent last
-	\item[-] $\gamma_Q$: Partialkoefficient for variabel last
-	\item[-] $Q_K$: Karakteristisk værdi for variabel last
-	\item[-] $\Psi$: Kombinationsværdi af variabel last, som mulitipliceres den værdi, som ikke er dominerende 
+	\item[-] $\gamma_G$: partialkoefficient for permanent last
+	\item[-] $K_{FI}$: konsekvensklasse
+	\item[-] $G_K$: karakteristisk værdi for permanent last
+	\item[-] $\gamma_Q$: partialkoefficient for variabel last
+	\item[-] $Q_K$: karakteristisk værdi for variabel last
+	\item[-] $\psi$: lastkombinationsfaktor 
 \end{itemize}
 
 Nedenfor gennemgås to beregningseksempeler for den regningsmæssige last, med udgangspunkt i henholdsvis område 1 og 6. 
 
 I område 1 optræder der vindlast, snelast og egenlast, og beregnes ved følgende:
-
-\begin{center}
-	$E_d = 1,\!0 \cdot 1,\!1 \cdot 8,\!63 \frac{kN}{m} + 1,\!5 \cdot 1,\!1 \cdot 3,\!20 \frac{kN}{m} + 1,\!5 \cdot 0 \cdot 1,\!1 \cdot 5,\!0 \frac{kN}{m}$
-\end{center}
+\begin{equation}
+	E_d = 1,\!0 \cdot 1,\!1 \cdot 8,\!63 \frac{\text{kN}}{\text{m}}" + "1,\!5 \cdot 1,\!1 \cdot 3,\!20 \frac{\text{kN}}{\text{m}}" + "1,\!5 \cdot 0 \cdot 1,\!1 \cdot 5,\!0 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
 Herudfra kan egenlasten, der virker per løbende skrå længde, vindlasten, der virker vinkelret på taget, og snelasten, der virker per løbende vandrette længde, for dette område findes:
+\begin{equation}
+	\text{Egenlast} = 1,\!0 \cdot 1,\!1 \cdot 8,\!63 \frac{\text{kN}}{\text{m}} = 9,\!49 \frac{\text{kN}}{\text{m}}
+\end{equation}
+\begin{equation}
+	\text{Vindlast} = 1,\!5 \cdot 1,\!1 \cdot 3,\!20 \frac{\text{kN}}{\text{m}} = 5,\!28 \frac{\text{kN}}{\text{m}}
+\end{equation}
+\begin{equation}
+	\text{Snelast} = 1,\!5 \cdot 0 \cdot 1,\!1 \cdot 5,\!0 \frac{\text{kN}}{\text{m}} = 0 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
-\begin{center}
-	$Egenlast = 1,\!0 \cdot 1,\!1 \cdot 8,\!63 \frac{kN}{m} = 9,\!49 \frac{kN}{m}$
-\end{center}
-
-\begin{center}
-	$Vindlast = 1,\!5 \cdot 1,\!1 \cdot 3,\!20 \frac{kN}{m} = 5,\!28 \frac{kN}{m}$
-\end{center}
-
-\begin{center}
-	$Snelast = 1,\!5 \cdot 0 \cdot 1,\!1 \cdot 5,\!0 \frac{kN}{m} = 0 \frac{kN}{m}$ 
-\end{center}
-
-I område 6 optræder der vindlast, egenlast fra etagedæk, egenlast fra stålprofiler og nyttelast. Her er egenlasten for etagedæk og egenlasten fra stålprofilerne lagt sammen til $21,\!64 \frac{kN}{m}$. Lastkombinationen opstilles som følgende:
-
-\begin{center}
-	$E_d = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{kN}{m} + 1,\!5 \cdot 1,\!1 \cdot 3,\!68 \frac{kN}{m} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{kN}{m}$
-\end{center}
+I område 6 optræder der vindlast, egenlast fra etagedæk, egenlast fra stålprofiler og nyttelast. Her er egenlasten for etagedæk og egenlasten fra stålprofilerne lagt sammen til 21,64 $\frac{\text{kN}}{\text{m}}$. Lastkombinationen opstilles som følgende:
+\begin{equation}
+	E_d = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{\text{kN}}{\text{m}}" + "1,\!5 \cdot 1,\!1 \cdot 3,\!68 \frac{\text{kN}}{\text{m}}" + "1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
 De laster der virker i vandret retning, altså i x-retningen, er vindlast:
-
-\begin{center}
-	$x-retning = 1,\!5 \cdot 1,\!1 \cdot 3,\!68 \frac{kN}{m} = 6,\!08 \frac{kN}{m}$
-\end{center}
+\begin{equation}
+	q_{x6} = 1,\!5 \cdot 1,\!1 \cdot 3,\!68 \frac{\text{kN}}{\text{m}} = 6,\!08 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
 De laster der virker i lodret retning, altså y-retningen, er nyttelast, egenlast fra etagedæk samt egenlast fra stålprofiler:
+\begin{equation}
+	q_{y6} = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{\text{kN}}{\text{m}} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{\text{kN}}{\text{m}} = 31,\!54 \frac{\text{kN}}{\text{m}}
+\end{equation}
 
-\begin{center}
-	$y-retningen = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{kN}{m} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!37 \frac{kN}{m} = 31,\!54 \frac{kN}{m}$ 
-\end{center}
-
-Ovenstående beregninger gentages hvor hvert område på konstruktionen, og der er derfor lavet i alt 11 lastkombinationer i dette projekt. De endelige laster der virker på konstruktionen er angivet på Figur \ref{fig:laster}. 
+Ovenstående beregninger gentages for hvert område på konstruktionen, og derfor regnes der for i alt 10 områder. De endelige laster der virker på konstruktionen er angivet på Figur \ref{fig:laster}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -802,12 +783,12 @@ Taget i bjælkekonstruktionen er forbundet til den resterende del af konstruktio
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{billeder/tagmedreaktioner.png}
-	\caption{Tag med laster og understøtninger. Lasterne er angivet i $\frac{kN}{m}$}
+	\includegraphics[width=0.4\textwidth]{billeder/tagmedreaktioner.png}
+	\caption{Tag med laster og understøtninger. Lasterne er angivet i [$\frac{\text{kN}}{\text{m}}$]}
 	\label{fig:tagmedreaktioner}
 \end{figure}
 
-Punktlasterne bestemmes gennem de tre ligevægtsligninger, ved at beregne reaktionerne i de to punkter, D og F, som begge er fast simple understøttet. Før reaktionerne bestemmes, skal vindlasten, som virker vinkelret på tagoverfladen, deles op i x- og y-komposanter ved at mulitplicere med henholdsvis sinis og cosinus til taghældningen på $26,\!6^\circ$. Egenlasten virker vinkelret på jordoverfladen, og derfor kun i y-retningen. Når vindlasten er opdelt i x- og y-komposanter, samles lasterne for henholdsvis x- og y-retningen. Fritlegemediagrammet samt de laster på taget, som skal bruges til at beregne reaktioner, er illustreret på Figur \ref{fig:fld}. 
+Punktlasterne bestemmes gennem de tre ligevægtsligninger, ved at beregne reaktionerne i de to punkter, D og F, som begge er fast simple understøttet. Før reaktionerne bestemmes, skal vindlasten, som virker vinkelret på tagoverfladen, deles op i x- og y-komposanter ved at multiplicere med henholdsvis sinus og cosinus til taghældningen på $26,\!57^\circ$. Egenlasten virker vinkelret på jordoverfladen, og derfor kun i y-retningen. Når vindlasten er opdelt i x- og y-komposanter, samles lasterne for henholdsvis x- og y-retningen. Fritlegemediagrammet samt de laster på taget, som skal bruges til at beregne reaktioner, er illustreret på Figur \ref{fig:fld}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -816,29 +797,29 @@ Punktlasterne bestemmes gennem de tre ligevægtsligninger, ved at beregne reakti
 	\label{fig:fld}
 \end{figure}
 
-Reaktionerne kan dermed beregnes:
+Reaktionerne for taget kan dermed beregnes:
 \begin{center}
-	Moment om D: $-F_{1y} \cdot 2,\!795 m \cdot \frac{2,\!5 m}{2} - F_{2y} \cdot 3,\!913 m \cdot (2,\!5 m + \frac{3,\!5 m}{2}) - F_{1x} \cdot 2,\!795 m \cdot (\frac{1,\!25 m}{2}) - F_{2x} \frac{kN}{m} \cdot 3,\!913 m \cdot (1,\!25 m + \frac{1,\!75 m}{2}) - F_{3y} \cdot 2,\!795 m \cdot (6 m + \frac{2,\!5 m}{2}) - F_{4y} \frac{kN}{m} \cdot 3,\!913 m \cdot (8,\!5 m + \frac{3,\!5 m}{2}) - F_{3x} \cdot 2,\!795 m \cdot (1,\!75 m + \frac{1,\!25 m}{2}) - F_{4x} \cdot 3,\!913 m \cdot (\frac{1,\!75 m}{2}) + 12 m \cdot F_y = 0$ 
-	\newline 
-	$F_y = 39,\!74 kN$ 
+	$Moment om D: -h_{1y} \cdot \SI{2,80}{m} \cdot \frac{2,5 \text{m}}{2} - h_{2y} \cdot \SI{3,91}{m} \cdot (2,\!5 \text{m} + \frac{3,5 \text{m}}{2}) - h_{1x} \cdot \SI{2,80}{m} \cdot (\frac{1,25 \text{m}}{2}) - h_{2x} \cdot \SI{3,91}{m} \cdot (1,\!25 \text{m} + \frac{1,\!75 \text{m}}{2}) - h_{3y} \cdot \SI{2,80}{m} \cdot (6 \text{m} + \frac{2,5 \text{m}}{2}) - h_{4y} \cdot \SI{3,91}{m} \cdot (8,\!5 \text{m} + \frac{3,5 \text{m}}{2}) - h_{3x} \cdot \SI{2,80}{m} \cdot (1,\!25 \text{m} + \frac{1,75 \text{m}}{2}) - h_{4x} \cdot \SI{3,91}{m} \cdot (\frac{1,\!25 \text{m}}{2}) + \SI{12}{m} \cdot F_y $=$ 0$ 
+	\newline
+	$F_y $=$ \SI{39,74}{kN}$
 \end{center}
 
 \begin{center}
-	Lodret ligevægt: $-F_{1y} \frac{kN}{m} \cdot 2,\!795 m - F_{2y} \frac{kN}{m} \cdot 3,\!913 m - F_{3y} \frac{kN}{m} \cdot 2,\!795 m -  F_{4y} \cdot 3,\!913 m + D_y + F_y = 0$ 
+	Lodret ligevægt: $-h_{1y} \frac{\text{kN}}{\text{m}} \cdot \SI{2,80}{m} - h_{2y} \frac{\text{kN}}{\text{m}} \cdot \SI{3,91}{m} - h_{3y} \frac{\text{kN}}{\text{m}} \cdot \SI{2,80}{m} -  h_{4y} \cdot \SI{3,91}{m} + D_y + F_y = 0$ 
 	\newline
 	$D_y = 52,\!45 kN$
 \end{center}
 
 \begin{center}
-	Moment om charnier led (højre del): $- F_{3y} \cdot 2,\!795 m \cdot (\frac{2,\!5 m}{2}) - F_{4y} \cdot 3,\!913 m \cdot (2,\!5 m + \frac{3,\!5 m}{2}) - F_{3x} \cdot 2,\!795 m \cdot (\frac{1,\!75 m}{2}) - F_{4x} \cdot 3,\!913 m \cdot (1,\!75 m + \frac{1,\!25 m}{2}) + F_y \cdot 6 m - F_x \cdot 3 m = 0$ 
+	Moment om charniere led (højre del): $- h_{3y} \cdot \SI{2,80}{m} \cdot (\frac{2,5 \text{m}}{2}) - h_{4y} \cdot \SI{3,91}{m} \cdot (2,\!5 \text{m} + \frac{3,5 \text{m}}{2}) - h_{3x} \cdot \SI{2,80}{m} \cdot (\frac{1,25 \text{m}}{2}) - h_{4x} \cdot \SI{3,91}{m} \cdot (1,\!25 \text{m} + \frac{1,75 \text{m}}{2}) + F_y \cdot \SI{6}{m} - F_x \cdot \SI{3}{m} = 0$ 
 	\newline
-	$F_x = 49,\!57 kN$
+	$F_x = 49,\!57 \text{kN}$
 \end{center}
 
 \begin{center}
-	Vandret ligevægt: $F_{1x} \cdot 2,\!795 m + F_{2x} \cdot 3,\!913 m - F_{3x} \cdot 2,\!795 m - F_{4x} \cdot 3,\!913 m - F_x + D_x = 0$
+	Vandret ligevægt: $h_{1x} \cdot \SI{2,80}{m} + h_{2x} \cdot \SI{3,91}{m} - h_{3x} \cdot \SI{2,80}{m} - h_{4x} \cdot \SI{3,91}{m} - F_x + D_x = 0$
 	\newline
-	$D_x = 32,\!74 kN$
+	$D_x = 32,\!74 \text{kN}$
 \end{center}
 
 Disse reaktioner virker som punktlast på taget, og det endelige statiske system med de laster der skal bruges til at finde reaktioner for det statiske system, er illustreret på Figur \ref{fig:alle}. 
