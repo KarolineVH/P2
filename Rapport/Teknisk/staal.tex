@@ -231,7 +231,7 @@ Hovedformålet med dette afsnit, er at finde ud af om konstruktionen har en tils
 	\item[-] $\gamma$: partialkoefficient, der sættes til 1,1 \citep[ s. 212]{stabi}
 \end{itemize}
 
-Spændingstilstanden undersøges i tre forskellige snit på I-profilet, som ses på Figur \ref{fig:iprofilsnit}.
+Spændingstilstanden undersøges i tre snit på I-profilet, som ses på Figur \ref{fig:iprofilsnit}.
 
 \begin{figure}[H]
 	\centering
@@ -240,11 +240,9 @@ Spændingstilstanden undersøges i tre forskellige snit på I-profilet, som ses 
 	\label{fig:iprofilsnit}
 \end{figure}
 
-Først skal normal- og forskydningsspændingen beregnes, som gøres nedenfor. 
+Først beregnes normal- og forskydningsspændingen. 
 
 \subsection{Forskydningsspænding}
-SKRIV KORT HVAD FORSKYDNINGSSPÆNDING ER.
-\newline
 Forskydningsspændingen $\tau$ beregnes ved Grasshofs formel:
 
 \begin{equation}
@@ -262,7 +260,7 @@ Forskydningsspændingsfordelingen på I-profilet findes ved, at lave to snit på
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.3\textwidth]{billeder/forskydningprofil.png}
-	\caption{BILLETEKST}
+	\caption{Snit 1 og snit 2 på I-profilet til bestemmelse af forskydningsspændingsfordeling}
 	\label{fig:snitsnit}
 \end{figure}
 
@@ -291,7 +289,7 @@ Snit 1 er vist på Figur \ref{fig:snitetforskyd}, hvor 0 mm < z < 76,9 mm
 
 Tyngdepunktskoordinat $\bar{y}$ samt arealet bestemmes:
 \begin{equation}
-\bar{y} = \frac{450 \text{mm} - 2 \cdot 24,\!3 \textbf{mm}}{2} + \frac{24,\!3 \text{mm}}{2} = 212,\!85 \text{mm}
+\bar{y} = \frac{450 \text{mm} - 2 \cdot 24,\!3 \text{mm}}{2} + \frac{24,\!3 \text{mm}}{2} = 212,\!85 \text{mm}
 \end{equation}
 \begin{equation}
 A = z \cdot \SI{24,3}{mm}
@@ -302,24 +300,24 @@ Dermed bestemmes det statiske moment til:
 Q(z) = \SI{212,85}{mm} \cdot (z \cdot \SI{24,3}{mm})
 \end{equation}
 
-z sættes til 0 mm og 76,9 mm for at kunne bestemmes den mindste og største forskydningsspænding:
+z sættes til 0 mm og 76,9 mm for at bestemme den mindste og største forskydningsspænding på I-profilets flange:
 \begin{equation}
-Q_0 = \SI{212,85}{mm} \cdot (\SI{0}{mm} \cdot \SI{24,3}{mm}) = \SI{0}{mm^3}
+Q_{0 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{0}{mm} \cdot \SI{24,3}{mm}) = \SI{0}{mm^3}
 \end{equation} 
 \begin{equation}
-	Q_{76,9} = \SI{212,85}{mm} \cdot (\SI{76,9}{mm} \cdot \SI{24,3}{mm}) =  3,\!977 \cdot 10^5 \text{mm}^3 
+	Q_{76,9 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{76,9}{mm} \cdot \SI{24,3}{mm}) =  3,\!977 \cdot 10^5 \text{mm}^3 
 \end{equation}
 
-Dermed kan den mindste og den største forskydningsspænding bestemmes, hvor kun V afhænger af hvilket snit på konstruktionen der vælges:
+Dermed kan den mindste og den største forskydningsspænding bestemmes, hvor forskydningskraften, \textit{V} afhænger af hvilket snit på konstruktionen der vælges:
 \begin{equation}
 	\tau_{max} = \frac{V \cdot 3,977 \cdot 10^5 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}}
 \end{equation}
 
 \begin{equation}
-	\tau_{min} = \frac{V \cdot 0 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}} = \SI{0,00}{MPa}
+	\tau_{min} = \frac{V \cdot 0 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}}
 \end{equation}
 
-INDSÆT TABEL 1
+INDSÆT TABEL2
 
 \textbf{Snit 2: Forskydningsspændingsfordeling i kroppen}
 \newline
@@ -332,35 +330,32 @@ Snit 2 er vist på Figur \ref{fig:snittoforskyd}.
 	\label{fig:snittoforskyd}
 \end{figure}
 
-Som det ses på Figur \ref{fig:snittoforskyd} er I-profilet inddelt i to arealer; $A_1$ og $A_2$. Derfor findes en Q for hver areal; $Q_1$ og $Q_2$, og den samlede Q er dermed $Q = Q_1 + Q_2$. 
+Som det ses på Figur \ref{fig:snittoforskyd} er I-profilet inddelt i to arealer; $A_1$ og $A_2$. Derfor beregnes det statiske moment \textit{Q} for hvert areal; $Q_1$ og $Q_2$, og den samlede Q er dermed $Q = Q_1 + Q_2$. 
 
 Først findes Q for $A_1$:
 \begin{equation}
 	Q_1 = \SI{24,3}{mm} \cdot \SI{170}{mm} \cdot (\SI{225}{mm} - \frac{1}{2} \cdot \SI{24,3}{mm}) = 8,\!793 \cdot 10^5 \text{mm}^3
 \end{equation}
 
-$Q_1$ er altså en konstant, idet den ikke er afhængig af y.
-\newline
-\newline
 Q for $A_2$, som er afhængig af y, bestemmes nu:
 \begin{equation}
 Q_2(y) = (\SI{16,2}{mm} \cdot (\SI{200,7}{mm} -y)) \cdot (\frac{200\!,7 \text{mm} -y}{2} + y)
 \end{equation}
 
-Hermed fås en samlet Q som funktion af y:
+$Q_1$ er en konstant og $Q_2$ er en funktion af y. Dermed fås et samlet statisk moment \textit{Q}, som funktion af \textit{y}:
 \begin{equation}
 	Q(y) = 8,\!793 \cdot 10^5 \text{mm}^3 + ((\SI{16,2}{mm} \cdot (\SI{200,7}{mm} -y)) \cdot (\frac{200\!,7 \text{mm} -y}{2} + y))
 \end{equation}
 
 Forskydningsspændingen kan hermed beregnes ved:
 \begin{equation}
-	\tau(y) = \frac{V Q(y)}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 16,\!2 \text{mm}}
+	\tau(y) = \frac{V \cdot Q(y)}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 16,\!2 \text{mm}}
 \end{equation}
 
-Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I-profilet krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved y = 225 mm. Forskydningsspændingsfordeling er illustreret på Figur \ref{fig:forskydfordeling}. Resultatet af forskydningsspændingsfordeling ses i Tabel XXX.  
+Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I-profilets krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved y = 225 mm. Forskydningsspændingsfordeling er illustreret på Figur \ref{fig:forskydfordeling}, og resultatet ses i Tabel XXX.  
 \newline
 \newline
-INDSÆT TABEL2
+INDSÆT TABEL1
 
 \begin{figure}[H]
 	\centering
@@ -370,8 +365,6 @@ INDSÆT TABEL2
 \end{figure}
 
 \subsection{Normalspænding}
-SKRIV KORT HVAD NORMALSPÆNDING ER.
-\newline
 Normalspændingen $\sigma$ findes ved Naviers formel:
 \begin{equation}
 \sigma = \frac{N}{A} - \frac{M}{I} y
@@ -389,20 +382,26 @@ Her er den eneste ubekendte faktor y. Derfor fås normalspændingen som en funkt
 \begin{equation}
 	\sigma(y) = \frac{N}{14,\!7 \cdot 10^3 \text{mm}^2} - \frac{M}{458,\!5 \cdot 10^6 \text{mm}^4} y
 \end{equation}
-Spændingen beregnes, ligesom forskydningskraften, til $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. Resultatet ses i tabel XXX. 
+Spændingen beregnes til $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. Resultatet ses i tabel XXX.
 \newline
 \newline
 INDSÆT TABEL3
 
 \subsection{Spændingstilstand}
+Spændingstilstanden er beregnet for alle snittene, og de største værdier er angivet i Tabel XX.
+\newline
+\newline
 Den regningsmæssige flydespænding $f_y$ bestemmes til:
 \begin{equation}
 f_y = \frac{225 \text{MPa}}{1,\!1} = \SI{204,54}{MPa}
 \end{equation}
 
+Udnyttelsesgraden beregnes ved:
+\begin{equation}
+	\frac{\sqrt{\sigma^2 + 3\tau^2} \le \frac{f_{yk}}{\gamma}}{\frac{f_{yk}}{$\gamma$}} \le 1
+\end{equation}
+Overskrider denne værdi 1, betyder det, at den regningsmæssige flydespænding er overskredet, og dermed har tilbygningen ikke en tilstrækkelig bæreevne. 
+
 INSÆT TABEL4
 
-Det ses i Tabel XX, at spændingen ikke overstiger flydespændingen, og dermed kan det konkluderes, at konstruktionen har en tilstrækkelig bæreevne. 
-
-
-
+Det ses, at den højeste spænding er 100,50 MPa, og dermed overskrider spændingen ikke den regningsmæssige flydespænding. Det kan dermed konkluderes, at tilbygningen har en tilstrækkelig bæreevne. 
