@@ -244,7 +244,7 @@ Egenlasten fra stålsystemet er altså 1,13 $\frac{\text{kN}}{\text{m}}$.
 
 \textbf{Opsamling}
 \newline
-De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsystemet bestemt. Disse placeres nu i det statiske sytem vidst på Figur \ref{fig:m} og \ref{fig:n}.
+De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsystemet bestemt. Disse placeres nu i det statiske system vidst på Figur \ref{fig:m} og \ref{fig:n}.
 
 \begin{figure}[H]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
@@ -273,7 +273,7 @@ Jordlasten beregnes gennem formlen:
 \end{equation}
 
 \begin{itemize}
-	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0=1-\sin(\varphi)$, hvor $\varphi$ er friktionsvinklen. Friktionsvinklen er bestemt igennem fire forsøg, som ses under Afsnit (!!!!!!)
+	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0=1-\sin(\varphi)$, hvor $\varphi$ er friktionsvinklen. Friktionsvinklen er bestemt igennem fire forsøg, som ses under afsnit 10.3.5. 
 	\item[-] $\sigma_z$: den lodrette fladelast i dybden $z$ givet ved $\sigma_z = z\gamma$, hvor $z$ er dybden og $\gamma$ er rumvægten $[\frac{\text{kN}}{\text{m}^3}]$
 \end{itemize}
 
@@ -301,36 +301,23 @@ I og med jordlasten ved 0 m er 0 $\frac{\text{kN}}{\text{m}^2}$, vil den også o
 	q_{x,linje} = 18,\!61 \frac{\text{kN}}{\text{m}^2}\cdot \SI{6,25}{m} = 116,\!32 \frac{\text{kN}}{\text{m}}
 \end{equation}
 
-Dermed er jordlasten, som linjelast, i dybderne som ses på Tabel \ref{tab:jord}.
-\begin{table}[htb]
-	\begin{center}
-		\begin{tabular}{ c c c } 
-		\hline
-		Dybde [m] & Jordlast $p_{x,linje}$ [$\frac{\text{kN}}{\text{m}}$] \\ \hline
-		0 & 0 \\ 
-		2 & 116,32
-		\end{tabular}
-		\caption{Værdier for jordlasten}
-		\label{tab:jord}
-	\end{center}
-\end{table}
-
-For at finde den jordlast der virker over x-antal meter under jorden, opstilles følgende ligning:
+Jordlasten virker derfor som en lineær funktion, og der opstilles nu et generelt udtryk for funktionen $j(z)$: 
 \begin{equation}
-	w = \frac{1}{2} x p
+	j(z) = a z + b
 \end{equation}
 
 \begin{itemize}
-	\item[-] $x$: længden, som kraften virker over
-	\item[-] $p$: den største kraft
+	\item[-] $a$: Hældning, som er givet ved $\frac{116,\!32kN/m}{2m} = 58,\!16 kN/m $
+	\item[-] $z$: Koordinatet til kraften
+	\item[-] $b$: Lasten i z = 0 m
 \end{itemize}
 
-Hermed fås ligningen: 
+Linjelasten for jordlasten er derfor givet ved: 
 \begin{equation}
-	w = \frac{1}{2} 116,\!32 \frac{\text{kN}}{\text{m}} x = 58,\!16x
+	j(z) = 58,\!16 kN/m^2 \cdot z
 \end{equation}
-
-Den jordlast der virker på det statiske system er illustreret på Figur \ref{fig:jordlast}.
+ 
+Jordlasten, der virker på det statiske system, er illustreret på Figur \ref{fig:jordlast}.
 
 \begin{figure}[H]
 	\centering
@@ -555,7 +542,7 @@ Der opstilles fire vindkombinationer for hver vindretning:
 Nedenfor laves et beregningseksempel med vind fra vest med vindkombination 1 for zone F. De resterende værdier kan ses i Tabel \ref{tab:bb}.
 \newline
 \newline
-Enheden skal være $[\frac{\text{kN}}{\text{m}}]$, og derfor multipliceres med længden mellem hver af stængerne, som er 6,25 m. Se Figur \ref{fig:farvel}.
+Vindlasten skal omregnes til en linjelast, og hvorfor der multipliceres med længden mellem hver af stængerne, 6,25 m. Se Figur \ref{fig:farvel}.
 
 \begin{equation} 
 	w_F = (w_{e,F}-w_{i,F})\cdot \SI{6,25}{m}
@@ -589,7 +576,7 @@ For alle vindretningerne anvendes vindkombination 1 til videre beregning, og dis
 \end{table}
 
 Fra Tabel \ref{tab:bb} ses, at værdierne for vest er større i forhold til værdierne for øst. Det formodes derfor, at vindlasten er mere kritisk ved vind fra vest, og der ses fremover bort fra vinden fra øst i projektet. I tabellen ses det ligeledes, at værdierne for nord alle er negative, hvilket skyldes at vinden fra nord kun kan påvirke taget med sug, og dermed ses der i denne rapport også bort fra denne. 
-\newline \indent{     }  Derfor anvendes værdierne for vest til de videre beregninger, når der skal opstilles lastkombinationer vindlasten for taget.
+\newline \indent{     }  Derfor anvendes værdierne for vest til de videre beregninger, når der skal opstilles lastkombinationer.
 
 
 \textbf{Vindtryk på facaderne}
@@ -780,7 +767,7 @@ Taget i bjælkekonstruktionen er forbundet til den resterende del af konstruktio
 	\label{fig:tagmedreaktioner}
 \end{figure}
 
-Punktlasterne bestemmes gennem de tre ligevægtsligninger, ved at beregne reaktionerne i de to punkter, D og F, som begge er fast simple understøttet. Før reaktionerne bestemmes, skal vindlasten, som virker vinkelret på tagoverfladen, deles op i x- og y-komposanter ved at multiplicere med henholdsvis sinus og cosinus til taghældningen på $26,\!57^\circ$. Egenlasten virker vinkelret på jordoverfladen, og derfor kun i y-retningen. Når vindlasten er opdelt i x- og y-komposanter, samles lasterne for henholdsvis x- og y-retningen. Fritlegemediagrammet samt de laster på taget, som skal bruges til at beregne reaktioner, er illustreret på Figur \ref{fig:fld}. 
+De tre ligevægtsligninger anvendes til at bestemme punktlasterne. Dette gøres ved at udregne reaktionerne i punkterne D og F, hvor vindlasterne på taget omregnes til komposanter. Fritlegemediagrammet samt de laster på taget, der bruges til at udregne reaktionerne, er illustreret på Figur \ref{fig:fld}. 
 
 \begin{figure}[htbp]
 	\centering
