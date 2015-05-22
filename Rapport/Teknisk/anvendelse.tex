@@ -46,15 +46,15 @@ Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitetan}.
 
 Først bestemmes momentligningen for snit 1, 2 og 3 disse kaldes for $M_1$, $M_2$ og $M_3$:
 \begin{equation}
-M_1(x_1)=\frac{A_xx_1-\frac{1}{2}V_1x_1^2}{EI}
+	M_1(x_1)=\frac{A_xx_1-\frac{1}{2}V_1x_1^2}{EI}
 \end{equation}
 
 \begin{equation}
-M_2(x_2)=\frac{-\frac{1}{2}E_sx_2^2-E_1*18m*x_2-P_1_y*x_2+A_y*x_2-A_x*18m-V_1*162m^2}{EI}
+	M_2(x_2)=\frac{-\frac{1}{2}E_s x_2^2 - E_1 \cdot 18m \cdot x_2 - P_{1y} \cdot x_2 + A_y \cdot x_2 - A_x \cdot 18m - V_1 \cdot 162m^2}{EI}
 \end{equation}
 
 \begin{equation}
-M_3(x_3)=\frac{B_x*x_3}{EI}
+	M_3(x_3)=\frac{B_x*x_3}{EI}
 \end{equation}
 
 \section{Bjælkens differentialligning}
@@ -73,22 +73,22 @@ Først findes den første og anden aflede for $M_1$: %Her vises integration%
 
 \begin{equation}
 	\int \alpha_1(x_1) = \int \frac{-\frac{1}{2} A_x x_1^2 - \frac{1}{6}  V_1  x_1^3 }{EI}
-	= u_1(x_1) = \frac{1}{6} A_x x_1^3 - \frac{1}{24}  V_1  x_1^4 }{EI} + k_1 x_1 + k_2
+	= u_1(x_1) = \frac{\frac{1}{6} A_x x_1^3 - \frac{1}{24}  V_1  x_1^4 }{EI} + k_1 x_1 + k_2
 \end{equation}
 
 Samme metode bruges på de næste 2 momentligninger og det giver følgende udgangspunkt: 
 \newline
 $M_2$:
 \begin{equation}
-M_2(x_2) = \frac{- \frac{1}{2}E_s x_2^29 - E_1 \cdot 18m x_2 - P_ly x_2^2 + A_y x_2 - A_x \cdot 18m - V_1 \cdot (162m)^2 {EI}
-	\end{equation}
+M_2(x_2) = \frac{- \frac{1}{2}E_s x_2^29 - E_1 \cdot 18m x_2 - P_ly x_2^2 + A_y x_2 - A_x \cdot 18m - V_1 \cdot (162m)^2}{EI}
+\end{equation}
 	
 	\begin{equation}
 	\alpha_2(x_2) = \frac{-\frac{1}{6}E_s x_2^3 - E_1 \cdot 9m x_2^2 - \frac{1}{2} P_ly x_2^2 + \frac{1}{2} A_y x_2^2 - A_x \cdot 18m x_2 - V_1 \cdot (162m)^2 x_2 }{EI}
 	\end{equation}
 	
 	\begin{equation}
-	u_2(x_2) = \frac{-\frac{1}{24}E_s x_2^4 - E_1 \cdot 3m x_2^3 - \frac{1}{6} P_ly x_2^3 + \frac{1}{6} A_y x_2^3 - A_x \cdot 9m x_2^2 - V_1 \cdot (81m)^2 x_2^2 }{EI
+	u_2(x_2) = \frac{-\frac{1}{24}E_s x_2^4 - E_1 \cdot 3m x_2^3 - \frac{1}{6} P_ly x_2^3 + \frac{1}{6} A_y x_2^3 - A_x \cdot 9m x_2^2 - V_1 \cdot (81m)^2 x_2^2 }{EI}
 	\end{equation} 
 $M_3$:
 \begin{equation}
@@ -107,11 +107,11 @@ Ved integrering af ligningningerne giver dette 6 ligningner med 6 ubekænkte kon
 
 \begin{table}[h]
 	\begin{tabular}{l}
-		$u\_1(0)=0       \\
-		\alpha_1(h)=\alpha\_2(0) \\
-		u\_1(h)=u\_3(h) \\
-		u\_2(h)=0       \\
-		u\_2(l)=0      $ \\
+		$u_1(0)$=0       \\
+		$\alpha_1(h)$=$\alpha_2(0)$ \\
+		$u_1(h)$=$u_3(h)$ \\
+		$u_2(h)$=0       \\
+		$u_2(l)$=0       \\
 		
 	\end{tabular}
 \end{table}
