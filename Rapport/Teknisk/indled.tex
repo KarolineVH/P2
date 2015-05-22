@@ -10,7 +10,7 @@ Figur \ref{fig:hej} viser de nye byggefelter inden for henholdsvis delområde A 
 \end{figure}
 
 Med udgangspunkt i lokalplan 1-1-107 har bygningen fået de størrelser og dimensioner, som ses på Figur \ref{fig:farvel}, som videre beregninger tager udgangspunkt i.
-\newline \indent{     }  Tilbygningen bliver $12,\!5$ meter lang og 12 m bred i henhold til den eksisterende bygningsbredde. Kælderen har en højde på i alt $3,\!25$ m, hvor $1,\!25$ m ligger over terræn. Stueetagen, 1. sal og 2. sal har hver især en højde på $4,\!9$ m og tagetagen har en højde på 3 meter med en hældning på $26,\!57$ grader. I alt er tilbygningen 19 m høj over terræn.
+\newline \indent{     }  Tilbygningen bliver $12,\!5$ m lang og 12 m bred i henhold til den eksisterende bygningsbredde. Kælderen har en højde på i alt $3,\!25$ m, hvor $1,\!25$ m ligger over terræn. Stueetagen, 1. sal og 2. sal har hver især en højde på $4,\!9$ m og tagetagen har en højde på 3 meter med en hældning på $26,\!57^{\circ}$. I alt er tilbygningen 19 m høj over terræn.
 
 \begin{figure}[H]
 	\centering
@@ -96,21 +96,14 @@ Egenlasten for etagerne udregnes nu, ved først at regne egenlasten for væggene
 	\label{fig:facade}
 \end{figure}
 
-Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen er ikke er en del af det statiske system og skal derfor ikke medregnes. Indervæggen bestemmes at være mursten, og isoleringen bestemmes at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses i Tabel \ref{tab:murogwool}.
+Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen er ikke er en del af det statiske system og skal derfor ikke medregnes. Indervæggen bestemmes at være mursten, og isoleringen bestemmes at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses på Figur \ref{fig:væg}.
 
-\begin{table}
-	\begin{center}
-		\begin{tabular}{c c c}
-			\hline
-			Materiale & Densitet & Tykkelse \\ 
-			& \textit{d} [$\frac{\text{kg}}{\text{m}^3}$] & \textit{t} [mm] \\ \hline
-			Mursten  & 1500  & 130     \\ 
-			Rockwool & 30 & 100              \\ 
-		\end{tabular}
-		\caption{Materialer og deres egenskaber for væg \citep{murstendensitet} \citep{indervaeg} \citep{densitet} \citep{isolering}}
-		\label{tab:murogwool}
-	\end{center}
-\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{billeder/mur.png}
+	\caption{Opbygning af væg}
+	\label{fig:væg}
+\end{figure}
 
 Der medregnes kun egenlast for én gavl, idet den anden gavl ligger op ad den nuværende bygning, og den belaster dermed ikke det statiske system. 
 \newline \indent{     }  De 9 vinduer på gavlen har identiske mål med dem på facaden, som kan ses på Figur \ref{fig:gavl}. Indervæg og isolering for gavlen er ligeledes identisk med facadens.
@@ -163,7 +156,7 @@ Fire ud af tilbygningens fem etager består af bærende gulve. Kælderetagen lig
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.3\textwidth]{billeder/gulv.png}
-	\caption{Opbygning af bærende gulv}
+	\caption{Opbygning af bærende gulv \citep{gulv} \citep{granse}}
 	\label{fig:gulv}
 \end{figure}
 
@@ -182,16 +175,16 @@ Fire ud af tilbygningens fem etager består af bærende gulve. Kælderetagen lig
 	\end{center}
 \end{table}
 
-Der er behov for strøer, som hver er $6,\!25$ m lange, da det er halvdelen af tilbygningens længde, $140,\!00$ mm høje og $140,\!00$ mm bredde \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange strøer, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver strø \citep{Gulvopbygning}. 
+Der er behov for strøer, som hver er $6,\!25$ m lange, og har mål som vist på Figur 6.9. Disse anlægges langs med tilbygningen, og antallet af strøer bestemmes ved at dividere med 400 mm, da der skal være 400 mm imellem hver strø \citep{Gulvopbygning}. 
 
 \begin{equation}
 	\frac{2\cdot 12,\!50 \text{m}}{0,\!40 \text{m}} = \SI{31,25}{\text{strøer}}
 \end{equation} 
 
-Da der ikke kan optræde $31,\!25$ strøer afrundes det til 32 strøer.
+Dette afrundes til 32 strøer.
 
 
-Rumfanget af de 32 strøer med længden $6,\!25$ m multipliceres med densiteten for tørrumvægt af træ \citep{torrumvagt}, som er \SI{510,00}{$\frac{\text{kg}}{\text{m}^3}$}, hvorefter denne værdi først multipliceres med tyngdeaccelerationen og dernæst med 4 etager. Herved findes egenlasten for strøer: 
+Nu bestemmes egenlasten for strøyerne ved at multiplicere rumfanget af disse med densiteten for tørrumvægt af træ \citep{torrumvagt}, \SI{510,00}{$\frac{\text{kg}}{\text{m}^3}$}, med tyngdeaccelerationen og endeligt med 4 etager:
 \begin{equation}
 	p_{\textup{strøer}} = \SI{7,84}{m^3} \cdot \SI{9,82}{$\frac{\text{m}}{\text{s}^2}$} = \SI{157,06}{kN}
 \end{equation}
@@ -216,8 +209,8 @@ Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samm
 
 \textbf{Samlet egenlast for etagedæk}
 \newline
-Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet last på $2953,\!90$ kN. 
-\newline \indent{     }  Den samlede egenlast deles med 2, da midterrammen optager halvdelen af tilbygningens samlede egenlast, $1476,\!95$ kN. 
+Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet egenlast for tilbygningen på $2953,\!90$ kN. 
+\newline \indent{     }  Denne deles med 2, da midterrammen i tilbygningen optager halvdelen af den samlede egenlast, og der fås $1476,\!95$ kN. 
 \newline
 \newline
 Den midterste stang i det statiske system optager halvdelen af egenlasten, mens de to yderste stænger hver optager en fjerdedel:
@@ -225,7 +218,7 @@ Den midterste stang i det statiske system optager halvdelen af egenlasten, mens 
 	\frac{1476,\!95 \text{kN}}{4} = \SI{369,24}{kN}
 \end{equation}
 
-Denne last omregnes til en linjelast, og derfor deles med 18 m, som er højden fra understøtningerne til taget:
+Punktlasten for egenlasten omregnes nu til en linjelast, ved at dele med højden 18 m:
 \begin{equation}
 	\frac{369,\!24 \text{kN}}{18 \text{m}} = \SI{20,51}{$\frac{\text{kN}}{\text{m}}$}
 \end{equation}
