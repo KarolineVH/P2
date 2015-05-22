@@ -1,10 +1,10 @@
 \chapter{Brudgrænsetilstand}
-
 I dette afsnit undersøges tilbygningens brudgrænsetilstand. Først beregnes reaktionerne ud fra Figur \ref{fig:alle} og dernæst laves snitkræfter. Slutteligt undersøges spændingstilstanden, og udfra ståltypens flydespændingen kan det vurderes, om konstruktionen kan holde eller vil bryde sammen.   
 
 \section{Reaktioner}
-Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingv} og \ref{fig:opdelingh}. I skæringen mellem de to dele, vil der være snitkræfter, men ikke momentkræfter, da momentet i charnierledet er nul. Dermed optræder der kun normalkraften, N, og forskydningskraften, V. Det er derfor muligt, at betragte højre del som et isoleret del af konstruktionen med fast, simpel understøtning i punkt E.
-
+Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingv} og \ref{fig:opdelingh}. I skæringen mellem de to dele, vil der være snitkræfter, men ikke momentkræfter, da momentet i charnierledet er nul. Dermed optræder der kun normalkraften, \textit{N}, og forskydningskraften, \textit{V}. Det er derfor muligt, at betragte højre del som et isoleret del af konstruktionen med fast, simpel understøtning i punkt E.
+\\
+\\
 FORKLAR AT JORDLASTEN J LAVES OM TIL EN RESULTANT
 
 \begin{figure}[H]
@@ -21,59 +21,73 @@ FORKLAR AT JORDLASTEN J LAVES OM TIL EN RESULTANT
 	\label{fig:opdelingv}
 \end{figure}
 
-Reaktionerne i punkt E kan sættes som punktlaster på den venstre side af systemet, som ses på Figur \ref{fig:opdelingv}. Reaktionerne på højre del af systemet beregnes først.
+Reaktionerne i punkt E kan sættes som punktlaster i charnieret på den venstre side af systemet, som ses på Figur \ref{fig:opdelingv}. Reaktionerne på højre del af systemet beregnes først.
 \newline
 \newline
-Først bestemmes den vandrette reaktion i charnier ledet, $E_x$ gennem vandret ligevægt: 
+Først bestemmes den vandrette reaktion i charnieret, $E_x$ gennem vandret ligevægt: 
 \begin{equation}
-	\rightarrow+:0 $=$ F_x + E_x - J - v_k \cdot 2m - v_2 \cdot 16m
-	\\
-	E_x $=$ 62,\!52 kN
+\begin{split}
+	$$+\atop\rightarrow$$: 0 = & F_x + E_x - j - v_k \cdot \SI{2}{m} - v_2 \cdot \SI{16}{m}
+	\\ &
+	E_x = \SI{62,52}{kN}
+\end{split}
 \end{equation}
 
-$C_y$ bestemmes gennem moment ligevægt om punkt E: 
+$C_y$ bestemmes gennem momentligevægt om punkt E: 
 \begin{equation}
-	E\AR{}:0 $=$ -F_y \cdot 6m - E_1 \cdot 18m \cdot 6m + C_y \cdot 6m - J \cdot 17,\!33m - v_k \cdot 2m \cdot 17m - E_s \cdot 6m \cdot 3m - v_2 \cdot 16m \cdot 8m
-	\\
-	C_y $=$ 964,\!60 kN
+\begin{split}
+	\ALN{\text{E}} :0 = & -F_y \cdot \SI{6}{m} - E_1 \cdot \SI{18}{m} \cdot \SI{6}{m} + C_y \cdot \SI{6}{m} - j \cdot \SI{17,33}{m} - v_k \cdot \SI{2}{m} \cdot \SI{17}{m} \\ & - E_s \cdot \SI{6}{m} \cdot \SI{3}{m} - v_2 \cdot \SI{16}{m} \cdot \SI{8}{m}
+	\\ &
+	C_y = \SI{964,68}{kN}
+\end{split}
 \end{equation}
 
-Til sidst bestemmes den lodrette reaktion i charnier ledet, $E_y$ gennem lodret ligevægt: 
+Til sidst bestemmes den lodrette reaktion i charnierledet, $E_y$ gennem lodret ligevægt: 
 \begin{equation}
-	\uparrow+: 0 $=$ F_y - E_1 \cdot 18m - E_s \cdot 6m + C_y + E_y
-	\\	
-	E_y $=$ -349,\!67 kN
+\begin{split}
+	\uparrow+: 0 = & F_y - E_1 \cdot \SI{18}{m} - E_s \cdot \SI{6}{m} + C_y + E_y
+	\\ &
+	E_y = \SI{-349,74}{kN}
+\end{split}
 \end{equation}
 
 Reaktionerne $E_y$ og $E_x$ påsættes som belastninger i punkt E på det venstre system, så de virker som vist på Figur \ref{fig:opdelingv}. Reaktionerne i det venstre system kan hermed bestemmes.  SKAL VI HER SKRIVE IGEN, HVORFOR DETTE GØRES - SNAKKEDE VI IKKE TIDLIGERE OM DETTE?
-\newline
-\newline
+\\
+\\
 Først tages der moment om A, for at beregne $B_y$:
 \begin{equation}
-	A\AR+: 0 $=$ B_y \cdot 6m + E_y \cdot 6m + E_x \cdot 18m - E_2 \cdot 18m \cdot 6m - E_s \cdot 6m \cdot 3m + D_x \cdot 18m - v_1 \cdot 16m \cdot (8m + 2m) - J \cdot (2m \cdot \frac{1}{3}) - v_k \cdot 2m \cdot 1m
-	\\ 
-	B_y $=$ 658,\!33 kN
+\begin{split}
+	\ALN{\text{A}}: 0 = & B_y \cdot \SI{6}{m} + E_y \cdot \SI{6}{m} + E_x \cdot \SI{18}{m} - E_2 \cdot \SI{18}{m} \cdot \SI{6}{m} - E_s \cdot \SI{6}{m} \cdot \SI{3}{m} \\ & + D_x \cdot \SI{18}{m} - v_1 \cdot \SI{16}{m} \cdot (\SI{8}{m} + \SI{2}{m}) - j \cdot (\SI{2}{m} \cdot \frac{1}{3}) - v_k \cdot \SI{2}{m} \cdot \SI{1}{m}
+	\\ &
+	B_y = \SI{658,26}{kN}
+\end{split}
 \end{equation}
 
 Nu laves lodret ligevægt for at bestemme $A_y$:
 \begin{equation}
-	\uparrow+: 0 $=$ A_y + B_y - E_y - E_2 \cdot 18m - E_1 \cdot 18m - F_y - E_s \cdot 6 m
-	\\
-	A_y $=$ 732,\!77 kN
+\begin{split}
+	\uparrow+: 0 = & A_y + B_y - E_y - E_2 \cdot \SI{18}{m} - E_1 \cdot \SI{18}{m} - F_y - E_s \cdot \SI{6}{m}
+	\\ &
+	A_y = \SI{732,77}{kN}
+\end{split}
 \end{equation}
 
 For at gøre det muligt at isolere en af de vandrette reaktioner laves der et snit i charnieret. Derefter betragtes den nedre del, og der tages moment omkring charnieret i punkt E, for at bestemme $B_x$:
 \begin{equation}
-	E\AR+: 0 $=$ B_x \cdot 18m
-	\\
-	B_x $=$ 0 kN
+\begin{split}
+	\ALN{\text{E}}: 0 = & B_x \cdot \SI{18}{m}
+	\\ &
+	B_x = \SI{0}{kN}
+\end{split}
 \end{equation}
 
 Slutteligt laves vandret ligevægt for at bestemme $A_x$:
 \begin{equation}
-	\rightarrow+: 0 $=$ A_x - E_x + B_x + J + v_k \cdot 2m + v_1 \cdot 16 m - D_x
-	\\
-	A_x $=$ -133,\!31 kN
+\begin{split}
+	$$+\atop\rightarrow$$: 0 = & A_x - E_x + B_x + j + v_k \cdot \SI{2}{m} + v_1 \cdot \SI{16}{m} - D_x
+	\\ &
+	A_x = \SI{-133,31}{kN}
+\end{split}
 \end{equation} 
 
 \section{Snitkræfter}
@@ -95,34 +109,21 @@ Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitet}.
 \newline
 \newline
 Først bestemmes normalkraften:
-\begin{center}
-	$0 = N_1 + A_y - E_1 \cdot x \leftrightarrow N_1(x) = 31,\!54 \frac{kN}{m} x - 547,\!95 kN $
-\end{center}
-
-Normalkraften bestemmes ved 0 m og 2 m:
-\begin{center}
-	$N_1(0m) = -547,\!95 kN$ og	$N_1(2m) = -484,\!87 kN$
-\end{center}
+\begin{equation}
+	0 = N_1 + A_y - E_1 \cdot x \leftrightarrow N_1(x) = 31,\!54 \frac{\text{kN}}{\text{m}} x - \SI{547,95}{kN}
+\end{equation}
 
 Nu bestemmes forskydningskraften:
-\begin{center}
-	$0 = V_1 + J(x) + v_k \cdot x + A_x \leftrightarrow V_1(x) = -33,\!64\frac{kN}{m} x + 133,\!31 kN$
-\end{center}
+\begin{equation}
+	0 = V_1 + j + v_k \cdot x + A_x \leftrightarrow V_1(x) = -33,\!64\frac{\text{kN}}{\text{m}} x + \SI{133,31}{kN}
+\end{equation}
 
-Forskydningskraften bestemmes ved 0 m og 2 m:
-\begin{center}
-	$V_1(0m) = 133,\!31 kN$ og $V_1(2m) = 66,\!02 kN$
-\end{center}
+Til sidst bestemmes moment:
+\begin{equation}
+	0 = M_1 + j \cdot \frac{2x}{3} + v_k \cdot x \cdot \frac{x}{2} + A_x \cdot x \leftrightarrow M_1(x) = -22,\!15\frac{\text{kN}}{\text{m}} x^2 + \SI{133,30}{kN} x
+\end{equation}
 
-Til sidst bestemmes momentkraften:
-\begin{center}
-	$0 = M_1 + J(x) \cdot \frac{2x}{3} + v_k \cdot x \cdot \frac{x}{2} + A_x \cdot x \leftrightarrow M_1(x) = -22,\!15\frac{kN}{m} x^2 + 133,\!30kN x$
-\end{center}
-
-Momentkraften i højden 0 m og 2 m bestemmes:
-\begin{center}
-	$M_1(0m) = 0 kNm$  og $M_1(2m) = 178,\!00 kNm$
-\end{center}
+Alle resultater kan ses i Tabel \ref{tab:resultaterbrud}.
 
 \begin{figure}[H]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
@@ -147,32 +148,21 @@ Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitfem}.
 \newline
 \newline
 Normalkraften bestemmes først:
-\begin{center}
-	$0 = -N_5 + F_x - v_2 \cdot 16m - J(2m) - v_k \cdot 2m \leftrightarrow N_5 = 49,\!57 kN - 48,\!12 kN = 1,\!45 kN$
-\end{center}
+\begin{equation}
+	0 = - N_5 + F_x - v_2 \cdot \SI{16}{m} - j - v_k \cdot 2m \leftrightarrow N_5 = \SI{49,57}{kN} - \SI{48,12}{kN} = \SI{1,45}{kN}
+\end{equation}
 
-Hermed er normalkraften til 0 m og 6 m 1,45 kN. 
-\newline
-\newline
 Forskydningskraften for snit 5 bestemmes ved:
-\begin{center}
-	$0 = V_5 - E_1 \cdot 18 m - F_y + C_y - E_s x \leftrightarrow V_5(x) = -172,\!35 kN + 1,\!24 \frac{kN}{m}x$
-\end{center}
+\begin{equation}
+	0 = V_5 - E_1 \cdot \SI{18}{m} - F_y + C_y - E_s \cdot x \leftrightarrow V_5(x) = \SI{-172,35}{kN} + 1,\!24 \frac{\text{kN}}{\text{m}}x
+\end{equation}
 
-Forskydningskraften til 0 m og 6 m er hermed:
-\begin{center}
-	$V_5(0m) = -172,\!35 kN$ og $V_5(6m) = -164,\!89 kN$
-\end{center}
-
-Til sidst bestemmes momentkraften:
-\begin{center}
-	$0 = -M_5 - F_y \cdot x - E_1 \cdot 18 m \cdot x - E_s \cdot x \frac{x}{2} - v_2 \cdot 16 m \cdot 8 m - v_k \cdot 2 m \cdot 17 m - J(2m) \cdot 17,\!33 m + C_y \cdot x \leftrightarrow M_5(x) = 172,\!35 kN \cdot x - 0,\!62 \frac{kN}{m} \cdot x^2 -1011,\!72 kNm$
-\end{center}
-
-Momentkraften til 0 m og 6 m bestemmes:
-\begin{center}
-	$M_5(0m) = -1011,\!72 kNm$ og $M_5(6m) = 0 kN$
-\end{center}
+Til sidst bestemmes moment:
+\begin{equation}
+\begin{split}
+	0 = & - M_5 - F_y \cdot x - E_1 \cdot \SI{18}{m} \cdot x - E_s \cdot x \frac{x}{2} - v_2 \cdot \SI{16}{m} \cdot \SI{8}{m} - v_k \cdot \SI{2}{m} \cdot \SI{17}{m} - j \cdot \SI{17,33}{m} + C_y \cdot x \leftrightarrow \\ & M_5(x) =  \SI{172,35}{kN} \cdot x - 0,\!62 \frac{\text{kN}}{\text{m}} \cdot x^2 - \SI{1011,72}{kNm}
+\end{split}
+\end{equation}
 
 Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene, som bruges til at beregne spændingstilstanden. 
 
