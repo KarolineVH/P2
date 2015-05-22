@@ -10,7 +10,7 @@ Figur \ref{fig:hej} viser de nye byggefelter inden for henholdsvis delområde A 
 \end{figure}
 
 Med udgangspunkt i lokalplan 1-1-107 har bygningen fået de størrelser og dimensioner, som ses på Figur \ref{fig:farvel}, som videre beregninger tager udgangspunkt i.
-\newline \indent{     }  Tilbygningen bliver $12,\!5$ meter lang og 12 m bred i henhold til den eksisterende bygningsbredde. Kælderen har en højde på i alt $3,\!25$ m, hvor $1,\!25$ m ligger over terræn. Stueetagen, 1. sal og 2. sal har hver især en højde på $4,\!9$ m og tagetagen har en højde på 3 meter med en hældning på $26,\!57$ grader. I alt er tilbygningen 19 m høj over terræn.
+\newline \indent{     }  Tilbygningen bliver $12,\!5$ m lang og 12 m bred i henhold til den eksisterende bygningsbredde. Kælderen har en højde på i alt $3,\!25$ m, hvor $1,\!25$ m ligger over terræn. Stueetagen, 1. sal og 2. sal har hver især en højde på $4,\!9$ m og tagetagen har en højde på 3 meter med en hældning på $26,\!57^{\circ}$. I alt er tilbygningen 19 m høj over terræn.
 
 \begin{figure}[H]
 	\centering
@@ -96,21 +96,14 @@ Egenlasten for etagerne udregnes nu, ved først at regne egenlasten for væggene
 	\label{fig:facade}
 \end{figure}
 
-Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen er ikke er en del af det statiske system og skal derfor ikke medregnes. Indervæggen bestemmes at være mursten, og isoleringen bestemmes at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses i Tabel \ref{tab:murogwool}.
+Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen er ikke er en del af det statiske system og skal derfor ikke medregnes. Indervæggen bestemmes at være mursten, og isoleringen bestemmes at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses på Figur \ref{fig:vaeg}.
 
-\begin{table}
-	\begin{center}
-		\begin{tabular}{c c c}
-			\hline
-			Materiale & Densitet & Tykkelse \\ 
-			& \textit{d} [$\frac{\text{kg}}{\text{m}^3}$] & \textit{t} [mm] \\ \hline
-			Mursten  & 1500  & 130     \\ 
-			Rockwool & 30 & 100              \\ 
-		\end{tabular}
-		\caption{Materialer og deres egenskaber for væg \citep{murstendensitet} \citep{indervaeg} \citep{densitet} \citep{isolering}}
-		\label{tab:murogwool}
-	\end{center}
-\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{billeder/mur.png}
+	\caption{Opbygning af væg}
+	\label{fig:vaeg}
+\end{figure}
 
 Der medregnes kun egenlast for én gavl, idet den anden gavl ligger op ad den nuværende bygning, og den belaster dermed ikke det statiske system. 
 \newline \indent{     }  De 9 vinduer på gavlen har identiske mål med dem på facaden, som kan ses på Figur \ref{fig:gavl}. Indervæg og isolering for gavlen er ligeledes identisk med facadens.
@@ -158,12 +151,12 @@ Det antages at bygningens etager kun består af gulv, dvs. ingen skillevægge, t
 \end{equation}
 
 Fire ud af tilbygningens fem etager består af bærende gulve. Kælderetagen ligger på fundamentet, og bliver dermed ikke båret af rammen. Derfor medregnes kælderetagens gulv ikke. 
-\newline \indent{     }  Opbygningen af det bærende gulv er illustreret på Figur \ref{fig:gulv}. Det bærende gulv består af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Det bestemmes, at den er 120 mm tyk, hvorpå der ligger bjælker. Bjælkernes opgave er at løfte gulvet, således der er plads til isoleringslaget \citep{Gulvopbygning}. Densiteten og tykkelsen af gulvlagene kan ses i Tabel \ref{tab:densi}.
+\newline \indent{     }  Opbygningen af det bærende gulv er illustreret på Figur \ref{fig:gulv}. Det bærende gulv består af et armeret betondæk nederst, der oftest er mellem 80 mm og 200 mm tyk. Det bestemmes, at den er 120 mm tyk, hvorpå der ligger strøer. Strøernes opgave er at løfte gulvet, således der er plads til isoleringslaget \citep{Gulvopbygning}. Densiteten og tykkelsen af gulvlagene kan ses i Tabel \ref{tab:densi}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.3\textwidth]{billeder/gulv.png}
-	\caption{Opbygning af bærende gulv}
+	\caption{Opbygning af bærende gulv \citep{gulv} \citep{granse}}
 	\label{fig:gulv}
 \end{figure}
 
@@ -182,21 +175,21 @@ Fire ud af tilbygningens fem etager består af bærende gulve. Kælderetagen lig
 	\end{center}
 \end{table}
 
-Der er behov for bjælker, som hver er $6,\!25$ m lange, da det er halvdelen af tilbygningens længde, $140,\!00$ mm høje og $140,\!00$ mm bredde \citep{granse}. Disse anlægges langs med tilbygningen. For at bestemme hvor mange bjælker, der er behov for, divideres længden af tilbygningen med 400 mm, da der skal være 400 mm imellem hver bjælke \citep{Gulvopbygning}. 
+Der er behov for strøer, som hver er $6,\!25$ m lange, og har mål som vist på Figur 6.9. Disse anlægges langs med tilbygningen, og antallet af strøer bestemmes ved at dividere med 400 mm, da der skal være 400 mm imellem hver strø \citep{Gulvopbygning}. 
 
 \begin{equation}
-	\frac{12,\!50 \text{m}}{0,\!40 \text{m}} = \SI{31,25}{\text{bjælker}}
+	\frac{2\cdot 12,\!50 \text{m}}{0,\!40 \text{m}} = \SI{31,25}{\text{strøer}}
 \end{equation} 
 
-Da der ikke kan optræde $31,\!25$ bjælker afrundes det til 32 bjælker.
+Dette afrundes til 32 strøer.
 
 
-Rumfanget af de 32 bjælker med længden $12,\!5$ m multipliceres med densiteten for tørrumvægt af træ \citep{torrumvagt}, som er \SI{510,00}{$\frac{\text{kg}}{\text{m}^3}$}, hvorefter denne værdi først multipliceres med tyngdeaccelerationen og dernæst med 4, da der er fire etager foruden kælderen. Herved findes egenlasten for bjælkerne: 
+Nu bestemmes egenlasten for strøyerne ved at multiplicere rumfanget af disse med densiteten for tørrumvægt af træ \citep{torrumvagt}, \SI{510,00}{$\frac{\text{kg}}{\text{m}^3}$}, med tyngdeaccelerationen og endeligt med 4 etager:
 \begin{equation}
-	p_{\textup{bjælker}} = \SI{7,84}{m^3} \cdot \SI{9,82}{$\frac{\text{m}}{\text{s}^2}$} = \SI{157,06}{kN}
+	p_{\textup{strøer}} = \SI{7,84}{m^3} \cdot \SI{9,82}{$\frac{\text{m}}{\text{s}^2}$} = \SI{157,06}{kN}
 \end{equation}
 
-Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samme måde som for bjælkerne, dog skal bjælkernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:gulv}.
+Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samme måde som for strøerne, dog skal strøernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:gulv}.
 
 \begin{table}
 	\begin{center}
@@ -216,8 +209,8 @@ Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samm
 
 \textbf{Samlet egenlast for etagedæk}
 \newline
-Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet last på $2953,\!90$ kN. 
-\newline \indent{     }  Den samlede egenlast deles med 2, da midterrammen optager halvdelen af tilbygningens samlede egenlast, $1476,\!95$ kN. 
+Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet egenlast for tilbygningen på $2953,\!90$ kN. 
+\newline \indent{     }  Denne deles med 2, da midterrammen i tilbygningen optager halvdelen af den samlede egenlast, og der fås $1476,\!95$ kN. 
 \newline
 \newline
 Den midterste stang i det statiske system optager halvdelen af egenlasten, mens de to yderste stænger hver optager en fjerdedel:
@@ -225,7 +218,7 @@ Den midterste stang i det statiske system optager halvdelen af egenlasten, mens 
 	\frac{1476,\!95 \text{kN}}{4} = \SI{369,24}{kN}
 \end{equation}
 
-Denne last omregnes til en linjelast, og derfor deles med 18 m, som er højden fra understøtningerne til taget:
+Punktlasten for egenlasten omregnes nu til en linjelast, ved at dele med højden 18 m:
 \begin{equation}
 	\frac{369,\!24 \text{kN}}{18 \text{m}} = \SI{20,51}{$\frac{\text{kN}}{\text{m}}$}
 \end{equation}
@@ -251,7 +244,7 @@ Egenlasten fra stålsystemet er altså 1,13 $\frac{\text{kN}}{\text{m}}$.
 
 \textbf{Opsamling}
 \newline
-De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsystemet bestemt. Disse placeres nu i det statiske sytem vidst på Figur \ref{fig:m} og \ref{fig:n}.
+De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsystemet bestemt. Disse placeres nu i det statiske system vidst på Figur \ref{fig:m} og \ref{fig:n}.
 
 \begin{figure}[H]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
@@ -280,7 +273,7 @@ Jordlasten beregnes gennem formlen:
 \end{equation}
 
 \begin{itemize}
-	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0=1-\sin(\varphi)$, hvor $\varphi$ er friktionsvinklen. Friktionsvinklen er bestemt igennem fire forsøg, som ses under Afsnit (!!!!!!)
+	\item[-] $k_0$: hviletrykskoefficienten, som er givet ved $k_0=1-\sin(\varphi)$, hvor $\varphi$ er friktionsvinklen. Friktionsvinklen er bestemt igennem fire forsøg, som ses under afsnit 10.3.5. 
 	\item[-] $\sigma_z$: den lodrette fladelast i dybden $z$ givet ved $\sigma_z = z\gamma$, hvor $z$ er dybden og $\gamma$ er rumvægten $[\frac{\text{kN}}{\text{m}^3}]$
 \end{itemize}
 
@@ -308,36 +301,23 @@ I og med jordlasten ved 0 m er 0 $\frac{\text{kN}}{\text{m}^2}$, vil den også o
 	q_{x,linje} = 18,\!61 \frac{\text{kN}}{\text{m}^2}\cdot \SI{6,25}{m} = 116,\!32 \frac{\text{kN}}{\text{m}}
 \end{equation}
 
-Dermed er jordlasten, som linjelast, i dybderne som ses på Tabel \ref{tab:jord}.
-\begin{table}[htb]
-	\begin{center}
-		\begin{tabular}{ c c c } 
-		\hline
-		Dybde [m] & Jordlast $p_{x,linje}$ [$\frac{\text{kN}}{\text{m}}$] \\ \hline
-		0 & 0 \\ 
-		2 & 116,32
-		\end{tabular}
-		\caption{Værdier for jordlasten}
-		\label{tab:jord}
-	\end{center}
-\end{table}
-
-For at finde den jordlast der virker over x-antal meter under jorden, opstilles følgende ligning:
+Jordlasten virker derfor som en lineær funktion, og der opstilles nu et generelt udtryk for funktionen $j(z)$: 
 \begin{equation}
-	w = \frac{1}{2} x p
+	j(z) = a z + b
 \end{equation}
 
 \begin{itemize}
-	\item[-] $x$: længden, som kraften virker over
-	\item[-] $p$: den største kraft
+	\item[-] $a$: Hældning, som er givet ved $\frac{116,\!32kN/m}{2m} = 58,\!16 kN/m $
+	\item[-] $z$: Koordinatet til kraften
+	\item[-] $b$: Lasten i z = 0 m
 \end{itemize}
 
-Hermed fås ligningen: 
+Linjelasten for jordlasten er derfor givet ved: 
 \begin{equation}
-	w = \frac{1}{2} 116,\!32 \frac{\text{kN}}{\text{m}} x = 58,\!16x
+	j(z) = 58,\!16 kN/m^2 \cdot z
 \end{equation}
-
-Den jordlast der virker på det statiske system er illustreret på Figur \ref{fig:jordlast}.
+ 
+Jordlasten, der virker på det statiske system, er illustreret på Figur \ref{fig:jordlast}.
 
 \begin{figure}[H]
 	\centering
@@ -468,7 +448,7 @@ Peakhastighedstrykket skal nu anvendes, for at bestemme vindlasten på taget fra
 Først bestemmes de karakteristiske vindlaster ved at opstille en række vindtilfælde for henholdsvis tryk og sug. Tryk regnes altid positiv, da denne virker mod taget, og sug regnes altid negativ, da denne virker væk fra taget.
 
 
-Da tilbygningen til Strøybergs Palæ får et sadeltag, anbefales det at dele taget ind i zoner efter Eurodecode 1991. Bygningen tegnes i fuld størrelse, hvor længden \textit{e} er 25 m, og derfor er den nuværende bygning også medregnet i målene. For vindretningen $\theta = 0^{\circ}$ (gælder for vindretning fra vest og fra øst) skal bygningen deles ind som vist på Figur \ref{fig:opdeling}.  
+Da tilbygningen til Strøybergs Palæ får et sadeltag, anbefales det at dele taget ind i zoner efter Eurocode 1991. Bygningen tegnes i fuld størrelse, hvor længden \textit{e} er 25 m, og derfor er den nuværende bygning også medregnet i målene. For vindretningen $\theta = 0^{\circ}$ (gælder for vindretning fra vest og fra øst) skal bygningen deles ind som vist på Figur \ref{fig:opdeling}.  
 
 \begin{figure}[htbp]
 	\centering
@@ -562,7 +542,7 @@ Der opstilles fire vindkombinationer for hver vindretning:
 Nedenfor laves et beregningseksempel med vind fra vest med vindkombination 1 for zone F. De resterende værdier kan ses i Tabel \ref{tab:bb}.
 \newline
 \newline
-Enheden skal være $[\frac{\text{kN}}{\text{m}}]$, og derfor multipliceres med længden mellem hver af stængerne, som er 6,25 m. Se Figur \ref{fig:farvel}.
+Vindlasten skal omregnes til en linjelast, og hvorfor der multipliceres med længden mellem hver af stængerne, 6,25 m. Se Figur \ref{fig:farvel}.
 
 \begin{equation} 
 	w_F = (w_{e,F}-w_{i,F})\cdot \SI{6,25}{m}
@@ -596,7 +576,7 @@ For alle vindretningerne anvendes vindkombination 1 til videre beregning, og dis
 \end{table}
 
 Fra Tabel \ref{tab:bb} ses, at værdierne for vest er større i forhold til værdierne for øst. Det formodes derfor, at vindlasten er mere kritisk ved vind fra vest, og der ses fremover bort fra vinden fra øst i projektet. I tabellen ses det ligeledes, at værdierne for nord alle er negative, hvilket skyldes at vinden fra nord kun kan påvirke taget med sug, og dermed ses der i denne rapport også bort fra denne. 
-\newline \indent{     }  Derfor anvendes værdierne for vest til de videre beregninger, når der skal opstilles lastkombinationer vindlasten for taget.
+\newline \indent{     }  Derfor anvendes værdierne for vest til de videre beregninger, når der skal opstilles lastkombinationer.
 
 
 \textbf{Vindtryk på facaderne}
@@ -787,7 +767,7 @@ Taget i bjælkekonstruktionen er forbundet til den resterende del af konstruktio
 	\label{fig:tagmedreaktioner}
 \end{figure}
 
-Punktlasterne bestemmes gennem de tre ligevægtsligninger, ved at beregne reaktionerne i de to punkter, D og F, som begge er fast simple understøttet. Før reaktionerne bestemmes, skal vindlasten, som virker vinkelret på tagoverfladen, deles op i x- og y-komposanter ved at multiplicere med henholdsvis sinus og cosinus til taghældningen på $26,\!57^\circ$. Egenlasten virker vinkelret på jordoverfladen, og derfor kun i y-retningen. Når vindlasten er opdelt i x- og y-komposanter, samles lasterne for henholdsvis x- og y-retningen. Fritlegemediagrammet samt de laster på taget, som skal bruges til at beregne reaktioner, er illustreret på Figur \ref{fig:fld}. 
+De tre ligevægtsligninger anvendes til at bestemme punktlasterne. Dette gøres ved at udregne reaktionerne i punkterne D og F, hvor vindlasterne på taget omregnes til komposanter. Fritlegemediagrammet samt de laster på taget, der bruges til at udregne reaktionerne, er illustreret på Figur \ref{fig:fld}. 
 
 \begin{figure}[htbp]
 	\centering
