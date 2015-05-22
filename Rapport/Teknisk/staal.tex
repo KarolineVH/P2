@@ -2,10 +2,13 @@
 I dette afsnit undersøges tilbygningens brudgrænsetilstand. Først beregnes reaktionerne ud fra Figur \ref{fig:alle} og dernæst laves snitkræfter. Slutteligt undersøges spændingstilstanden, og udfra ståltypens flydespændingen kan det vurderes, om konstruktionen kan holde eller vil bryde sammen.   
 
 \section{Reaktioner}
-Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingv} og \ref{fig:opdelingh}. I skæringen mellem de to dele, vil der være snitkræfter, men ikke momentkræfter, da momentet i charnierledet er nul. Dermed optræder der kun normalkraften, \textit{N}, og forskydningskraften, \textit{V}. Det er derfor muligt, at betragte højre del som et isoleret del af konstruktionen med fast, simpel understøtning i punkt E.
+Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingv} og \ref{fig:opdelingh}. I skæringen mellem de to dele, vil der være snitkræfter; dog er bøjningsmomentet \textit{M} lig 0 i charnieret. Dermed optræder der kun normalkraften, \textit{N}, og forskydningskraften, \textit{V}. Det er derfor muligt, at betragte højre del som en isoleret del af konstruktionen med fast, simpel understøtning i punkt E.
 \\
 \\
-FORKLAR AT JORDLASTEN J LAVES OM TIL EN RESULTANT
+Inden reaktionerne bestemmes bestemmes jordlastens resultant, j. Dette gøres ved et bestemt integrale: 
+\begin{equation}
+j = \int_{0}^{2} \! j(z) \, \mathrm{d}z \leftrightarrow j = 127,\!95 kN
+\end{equation}
 
 \begin{figure}[H]
 	\centering
@@ -51,7 +54,7 @@ Til sidst bestemmes den lodrette reaktion i charnierledet, $E_y$ gennem lodret l
 \end{split}
 \end{equation}
 
-Reaktionerne $E_y$ og $E_x$ påsættes som belastninger i punkt E på det venstre system, så de virker som vist på Figur \ref{fig:opdelingv}. Reaktionerne i det venstre system kan hermed bestemmes.  SKAL VI HER SKRIVE IGEN, HVORFOR DETTE GØRES - SNAKKEDE VI IKKE TIDLIGERE OM DETTE?
+Reaktionerne $E_y$ og $E_x$ påsættes som belastninger i punkt E på det venstre system, så de virker som vist på Figur \ref{fig:opdelingv}. Reaktionerne i det venstre system kan hermed bestemmes.
 \\
 \\
 Først tages der moment om A, for at beregne $B_y$:
