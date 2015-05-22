@@ -232,19 +232,19 @@ Der beregnes en egenlast for stålsystemet ekslusivt tag.
 \newline
 For at finde kraften af et enkelt rammeben multipliceres profilets densitet 115,00 $\frac{\text{kg}}{\text{m}}$ med tyngeaccelerationen:
 \begin{equation}
-	115,\!00 \frac{\text{kg}}{\text{m}} \cdot 9,\!82 \frac{\text{m}}{\text{s}^2} = 1,\!13 \frac{text{kN}}{\text{m}}
+	115,\!00 \frac{\text{kg}}{\text{m}} \cdot 9,\!82 \frac{\text{m}}{\text{s}^2} = 1,\!13 \frac{\text{kN}}{\text{m}}
 \end{equation}
 
 Det samme skal gøres for at finde kraften for en vandret stang.
 \begin{equation}
-	115 \frac{\text{kg}}{\text{m}}\cdot \cdot 9,\!82 \frac{\text{m}}{\text{s}^2} = 1,\!13 \frac{\text{kN}}{\text{m}}
+	115 \frac{\text{kg}}{\text{m}} \cdot 9,\!82 \frac{\text{m}}{\text{s}^2} = 1,\!13 \frac{\text{kN}}{\text{m}}
 \end{equation}
 
 Egenlasten fra stålsystemet er altså 1,13 $\frac{\text{kN}}{\text{m}}$.
 
 \textbf{Opsamling}
 \newline
-De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsystemet bestemt. Disse placeres nu i det statiske system vidst på Figur \ref{fig:m} og \ref{fig:n}.
+De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsystemet er nu bestemt. Disse placeres nu i det statiske system vidst på Figur \ref{fig:m} og \ref{fig:n}.
 
 \begin{figure}[H]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
@@ -278,18 +278,18 @@ Jordlasten beregnes gennem formlen:
 \end{itemize}
 
 Hviletrykskoefficenten, $k_0$ bestemmes:
-\begin{center}
-	$k_0 = 1 - \sin(32,\!33) = 0,\!47$
-\end{center}
+\begin{equation}
+	k_0 = 1 - \sin(32,\!33) = 0,\!47
+\end{equation}
 
 Rumvægten slås op til 20 $\frac{\text{kN}}{\text{m}^3}$ \citep[ s. 386]{stabi} og den lodrette hviletryksspænding, $\sigma_z$, bestemmes:
 \begin{equation}
-	\sigma_z = z\cdot 20 \frac{\text{kN}}{\text{m}^3}
+\sigma_z = z\cdot 20 \frac{\text{kN}}{\text{m}^3}
 \end{equation}
 
 Nu er hviletrykskoefficienten og fladlasten bestemt, og det betyder, at jordlasten $\sigma_x$, i dybderne $z$ for 0 m og 2 m bestemmes:
 \begin{equation}
-	\sigma_x = 0,\!47\cdot \SI{0}{m}\cdot 20 \frac{\text{kN}}{\text{m}^3} = 0 \frac{\text{kN}}{\text{m}^2}
+\sigma_x = 0,\!47\cdot \SI{0}{m}\cdot 20 \frac{\text{kN}}{\text{m}^3} = 0 \frac{\text{kN}}{\text{m}^2}
 \end{equation}
 
 \begin{equation}
@@ -307,16 +307,16 @@ Jordlasten virker derfor som en lineær funktion, og der opstilles nu et generel
 \end{equation}
 
 \begin{itemize}
-	\item[-] $a$: Hældning, som er givet ved $\frac{116,\!32kN/m}{2m} = 58,\!16 kN/m $
+	\item[-] $a$: Hældning, som er givet ved $\frac{116,\!32 \frac{\text{kN}}{\text{m}}}{2 \text{m}} = 58,\!16 \frac{\text{kN}}{\text{m}^2}$
 	\item[-] $z$: Koordinatet til kraften
-	\item[-] $b$: Lasten i z = 0 m
+	\item[-] $b$: Lasten i $z = 0$ m
 \end{itemize}
 
 Linjelasten for jordlasten er derfor givet ved: 
 \begin{equation}
-	j(z) = 58,\!16 kN/m^2 \cdot z
+	j(z) = 58,\!16 \frac{\text{kN}}{\text{m}^2} \cdot z
 \end{equation}
- 
+
 Jordlasten, der virker på det statiske system, er illustreret på Figur \ref{fig:jordlast}.
 
 \begin{figure}[H]
@@ -754,7 +754,7 @@ Ovenstående beregninger gentages for hvert område på konstruktionen, og derfo
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\textwidth]{billeder/vdom.png}
-	\caption{Samlede laster på det statiske system med vind fra vest dominerende. Lasterne er angivet i $\frac{kN}{m}$}
+	\caption{Samlede laster på det statiske system med vind fra vest dominerende. Lasterne er angivet i [$\frac{kN}{m}$]}
 	\label{fig:laster}
 \end{figure}
 
@@ -772,37 +772,42 @@ De tre ligevægtsligninger anvendes til at bestemme punktlasterne. Dette gøres 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{billeder/fldtag.png}
-	\caption{Frilegemediagram af taget. Lasterne er angivet i $\frac{kN}{m}$}
+	\caption{Fritlegemediagram af taget. Lasterne er angivet i [$\frac{kN}{m}$]}
 	\label{fig:fld}
 \end{figure}
 
 Reaktionerne for taget kan dermed beregnes:
 \begin{equation}
 	\begin{split}
-	Moment om D: &-h_{1y} \cdot \SI{2,80}{m} \cdot \frac{2,5 \text{m}}{2} - h_{2y} \cdot \SI{3,91}{m} \cdot (2,\!5 \text{m} + \frac{3,5 \text{m}}{2}) - h_{1x} \cdot \SI{2,80}{m} \cdot (\frac{1,25 \text{m}}{2}) \\
-	& - h_{2x} \cdot \SI{3,91}{m} \cdot (1,\!25 \text{m} + \frac{1,\!75 \text{m}}{2}) - h_{3y} \cdot \SI{2,80}{m} \cdot (6 \text{m} + \frac{2,5 \text{m}}{2}) - h_{4y} \cdot \SI{3,91}{m} \cdot (8,\!5 \text{m} + \frac{3,5 \text{m}}{2}) - h_{3x} \cdot \SI{2,80}{m} \cdot (1,\!25 \text{m} + \frac{1,75 \text{m}}{2}) - h_{4x} \cdot \SI{3,91}{m} \cdot (\frac{1,\!25 \text{m}}{2}) + \SI{12}{m} \cdot F_y = 0
-	\newline
+	\ALN{\text{D}}: 0 = &-h_{1y} \cdot \SI{2,80}{m} \cdot \frac{2,5 \text{m}}{2} - h_{2y} \cdot \SI{3,91}{m} \cdot (2,\!5 \text{m} + \frac{3,5 \text{m}}{2}) \\ & - h_{1x} \cdot \SI{2,80}{m} \cdot (\frac{1,25 \text{m}}{2}) - h_{2x} \cdot \SI{3,91}{m} \cdot (1,\!25 \text{m} + \frac{1,\!75 \text{m}}{2}) \\ & - h_{3y} \cdot \SI{2,80}{m} \cdot (6 \text{m} + \frac{2,5 \text{m}}{2}) - h_{4y} \cdot \SI{3,91}{m} \cdot (8,\!5 \text{m} + \frac{3,5 \text{m}}{2}) \\ & - h_{3x} \cdot \SI{2,80}{m} \cdot (1,\!25 \text{m} + \frac{1,75 \text{m}}{2}) - h_{4x} \cdot \SI{3,91}{m} \cdot (\frac{1,\!25 \text{m}}{2}) \\ & + \SI{12}{m} \cdot F_y
+	\\ &
 	F_y = \SI{39,74}{kN}
 	\end{split}
 \end{equation}
 
-\begin{center}
-	Lodret ligevægt: $-h_{1y} \frac{\text{kN}}{\text{m}} \cdot \SI{2,80}{m} - h_{2y} \frac{\text{kN}}{\text{m}} \cdot \SI{3,91}{m} - h_{3y} \frac{\text{kN}}{\text{m}} \cdot \SI{2,80}{m} -  h_{4y} \cdot \SI{3,91}{m} + D_y + F_y = 0$ 
-	\newline
-	$D_y = 52,\!45 kN$
-\end{center}
+\begin{equation}
+\begin{split}
+	+\atop\rightarrow: 0 = & -h_{1y} \frac{\text{kN}}{\text{m}} \cdot \SI{2,80}{m} - h_{2y} \frac{\text{kN}}{\text{m}} \cdot \SI{3,91}{m} - h_{3y} \frac{\text{kN}}{\text{m}} \cdot \SI{2,80}{m} -  h_{4y} \cdot \SI{3,91}{m} + D_y + F_y 
+	\\ &
+	D_y = \SI{52,45}{kN}
+\end{split}
+\end{equation}
 
-\begin{center}
-	Moment om charniere led (højre del): $- h_{3y} \cdot \SI{2,80}{m} \cdot (\frac{2,5 \text{m}}{2}) - h_{4y} \cdot \SI{3,91}{m} \cdot (2,\!5 \text{m} + \frac{3,5 \text{m}}{2}) - h_{3x} \cdot \SI{2,80}{m} \cdot (\frac{1,25 \text{m}}{2}) - h_{4x} \cdot \SI{3,91}{m} \cdot (1,\!25 \text{m} + \frac{1,75 \text{m}}{2}) + F_y \cdot \SI{6}{m} - F_x \cdot \SI{3}{m} = 0$ 
-	\newline
-	$F_x = 49,\!57 \text{kN}$
-\end{center}
+\begin{equation}
+\begin{split}
+	\ALN{\text{G}}: 0 = & - h_{3y} \cdot \SI{2,80}{m} \cdot (\frac{2,5 \text{m}}{2}) - h_{4y} \cdot \SI{3,91}{m} \cdot (2,\!5 \text{m} + \frac{3,5 \text{m}}{2}) - h_{3x} \cdot \SI{2,80}{m} \cdot (\frac{1,25 \text{m}}{2}) \\& - h_{4x} \cdot \SI{3,91}{m} \cdot (1,\!25 \text{m} + \frac{1,75 \text{m}}{2}) + F_y \cdot \SI{6}{m} - F_x \cdot \SI{3}{m}
+	\\ &
+	F_x = \SI{49,57}{kN}
+\end{split}
+\end{equation}
 
-\begin{center}
-	Vandret ligevægt: $h_{1x} \cdot \SI{2,80}{m} + h_{2x} \cdot \SI{3,91}{m} - h_{3x} \cdot \SI{2,80}{m} - h_{4x} \cdot \SI{3,91}{m} - F_x + D_x = 0$
-	\newline
-	$D_x = 32,\!74 \text{kN}$
-\end{center}
+\begin{equation}
+\begin{split}
+	+\atop\rightarrow: 0 = & h_{1x} \cdot \SI{2,80}{m} + h_{2x} \cdot \SI{3,91}{m} - h_{3x} \cdot \SI{2,80}{m} - h_{4x} \cdot \SI{3,91}{m} - F_x + D_x
+	\\ &
+	D_x = \SI{32,74}{kN} 
+\end{split}
+\end{equation}
 
 Disse reaktioner virker som punktlast på taget, og det endelige statiske system med de laster der skal bruges til at finde reaktioner for det statiske system, er illustreret på Figur \ref{fig:alle}. 
 
