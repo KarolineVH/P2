@@ -25,7 +25,10 @@
 % ¤¤ Matematik mm. ¤¤
 \usepackage{amsmath,amssymb,stmaryrd} 		% Avancerede matematik-udvidelser
 \usepackage{mathtools,mathabx}
-\newcommand\AR[1]{\makebox[0pt][l]{$#1$}\kern0.0em\raisebox{1.5ex}{$\curvearrowright$}}						% Andre matematik- og tegnudvidelser
+\newcommand\ARN[1]{\makebox[0pt][l]{$#1$}\kern-0.15em\raisebox{1.5ex}{$\curvearrowright$}}
+\newcommand\ALN[1]{\makebox[0pt][l]{$#1$}\kern-0.15em\raisebox{1.5ex}{$\curvearrowleft$}}
+\newcommand\AR[1]{\makebox[0pt][l]{$#1$}\kern0.0em\raisebox{1.5ex}{$\curvearrowright$}}
+\newcommand\AL[1]{\makebox[0pt][l]{$#1$}\kern0.0em\raisebox{1.5ex}{$\curvearrowleft$}}						% Andre matematik- og tegnudvidelser
 \usepackage{textcomp}                 		% Symbol-udvidelser (f.eks. promille-tegn med \textperthousand )
 \usepackage{rsphrase}						% Kemi-pakke til RS-saetninger, f.eks. \rsphrase{R1}
 \usepackage[version=3]{mhchem} 				% Kemi-pakke til flot og let notation af formler, f.eks. \ce{Fe2O3}
