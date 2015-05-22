@@ -219,19 +219,19 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 	\label{fig:iprofil}
 \end{figure}
 
-Hovedformålet med dette afsnit, er at finde ud af om konstruktionen har en tilstrækkelig bæreevne. Derfor undersøges spændingstilstanden ved: 
+Hovedformålet med dette afsnit er, at finde ud af om konstruktionen har en tilstrækkelig bæreevne. Derfor undersøges spændingstilstanden ved: 
 \begin{equation}
 	\sqrt{\sigma^2 + 3\tau^2} \le \frac{f_{yk}}{\gamma}
 \end{equation}
 
 \begin{itemize}
-	\item[-] $\sigma$: normalspænding 
-	\item[-] $\tau$: forskydningsspænding
-	\item[-] $f_{yk}$: den karakteristiske flydespænding, der afhænger af ståltype. For ståltype S235 ved $16 < t \le 40$ er $f_{yk} = 225 MPa$ \citep[ s. 213]{stabi}
-	\item[-] $\gamma$: partialkoefficient, der sættes til 1,1 \citep[ s. 212]{stabi}
+	\item[-] $\sigma$: Normalspænding 
+	\item[-] $\tau$: Forskydningsspænding
+	\item[-] $f_{yk}$: Den karakteristiske flydespænding, der afhænger af ståltype. For ståltype S235 ved $16 < t \le 40$ er $f_{yk} = 225 MPa$ \citep[ s. 213]{stabi}
+	\item[-] $\gamma$: Partialkoefficient, der sættes til 1,1 \citep[ s. 212]{stabi}
 \end{itemize}
 
-Spændingstilstanden undersøges i tre snit på I-profilet, som ses på Figur \ref{fig:iprofilsnit}.
+Spændingstilstanden undersøges i fem snit på I-profilet, som ses på Figur \ref{fig:iprofilsnit}.
 
 \begin{figure}[H]
 	\centering
@@ -250,12 +250,12 @@ Forskydningsspændingen $\tau$ beregnes ved Grasshofs formel:
 \end{equation}
 
 \begin{itemize}
-	\item[-] $V$: forskydningskraft, som er bestemt igennem snitkræfter
-	\item[-] $Q$: statisk moment
-	\item[-] $b$: bredde
+	\item[-] $V$: Forskydningskraft, som er bestemt igennem snitkræfter
+	\item[-] $Q$: Statisk moment
+	\item[-] $b$: Bredde
 \end{itemize}
 
-Forskydningsspændingsfordelingen på I-profilet findes ved, at lave to snit på I-profilet, som er illustreret på Figur \ref{fig:snitsnit}. 
+Forskydningsspændingsfordelingen på I-profilet findes ved, at lave to snit, som er illustreret på Figur \ref{fig:snitsnit}. 
 
 \begin{figure}[H]
 	\centering
@@ -269,8 +269,8 @@ Den ubekendte faktor til beregningen af forskydningsspændingen er det statiske 
 Q = \bar{y}A
 \end{equation}
 \begin{itemize}
-	\item[-] $\bar{y}$: tyngdepunktskoordinat
-	\item[-] A: areal
+	\item[-] $\bar{y}$: Tyngdepunktskoordinat
+	\item[-] A: Areal
 \end{itemize}
 
 Q beregnes for henholdsvis snit 1 og snit 2, hvormed forskydningsspændingen kan beregnes. 
@@ -300,7 +300,7 @@ Dermed bestemmes det statiske moment til:
 Q(z) = \SI{212,85}{mm} \cdot (z \cdot \SI{24,3}{mm})
 \end{equation}
 
-z sættes til 0 mm og 76,9 mm for at bestemme den mindste og største forskydningsspænding på I-profilets flange:
+z sættes til 0 mm og 76,9 mm for at bestemme forskydningsspænding på I-profilets flange:
 \begin{equation}
 Q_{0 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{0}{mm} \cdot \SI{24,3}{mm}) = \SI{0}{mm^3}
 \end{equation} 
@@ -308,7 +308,7 @@ Q_{0 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{0}{mm} \cdot \SI{24,3}{mm}) = \SI{0
 	Q_{76,9 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{76,9}{mm} \cdot \SI{24,3}{mm}) =  3,\!977 \cdot 10^5 \text{mm}^3 
 \end{equation}
 
-Dermed kan den mindste og den største forskydningsspænding bestemmes, hvor forskydningskraften, \textit{V} afhænger af hvilket snit på konstruktionen der vælges:
+Dermed kan den mindste og den største forskydningsspænding bestemmes, hvor forskydningskraften, \textit{V} afhænger af, hvilket snit på konstruktionen der vælges:
 \begin{equation}
 	\tau_{max} = \frac{V \cdot 3,977 \cdot 10^5 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}}
 \end{equation}
@@ -317,7 +317,21 @@ Dermed kan den mindste og den største forskydningsspænding bestemmes, hvor for
 	\tau_{min} = \frac{V \cdot 0 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}}
 \end{equation}
 
-INDSÆT TABEL2
+Resultatet for snittene er vist i Tabel \ref{tab:forskudning}.
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{c c c c }
+			\hline
+			$	Kritisk punkt   & Forskydningskraft, V {[}kN{]} & \tau_{max} {[}MPa{]} & \tau_{min}{[}MPa{]} \\ \hline
+			Snit 4 ved 0 m  & 0                             & 0                      & 0                     \\ \hline
+			Snit 5 ved 0 m  & -357,20                  & -12,75          & 0                     \\ \hline
+			Snit 6 ved 18 m & -112,10                 & -4,00          & 0                     \\ \hline$
+		\end{tabular}
+		\caption{Forskydningsspænding i flangen}
+		\label{tab:forskudning}
+	\end{center}
+\end{table}
 
 \textbf{Snit 2: Forskydningsspændingsfordeling i kroppen}
 \newline
@@ -352,14 +366,25 @@ Forskydningsspændingen kan hermed beregnes ved:
 	\tau(y) = \frac{V \cdot Q(y)}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 16,\!2 \text{mm}}
 \end{equation}
 
-Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I-profilets krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved y = 225 mm. Forskydningsspændingsfordeling er illustreret på Figur \ref{fig:forskydfordeling}, og resultatet ses i Tabel XXX.  
-\newline
-\newline
-INDSÆT TABEL1
+Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I-profilets krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved y = 225 mm. Forskydningsspændingsfordeling er illustreret på Figur \ref{fig:forskydfordeling}, og resultatet ses i Tabel \ref{tab:kroppen}.  
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{c c c c c }
+			\hline
+			$	Kritisk punkt   & Forskydningskraft, V {[}kN{]} & \tau(0) {[}MPa{]} & \tau(200,7){[}MPa{]} & \tau(-200,7){[}MPa{]} \\ \hline
+			Snit 4 ved 0 m  & 0                             & 0              & 0                 & 0                  \\ \hline
+			Snit 5 ved 0 m  & -357,20                 & -57,97   & -42,28     & -42,28     \\ \hline
+			Snit 6 ved 18 m & -112,10                 & -18,19  & -13,27      & -13,27       \\ \hline$
+		\end{tabular}
+		\caption{Forskydningsspænding i kroppen}
+		\label{tab:kroppen}
+	\end{center}
+\end{table}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.3\textwidth]{billeder/forskydningsfordeling.png}
+	\includegraphics[width=0.4\textwidth]{billeder/forskydningsfordeling.png}
 	\caption{Forskydningsspændingsfordeling}
 	\label{fig:forskydfordeling}
 \end{figure}
@@ -371,21 +396,32 @@ Normalspændingen $\sigma$ findes ved Naviers formel:
 \end{equation}
 
 \begin{itemize}
-	\item[-] N: normalkraft, som er bestemt igennem snitkræfter
-	\item[-] A: tværsnitsareal, som for stålprofil 450 er $14,\!7 \cdot 10^3 mm^2$ \citep{stabi}. 
-	\item[-] M: moment, som er bestemt igennem snitkræfter
-	\item[-] y: koordinat til snit
-	\item[-] I: inertimoment, som for stålprofil 450 er $458,\!5 \cdot 10^6 mm^4$ \citep{stabi}. 
+	\item[-] N: Normalkraft, som er bestemt igennem snitkræfter
+	\item[-] A: Tværsnitsareal, som for stålprofil 450 er $14,\!7 \cdot 10^3 mm^2$ \citep{stabi}. 
+	\item[-] M: Moment, som er bestemt igennem snitkræfter
+	\item[-] y: Koordinat til snit
+	\item[-] I: Inertimoment, som for stålprofil 450 er $458,\!5 \cdot 10^6 mm^4$ \citep{stabi}. 
 \end{itemize} 
 
 Her er den eneste ubekendte faktor y. Derfor fås normalspændingen som en funktion af y, hvor N og M varierer efter hvilket snit på konstruktionen der undersøges:
 \begin{equation}
 	\sigma(y) = \frac{N}{14,\!7 \cdot 10^3 \text{mm}^2} - \frac{M}{458,\!5 \cdot 10^6 \text{mm}^4} y
 \end{equation}
-Spændingen beregnes til $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. Resultatet ses i tabel XXX.
-\newline
-\newline
-INDSÆT TABEL3
+Spændingen beregnes til $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. Resultatet ses i Tabel \ref{tab:normalspanding}.
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{c c c c c c c c }
+			\hline$
+			Kritisk punkt   & Normalkraft, N {[}kN{]} & Moment, M {[}kNm{]} & \sigma(0){[}MPa{]} & \sigma(200,7){[}MPa{]} & \sigma(200,7){[}MPa{]} & \sigma(225){[}MPa{]} & sigma(-225){[}MPa{]} \\ \hline
+			Snit 4 ved 0 m  & -658,26           & 0                   & -44,78      & -44,78          & -44,78          & -44,78        & -44,78       \\ \hline
+			Snit 5 ved 0 m  & -62,52          & -2120,82      & -4,25     & -3,32         & -5,18          & -3,21        & -5,29        \\ \hline
+			Snit 6 ved 18 m & -396,94           & -2120,82        & -27,00      & -26,08         & -27,93          & -25,96        &                      \\ \hline$
+		\end{tabular}
+		\caption{Normalspænding}
+		\label{tab:normalspanding}
+	\end{center}
+\end{table}
 
 \subsection{Spændingstilstand}
 Spændingstilstanden er beregnet for alle snittene, og de største værdier er angivet i Tabel XX.
@@ -398,7 +434,7 @@ f_y = \frac{225 \text{MPa}}{1,\!1} = \SI{204,54}{MPa}
 
 Udnyttelsesgraden beregnes ved:
 \begin{equation}
-	\frac{\sqrt{\sigma^2 + 3\tau^2} \le \frac{f_{yk}}{\gamma}}{\frac{f_{yk}}{\gamma}} \le 1
+	\frac{\sqrt{\sigma^2 + 3\tau^2}}{\frac{f_{yk}}{\gamma}} \le 1
 \end{equation}
 Overskrider denne værdi 1, betyder det, at den regningsmæssige flydespænding er overskredet, og dermed har tilbygningen ikke en tilstrækkelig bæreevne. 
 
