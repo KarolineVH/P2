@@ -126,8 +126,6 @@ Til sidst bestemmes moment:
 	0 = M_1 + j \cdot \frac{2x}{3} + v_k \cdot x \cdot \frac{x}{2} + A_x \cdot x \leftrightarrow M_1(x) = -22,\!15\frac{\text{kN}}{\text{m}} x^2 + \SI{133,30}{kN} x
 \end{equation}
 
-Alle resultater kan ses i Tabel \ref{tab:resultaterbrud}.
-
 \begin{figure}[H]\centering
 	\begin{minipage}[b]{0.48\textwidth}\centering
 		\includegraphics[width=0.80\textwidth]{billeder/snitet.png} %Venstre billede
@@ -167,7 +165,7 @@ Til sidst bestemmes moment:
 \end{split}
 \end{equation}
 
-Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene, som bruges til at beregne spændingstilstanden. 
+Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene. 
 
 \begin{table}
 	\begin{center}
@@ -210,7 +208,7 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 	\label{fig:normalkraftkurve}
 \end{figure}
 
-\section{Spænding}
+\section{Spænding og dimensioneringskriterier}
 
 \begin{figure}[H]
 	\centering
@@ -219,7 +217,7 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 	\label{fig:iprofil}
 \end{figure}
 
-Hovedformålet med dette afsnit er, at finde ud af om konstruktionen har en tilstrækkelig bæreevne. Derfor undersøges spændingstilstanden ved: 
+Hovedformålet med dette afsnit er, at undersøge om konstruktionen har en tilstrækkelig bæreevne. Derfor undersøges spændingstilstanden ved Von Mises, hvor det skal gælde: 
 \begin{equation}
 	\sqrt{\sigma^2 + 3\tau^2} \le \frac{f_{yk}}{\gamma}
 \end{equation}
@@ -244,11 +242,9 @@ Først beregnes normal- og forskydningsspændingen.
 
 \subsection{Forskydningsspænding}
 Forskydningsspændingen $\tau$ beregnes ved Grasshofs formel:
-
 \begin{equation}
 \tau = \frac{VQ}{Ib}
 \end{equation}
-
 \begin{itemize}
 	\item[-] $V$: Forskydningskraft, som er bestemt igennem snitkræfter
 	\item[-] $Q$: Statisk moment
@@ -273,7 +269,7 @@ Q = \bar{y}A
 	\item[-] A: Areal
 \end{itemize}
 
-Q beregnes for henholdsvis snit 1 og snit 2, hvormed forskydningsspændingen kan beregnes. 
+Q beregnes for snit 1 og snit 2, hvormed forskydningsspændingen i henholdsvis flangen og kroppen kan beregnes. 
 \newline
 \newline
 \textbf{Snit 1: Forskydningsspændingsfordeling i flangen}
@@ -287,7 +283,7 @@ Snit 1 er vist på Figur \ref{fig:snitetforskyd}, hvor 0 mm < z < 76,9 mm
 	\label{fig:snitetforskyd}
 \end{figure}
 
-Tyngdepunktskoordinat $\bar{y}$ samt arealet bestemmes:
+Tyngdepunktskoordinat $\bar{y}$ samt arealet \textit{A} bestemmes:
 \begin{equation}
 \bar{y} = \frac{450 \text{mm} - 2 \cdot 24,\!3 \text{mm}}{2} + \frac{24,\!3 \text{mm}}{2} = 212,\!85 \text{mm}
 \end{equation}
@@ -300,7 +296,7 @@ Dermed bestemmes det statiske moment til:
 Q(z) = \SI{212,85}{mm} \cdot (z \cdot \SI{24,3}{mm})
 \end{equation}
 
-z sættes til 0 mm og 76,9 mm for at bestemme forskydningsspænding på I-profilets flange:
+\textit{z} sættes til 0 mm og 76,9 mm for at bestemme forskydningsspændingen på I-profilets flange:
 \begin{equation}
 Q_{0 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{0}{mm} \cdot \SI{24,3}{mm}) = \SI{0}{mm^3}
 \end{equation} 
@@ -317,9 +313,9 @@ Dermed kan den mindste og den største forskydningsspænding bestemmes, hvor for
 	\tau_{min} = \frac{V \cdot 0 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}}
 \end{equation}
 
-Resultatet for snittene er vist i Tabel \ref{tab:forskudning}.
+Den største og mindste forskydningsspænding for de valgte kritiske punkter er vist i Tabel \ref{tab:forskudning}, og forskydningsspændingsfordelingen i flangen er illustreret på Figur \ref{fig:forskydfordeling}.
 
-\begin{table}
+\begin{table} [H]
 	\begin{center}
 		\begin{tabular}{c c c c }
 			\hline
@@ -335,7 +331,7 @@ Resultatet for snittene er vist i Tabel \ref{tab:forskudning}.
 
 \textbf{Snit 2: Forskydningsspændingsfordeling i kroppen}
 \newline
-Snit 2 er vist på Figur \ref{fig:snittoforskyd}. 
+Snit 2 er vist på Figur \ref{fig:snittoforskyd}, hvor -200,7 mm < y < 200,7 mm
 
 \begin{figure}[H]
 	\centering
@@ -366,7 +362,7 @@ Forskydningsspændingen kan hermed beregnes ved:
 	\tau(y) = \frac{V \cdot Q(y)}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 16,\!2 \text{mm}}
 \end{equation}
 
-Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I-profilets krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved y = 225 mm. Forskydningsspændingsfordeling er illustreret på Figur \ref{fig:forskydfordeling}, og resultatet ses i Tabel \ref{tab:kroppen}.  
+Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I-profilets krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved y = 225 mm. Forskydningsspændingen for de valgte kritiske punkter ses i Tabel \ref{tab:kroppen}, og forskydningsspændingsfordelingen på I-profilet er illustreret på Figur \ref{fig:forskydfordeling}. 
 
 \begin{table}
 	\begin{center}
@@ -403,13 +399,13 @@ Normalspændingen $\sigma$ findes ved Naviers formel:
 	\item[-] I: Inertimoment, som for stålprofil 450 er $458,\!5 \cdot 10^6 mm^4$ \citep{stabi}. 
 \end{itemize} 
 
-Her er den eneste ubekendte faktor y. Derfor fås normalspændingen som en funktion af y, hvor N og M varierer efter hvilket snit på konstruktionen der undersøges:
+Her er den eneste ubekendte faktor y. Derfor fås normalspændingen som en funktion af y, hvor N og M afhænger af hvilket snit på konstruktionen der undersøges:
 \begin{equation}
 	\sigma(y) = \frac{N}{14,\!7 \cdot 10^3 \text{mm}^2} - \frac{M}{458,\!5 \cdot 10^6 \text{mm}^4} y
 \end{equation}
-Spændingen beregnes til $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. Resultatet ses i Tabel \ref{tab:normalspanding}.
+Spændingen beregnes i snittene $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. Resultatet ses i Tabel \ref{tab:normalspanding}.
 
-\begin{table}
+\begin{table} [H]
 	\begin{center}
 		\begin{tabular}{c c c c c c c c }
 			\hline
@@ -424,7 +420,7 @@ Spændingen beregnes til $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. R
 \end{table}
 
 \subsection{Spændingstilstand}
-Spændingstilstanden er beregnet for alle snittene, og de største værdier er angivet i Tabel XX.
+Spændingstilstanden er beregnet for alle snittene, og de største værdier er angivet i Tabel \ref{tab:tilstand}.
 \newline
 \newline
 Den regningsmæssige flydespænding $f_y$ bestemmes til:
@@ -438,19 +434,18 @@ Udnyttelsesgraden beregnes ved:
 \end{equation}
 Overskrider denne værdi 1, betyder det, at den regningsmæssige flydespænding er overskredet, og dermed har tilbygningen ikke en tilstrækkelig bæreevne. 
 
-\begin{table}
+\begin{table} [H]
 	\begin{center}
 		\begin{tabular}{c c c c }
 			\hline
-			Kritisk punkt   & Normalkraft, N [kN] & FORMEL!! & FORMEL!! \\ \hline
+			Kritisk punkt   & Maksimal spændingstilstand [MPa] & FORMEL!! & Udnyttelsesgrad \\ \hline
 			Snit 4 ved 0 m  & 44,78                   & 204,54      & 0,22     \\ \hline
 			Snit 5 ved 0 m  & 100,51                  & 204,54      & 0,49     \\ \hline
 			Snit 6 ved 18 m & 41,50                   & 204,54      & 0,20     \\ \hline
 		\end{tabular}
-		\caption{Normalspænding}
-		\label{tab:normalspinding}
+		\caption{Spændingstilstand}
+		\label{tab:tilstand}
 	\end{center}
 \end{table}
 
-
-Det ses, at den højeste spænding er 100,50 MPa, og dermed overskrider spændingen ikke den regningsmæssige flydespænding. Det kan dermed konkluderes, at tilbygningen har en tilstrækkelig bæreevne. 
+Det ses, at den højeste spænding er 100,50 MPa med en udnyttelsesgrad på 0,49, og dermed overskrider spændingen ikke den regningsmæssige flydespænding. Det kan dermed konkluderes, at tilbygningen har en tilstrækkelig bæreevne. 
