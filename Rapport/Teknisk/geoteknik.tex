@@ -92,7 +92,7 @@ Uensformighedstallet fortæller, hvor velsorteret jorden er:
 \end{itemize}
 
 Forsøget er udført to gange, og der er derfor lavet en sigtekurve for hvert forsøg, og uensformighedstallet er udregnet for begge forsøg. 
-\newline \indent{     }  Det procentvise gennemfald i hver sigte er beregnet, og herudfra fås sigtekurverne vist på Figur \ref{fig:sigtekurve1} og Figur \ref{fig:sigtekurve2}. Værdierne der er brugt til at finde det procentvise gennemfald på Figur \ref{fig:forsoget} og Figur \ref{forsogto} i Bilag C. 
+\newline \indent{     }  Det procentvise gennemfald i hver sigte er beregnet, og herudfra fås sigtekurverne vist på Figur \ref{fig:sigtekurve1} og Figur \ref{fig:sigtekurve2}. Værdierne der er brugt til at finde det procentvise gennemfald på Figur \ref{fig:forsoget} og Figur \ref{fig:forsogto} i Bilag C. 
 
 \begin{figure}[htbp]
 		\includegraphics[width=1.0\textwidth]{billeder/sigtekurve1.png}
@@ -112,18 +112,22 @@ Uensformighedstallet for begge forsøg er beregnet, ved at lave lineær regressi
 \newline
 Ved det første udførte forsøg er 10\%-fraktilen fundet ved at lave lineær regression imellem sigte med maskestørrelse $0,\!075$ mm og $0,\!125$ mm, hvor følgende ligning fremgår: 
 \begin{equation}
-	y = 862,\!42x - 63,\!223
+	y_{10} = 862,\!42x - 63,\!223
 \end{equation}
 
 For at finde 60\%-fraktilen er der lavet lineær regression imellem sigte med maskestørrelse $0,\!125$ mm og $0,\!15$ mm, hvor følgende ligning fremgår:
 \begin{equation}
-	d_{60}=937,\!12x - \SI{72,56}{mm}
+	y_{60} = 937,\!12x - 72,\!56
 \end{equation}
 
 Ved forsøg 1 er 10\%-fraktilen og 60\%-fraktilen hermed beregnet til: 
 \begin{equation}
-	d_{10} = 0,\!08 \text{og} d_{60} = \SI{0,14}{mm}
+	d_{10} = \SI{0,08}{mm}
 \end{equation} 
+
+\begin{equation}
+d_{60} = \SI{0,14}{mm}
+\end{equation}
 
 Uensformighedstallet i forsøg 1 er derved:
 \begin{equation}
@@ -144,9 +148,9 @@ Formålet med forsøget er at finde den relative densitet $d_s$, også kaldet ko
 \newline
 Kornvægtfylden beregnes ved:
 
-\begin{center}
-	$d_s = \frac{W_s \rho_w^t}{(W_s + W_2 - W_1)\rho_w^{4^{\circ}}}$
-\end{center}
+\begin{equation}
+	d_s = \frac{W_s \rho_w^t}{(W_s + W_2 - W_1)\rho_w^{4^{\circ}}}
+\end{equation}
 
 \begin{itemize}
 	\item[-] $W_s$: Vægten af tørt kornmateriale [g]
