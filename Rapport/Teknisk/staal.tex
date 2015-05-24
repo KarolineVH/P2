@@ -3,12 +3,6 @@ I dette afsnit undersøges tilbygningens brudgrænsetilstand. Først beregnes re
 
 \section{Reaktioner}
 Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingv} og \ref{fig:opdelingh}. I skæringen mellem de to dele, vil der være snitkræfter; dog er bøjningsmomentet \textit{M} lig 0 i charnieret. Dermed optræder der kun normalkraften, \textit{N}, og forskydningskraften, \textit{V}. Det er derfor muligt, at betragte højre del som en isoleret del af konstruktionen med fast, simpel understøtning i punkt E.
-\\
-\\
-Inden reaktionerne bestemmes bestemmes jordlastens resultant, j. Dette gøres ved et bestemt integrale: 
-\begin{equation}
-j = \int_{0}^{2} \! j(z) \, \mathrm{d}z \leftrightarrow j = 127,\!95 kN
-\end{equation}
 
 \begin{figure}[H]
 	\centering
@@ -27,10 +21,15 @@ j = \int_{0}^{2} \! j(z) \, \mathrm{d}z \leftrightarrow j = 127,\!95 kN
 Reaktionerne i punkt E kan sættes som punktlaster i charnieret på den venstre side af systemet, som ses på Figur \ref{fig:opdelingv}. Reaktionerne på højre del af systemet beregnes først.
 \newline
 \newline
+Inden reaktionerne bestemmes skal jordlastens resultant \textit{j} beregnes. Dette gøres ved et bestemt integrale: 
+\begin{equation}
+	j = \int_{0}^{2} \! j(z) \, \mathrm{d}z \leftrightarrow j = 127,\!95 kN
+\end{equation}
+
 Først bestemmes den vandrette reaktion i charnieret, $E_x$ gennem vandret ligevægt: 
 \begin{equation}
 \begin{split}
-	+\atop\rightarrow: 0 = & F_x + E_x - j - v_k \cdot \SI{2}{m} - v_2 \cdot \SI{16}{m}
+	\rightarrow+: 0 = & F_x + E_x - j - v_k \cdot \SI{2}{m} - v_2 \cdot \SI{16}{m}
 	\\ &
 	E_x = \SI{62,52}{kN}
 \end{split}
@@ -87,14 +86,16 @@ For at gøre det muligt at isolere en af de vandrette reaktioner laves der et sn
 Slutteligt laves vandret ligevægt for at bestemme $A_x$:
 \begin{equation}
 \begin{split}
-	+\atop\rightarrow: 0 = & A_x - E_x + B_x + j + v_k \cdot \SI{2}{m} + v_1 \cdot \SI{16}{m} - D_x
+	\rightarrow+: 0 = & A_x - E_x + B_x + j + v_k \cdot \SI{2}{m} + v_1 \cdot \SI{16}{m} - D_x
 	\\ &
 	A_x = \SI{-133,31}{kN}
 \end{split}
 \end{equation} 
 
+Hermed er alle reaktioner bestemt. De kan ses på Figur \ref{fig:snitbrud}.
+
 \section{Snitkræfter}
-Snitkræfterne for stålrammen til tilbygningen til Strøybergs Palæs kan nu beregnes. Her laves der syv snit, som er illustreret på Figur \ref{fig:snitbrud}. Disse resultater vil bruges til at undersøge, om konstruktionen har en tilstrækkelig bæreevne, eller om den vil bryde sammen. 
+Snitkræfterne for stålrammen til tilbygningen til Strøybergs Palæs kan nu beregnes. Her laves der syv snit, som er illustreret på Figur \ref{fig:snitbrud}. Disse resultater vil bruges til at undersøge, om konstruktionen har en tilstrækkelig bæreevne, eller om den vil bryde sammen.
 
 \begin{figure}[H]
 	\centering
@@ -189,7 +190,7 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/sk.png}
+	\includegraphics[width=0.8\textwidth]{billeder/sk.png}
 	\caption{Forskydningskurve}
 	\label{fig:forskydningskurve}
 \end{figure}
@@ -212,7 +213,7 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{billeder/iprofil.png}
+	\includegraphics[width=0.6\textwidth]{billeder/iprofil.png}
 	\caption{I-profil 450}
 	\label{fig:iprofil}
 \end{figure}
@@ -287,6 +288,7 @@ Tyngdepunktskoordinat $\bar{y}$ samt arealet \textit{A} bestemmes:
 \begin{equation}
 \bar{y} = \frac{450 \text{mm} - 2 \cdot 24,\!3 \text{mm}}{2} + \frac{24,\!3 \text{mm}}{2} = 212,\!85 \text{mm}
 \end{equation}
+
 \begin{equation}
 A = z \cdot \SI{24,3}{mm}
 \end{equation}
@@ -438,7 +440,7 @@ Overskrider denne værdi 1, betyder det, at den regningsmæssige flydespænding 
 	\begin{center}
 		\begin{tabular}{c c c c }
 			\hline
-			Kritisk punkt   & Maksimal spændingstilstand [MPa] & FORMEL!! & Udnyttelsesgrad \\ \hline
+			Kritisk punkt   & Maksimal spændingstilstand [MPa] & $\frac{f_{yk}}{\gamma}$ & Udnyttelsesgrad \\ \hline
 			Snit 4 ved 0 m  & 44,78                   & 204,54      & 0,22     \\ \hline
 			Snit 5 ved 0 m  & 100,51                  & 204,54      & 0,49     \\ \hline
 			Snit 6 ved 18 m & 41,50                   & 204,54      & 0,20     \\ \hline

@@ -266,7 +266,17 @@
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" hide-input="false" hide-output="true" inline-output="false" labelreference="L10080" drawlabel="true">
 <Input>
-<Text-field style="Text" layout="Normal"><Font encoding="UTF-8">                         - For hele h\303\270jden: </Font><Equation executable="false" style="2D Math" input-equation="" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYkLUkmbWZyYWNHRiQ2KC1JI21pR0YkNiNRJ2BoX19lYEYnLUYjNiUtSSNtbkdGJDYkUSQ1MDBGJy8lLG1hdGh2YXJpYW50R1Enbm9ybWFsRicvJSdpdGFsaWNHUSV0cnVlRicvRjlRJ2l0YWxpY0YnLyUubGluZXRoaWNrbmVzc0dRIjFGJy8lK2Rlbm9tYWxpZ25HUSdjZW50ZXJGJy8lKW51bWFsaWduR0ZFLyUpYmV2ZWxsZWRHUSZmYWxzZUYnRjg=">LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYkLUkmbWZyYWNHRiQ2KC1JI21pR0YkNiNRJ2BoX19lYEYnLUYjNiUtSSNtbkdGJDYkUSQ1MDBGJy8lLG1hdGh2YXJpYW50R1Enbm9ybWFsRicvJSdpdGFsaWNHUSV0cnVlRicvRjlRJ2l0YWxpY0YnLyUubGluZXRoaWNrbmVzc0dRIjFGJy8lK2Rlbm9tYWxpZ25HUSdjZW50ZXJGJy8lKW51bWFsaWduR0ZFLyUpYmV2ZWxsZWRHUSZmYWxzZUYnRjg=</Equation></Text-field>
+<Text-field style="Text" layout="Normal"><Font encoding="UTF-8">                         - For hele h\303\270jden: </Font><Equation executable="false" style="2D Math" input-equation="" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYkLUkmbWZyYWNHRiQ2KC1JI21pR0YkNiNRJ2BoX19lYEYnLUYjNiUtSSNtbkdGJDYkUSQ1MDBGJy8lLG1hdGh2YXJpYW50R1Enbm9ybWFsRicvJSdpdGFsaWNHUSV0cnVlRicvRjlRJ2l0YWxpY0YnLyUubGluZXRoaWNrbmVzc0dRIjFGJy8lK2Rlbm9tYWxpZ25HUSdjZW50ZXJGJy8lKW51bWFsaWduR0ZFLyUpYmV2ZWxsZWRHUSZmYWxzZUYnRjg=">LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYkLUkmbWZyYWNHRiQ2KC1JI21pR0YkNiNRJ2BoX19lYEYnLUYjNiUtSSNtbkdGJDYkUSQ1MDBGJy8lLG1hdGh2YXJpYW50R1Enbm9ybWFsRicvJSdpdGFsaWNHUSV0cnVlRicvRjlRJ2l0YWxpY0YnLyUubGluZXRoaWNrbmVzc0dRIjFGJy8lK2Rlbm9tYWxpZ25HUSdjZW50ZXJGJy8lKW51bWFsaWduR0ZFLyUpYmV2ZWxsZWRHUSZmYWxzZUYnRjg=</Equation> </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" hide-input="false" hide-output="true" inline-output="false" labelreference="L10118" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block></Presentation-Block><Presentation-Block>
+<Group view="presentation" hide-input="false" hide-output="true" inline-output="false" labelreference="L10120" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal"></Text-field>
 </Input>
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" hide-input="false" hide-output="true" inline-output="false" labelreference="L10110" drawlabel="true">
