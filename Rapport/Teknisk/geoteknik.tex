@@ -194,8 +194,8 @@ Poretallet \textit{e}, for henholdsvis den løseste og fasteste lejring beregnes
 
 \begin{itemize}
 	\item[-] $d_s$: Kornvægtfylde [rent tal], som er fundet i forsøg 3: Kornvægtfylde, til $2,\!64$ 
-	\item[-] $\rho_w$: Vands densitet på $1 \frac{g}{cm^3}$
-	\item[-] V: Volumen af materialet $[cm^3]$
+	\item[-] $\rho_w$: Vands densitet på $1 \frac{\text{g}}{\text{cm}^3}$
+	\item[-] $V$: Volumen af materialet $[\text{cm}^3]$
 	\item[-] $W_s$: Vægten at tørt kornmateriale [g]
 \end{itemize}
  
@@ -255,8 +255,8 @@ Til bestemmelse af bæreevnen af fundamentet benyttes formlen:
 Der beregnes ikke kohæsion, fordi den der næsten ingen kohæsion er imellem sandkornene og dermed betragtes som værende 0. Derfor medregnes $c'N_c s_c i_c d_c$ -leddet ikke.
 
 \begin{itemize}
-	\item[-] R: Effektiv lodret bæreevne
-	\item[-] A: Effektiv areal
+	\item[-] $R$: Effektiv lodret bæreevne
+	\item[-] $A$: Effektiv areal
 	\item[-] $\gamma$: Rumvægt for sand - vand, som sættes til $20\frac{\text{kN}}{\text{m}^3} - 10\frac{\text{kN}}{\text{m}^3}$
 	\item[-] $b'$: Effektive bredde
 	\item[-] $N_{\gamma}$ og $N_q$: Bæreevnefaktor
@@ -336,7 +336,7 @@ $q$ bestemmes:
 
 Bæreevnefaktorerne bestemmes, når friktionsvinklen $\varphi = 32,\!33$:
 \begin{equation}
-	N_q = e^{\pi Tan(\varphi)} \frac{1 + Sin(\varphi)}{1 - \sin(\varphi)} = e^{\pi \tan(32,\!33)} \frac{1 + \sin(32,\!33)}{1 - \sin(32,\!33)} = 24,\!08
+	N_q = e^{\pi \tan(\varphi)} \frac{1 + \sin(\varphi)}{1 - \sin(\varphi)} = e^{\pi \tan(32,\!33)} \frac{1 + \sin(32,\!33)}{1 - \sin(32,\!33)} = 24,\!08
 \end{equation}
 \begin{equation}
 	N_\gamma = \frac{1}{4}((N_q - 1)\cos(\varphi))^\frac{3}{2} = \frac{1}{4}((24,\!08 - 1)\cos(32,\!33))^\frac{3}{2}=21,\!54
@@ -344,7 +344,9 @@ Bæreevnefaktorerne bestemmes, når friktionsvinklen $\varphi = 32,\!33$:
 
 Bredden $b'=b$ kan nu bestemmes: 
 \begin{equation}
-	\frac{R}{A} = \frac{1}{2} \gamma b' N_\gamma s_\gamma i_\gamma + q' N_q s_q i_q d_q \leftrightarrow \frac{V}{b^2} = \frac{1}{2} \gamma b' N_\gamma s_\gamma i_\gamma + q' N_q s_q i_q d_q \leftrightarrow \frac{535,\!17 \text{kN}}{b^2} = \frac{1}{2}\cdot 10 \frac{\text{kN}}{\text{m}^3}\cdot b\cdot 21,\!54\cdot 0,\!6 \cdot 0,\!3186610841 + 36,\!00 \frac{\text{kN}}{\text{m}^2}\cdot 24,\!08 \cdot 1,\!2 \cdot 0,\!56 \cdot 1) = 0,\!94 \text{m}
+\begin{split}
+	\frac{R}{A} = & \frac{1}{2} \gamma b' N_\gamma s_\gamma i_\gamma + q' N_q s_q i_q d_q \leftrightarrow \frac{V}{b^2} = \frac{1}{2} \gamma b' N_\gamma s_\gamma i_\gamma + q' N_q s_q i_q d_q \\ & \leftrightarrow \frac{535,\!17 \text{kN}}{b^2} = \frac{1}{2}\cdot 10 \frac{\text{kN}}{\text{m}^3}\cdot b\cdot 21,\!54\cdot 0,\!6 \cdot 0,\!3186610841 + 36,\!00 \frac{\text{kN}}{\text{m}^2}\cdot 24,\!08 \cdot 1,\!2 \cdot 0,\!56 \cdot 1) = 0,\!94 \text{m}
+\end{split}
 \end{equation}
 
 Dermed skal alle fire sider på fundamentet være 0,94 m hver.
