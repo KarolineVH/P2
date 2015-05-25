@@ -170,21 +170,21 @@ Dette afrundes til 32 strøer.
 
 Nu bestemmes egenlasten for strøerne ved at multiplicere 32 strøer med deres rumfang samt densitet, for tørrumvægt af træ 510 [$\frac{\text{kg}}{\text{m}^3}$] \citep{torrumvagt}, tyngdeaccelerationen og fire etager:
 \begin{equation}
-	p_{\textup{strøer}} = \SI{7,84}{m^3} \cdot 510 [$\frac{\text{kg}}{\text{m}^3}$] \cdot \SI{9,82}{$\frac{\text{m}}{\text{s}^2}$} \cdot 4 = \SI{157,06}{kN}
+	p_{\textup{strøer}} = \SI{7,84}{m^3} \cdot 510 [\frac{\text{kg}}{\text{m}^3}] \cdot 9,\!82 \frac{\text{m}}{\text{s}^2} \cdot 4 = \SI{157,06}{kN}
 \end{equation}
 
 Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samme måde som for strøerne, dog skal strøernes volumen trækkes fra ved beregning af værdierne for rockwool. Resultaterne kan ses i Tabel \ref{tab:densi}.
 
 \begin{table} [H]
 	\begin{center}
-		\begin{tabular}{c c c c c}
+		\begin{tabular}{c c c c}
 			\hline
-			Materiale & Densitet & Tykkelse & Volumen & Last \\
-			& \textit{d} [$\frac{\text{kg}}{\text{m}^3}$] & \textit{t} [mm] & \textit{V} [$\text{m}3$] & \textit{p} [kN] \\ \hline
-			Strøer & - & 140 & 7,84 & 157,06	\\
-			Beton    & 2400     & 120 & 72,00 & 1693,44      \\ 
-			Rockwool & 30       & 140 & 52,64 & 15,51     \\ 
-			Linoleum & 2,9      & 2,5 & 1,50 & 0,04 \\ 
+			Materiale & Densitet & Volumen & Last \\
+			& \textit{d} [$\frac{\text{kg}}{\text{m}^3}$] & \textit{V} [$\text{m}^3$] & \textit{p} [kN] \\ \hline
+			Strøer & - & 7,84 & 157,06	\\
+			Beton    & 2400 & 72,00 & 1693,44      \\ 
+			Rockwool & 30  & 52,64 & 15,51     \\ 
+			Linoleum & 2,9 & 1,50 & 0,04 \\ 
 		\end{tabular}
 		\caption{Materialer og deres egenskaber for gulv}
 		\label{tab:densi}
@@ -193,7 +193,7 @@ Udregningen af volumen og egenlast for beton, rockwool og linoleum sker på samm
 
 \textbf{Samlet egenlast for etagedæk}
 \newline
-Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:gulv} adderes, og der fås en samlet egenlast for tilbygningen på $2953,\!90$ kN. 
+Lasterne fra henholdsvis Tabel \ref{tab:arealoglast} og Tabel \ref{tab:densi} adderes, og der fås en samlet egenlast for tilbygningen på $2953,\!90$ kN. 
 \newline \indent{     }  Denne deles med 2, da midterrammen i tilbygningen optager halvdelen af den samlede egenlast, og der fås $1476,\!95$ kN. 
 \newline
 \newline
