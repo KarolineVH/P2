@@ -170,18 +170,19 @@ Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene.
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|c|}
+		\begin{tabular}{c c c c c c c}
 			\hline
-			Snit/Værdi & N($x_{min}$) & N($x_{max}$) & V($x_{min}$) & V($x_{max}$) & M($x_{min}$) & M($x_{max}$) 	\\ \hline
-			1, 0<x<2  & -547,95       & -484,87    	&  133,31    	&  66,02 	&  0,00     &  178.00        		\\ \hline
-			2, 2<x<18 &  -484,87        &  19,78       &  53,85      & -43,46   &  178,00  &  455,80    \\ \hline
-			3, 0<x<6  & 1,45       &  1,45     &  -72,24         &  -79,69     &  403,78     &  0,21 			    \\ \hline
-			4, 0<x<18 &  -1027,92       &  85,20      &  0,00        &  0,00    &  0,00   &   0,00    \\ \hline
-			5, 0<x<6  &  1,45     &    1,45      &  -172,35      &  -164,89     &   -1011,72        &   0,00      		\\ \hline
-			6, 2<x<18 &  -716,74  &   -212,09  &   -64,89    &   -45,73    &    -88,62       &   -1011,94      		\\ \hline
-			7, 0<x<2 &  -779,83        &   -716,75       &     0,00      &   -67,29   &    0,00     &    -88,62     		\\ \hline
+			Snit & N($x_{min}$) & N($x_{max}$) & V($x_{min}$) & V($x_{max}$) & M($x_{min}$) & M($x_{max}$) 	\\ 
+			& [kN] & [kN] & [kN] & [kN] & [kNm] & [kNm] \\ \hline
+			1, 0<x<2  & -547,95       & -484,87    	&  133,31    	&  66,02 	&  0,00     &  178.00        		\\ 
+			2, 2<x<18 &  -484,87        &  19,78       &  53,85      & -43,46   &  178,00  &  455,80    \\ 
+			3, 0<x<6  & 1,45       &  1,45     &  -72,24         &  -79,69     &  403,78     &  0,21 			    \\
+			4, 0<x<18 &  -1027,92       &  85,20      &  0,00        &  0,00    &  0,00   &   0,00    \\ 
+			5, 0<x<6  &  1,45     &    1,45      &  -172,35      &  -164,89     &   -1011,72        &   0,00      		\\ 
+			6, 2<x<18 &  -716,74  &   -212,09  &   -64,89    &   -45,73    &    -88,62       &   -1011,94      		\\ 
+			7, 0<x<2 &  -779,83        &   -716,75       &     0,00      &   -67,29   &    0,00     &    -88,62     		\\ 
 		\end{tabular}
-		\caption{Snitkræfter for brudgrænsetilstand, N og V: kN og M: $kNm$}
+		\caption{Snitkræfter for brudgrænsetilstand}
 		\label{tab:resultaterbrud}
 	\end{center}
 \end{table}
@@ -220,13 +221,13 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 
 Hovedformålet med dette afsnit er, at undersøge om konstruktionen har en tilstrækkelig bæreevne. Derfor undersøges spændingstilstanden ved Von Mises, hvor det skal gælde: 
 \begin{equation}
-	\sqrt{\sigma^2 + 3\tau^2} \le \frac{f_{yk}}{\gamma}
+	\sqrt{\sigma^2 + 3\tau^2} \varleq \frac{f_{yk}}{\gamma}
 \end{equation}
 
 \begin{itemize}
 	\item[-] $\sigma$: Normalspænding 
 	\item[-] $\tau$: Forskydningsspænding
-	\item[-] $f_{yk}$: Den karakteristiske flydespænding, der afhænger af ståltype. For ståltype S235 ved $16 < t \le 40$ er $f_{yk} = 225 MPa$ \citep[ s. 213]{stabi}
+	\item[-] $f_{yk}$: Den karakteristiske flydespænding, der afhænger af ståltype. For ståltype S235 ved $16 < t \varleq 40$ er $f_{yk} = 225 MPa$ \citep[ s. 213]{stabi}
 	\item[-] $\gamma$: Partialkoefficient, der sættes til 1,1 \citep[ s. 212]{stabi}
 \end{itemize}
 
@@ -288,7 +289,6 @@ Tyngdepunktskoordinat $\bar{y}$ samt arealet \textit{A} bestemmes:
 \begin{equation}
 \bar{y} = \frac{450 \text{mm} - 2 \cdot 24,\!3 \text{mm}}{2} + \frac{24,\!3 \text{mm}}{2} = 212,\!85 \text{mm}
 \end{equation}
-
 \begin{equation}
 A = z \cdot \SI{24,3}{mm}
 \end{equation}
@@ -321,10 +321,12 @@ Den største og mindste forskydningsspænding for de valgte kritiske punkter er 
 	\begin{center}
 		\begin{tabular}{c c c c }
 			\hline
-			Kritisk punkt   & Forskydningskraft, V [kN] & $\tau_{max}$ [MPa] & $\tau_{min}$[MPa] \\ \hline
-			Snit 4 ved 0 m  & 0                       & 0              & 0                     \\ \hline
-			Snit 5 ved 0 m  & -357,20                 & -12,75         & 0                     \\ \hline
-			Snit 6 ved 18 m & -112,10                 & -4,00          & 0                     \\ \hline
+			Kritisk punkt   & Forskydningskraft, V & $\tau_{max}$ & $\tau_{min}$ \\ 
+			& [kN] & [MPa] & [MPa]
+			\\ \hline
+			Snit 4 ved 0 m  & 0,00                       & 0,00              & 0,00                     \\ \hline
+			Snit 5 ved 0 m  & -357,20                 & -12,75         & 0,00                     \\ \hline
+			Snit 6 ved 18 m & -112,10                 & -4,00          & 0,00                     \\ \hline
 		\end{tabular}
 		\caption{Forskydningsspænding i flangen}
 		\label{tab:forskudning}
@@ -370,8 +372,9 @@ Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I
 	\begin{center}
 		\begin{tabular}{c c c c c }
 			\hline
-			Kritisk punkt   & Forskydningskraft, V [kN] & $\tau(0)$ [MPa] & $\tau(200,7)$[MPa] & $\tau(-200,7)$[MPa] \\ \hline
-			Snit 4 ved 0 m  & 0                       & 0       & 0          & 0                  \\ \hline
+			Kritisk punkt   & Forskydningskraft, V & $\tau(0)$ & $\tau(200,7)$ & $\tau(-200,7)$ \\ 
+			& [kN] & [MPa] & [MPa] & [MPa] \\ \hline
+			Snit 4 ved 0 m  & 0,00                       & 0,00       & 0,00          & 0,00                  \\ \hline
 			Snit 5 ved 0 m  & -357,20                 & -57,97  & -42,28     & -42,28     \\ \hline
 			Snit 6 ved 18 m & -112,10                 & -18,19  & -13,27     & -13,27       \\ \hline
 		\end{tabular}
@@ -412,7 +415,7 @@ Spændingen beregnes i snittene $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225
 		\begin{tabular}{c c c c c c c c }
 			\hline
 			Kritisk punkt   & Normalkraft, N [kN] & Moment, M [kNm] & $\sigma(0)$[MPa] & $\sigma(200,7)$[MPa] & $\sigma(200,7)$[MPa] & $\sigma(225)$[MPa] & $\sigma(-225)$[MPa] \\ \hline
-			Snit 4 ved 0 m  & -658,26           & 0                   & -44,78      & -44,78          & -44,78          & -44,78        & -44,78       \\ \hline
+			Snit 4 ved 0 m  & -658,26           & 0,00                   & -44,78      & -44,78          & -44,78          & -44,78        & -44,78       \\ \hline
 			Snit 5 ved 0 m  & -62,52          & -2120,82      & -4,25     & -3,32         & -5,18          & -3,21        & -5,29        \\ \hline
 			Snit 6 ved 18 m & -396,94           & -2120,82        & -27,00      & -26,08         & -27,93          & -25,96        &                      \\ \hline
 		\end{tabular}
@@ -432,7 +435,7 @@ f_y = \frac{225 \text{MPa}}{1,\!1} = \SI{204,54}{MPa}
 
 Udnyttelsesgraden beregnes ved:
 \begin{equation}
-	\frac{\sqrt{\sigma^2 + 3\tau^2}}{\frac{f_{yk}}{\gamma}} \le 1
+	\frac{\sqrt{\sigma^2 + 3\tau^2}}{\frac{f_{yk}}{\gamma}} \varleq 1
 \end{equation}
 Overskrider denne værdi 1, betyder det, at den regningsmæssige flydespænding er overskredet, og dermed har tilbygningen ikke en tilstrækkelig bæreevne. 
 
