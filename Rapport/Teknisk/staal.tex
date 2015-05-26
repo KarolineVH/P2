@@ -2,7 +2,7 @@
 I dette afsnit undersøges tilbygningens brudgrænsetilstand. Først beregnes reaktionerne ud fra Figur \ref{fig:alle} og dernæst laves snitkræfter. Slutteligt undersøges spændingstilstanden, og udfra ståltypens flydespændingen kan det vurderes, om konstruktionen kan holde eller vil bryde sammen.   
 
 \section{Reaktioner}
-Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingv} og \ref{fig:opdelingh}. I skæringen mellem de to dele, vil der være snitkræfter; dog er bøjningsmomentet \textit{M} lig 0 i charnieret. Dermed optræder der kun normalkraften, \textit{N}, og forskydningskraften, \textit{V}. Det er derfor muligt, at betragte højre del som en isoleret del af konstruktionen med fast, simpel understøtning i punkt E.
+Reaktionerne i de tre understøtninger beregnes ved at opdele konstruktionen. Systemet opdeles i det midterste charnierled i henholdvis en venstre- og højre del, som ses på Figur \ref{fig:opdelingh} og \ref{fig:opdelingv}. I skæringen mellem de to dele, vil der være snitkræfter, og bøjningsmomentet \textit{M} vil være lig 0 i charnieret. Dermed optræder der kun normalkraften, \textit{N}, og forskydningskraften, \textit{V}. Det er derfor muligt, at betragte højre del som en isoleret del af konstruktionen med fast, simpel understøtning i punkt E som vist på Figur \ref{fig:opdelingh}.
 
 \begin{figure}[H]
 	\centering
@@ -23,7 +23,7 @@ Reaktionerne i punkt E kan sættes som punktlaster i charnieret på den venstre 
 \newline
 Inden reaktionerne bestemmes skal jordlastens resultant \textit{j} beregnes. Dette gøres ved et bestemt integrale: 
 \begin{equation}
-	j = \int_{0}^{2} \! j(z) \, \mathrm{d}z \leftrightarrow j = 127,\!95 kN
+	j = \int_{0}^{2} \! j(z) \, \mathrm{d}z \leftrightarrow j = \SI{127,95}{kN}
 \end{equation}
 
 Først bestemmes den vandrette reaktion i charnieret, $E_x$ gennem vandret ligevægt: 
@@ -38,7 +38,7 @@ Først bestemmes den vandrette reaktion i charnieret, $E_x$ gennem vandret ligev
 $C_y$ bestemmes gennem momentligevægt om punkt E: 
 \begin{equation}
 \begin{split}
-	\ALN{\text{E}} :0 = & -F_y \cdot \SI{6}{m} - E_1 \cdot \SI{18}{m} \cdot \SI{6}{m} + C_y \cdot \SI{6}{m} - j \cdot \SI{17,33}{m} - v_k \cdot \SI{2}{m} \cdot \SI{17}{m} \\ & - E_s \cdot \SI{6}{m} \cdot \SI{3}{m} - v_2 \cdot \SI{16}{m} \cdot \SI{8}{m}
+	\ALN{\text{E}} :0 = & -F_y \cdot \SI{6}{m} - E_1 \cdot \SI{18}{m} \cdot \SI{6}{m} + C_y \cdot \SI{6}{m} - j \cdot 17 \frac{1}{3} \text{m} - v_k \cdot \SI{2}{m} \cdot \SI{17}{m} \\ & - E_s \cdot \SI{6}{m} \cdot \SI{3}{m} - v_2 \cdot \SI{16}{m} \cdot \SI{8}{m}
 	\\ &
 	C_y = \SI{964,68}{kN}
 \end{split}
@@ -47,7 +47,7 @@ $C_y$ bestemmes gennem momentligevægt om punkt E:
 Til sidst bestemmes den lodrette reaktion i charnierledet, $E_y$ gennem lodret ligevægt: 
 \begin{equation}
 \begin{split}
-	\uparrow+: 0 = & F_y - E_1 \cdot \SI{18}{m} - E_s \cdot \SI{6}{m} + C_y + E_y
+	\uparrow+: 0 = & - F_y - E_1 \cdot \SI{18}{m} - E_s \cdot \SI{6}{m} + C_y + E_y
 	\\ &
 	E_y = \SI{-349,74}{kN}
 \end{split}
@@ -59,7 +59,7 @@ Reaktionerne $E_y$ og $E_x$ påsættes som belastninger i punkt E på det venstr
 Først tages der moment om A, for at beregne $B_y$:
 \begin{equation}
 \begin{split}
-	\ALN{\text{A}}: 0 = & B_y \cdot \SI{6}{m} + E_y \cdot \SI{6}{m} + E_x \cdot \SI{18}{m} - E_2 \cdot \SI{18}{m} \cdot \SI{6}{m} - E_s \cdot \SI{6}{m} \cdot \SI{3}{m} \\ & + D_x \cdot \SI{18}{m} - v_1 \cdot \SI{16}{m} \cdot (\SI{8}{m} + \SI{2}{m}) - j \cdot (\SI{2}{m} \cdot \frac{1}{3}) - v_k \cdot \SI{2}{m} \cdot \SI{1}{m}
+	\ALN{\text{A}}: 0 = & B_y \cdot \SI{6}{m} - E_y \cdot \SI{6}{m} + E_x \cdot \SI{18}{m} - E_2 \cdot \SI{18}{m} \cdot \SI{6}{m} - E_s \cdot \SI{6}{m} \cdot \SI{3}{m} \\ & + D_x \cdot \SI{18}{m} - v_1 \cdot \SI{16}{m} \cdot (\SI{8}{m} + \SI{2}{m}) - j \cdot (\SI{2}{m} \cdot \frac{1}{3}) - v_k \cdot \SI{2}{m} \cdot \SI{1}{m}
 	\\ &
 	B_y = \SI{658,26}{kN}
 \end{split}
@@ -68,13 +68,13 @@ Først tages der moment om A, for at beregne $B_y$:
 Nu laves lodret ligevægt for at bestemme $A_y$:
 \begin{equation}
 \begin{split}
-	\uparrow+: 0 = & A_y + B_y - E_y - E_2 \cdot \SI{18}{m} - E_1 \cdot \SI{18}{m} - F_y - E_s \cdot \SI{6}{m}
+	\uparrow+: 0 = & A_y + B_y - E_y - E_2 \cdot \SI{18}{m} - E_1 \cdot \SI{18}{m} - D_y - E_s \cdot \SI{6}{m}
 	\\ &
 	A_y = \SI{732,77}{kN}
 \end{split}
 \end{equation}
 
-For at gøre det muligt at isolere en af de vandrette reaktioner laves der et snit i charnieret. Derefter betragtes den nedre del, og der tages moment omkring charnieret i punkt E, for at bestemme $B_x$:
+For at gøre det muligt at isolere en af de vandrette reaktioner, laves der et snit i charnieret ved punkt E. Derefter betragtes den nedre del, og der tages moment omkring charnieret i punkt E, for at bestemme $B_x$:
 \begin{equation}
 \begin{split}
 	\ALN{\text{E}}: 0 = & B_x \cdot \SI{18}{m}
@@ -95,7 +95,7 @@ Slutteligt laves vandret ligevægt for at bestemme $A_x$:
 Hermed er alle reaktioner bestemt. De kan ses på Figur \ref{fig:snitbrud}.
 
 \section{Snitkræfter}
-Snitkræfterne for stålrammen til tilbygningen til Strøybergs Palæs kan nu beregnes. Her laves der syv snit, som er illustreret på Figur \ref{fig:snitbrud}. Disse resultater vil bruges til at undersøge, om konstruktionen har en tilstrækkelig bæreevne, eller om den vil bryde sammen.
+Snitkræfterne for stålrammen til tilbygningen til Strøybergs Palæs kan nu beregnes. Her laves der syv snit, som er illustreret på Figur \ref{fig:snitbrud}.
 
 \begin{figure}[H]
 	\centering
@@ -104,7 +104,7 @@ Snitkræfterne for stålrammen til tilbygningen til Strøybergs Palæs kan nu be
 	\label{fig:snitbrud}
 \end{figure}
 
-Nedenfor vises beregningseksempel for snit 1 og snit 5. Beregningerne for de resterende snit kan ses i Bilag ???. 
+Nedenfor vises beregningseksempel for snit 1 og snit 5. Beregningerne for de resterende snit kan ses i Bilag F punkt 4. 
 \newline
 \newline
 \textbf{Snit 1: 0 m < x < 2 m}
@@ -112,19 +112,19 @@ Nedenfor vises beregningseksempel for snit 1 og snit 5. Beregningerne for de res
 Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitet}.
 \newline
 \newline
-Først bestemmes normalkraften:
+Først bestemmes normalkraften, $N_1$:
 \begin{equation}
-	0 = N_1 + A_y - E_1 \cdot x \leftrightarrow N_1(x) = 31,\!54 \frac{\text{kN}}{\text{m}} x - \SI{547,95}{kN}
+	\uparrow+: 0 = N_1 + A_y - E_1 \cdot x \leftrightarrow N_1(x) = 31,\!54 \frac{\text{kN}}{\text{m}} x - \SI{547,95}{kN}
 \end{equation}
 
-Nu bestemmes forskydningskraften:
+Nu bestemmes forskydningskraften, $V_1$:
 \begin{equation}
-	0 = V_1 + j + v_k \cdot x + A_x \leftrightarrow V_1(x) = -33,\!64\frac{\text{kN}}{\text{m}} x + \SI{133,31}{kN}
+	\rightarrow+: 0 = V_1 + j(x) + v_k \cdot x + A_x \leftrightarrow V_1(x) = -33,\!64\frac{\text{kN}}{\text{m}} x + \SI{133,31}{kN}
 \end{equation}
 
-Til sidst bestemmes moment:
+Til sidst bestemmes moment, $M_1$:
 \begin{equation}
-	0 = M_1 + j \cdot \frac{2x}{3} + v_k \cdot x \cdot \frac{x}{2} + A_x \cdot x \leftrightarrow M_1(x) = -22,\!15\frac{\text{kN}}{\text{m}} x^2 + \SI{133,30}{kN} x
+	\ALN{\text{$M_1$}}: 0 = M_1 + j(x) \cdot \frac{2}{3} x + v_k \cdot x \cdot \frac{x}{2} + A_x \cdot x \leftrightarrow M_1(x) = -22,\!15\frac{\text{kN}}{\text{m}} x^2 + \SI{133,30}{kN} x
 \end{equation}
 
 \begin{figure}[H]\centering
@@ -144,41 +144,41 @@ Til sidst bestemmes moment:
 	\end{minipage}
 \end{figure}
 
-\textbf{Snit 5: 0 m < x < 6 m}
+\textbf{Snit 5: 0 m < $x_5$ < 6 m}
 \newline
-Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitfem}.
+Fritlegemediagrammet for snit 5 ses på Figur \ref{fig:snitfem}.
 \newline
 \newline
-Normalkraften bestemmes først:
+Normalkraften, $N_5$, bestemmes først:
 \begin{equation}
-	0 = - N_5 + F_x - v_2 \cdot \SI{16}{m} - j - v_k \cdot 2m \leftrightarrow N_5 = \SI{49,57}{kN} - \SI{48,12}{kN} = \SI{1,45}{kN}
+	\uparrow+: 0 = - N_5 + F_x - v_2 \cdot \SI{16}{m} - j - v_k \cdot \SI{2}{m} \leftrightarrow N_5 = \SI{1,45}{kN}
 \end{equation}
 
-Forskydningskraften for snit 5 bestemmes ved:
+Forskydningskraften, $V_5$, for snit 5 bestemmes ved:
 \begin{equation}
-	0 = V_5 - E_1 \cdot \SI{18}{m} - F_y + C_y - E_s \cdot x \leftrightarrow V_5(x) = \SI{-172,35}{kN} + 1,\!24 \frac{\text{kN}}{\text{m}}x
+	\rightarrow+: 0 = V_5 - E_1 \cdot \SI{18}{m} - F_y + C_y - E_s \cdot x_5 \leftrightarrow V_5(x_5) = \SI{-172,35}{kN} + 1,\!24 \frac{\text{kN}}{\text{m}}x_5
 \end{equation}
 
-Til sidst bestemmes moment:
+Til sidst bestemmes moment $M_5$:
 \begin{equation}
 \begin{split}
-	0 = & - M_5 - F_y \cdot x - E_1 \cdot \SI{18}{m} \cdot x - E_s \cdot x \frac{x}{2} - v_2 \cdot \SI{16}{m} \cdot \SI{8}{m} - v_k \cdot \SI{2}{m} \cdot \SI{17}{m} - j \cdot \SI{17,33}{m} + C_y \cdot x \leftrightarrow \\ & M_5(x) =  \SI{172,35}{kN} \cdot x - 0,\!62 \frac{\text{kN}}{\text{m}} \cdot x^2 - \SI{1011,72}{kNm}
+	\ALN{\text{$M_5$}}: 0 = & - M_5 - F_y \cdot x_5 - E_1 \cdot \SI{18}{m} \cdot x_5 - E_s \cdot x_5 \frac{x_5}{2} - v_2 \cdot \SI{16}{m} \cdot \SI{8}{m} - v_k \cdot \SI{2}{m} \cdot \SI{17}{m} - j \cdot 17 \cdot \frac{1}{3} \text{m} + C_y \cdot x_5 \leftrightarrow \\ & M_5(x_5) =  \SI{172,35}{kN} \cdot x_5 - 0,\!62 \frac{\text{kN}}{\text{m}} \cdot x_5^2 - \SI{1011,72}{kNm}
 \end{split}
 \end{equation}
 
 Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene. 
 
-\begin{table}
+\begin{table} [H]
 	\begin{center}
 		\begin{tabular}{c c c c c c c}
 			\hline
 			Snit & N($x_{min}$) & N($x_{max}$) & V($x_{min}$) & V($x_{max}$) & M($x_{min}$) & M($x_{max}$) 	\\ 
-			& [kN] & [kN] & [kN] & [kN] & [kNm] & [kNm] \\ \hline
+			$[\text{m}]$ & [kN] & [kN] & [kN] & [kN] & [kNm] & [kNm] \\ \hline
 			1, 0<x<2  & -547,95       & -484,87    	&  133,31    	&  66,02 	&  0,00     &  178.00        		\\ 
 			2, 2<x<18 &  -484,87        &  19,78       &  53,85      & -43,46   &  178,00  &  455,80    \\ 
-			3, 0<x<6  & 1,45       &  1,45     &  -72,24         &  -79,69     &  403,78     &  0,21 			    \\
+			3, 0<$x_3$<6  & 1,45       &  1,45     &  -72,24         &  -79,69     &  403,78     &  0,21 			    \\
 			4, 0<x<18 &  -1027,92       &  85,20      &  0,00        &  0,00    &  0,00   &   0,00    \\ 
-			5, 0<x<6  &  1,45     &    1,45      &  -172,35      &  -164,89     &   -1011,72        &   0,00      		\\ 
+			5, 0<$x_5$<6  &  1,45     &    1,45      &  -172,35      &  -164,89     &   -1011,72        &   0,00      		\\ 
 			6, 2<x<18 &  -716,74  &   -212,09  &   -64,89    &   -45,73    &    -88,62       &   -1011,94      		\\ 
 			7, 0<x<2 &  -779,83        &   -716,75       &     0,00      &   -67,29   &    0,00     &    -88,62     		\\ 
 		\end{tabular}
@@ -187,11 +187,11 @@ Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene.
 	\end{center}
 \end{table}
 
-Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:forskydningskurve}, Figur \ref{fig:momentkurve} og Figur \ref{fig:normalkraftkurve}. Værdierne i kurverne aflæses i Tabel \ref{tab:resultaterbrud}, hvor $V_1$ angiver værdien for forskydningskraften ved snit 1. Altså er $V_1(0m) = 133,31 kN$, $V_1(2m) = 66,02 kN$, osv.
+Ud fra snittene udarbejdes snitkurver, som er illusteret på Figur \ref{fig:forskydningskurve}, Figur \ref{fig:momentkurve} og Figur \ref{fig:normalkraftkurve}. Værdierne i kurverne aflæses i Tabel \ref{tab:resultaterbrud}, hvor $V_1$ angiver værdien for forskydningskraften ved snit 1. Altså er $V_1(0m) = V_1(x_{min})$ = 133,31 kN, $V_1(2m) = V_1(x_{max})$ = 66,02 kN, osv.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{billeder/sk.png}
+	\includegraphics[width=0.6\textwidth]{billeder/sk.png}
 	\caption{Forskydningskurve}
 	\label{fig:forskydningskurve}
 \end{figure}
@@ -205,20 +205,12 @@ Ud fra snittene er der lavet snitkurver, som er illusteret på Figur \ref{fig:fo
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/SKFN.png}
+	\includegraphics[width=0.6\textwidth]{billeder/SKFN.png}
 	\caption{Normalkraftkurve}
 	\label{fig:normalkraftkurve}
 \end{figure}
 
 \section{Spænding og dimensioneringskriterier}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{billeder/iprofil.png}
-	\caption{I-profil 450}
-	\label{fig:iprofil}
-\end{figure}
-
 Hovedformålet med dette afsnit er, at undersøge om konstruktionen har en tilstrækkelig bæreevne. Derfor undersøges spændingstilstanden ved Von Mises, hvor det skal gælde: 
 \begin{equation}
 	\sqrt{\sigma^2 + 3\tau^2} \varleq \frac{f_{yk}}{\gamma}
@@ -227,9 +219,16 @@ Hovedformålet med dette afsnit er, at undersøge om konstruktionen har en tilst
 \begin{itemize}
 	\item[-] $\sigma$: Normalspænding 
 	\item[-] $\tau$: Forskydningsspænding
-	\item[-] $f_{yk}$: Den karakteristiske flydespænding, der afhænger af ståltype. For ståltype S235 ved $16 < t \varleq 40$ er $f_{yk} = 225 MPa$ \citep[ s. 213]{stabi}
+	\item[-] $f_{yk}$: Den karakteristiske flydespænding, der afhænger af ståltype. For ståltype S235 ved $16 < t \varleq 40$ er $f_{yk}$ = 225 MPa \citep[ s. 213]{stabi}
 	\item[-] $\gamma$: Partialkoefficient, der sættes til 1,1 \citep[ s. 212]{stabi}
 \end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{billeder/iprofil.png}
+	\caption{I-profil 450}
+	\label{fig:iprofil}
+\end{figure}
 
 Spændingstilstanden undersøges i fem snit på I-profilet, som ses på Figur \ref{fig:iprofilsnit}.
 
@@ -240,8 +239,6 @@ Spændingstilstanden undersøges i fem snit på I-profilet, som ses på Figur \r
 	\label{fig:iprofilsnit}
 \end{figure}
 
-Først beregnes normal- og forskydningsspændingen. 
-
 \subsection{Forskydningsspænding}
 Forskydningsspændingen $\tau$ beregnes ved Grasshofs formel:
 \begin{equation}
@@ -250,6 +247,7 @@ Forskydningsspændingen $\tau$ beregnes ved Grasshofs formel:
 \begin{itemize}
 	\item[-] $V$: Forskydningskraft, som er bestemt igennem snitkræfter
 	\item[-] $Q$: Statisk moment
+	\item[-] $I$: Inertimoment
 	\item[-] $b$: Bredde
 \end{itemize}
 
@@ -268,10 +266,10 @@ Q = \bar{y}A
 \end{equation}
 \begin{itemize}
 	\item[-] $\bar{y}$: Tyngdepunktskoordinat
-	\item[-] A: Areal
+	\item[-] $A$: Areal
 \end{itemize}
 
-Q beregnes for snit 1 og snit 2, hvormed forskydningsspændingen i henholdsvis flangen og kroppen kan beregnes. 
+Q beregnes for snit 1 og 2, hvormed forskydningsspændingen i henholdsvis flangen og kroppen kan beregnes. 
 \newline
 \newline
 \textbf{Snit 1: Forskydningsspændingsfordeling i flangen}
@@ -303,12 +301,12 @@ Q(z) = \SI{212,85}{mm} \cdot (z \cdot \SI{24,3}{mm})
 Q_{0 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{0}{mm} \cdot \SI{24,3}{mm}) = \SI{0}{mm^3}
 \end{equation} 
 \begin{equation}
-	Q_{76,9 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{76,9}{mm} \cdot \SI{24,3}{mm}) =  3,\!977 \cdot 10^5 \text{mm}^3 
+	Q_{76,9 \text{mm}} = \SI{212,85}{mm} \cdot (\SI{76,9}{mm} \cdot \SI{24,3}{mm}) =  3,\!98 \cdot 10^5 \text{mm}^3 
 \end{equation}
 
 Dermed kan den mindste og den største forskydningsspænding bestemmes, hvor forskydningskraften, \textit{V} afhænger af, hvilket snit på konstruktionen der vælges:
 \begin{equation}
-	\tau_{max} = \frac{V \cdot 3,977 \cdot 10^5 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}}
+	\tau_{max} = \frac{V \cdot 3,98 \cdot 10^5 \text{mm}^3}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 24,\!3 \text{mm}}
 \end{equation}
 
 \begin{equation}
@@ -321,7 +319,7 @@ Den største og mindste forskydningsspænding for de valgte kritiske punkter er 
 	\begin{center}
 		\begin{tabular}{c c c c }
 			\hline
-			Kritisk punkt   & Forskydningskraft, V & $\tau_{max}$ & $\tau_{min}$ \\ 
+			Kritisk punkt   & Forskydningskraft, $V$ & $\tau_{max}$ & $\tau_{min}$ \\ 
 			& [kN] & [MPa] & [MPa]
 			\\ \hline
 			Snit 4 ved 0 m  & 0,00                       & 0,00              & 0,00                     \\ \hline
@@ -348,17 +346,17 @@ Som det ses på Figur \ref{fig:snittoforskyd} er I-profilet inddelt i to arealer
 
 Først findes Q for $A_1$:
 \begin{equation}
-	Q_1 = \SI{24,3}{mm} \cdot \SI{170}{mm} \cdot (\SI{225}{mm} - \frac{1}{2} \cdot \SI{24,3}{mm}) = 8,\!793 \cdot 10^5 \text{mm}^3
+	Q_1 = \SI{24,3}{mm} \cdot \SI{170}{mm} \cdot (\SI{225}{mm} - \frac{1}{2} \cdot \SI{24,3}{mm}) = 8,\!79 \cdot 10^5 \text{mm}^3
 \end{equation}
 
-Q for $A_2$, som er afhængig af y, bestemmes nu:
+Q for $A_2$, som er afhængig af $y$, bestemmes nu:
 \begin{equation}
-Q_2(y) = (\SI{16,2}{mm} \cdot (\SI{200,7}{mm} -y)) \cdot (\frac{200\!,7 \text{mm} -y}{2} + y)
+Q_2(y) = (\SI{16,2}{mm} \cdot (\SI{200,7}{mm} -y)) \cdot (\frac{200,7 \text{mm} -y}{2} + y)
 \end{equation}
 
-$Q_1$ er en konstant og $Q_2$ er en funktion af y. Dermed fås et samlet statisk moment \textit{Q}, som funktion af \textit{y}:
+$Q_1$ er en konstant og $Q_2$ er en funktion af $y$. Dermed fås et samlet statisk moment \textit{Q}, som funktion af \textit{y}:
 \begin{equation}
-	Q(y) = 8,\!793 \cdot 10^5 \text{mm}^3 + ((\SI{16,2}{mm} \cdot (\SI{200,7}{mm} -y)) \cdot (\frac{200\!,7 \text{mm} -y}{2} + y))
+	Q(y) = 8,\!793 \cdot 10^5 \text{mm}^3 + ((\SI{16,2}{mm} \cdot (\SI{200,7}{mm} -y)) \cdot (\frac{200,7 \text{mm} -y}{2} + y))
 \end{equation}
 
 Forskydningsspændingen kan hermed beregnes ved:
@@ -366,13 +364,13 @@ Forskydningsspændingen kan hermed beregnes ved:
 	\tau(y) = \frac{V \cdot Q(y)}{458,\!5 \cdot 10^6 \text{mm}^4 \cdot 16,\!2 \text{mm}}
 \end{equation}
 
-Ved at sætte y til 0 og $\pm 200,7 mm$ findes forskydningsspændingerne langs I-profilets krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved y = 225 mm. Forskydningsspændingen for de valgte kritiske punkter ses i Tabel \ref{tab:kroppen}, og forskydningsspændingsfordelingen på I-profilet er illustreret på Figur \ref{fig:forskydfordeling}. 
+Ved at sætte $y$ til 0 og $\pm$ 200,7 mm findes forskydningsspændingerne langs I-profilets krop. Forskydningsspændingen vil altid være 0 i oversiden, dvs. ved $y$ = 225 mm. Forskydningsspændingen for de valgte kritiske punkter ses i Tabel \ref{tab:kroppen}, og forskydningsspændingsfordelingen på I-profilet er illustreret på Figur \ref{fig:forskydfordeling}. 
 
 \begin{table}
 	\begin{center}
 		\begin{tabular}{c c c c c }
 			\hline
-			Kritisk punkt   & Forskydningskraft, V & $\tau(0)$ & $\tau(200,7)$ & $\tau(-200,7)$ \\ 
+			Kritisk punkt   & Forskydningskraft, $V$ & $\tau(0)$ & $\tau(200,7)$ & $\tau(-200,7)$ \\ 
 			& [kN] & [MPa] & [MPa] & [MPa] \\ \hline
 			Snit 4 ved 0 m  & 0,00                       & 0,00       & 0,00          & 0,00                  \\ \hline
 			Snit 5 ved 0 m  & -357,20                 & -57,97  & -42,28     & -42,28     \\ \hline
@@ -397,24 +395,24 @@ Normalspændingen $\sigma$ findes ved Naviers formel:
 \end{equation}
 
 \begin{itemize}
-	\item[-] N: Normalkraft, som er bestemt igennem snitkræfter
-	\item[-] A: Tværsnitsareal, som for stålprofil 450 er $14,\!7 \cdot 10^3 mm^2$ \citep{stabi}. 
-	\item[-] M: Moment, som er bestemt igennem snitkræfter
-	\item[-] y: Koordinat til snit
-	\item[-] I: Inertimoment, som for stålprofil 450 er $458,\!5 \cdot 10^6 mm^4$ \citep{stabi}. 
+	\item[-] $N$: Normalkraft, som er bestemt igennem snitkræfter
+	\item[-] $A$: Tværsnitsareal, som for stålprofil 450 er $14,\!7 \cdot 10^3 \text{mm}^2$ \citep{stabi}. 
+	\item[-] $M$: Moment, som er bestemt igennem snitkræfter
+	\item[-] $y$: Koordinat til snit
+	\item[-] $I$: Inertimoment, som for stålprofil 450 er $458,\!5 \cdot 10^6 \text{mm}^4$ \citep{stabi}. 
 \end{itemize} 
 
-Her er den eneste ubekendte faktor y. Derfor fås normalspændingen som en funktion af y, hvor N og M afhænger af hvilket snit på konstruktionen der undersøges:
+Her er den eneste ubekendte faktor $y$. Derfor fås normalspændingen som en funktion af $y$, hvor $N$ og $M$ afhænger af hvilket snit på konstruktionen der undersøges:
 \begin{equation}
 	\sigma(y) = \frac{N}{14,\!7 \cdot 10^3 \text{mm}^2} - \frac{M}{458,\!5 \cdot 10^6 \text{mm}^4} y
 \end{equation}
-Spændingen beregnes i snittene $y = 0 mm$, $y = \pm 200,\!7 mm$ og $y = \pm 225 mm$. Resultatet ses i Tabel \ref{tab:normalspanding}.
+Spændingen beregnes i snittene $y = 0$ mm, $y = \pm$ 200,7 mm og $y = \pm$ 225 mm. Resultatet ses i Tabel \ref{tab:normalspanding}.
 
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{c c c c c c c c }
 			\hline
-			Kritisk punkt   & Normalkraft, N [kN] & Moment, M [kNm] & $\sigma(0)$[MPa] & $\sigma(200,7)$[MPa] & $\sigma(200,7)$[MPa] & $\sigma(225)$[MPa] & $\sigma(-225)$[MPa] \\ \hline
+			Kritisk punkt   & Normalkraft, N [kN] & Moment, M [kNm] & $\sigma(0)$[MPa] & $\sigma(200,7)$[MPa] & $\sigma(-200,7)$[MPa] & $\sigma(225)$[MPa] & $\sigma(-225)$[MPa] \\ \hline
 			Snit 4 ved 0 m  & -658,26           & 0,00                   & -44,78      & -44,78          & -44,78          & -44,78        & -44,78       \\ \hline
 			Snit 5 ved 0 m  & -62,52          & -2120,82      & -4,25     & -3,32         & -5,18          & -3,21        & -5,29        \\ \hline
 			Snit 6 ved 18 m & -396,94           & -2120,82        & -27,00      & -26,08         & -27,93          & -25,96        &                      \\ \hline
