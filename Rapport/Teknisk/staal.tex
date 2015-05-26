@@ -189,25 +189,28 @@ Tabel \ref{tab:resultaterbrud} viser resultaterne for alle snittene.
 
 Ud fra snittene udarbejdes snitkurver, som er illusteret på Figur \ref{fig:forskydningskurve}, Figur \ref{fig:momentkurve} og Figur \ref{fig:normalkraftkurve}. Værdierne i kurverne aflæses i Tabel \ref{tab:resultaterbrud}, hvor $V_1$ angiver værdien for forskydningskraften ved snit 1. Altså er $V_1(0m) = V_1(x_{min})$ = 133,31 kN, $V_1(2m) = V_1(x_{max})$ = 66,02 kN, osv.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{billeder/sk.png}
-	\caption{Forskydningskurve}
-	\label{fig:forskydningskurve}
+\begin{figure}[H]\centering
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\includegraphics[width=1.1\textwidth]{billeder/sk.png} %Venstre billede
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.48\textwidth}\centering
+		\includegraphics[width=0.9\textwidth]{billeder/SKFN.png} %Højre billede
+	\end{minipage}\\ %Captions and labels
+	\begin{minipage}[t]{0.48\textwidth}
+		\caption{Forskydningskurve} %Venstre caption og label
+		\label{fig:forskydningskurve}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\caption{Normalkraftkurve} %Højre caption og label
+		\label{fig:normalkraftkurve}
+	\end{minipage}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{billeder/skkm.png}
+	\includegraphics[width=0.5\textwidth]{billeder/skkm.png}
 	\caption{Momentkurve}
 	\label{fig:momentkurve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{billeder/SKFN.png}
-	\caption{Normalkraftkurve}
-	\label{fig:normalkraftkurve}
 \end{figure}
 
 \section{Spænding og dimensioneringskriterier}
@@ -406,16 +409,17 @@ Her er den eneste ubekendte faktor $y$. Derfor fås normalspændingen som en fun
 \begin{equation}
 	\sigma(y) = \frac{N}{14,\!7 \cdot 10^3 \text{mm}^2} - \frac{M}{458,\!5 \cdot 10^6 \text{mm}^4} y
 \end{equation}
-Spændingen beregnes i snittene $y = 0$ mm, $y = \pm$ 200,7 mm og $y = \pm$ 225 mm. Resultatet ses i Tabel \ref{tab:normalspanding}.
+Spændingen beregnes i snittene $y$ = 0 mm, $y = \pm$ 200,7 mm og $y = \pm$ 225 mm. Resultatet ses i Tabel \ref{tab:normalspanding}.
 
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{c c c c c c c c }
 			\hline
-			Kritisk punkt   & Normalkraft, N [kN] & Moment, M [kNm] & $\sigma(0)$[MPa] & $\sigma(200,7)$[MPa] & $\sigma(-200,7)$[MPa] & $\sigma(225)$[MPa] & $\sigma(-225)$[MPa] \\ \hline
+			Kritisk punkt   & Normalkraft & Moment & $\sigma(0)$ & $\sigma(200,7)$ & $\sigma(-200,7)$ & $\sigma(225)$ & $\sigma(-225)$  \\
+			& $N$ [kN] & $M$ [kNm] & [MPa] & [MPa] & [MPa] & [MPa] & [MPa] \\ \hline
 			Snit 4 ved 0 m  & -658,26           & 0,00                   & -44,78      & -44,78          & -44,78          & -44,78        & -44,78       \\ \hline
 			Snit 5 ved 0 m  & -62,52          & -2120,82      & -4,25     & -3,32         & -5,18          & -3,21        & -5,29        \\ \hline
-			Snit 6 ved 18 m & -396,94           & -2120,82        & -27,00      & -26,08         & -27,93          & -25,96        &                      \\ \hline
+			Snit 6 ved 18 m & -396,94           & -2120,82        & -27,00      & -26,08         & -27,93          & -25,96        & -28,04                     \\ \hline
 		\end{tabular}
 		\caption{Normalspænding}
 		\label{tab:normalspanding}
