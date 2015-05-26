@@ -81,11 +81,12 @@ Ved integrering af ligningerne giver dette 6 ligningner med 6 ubekendte konstant
 
 \begin{table}[h]
 	\begin{tabular}{l}
-		$u_1(0)=0$       \\
-		$\alpha_1(h)$=$\alpha_2(0)$ \\
-		$u_1(h)$=$u_3(h)$ \\
-		$u_2(h)$=0       \\
-		$u_2(l)$=0       \\
+		$u_1(0)=0$: Der kan ikke ske en udbøjning ved understøtningen   \\ 
+		$\alpha_1(h)$=$\alpha_2(0)$: Vinkeldrejningen mellem bjælke 1 og 2 skal være ens. \\
+		$u_1(h)$=$u_3(h)$: Udbøjningen for bjælke 1 og 3 er ens i højden h. \\
+		$u_2(0)$=0: Da vinkeldrejningen for bjælke 1 og 2 er ens, bliver vinklen mellem disse $90^{\circ}$, og udbøjningen er derfor 0 \\
+		$u_2(l)$=0: Da vinkeldrejningen for bjælke 2 og 3 er ens, bliver vinklen mellem disse $90^{\circ}$, og udbøjningen er derfor 0 \\
+		$u_3(0)$=0: Der kan ikke ske en udbøjning ved understøtningen   \\
 	\end{tabular}
 \end{table}
 
@@ -107,20 +108,20 @@ Udregningerne for konstanterne findes i Bilag F punkt 9.
 \newline 
 Konstanterne indsættes nu i formlerne for $u_1(x_1)$, $u_2(x_2)$ og $u_3(x_3)$, og ud fra de nye funktioner kan udbøjningen bestemmes.
 \begin{equation}
-u_1(18m) = \SI{-1,76}{m}
+u_1(18m) = \SI{-1762,89}{mm}
 \end{equation}
 
 \begin{equation}
-u_2(3m) = \SI{-0,02}{m}
+u_2(3m) = \SI{-24,92}{mm}
 \end{equation}
 
 \begin{equation}
-u_3(18m) = \SI{-1,76}{m}
+u_3(18m) = \SI{-1762,89}{mm}
 \end{equation}
 
 TEGN EN UDBØJNINGSKURVE FOR KONSTRUKTIONEN? 
 
-Disse udbøjninger skal nu sammenlignes med de maksimalt tilladte udbøjninger for en bærende konstruktion, som findes i Eurocode 1993, afsnit 7.2. 
+Disse udbøjninger skal nu sammenlignes med de anbefalede udbøjningsværdier for en bærende konstruktion, som findes i Eurocode 1993, afsnit 7.2. 
 
 Maksimal vandret udbøjning: 
 \begin{equation}
@@ -135,3 +136,16 @@ Maksimal lodret udbøjning
 \\
 \frac{6000 \text{mm}}{400} = \SI{15}{mm}
 \end{equation}
+
+Her fås, at de vandrette udbøjninger for stængerne 1 og 3 overskrider de anbefalede værdier med næsten faktor 50, mens den lodrette udbøjning er næsten dobbelt så stor som den anbefalede. De lodrette udbøjninger er meget voldsomme, og må anses at være urealistiske, hvorfor der må være en fejl i beregningerne. Grundet tidsnød har det ikke været muligt at finde frem til fejlen i udregningerne, men i stedet er der sammenlignet med udbøjningen for en fast indspændt bjælke, for at få et bedre estimat for, hvor stor udbøjningen må være for stængerne 1 og 3. 
+\newline \indent{     }  Her anvendes udbøjningsformlen for en fast indspændt bjælke:
+\begin{equation}
+u{l}=\frac{1}{8} \frac{ql^4}{EI}
+\end{equation}
+
+Her sættes q til en karakteristisk vindlast på 3,68 N/mm og l til 18000 mm. Så fås udbøjningen til: 
+\begin{equation}
+u(18) = \frac{1}{8} \frac{3,\!68 N/mm \cdot (18000mm)l^4}{0,21 \cdot 10^6 \cdot 458,5 \cdot 10^4} \leftrightarrow u(18) = 501,52 mm
+\end{equation}
+
+Udbøjningen for stængerne 1 og 3 bør derfor maksimalt være 501,52 mm, hvilket er ca. 1/3 af den først beregnede. Denne beregning kan dog ikke bruges, da der ikke er tale om en fast indspændt bjælke, men blot give et estimat, og her kan denne støtte projektgruppens teori om, at der er en fejl beregningerne af udbøjningen for stang 1 og 3.
