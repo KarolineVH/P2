@@ -8,7 +8,7 @@ Ved udbøjning skal bjælkens differentialligning anvendes, og derfor skal momen
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{billeder/snitanvendelse.png}
-	\caption{Snit}
+	\caption{Snit for statisk system kun med vindlast}
 	\label{fig:snitanvendelse}
 \end{figure}
 
@@ -20,7 +20,7 @@ Nedenfor er vist et eksempel på, hvordan momentligningen regnes for snit 1. All
 Fritlegemediagrammet for snit 1 ses på Figur \ref{fig:snitetan}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.2\textwidth]{billeder/asnitet.png}
+	\includegraphics[width=0.3\textwidth]{billeder/asnitet.png}
 	\caption{Snit 1}
 	\label{fig:snitetan}
 \end{figure}
@@ -79,29 +79,24 @@ u_3(x_3) = \frac{1}{6} \frac{B_x x_3^3}{EI} + k_5 x_3 + k_6
 
 Ved integrering af ligningerne giver dette 6 ligningner med 6 ubekendte konstanter. Disse bestemmes ved at opstille 6 randbetingelser for det statiske system: 
 
-\begin{table}[h]
-	\begin{tabular}{l}
-		$u_1(0)=0$: Der kan ikke ske en udbøjning ved understøtningen   \\ 
-		$\alpha_1(h)$=$\alpha_2(0)$: Vinkeldrejningen mellem bjælke 1 og 2 skal være ens. \\
-		$u_1(h)$=$u_3(h)$: Udbøjningen for bjælke 1 og 3 er ens i højden h. \\
-		$u_2(0)$=0: Da vinkeldrejningen for bjælke 1 og 2 er ens, bliver vinklen mellem disse $90^{\circ}$, og udbøjningen er derfor 0 \\
-		$u_2(l)$=0: Da vinkeldrejningen for bjælke 2 og 3 er ens, bliver vinklen mellem disse $90^{\circ}$, og udbøjningen er derfor 0 \\
-		$u_3(0)$=0: Der kan ikke ske en udbøjning ved understøtningen   \\
-	\end{tabular}
-\end{table}
+\begin{itemize}
+	\item[-] $u_1(0)=0$: Der kan ikke ske en udbøjning ved understøtningen
+	\item[-] $\alpha_1(h)$=$\alpha_2(0)$: Vinkeldrejningen mellem bjælke 1 og 2 skal være ens
+	\item[-] $u_1(h)$=$u_3(h)$: Udbøjningen for bjælke 1 og 3 er ens i højden $h$
+	\item[-] $u_2(0)$=0: Da vinkeldrejningen for bjælke 1 og 2 er ens, bliver vinklen mellem disse $90^{\circ}$, og udbøjningen er derfor 0
+	\item[-] $u_2(l)$=0: Da vinkeldrejningen for bjælke 2 og 3 er ens, bliver vinklen mellem disse $90^{\circ}$, og udbøjningen er derfor 0
+	\item[-] $u_3(0)$=0: Der kan ikke ske en udbøjning ved understøtningen
+\end{itemize}
 
 De opsatte randbetingelser løses, og de 6 konstanter får værdierne: 
-
-\begin{table}[h]
-	\begin{tabular}{l}
-		$k_1 = -0,\!14$       \\
-		$k_2 = 0$             \\
-		$k_3 = -0,\!02$       \\
-		$k_4 = 0$             \\
-		$k_5 = -0,\!10$       \\
-		$k_6 = 0$             \\ 
-	\end{tabular}
-\end{table}
+\begin{itemize}
+	\item[-] $k_1 = -0,\!14$
+	\item[-] $k_2 = 0$
+	\item[-] $k_3 = -0,\!02$
+	\item[-] $k_4 = 0,\!00$
+	\item[-] $k_5 = -0,\!10$
+	\item[-] $k_6 = 0,\!00$
+\end{itemize}
 
 Udregningerne for konstanterne findes i Bilag F punkt 9.
 \newline
@@ -122,7 +117,7 @@ u_3(18m) = \SI{-1762,89}{mm}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{billeder/udbog.png}
-	\caption{Udbøjning}
+	\caption{Udbøjningskurve}
 	\label{fig:udboj}
 \end{figure}
 
@@ -150,7 +145,7 @@ u(l)=\frac{1}{8} \frac{ql^4}{EI}
 
 Her sættes $q$ til en karakteristisk vindlast på 3,68 $\frac{\text{N}}{\text{mm}}$ og $l$ til 18.000 mm. Så fås udbøjningen til: 
 \begin{equation}
-u(18) = \frac{1}{8} \frac{3,68\frac{\text{N}}{\text{mm}} \cdot (18000 \text{mm})l^4}{0,21 \cdot 10^6 \cdot 458,5 \cdot 10^4} \leftrightarrow u(18) = \SI{501,52}{mm}
+u(18) = \frac{1}{8} \frac{3,69\frac{\text{N}}{\text{mm}} \cdot (18000 \text{mm})l^4}{0,21 \cdot 10^6 \cdot 458,5 \cdot 10^4} \leftrightarrow u(18) = \SI{501,52}{mm}
 \end{equation}
 
 Udbøjningen for stængerne 1 og 3 bør derfor maksimalt være 501,52 mm, hvilket er ca. 1/3 af den først beregnede. Denne beregning kan dog ikke bruges, da der ikke er tale om en fast indspændt bjælke, men blot give et estimat, og her kan denne støtte projektgruppens teori om, at der er en fejl beregningerne af udbøjningen for stang 1 og 3.
