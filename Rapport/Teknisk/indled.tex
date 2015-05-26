@@ -28,7 +28,7 @@ For at kunne beregne de laster som påvirker tilbygningen, er der opstillet et s
 	\label{fig:system}
 \end{figure}
 
-Etagedækkene vil virke som en belastning og ses ikke som en del af konstruktionen. Dette er muligt, da der opsættes en samling mellem etagedækkene og stålkonstruktion, som ses på Figur \ref{fig:etage}.
+Etagedækkene vil virke som en belastning, og ses ikke som en del af konstruktionen. Dette er muligt, da der opsættes en samling mellem etagedækkene og stålkonstruktion, som ses på Figur \ref{fig:etage}.
 
 \begin{figure}[H]
 	\centering
@@ -96,7 +96,7 @@ Egenlasten for etagerne udregnes nu, ved først at regne egenlasten for væggene
 	\label{fig:facade}
 \end{figure}
 
-Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen bærer sig selv og er derfor ikke er en del af det statiske system og skal derfor ikke medregnes. Indervæggen bestemmes at være mursten, og isoleringen bestemmes at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses på Figur \ref{fig:vaeg}.
+Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleringslag. Ydervæggen bærer sig selv, og er derfor ikke er en del af det statiske system, og skal derfor ikke medregnes. Indervæggen bestemmes at være mursten, og isoleringen bestemmes at være rockwool. Tykkelsen og densiteten for mursten og rockwool kan ses på Figur \ref{fig:vaeg}.
 
 \begin{figure}[H]
 	\centering
@@ -106,7 +106,7 @@ Til beregning af væggens egenlast skal der påregnes en indervæg og et isoleri
 \end{figure}
 
 Der medregnes kun egenlast for én gavl, idet den anden gavl ligger op ad den nuværende bygning, og den belaster dermed ikke det statiske system. 
-\newline \indent{     }  De 9 vinduer på gavlen har identiske mål med dem på facaden, som kan ses på Figur \ref{fig:gavl}. Indervæg og isolering for gavlen er ligeledes identisk med facadens.
+\newline \indent{     }  De ni vinduer på gavlen har identiske mål med dem på facaden, som kan ses på Figur \ref{fig:gavl}. Indervæg og isolering for gavlen er ligeledes identisk med facadens.
 \newline \indent{     }  Når arealet af facaderne beregnes trækkes arealet af vinduerne samt døren fra, da disse antages at belaste ydermuren.
 
 \begin{figure}[H]
@@ -145,7 +145,7 @@ Arealerne og lasten for facaderne og gavlen kan ses i Tabel \ref{tab:arealoglast
 
 \textbf{Last fra gulv}
 \newline
-Det antages at bygningens etager kun består af gulv, dvs. ingen skillevægge, trapper m.m. Derfor er det samlede areal af gulvet pr. etage: 
+Det antages, at bygningens etager kun består af gulv, dvs. ingen skillevægge, trapper m.m. Derfor er det samlede areal af gulvet pr. etage: 
 \begin{equation}
 	A_{etage} = \SI{12,50}{m} \cdot \SI{12,00}{m} = \SI{150,00}{$\text{m}^2$}
 \end{equation}
@@ -241,7 +241,7 @@ De karakteristiske egenlaster fra henholdsvis taget, etagedækkene samt stålsys
 \end{figure}
 
 \subsubsection{Jordlast}
-Idet tilbygningen har en kælder, der går 2 m under jorden, bliver den påvirket med en jordlast. Jordlasten virker på konstruktionen fra jordoverfladen og nedefter og virker liniært afhængigt af dybden.
+Idet tilbygningen har en kælder, der går 2 m under jorden, bliver den påvirket med en jordlast. Jordlasten virker på konstruktionen fra jordoverfladen og nedefter, og virker liniært afhængigt af dybden.
 \newline
 \newline
 Jordlasten beregnes gennem formlen:
@@ -714,12 +714,12 @@ De laster der virker i vandret retning, altså i x-retningen, er vindlast:
 	q_{x6} = 1,\!5 \cdot 1,\!1 \cdot 3,\!69 \frac{\text{kN}}{\text{m}} = 6,\!08 \frac{\text{kN}}{\text{m}}
 \end{equation}
 
-De laster der virker i lodret retning, altså y-retningen, er nyttelast, egenlast fra etagedæk samt egenlast fra stålprofiler:
+De laster der virker i lodret retning, er nyttelast, egenlast fra etagedæk samt egenlast fra stålprofiler:
 \begin{equation}
 	q_{y6} = 1,\!0 \cdot 1,\!1 \cdot 21,\!64 \frac{\text{kN}}{\text{m}} + 1,\!5 \cdot 0,\!5 \cdot 1,\!1 \cdot 9,\!38 \frac{\text{kN}}{\text{m}} = 31,\!54 \frac{\text{kN}}{\text{m}}
 \end{equation}
 
-Ovenstående beregninger gentages for hvert område på konstruktionen, og derfor regnes der for i alt 10 områder. De endelige laster der virker på konstruktionen er angivet på Figur \ref{fig:laster}. 
+Ovenstående beregninger gentages for hvert område på konstruktionen, og derfor regnes der for i alt 10 områder. De endelige laster der virker på konstruktionen, er angivet på Figur \ref{fig:laster}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -728,7 +728,7 @@ Ovenstående beregninger gentages for hvert område på konstruktionen, og derfo
 	\label{fig:laster}
 \end{figure}
 
-Taget i bjælkekonstruktionen er forbundet til den resterende del af konstruktionen via charnierled. Lasterne der virker på taget vil dermed kunne overføres til den resterende del af konstruktionen som punktlaster med angrebspunkt i knudepunkterne, hvor charnierledene er. De reaktioner og laster som virker på taget er illustreret på Figur \ref{fig:tagmedreaktioner}.
+Taget i bjælkekonstruktionen er forbundet til den resterende del af konstruktionen via charnierled. Lasterne, der virker på taget, vil dermed kunne overføres til den resterende del af konstruktionen som punktlaster med angrebspunkt i knudepunkterne, hvor charnierledene er. Reaktionerne og lasterne, som virker på taget, er illustreret på Figur \ref{fig:tagmedreaktioner}.
 
 \begin{figure}[htbp]
 	\centering
